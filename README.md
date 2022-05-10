@@ -6,7 +6,7 @@ Start a new conversation with customers from your Android mobile app. Custom bra
 
 ## iOS Links
 
-- Messaging for In-App Developer Guide
+- [Messaging for In-App Developer Guide](https://developer.salesforce.com/docs/service/messaging-in-app/overview)
 - [iOS Release Notes](https://github.com/Salesforce-Async-Messaging/messaging-in-app-ios/releases)
 - [iOS Example Apps](./examples)
 - iOS Reference Documentation
