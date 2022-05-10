@@ -1,2 +1,17 @@
-# Messaging-InAppSDK-iOS-Release
-Release repo for hosting Licenses and specs required to consume the Messaging For In-App SDK
+![Salesforce logo](./images/Salesforce-logo.png)
+
+# Salesforce Messaging for In-App (iOS SDK)
+
+Start a new conversation with customers from your Android mobile app. Custom branding and mobile push notifications provide a modern experience.
+
+## iOS Links
+
+- Messaging for In-App Developer Guide
+- iOS Release Notes
+- iOS Sample Apps
+- iOS Reference Documentation
+
+## Other Links
+
+- Salesforce Org Setup Instructions
+- Android Messaging for In-App Links
