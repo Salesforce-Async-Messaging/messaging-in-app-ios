@@ -159,9 +159,9 @@ pre code {
     .navigation {
       order: 1;
       width: 25%;
-      max-width: 300px;
+      max-width: 400px;
       padding-bottom: 64px;
-      overflow: hidden;
+      overflow: auto;
       word-wrap: normal;
       background: #fbfbfb;
       border-right: 1px solid #ddd; } }
