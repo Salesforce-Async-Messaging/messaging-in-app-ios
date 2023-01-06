@@ -12,8 +12,8 @@ struct ContentView: View {
         
         NavigationView {
             VStack(spacing: 16.0) {
-                if controller.uiConfig != nil {
-                    NavigationLink(destination: Interface(controller.uiConfig!)) {
+                if let config = controller.uiConfig {
+                    NavigationLink(destination: Interface(config)) {
                         Text("Speak with an Agent")
                     }
                 }
