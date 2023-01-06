@@ -6,7 +6,7 @@ import SwiftUI
 import SMIClientUI
 
 struct ContentView: View {
-    @ObservedObject var controller = MessagingController()
+    @StateObject private var controller = MessagingController()
     
     var body: some View {
         
