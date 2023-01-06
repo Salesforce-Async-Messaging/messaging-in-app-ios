@@ -6,14 +6,14 @@ import SwiftUI
 import SMIClientUI
 
 struct ContentView: View {
-    @ObservedObject var controller = MessagingController()
+    @StateObject private var controller = MessagingController()
     
     var body: some View {
         
         NavigationView {
             VStack(spacing: 16.0) {
-                if controller.uiConfig != nil {
-                    NavigationLink(destination: Interface(controller.uiConfig!)) {
+                if let config = controller.uiConfig {
+                    NavigationLink(destination: Interface(config)) {
                         Text("Speak with an Agent")
                     }
                 }
