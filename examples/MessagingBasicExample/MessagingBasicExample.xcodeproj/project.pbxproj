@@ -11,7 +11,6 @@
 		87B86E082857E1C000B0DF86 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87B86DF72857E1BF00B0DF86 /* ContentView.swift */; };
 		87B86E0A2857E1C000B0DF86 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 87B86DF82857E1C000B0DF86 /* Assets.xcassets */; };
 		87B86E152857E1E000B0DF86 /* MessagingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87B86E142857E1E000B0DF86 /* MessagingController.swift */; };
-		87B86E182857E22300B0DF86 /* configFile.json in Resources */ = {isa = PBXBuildFile; fileRef = 87B86E172857E22300B0DF86 /* configFile.json */; };
 		87CC8EC32859109A00312421 /* Swift-InAppMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = 87CC8EC22859109A00312421 /* Swift-InAppMessaging */; };
 /* End PBXBuildFile section */
 
@@ -22,7 +21,6 @@
 		87B86DF82857E1C000B0DF86 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		87B86DFD2857E1C000B0DF86 /* MessagingBasicExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MessagingBasicExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		87B86E142857E1E000B0DF86 /* MessagingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagingController.swift; sourceTree = "<group>"; };
-		87B86E172857E22300B0DF86 /* configFile.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = configFile.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,7 +39,6 @@
 			isa = PBXGroup;
 			children = (
 				87678FE22859435D00903F65 /* MessagingBasicExample--iOS--Info.plist */,
-				87B86E172857E22300B0DF86 /* configFile.json */,
 				87B86DF62857E1BF00B0DF86 /* MessagingBasicExampleApp.swift */,
 				87B86DF72857E1BF00B0DF86 /* ContentView.swift */,
 				87B86E142857E1E000B0DF86 /* MessagingController.swift */,
@@ -123,7 +120,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				87B86E0A2857E1C000B0DF86 /* Assets.xcassets in Resources */,
-				87B86E182857E22300B0DF86 /* configFile.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -5,29 +5,33 @@
 import SwiftUI
 import SMIClientUI
 
+// TO DO: Replace this config value with a values from your Salesforce org.
+enum Constants {
+    static let organizationId: String = "TBD"
+    static let developerName: String = "TBD"
+    static let url: String = "https://TBD.salesforce-scrt.com"
+}
+
 class MessagingController: ObservableObject {
+
     @Published var uiConfig: UIConfiguration?
-    
+
     init() {
         resetConfig()
     }
     
     func resetConfig() {
-        NSLog("Initializing config file.")
-        
-        // TO DO: Replace the config file in this app (configFile.json)
-        //        with the config file you downloaded from your Salesforce org.
-        //        To learn more, see https://help.salesforce.com/s/articleView?id=sf.miaw_deployment_mobile.htm
+        let conversationID = UUID()
 
-        guard let configPath = Bundle.main.path(forResource: "configFile",
-                                                ofType: "json") else {
-            NSLog("Unable to find configFile.json file.")
+        guard let url = URL(string: Constants.url) else {
             return
         }
 
-        let conversationID = UUID()
-        let configURL = URL(fileURLWithPath: configPath)
-        uiConfig = UIConfiguration(url: configURL, conversationId: conversationID)
+        uiConfig = UIConfiguration(serviceAPI: url,
+                                   organizationId: Constants.organizationId,
+                                   developerName: Constants.developerName,
+                                   conversationId:conversationID )
+        
         NSLog("Config created using conversation ID \(conversationID.description).")
     }
 }
