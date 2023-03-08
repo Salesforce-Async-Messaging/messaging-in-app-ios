@@ -12,6 +12,7 @@
 		87B86E0A2857E1C000B0DF86 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 87B86DF82857E1C000B0DF86 /* Assets.xcassets */; };
 		87B86E152857E1E000B0DF86 /* MessagingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87B86E142857E1E000B0DF86 /* MessagingController.swift */; };
 		87CC8EC32859109A00312421 /* Swift-InAppMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = 87CC8EC22859109A00312421 /* Swift-InAppMessaging */; };
+		F216B3F329B90BE400F49F59 /* configFile.json in Resources */ = {isa = PBXBuildFile; fileRef = F216B3F229B90BE400F49F59 /* configFile.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,7 @@
 		87B86DF82857E1C000B0DF86 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		87B86DFD2857E1C000B0DF86 /* MessagingBasicExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MessagingBasicExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		87B86E142857E1E000B0DF86 /* MessagingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagingController.swift; sourceTree = "<group>"; };
+		F216B3F229B90BE400F49F59 /* configFile.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = configFile.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +44,7 @@
 				87B86DF62857E1BF00B0DF86 /* MessagingBasicExampleApp.swift */,
 				87B86DF72857E1BF00B0DF86 /* ContentView.swift */,
 				87B86E142857E1E000B0DF86 /* MessagingController.swift */,
+				F216B3F229B90BE400F49F59 /* configFile.json */,
 				87B86DF82857E1C000B0DF86 /* Assets.xcassets */,
 				87B86DFE2857E1C000B0DF86 /* Products */,
 			);
@@ -120,6 +123,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				87B86E0A2857E1C000B0DF86 /* Assets.xcassets in Resources */,
+				F216B3F329B90BE400F49F59 /* configFile.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
