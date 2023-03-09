@@ -1,0 +1,7 @@
+{
+  "_comment": "TO DO: Replace this config file with a file from your Salesforce org.",
+
+  "OrganizationId": "TBD",
+  "DeveloperName": "TBD",
+  "Url": "https://TBD.salesforce-scrt.com"
+}
