@@ -2,5 +2,4 @@
 
 We provide the following example apps to demonstrate common uses for the Messaging for In-App SDK.
 
-- [Simple Hello World Example](./MessagingBasicExample/): A simple Hello World app that starts a messaging session with an agent. To get started, download the app and update the `configFile.json` file with your embedded service deployment information.
-
+- [Simple UI SDK Example](./MessagingBasicExample/): A simple messaging app that uses the UI SDK to start a messaging session with an agent. To get started, download the app and update the `configFile.json` file with your embedded service deployment information. Since this example uses the UI SDK, the basic user experience, including any pre-chat form fields, is handled by the SDK. To learn more about the UI SDK, see [Use the UI SDK for iOS](https://developer.salesforce.com/docs/service/messaging-in-app/guide/ios-ui-sdk.html).

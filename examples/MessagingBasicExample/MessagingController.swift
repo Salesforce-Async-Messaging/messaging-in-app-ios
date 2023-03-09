@@ -18,10 +18,15 @@ class MessagingController: NSObject, ObservableObject {
     func resetConfig() {
         print("Initializing config file.")
 
+        // This code uses a random UUID for the conversation ID, but
+        // be sure to use the same ID if you want to continue the
+        // same conversation after a restart.
+        let conversationID = UUID()
+
         // TO DO: Replace the config file in this app (configFile.json)
         //        with the config file you downloaded from your Salesforce org.
-        //        To learn more, see https://help.salesforce.com/s/articleView?id=sf.miaw_deployment_mobile.htm
-        let conversationID = UUID()
+        //        To learn more, see:
+        // https://help.salesforce.com/s/articleView?id=sf.miaw_deployment_mobile.htm
 
         guard let configPath = Bundle.main.path(forResource: "configFile", ofType: "json") else {
             NSLog("Unable to find configFile.json file.")
@@ -32,14 +37,25 @@ class MessagingController: NSObject, ObservableObject {
         uiConfig = UIConfiguration(url: configURL, conversationId: conversationID)
 
         guard let config = uiConfig else { return }
+        
+        // Handle pre-chat requests with a HiddenPreChatDelegate implementation.
         CoreFactory.create(withConfig: config).setPreChatDelegate(delegate: self, queue: DispatchQueue.main)
+        
+        // Handle auto-response component requests with a TemplatedUrlDelegate implementation.
         CoreFactory.create(withConfig: config).setTemplatedUrlDelegate(delegate: self, queue: DispatchQueue.main)
+        
+        // Handle user verification requests with a UserVerificationDelegate implementation.
         CoreFactory.create(withConfig: config).setUserVerificationDelegate(delegate: self, queue: DispatchQueue.main)
 
         print("Config created using conversation ID \(conversationID.description).")
     }
 }
 
+/**
+ Implementation of HiddenPreChatDelegate for hidden pre-chat.
+ To learn more, see
+ https://developer.salesforce.com/docs/service/messaging-in-app/guide/ios-pre-chat.html
+ */
 extension MessagingController: HiddenPreChatDelegate {
     // Invoked automatically when hidden pre-chat fields are being sent
     func core(_ core: CoreClient!,
@@ -59,6 +75,11 @@ extension MessagingController: HiddenPreChatDelegate {
     }
 }
 
+/**
+ Implementation of TemplatedUrlDelegate for the auto-response component.
+ To learn more, see
+ https://developer.salesforce.com/docs/service/messaging-in-app/guide/ios-auto-response.html
+ */
 extension MessagingController: TemplatedUrlDelegate {
     // Invoked automatically when values are needed for a given TemplatedUrl
     func core(_ core: CoreClient!,
@@ -77,6 +98,11 @@ extension MessagingController: TemplatedUrlDelegate {
     }
 }
 
+/**
+ Implementation of UserVerificationDelegate for user verification.
+ To learn more, see
+ https://developer.salesforce.com/docs/service/messaging-in-app/guide/ios-user-verification.html
+ */
 extension MessagingController: UserVerificationDelegate {
     // Invoked automatically when credentials are required for authorizing a verified user
     func core(_ core: CoreClient,
