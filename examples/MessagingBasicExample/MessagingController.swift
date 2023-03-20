@@ -34,7 +34,16 @@ class MessagingController: NSObject, ObservableObject {
         }
 
         let configURL = URL(fileURLWithPath: configPath)
-        uiConfig = UIConfiguration(url: configURL, conversationId: conversationID)
+
+        // TO DO: Change the userVerificationRequired flag match the verification
+        //        requirements of the endpoint.
+        //        To learn more, see:
+        // https://salesforce-async-messaging.github.io/messaging-in-app-ios/Classes/SMICoreConfiguration.html#/c:objc(cs)SMICoreConfiguration(py)userVerificationRequired
+        // https://developer.salesforce.com/docs/service/messaging-in-app/guide/ios-user-verification.html
+        let userVerificationRequired = false
+        uiConfig = UIConfiguration(url: configURL,
+                                   userVerificationRequired: userVerificationRequired,
+                                   conversationId: conversationID)
 
         guard let config = uiConfig else { return }
         
