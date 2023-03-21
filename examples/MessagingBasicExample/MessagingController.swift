@@ -56,7 +56,22 @@ class MessagingController: NSObject, ObservableObject {
         // Handle user verification requests with a UserVerificationDelegate implementation.
         CoreFactory.create(withConfig: config).setUserVerificationDelegate(delegate: self, queue: DispatchQueue.main)
 
+        // Handle error messages from the SDK.
+        CoreFactory.create(withConfig: config).addDelegate(delegate: self)
+
         print("Config created using conversation ID \(conversationID.description).")
+    }
+}
+
+/**
+ Implementation of the CoreDelegate
+ To learn more, see
+ https://developer.salesforce.com/docs/service/messaging-in-app/guide/ios-core-sdk.html#listen-for-events
+ */
+extension MessagingController: CoreDelegate {
+    // Called when errors are returned from the SDK.
+    func core(_ core: CoreClient!, didError error: Error!) {
+        print("ERROR: " + error.localizedDescription + "|" + error.debugDescription)
     }
 }
 
@@ -120,6 +135,8 @@ extension MessagingController: UserVerificationDelegate {
 
         var token: String!
 
+        // TO DO: Fill in all <YOUR_CUSTOMER_IDENTITY_TOKEN> fields with a valid identity token.
+        // this demo app.
         switch reason {
             // Salesforce doesn't currently have your customer identity token.
             // Please provide one now.
