@@ -2,8 +2,6 @@
 //  MessagingViewModel+HiddenPreChatDelegate.swift
 //  MessagingCoreExample
 //
-//  Created by Nigel Brown on 2023-04-12.
-//
 
 import Foundation
 import SMIClientCore
@@ -15,7 +13,7 @@ import SMIClientCore
  */
 extension MessagingViewModel: HiddenPreChatDelegate {
 
-    // Invoked automatically when hidden pre-chat fields are being sent.
+    /// Invoked automatically when hidden pre-chat fields are being sent.
     public func core(_ core: CoreClient!,
                      conversation: Conversation!,
                      didRequestPrechatValues hiddenPreChatFields: [HiddenPreChatField]!,
