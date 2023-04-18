@@ -31,6 +31,11 @@ class MessagingController: NSObject, ObservableObject {
 
         let configURL = URL(fileURLWithPath: configPath)
 
+        // This code uses a random UUID for the conversation ID, but
+        // be sure to use the same ID if you want to continue the
+        // same conversation after a restart.
+        let conversationID = UUID()
+        
         // TO DO: Change the userVerificationRequired flag match the verification
         //        requirements of the endpoint.
         //        To learn more, see:
