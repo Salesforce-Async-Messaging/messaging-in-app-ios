@@ -2,8 +2,6 @@
 //  MessaingViewModel+UserVerifictionDelegate.swift
 //  MessagingCoreExample
 //
-//  Created by Nigel Brown on 2023-04-12.
-//
 
 import Foundation
 import SMIClientCore
@@ -15,7 +13,7 @@ import SMIClientCore
  */
 extension MessagingViewModel: UserVerificationDelegate {
 
-    // Invoked automatically when credentials are required for authorizing a verified user.
+    /// Invoked automatically when credentials are required for authorizing a verified user.
     public func core(_ core: CoreClient,
               userVerificationChallengeWith reason: ChallengeReason,
               completionHandler completion: @escaping UserVerificationChallengeCompletion) {
@@ -23,7 +21,6 @@ extension MessagingViewModel: UserVerificationDelegate {
         var token: String!
 
         // TO DO: Fill in all <YOUR_CUSTOMER_IDENTITY_TOKEN> fields with a valid identity token.
-        // this demo app.
         switch reason {
             // Salesforce doesn't currently have your customer identity token.
             // Please provide one now.

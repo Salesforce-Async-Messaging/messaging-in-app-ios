@@ -2,8 +2,6 @@
 //  MessageViewModel+TemplatedUrlDelegate.swift
 //  MessagingCoreExample
 //
-//  Created by Nigel Brown on 2023-04-12.
-//
 
 import Foundation
 import SMIClientCore
@@ -15,7 +13,7 @@ import SMIClientCore
  */
 extension MessagingViewModel: TemplatedUrlDelegate {
 
-    // Invoked automatically when values are needed for a given TemplatedUrl.
+    /// Invoked automatically when values are needed for a given TemplatedUrl.
     public func core(_ core: CoreClient!,
               didRequestTemplatedValues templatable: SMITemplateable!,
               completionHandler: URLParameterValueCompletion!) {

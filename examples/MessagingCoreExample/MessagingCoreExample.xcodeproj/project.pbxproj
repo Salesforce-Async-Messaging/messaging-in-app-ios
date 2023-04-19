@@ -17,6 +17,7 @@
 		27E70B6D29E5AB0C00B3E72C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E70B6C29E5AB0C00B3E72C /* ContentView.swift */; };
 		27E70B6F29E5AB0F00B3E72C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27E70B6E29E5AB0F00B3E72C /* Assets.xcassets */; };
 		27E70B7229E5AB0F00B3E72C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27E70B7129E5AB0F00B3E72C /* Preview Assets.xcassets */; };
+		8720C47529EE0E7A003481CD /* configFile.json in Resources */ = {isa = PBXBuildFile; fileRef = 8720C47429EE0E7A003481CD /* configFile.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		27E70B6C29E5AB0C00B3E72C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		27E70B6E29E5AB0F00B3E72C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		27E70B7129E5AB0F00B3E72C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		8720C47429EE0E7A003481CD /* configFile.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = configFile.json; path = ../../MessagingBasicExample/configFile.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +93,7 @@
 		27E70B6929E5AB0C00B3E72C /* MessagingCoreExample */ = {
 			isa = PBXGroup;
 			children = (
+				8720C47429EE0E7A003481CD /* configFile.json */,
 				279DF18F29E6DA9F00A50813 /* Delegates */,
 				279DF18E29E6D87A00A50813 /* Views */,
 				279DF18D29E6D86500A50813 /* ViewModels */,
@@ -173,6 +176,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				27E70B7229E5AB0F00B3E72C /* Preview Assets.xcassets in Resources */,
+				8720C47529EE0E7A003481CD /* configFile.json in Resources */,
 				27E70B6F29E5AB0F00B3E72C /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -327,6 +331,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -356,6 +361,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

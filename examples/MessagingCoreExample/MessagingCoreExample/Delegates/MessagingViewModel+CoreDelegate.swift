@@ -2,8 +2,6 @@
 //  MessagingViewModel+CoreDelegate.swift
 //  MessagingCoreExample
 //
-//  Created by Nigel Brown on 2023-04-12.
-//
 
 import Foundation
 import SMIClientCore
@@ -15,7 +13,7 @@ import SMIClientCore
  */
 extension MessagingViewModel: CoreDelegate {
 
-    // Received incoming conversation entries.
+    /// Received incoming conversation entries.
     public func core(_ core: CoreClient!,
             conversation: Conversation!,
             didReceiveEntries entries: [ConversationEntry]!,
@@ -30,7 +28,7 @@ extension MessagingViewModel: CoreDelegate {
         }
     }
 
-    // Message status has changed.
+    /// Message status has changed.
     public func core(_ core: CoreClient!,
             conversation: Conversation!,
             didUpdateEntries entries: [ConversationEntry]!) {
@@ -38,35 +36,35 @@ extension MessagingViewModel: CoreDelegate {
         print("didUpdateEntries")
     }
 
-    // Conversation was created.
+    /// Conversation was created.
     public func core(_ core: CoreClient!,
             didCreateConversation conversation: Conversation!) {
         // TO DO: Handle event
         print("didCreateConversation")
     }
 
-    // Received a started typing event.
+    /// Received a started typing event.
     public func core(_ core: CoreClient!,
             didReceiveTypingStartedEvent event: ConversationEntry!) {
         // TO DO: Handle event
         print("didReceiveTypingStartedEvent")
     }
 
-    // Received a stopped typing event.
+    /// Received a stopped typing event.
     public func core(_ core: CoreClient!,
             didReceiveTypingStoppedEvent event: ConversationEntry!) {
         // TO DO: Handle event
         print("didReceiveTypingStoppedEvent")
     }
 
-    // Network status has changed.
+    /// Network status has changed.
     public func core(_ core: CoreClient!,
             didChangeNetworkState state: NetworkConnectivityState!) {
         // TO DO: Handle event
         print("didChangeNetworkState")
     }
 
-    // Received an error message.
+    /// Received an error message.
     public func core(_ core: CoreClient!, didError error: Error!) {
         // TO DO: Handle an error condition!
         let errorCode = (error as NSError).code
