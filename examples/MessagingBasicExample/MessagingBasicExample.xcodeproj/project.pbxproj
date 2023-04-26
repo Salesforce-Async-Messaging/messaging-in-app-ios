@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		04B4356729F9A61E0036721F /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 04B4356929F9A61E0036721F /* Localizable.strings */; };
 		87B86E062857E1C000B0DF86 /* MessagingBasicExampleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87B86DF62857E1BF00B0DF86 /* MessagingBasicExampleApp.swift */; };
 		87B86E082857E1C000B0DF86 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87B86DF72857E1BF00B0DF86 /* ContentView.swift */; };
 		87B86E0A2857E1C000B0DF86 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 87B86DF82857E1C000B0DF86 /* Assets.xcassets */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		04B4356829F9A61E0036721F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		87678FE22859435D00903F65 /* MessagingBasicExample--iOS--Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "MessagingBasicExample--iOS--Info.plist"; sourceTree = "<group>"; };
 		87B86DF62857E1BF00B0DF86 /* MessagingBasicExampleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagingBasicExampleApp.swift; sourceTree = "<group>"; };
 		87B86DF72857E1BF00B0DF86 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -40,6 +42,7 @@
 		87B86DF02857E1BF00B0DF86 = {
 			isa = PBXGroup;
 			children = (
+				04B4356929F9A61E0036721F /* Localizable.strings */,
 				87678FE22859435D00903F65 /* MessagingBasicExample--iOS--Info.plist */,
 				87B86DF62857E1BF00B0DF86 /* MessagingBasicExampleApp.swift */,
 				87B86DF72857E1BF00B0DF86 /* ContentView.swift */,
@@ -123,6 +126,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				87B86E0A2857E1C000B0DF86 /* Assets.xcassets in Resources */,
+				04B4356729F9A61E0036721F /* Localizable.strings in Resources */,
 				F216B3F329B90BE400F49F59 /* configFile.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -141,6 +145,17 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		04B4356929F9A61E0036721F /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				04B4356829F9A61E0036721F /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		87B86E0C2857E1C000B0DF86 /* Debug */ = {
