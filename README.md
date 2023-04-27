@@ -19,5 +19,5 @@ Start a new conversation with customers from your Android mobile app. Custom bra
 ![iOS Device](./images/messaging-ios-device.png)
 
 ## Customization: 
-This app provides an example of how you can customize it to replace images and override branding. For instance, the actionMenu image in the chat feed has been replaced, and the branding for error messages has been changed.
+This app provides an example of how you can customize images and override branding. Specifically, the `actionMenu` image in the chat feed has been replaced, and the color for error messages has been changed.
 To undo these customizations, simply remove the corresponding items from the Assets catalog in the app.
