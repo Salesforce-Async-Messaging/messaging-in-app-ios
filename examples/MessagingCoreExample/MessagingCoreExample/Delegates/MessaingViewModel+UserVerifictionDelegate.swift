@@ -42,6 +42,6 @@ extension MessagingViewModel: UserVerificationDelegate {
         default: print("nothing to do")
         }
 
-        completion(UserVerification(customerIdentityToken: token, type: .SMIAuthorizationTypeJWT))
+        completion(UserVerification(customerIdentityToken: token, type: .JWT))
     }
 }
