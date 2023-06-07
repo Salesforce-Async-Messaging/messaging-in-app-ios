@@ -11,6 +11,11 @@ public class MessagingViewModel: NSObject {
 
     // Conversation client object
     var conversationClient: ConversationClient?
+
+    // This code uses a random UUID for the conversation ID, but
+    // be sure to use the same ID if you want to continue the
+    // same conversation after a restart.
+    var conversationID = UUID()
     
     // Core object
     private var coreClient: CoreClient?
@@ -67,28 +72,30 @@ public class MessagingViewModel: NSObject {
 
     /// Resets the conversation ID and creates a new conversation.
     public func resetChat() {
-        let defaults = UserDefaults.standard
-        let uuid = UUID()
-        defaults.set(uuid.uuidString, forKey: "convoID")
+        self.conversationID = UUID()
+        observeableConversationData?.conversationEntries = []
         createConversationClient()
     }
 
-    /// An example of creating a UUID for a conversation that
-    /// persists after app restart. Once the conversation is
-    /// created, this UUID can be used when creating the
-    /// conversation client so the conversation can be resumed.
-    public func getConvoID() -> UUID {
-        let defaults = UserDefaults.standard
-        let uuid = UUID()
-        if let convoID = defaults.string(forKey: "convoID") {
-            if (convoID.isEmpty) {
-                defaults.set(uuid.uuidString, forKey: "convoID")
-                return uuid
+    /// This is an example on how you would retrieve the business hours from your config,
+    /// you can then check if your current time is within the retrieved business hours.
+    public func checkIfWithinBusinessHours(completion: @escaping (Bool, Bool) -> ()) {
+        coreClient?.retrieveBusinessHours(completion: { (businessHours, error) in
+            guard let isWithinBusinessHours = businessHours?.isWithinBusinessHours(comparisonTime: Date()),
+                  error == nil else {
+                print("Business hours may not be configured!")
+                completion(false, false)
+                return
             }
-            return UUID(uuidString: convoID) ?? UUID()
-        } else {
-            defaults.set(uuid.uuidString, forKey: "convoID")
-            return uuid
+            completion(isWithinBusinessHours, true)
+        })
+    }
+
+    /// This method allows you to retrieve all conversations from core.
+    public func retrieveConversationList(completion: @escaping ([Conversation]) -> ()) {
+        coreClient?.conversations(withLimit: 0, sortedByActivityDirection: .descending) { (conversations, error) in
+            guard let conversations = conversations else { return }
+            completion(conversations)
         }
     }
 
@@ -103,7 +110,7 @@ public class MessagingViewModel: NSObject {
         // https://help.salesforce.com/s/articleView?id=sf.miaw_deployment_mobile.htm
 
         guard let configPath = Bundle.main.path(forResource: "configFile", ofType: "json") else {
-            NSLog("Unable to find configFile.json file.")
+            print("Unable to find configFile.json file.")
             return
         }
         
@@ -117,7 +124,7 @@ public class MessagingViewModel: NSObject {
         
         guard let config = Configuration(url: configURL,
                                          userVerificationRequired: userVerificationRequired) else {
-            NSLog("Unable to create Configuration object.")
+            print("Unable to create Configuration object.")
             return
         }
 
@@ -140,7 +147,7 @@ public class MessagingViewModel: NSObject {
         CoreFactory.create(withConfig: config).addDelegate(delegate: self)
 
         // Create the conversation client
-        conversationClient = coreClient?.conversationClient(with: getConvoID())
+        conversationClient = coreClient?.conversationClient(with: self.conversationID)
 
         // Retrieve and submit any PreChat fields
         getPreChatFieldsFromConfig(completion: { preChatFields in

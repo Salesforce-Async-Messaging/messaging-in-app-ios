@@ -16,7 +16,6 @@
 		27E70B6B29E5AB0C00B3E72C /* MessagingCoreExampleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E70B6A29E5AB0C00B3E72C /* MessagingCoreExampleApp.swift */; };
 		27E70B6D29E5AB0C00B3E72C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E70B6C29E5AB0C00B3E72C /* ContentView.swift */; };
 		27E70B6F29E5AB0F00B3E72C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27E70B6E29E5AB0F00B3E72C /* Assets.xcassets */; };
-		27E70B7229E5AB0F00B3E72C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27E70B7129E5AB0F00B3E72C /* Preview Assets.xcassets */; };
 		8720C47529EE0E7A003481CD /* configFile.json in Resources */ = {isa = PBXBuildFile; fileRef = 8720C47429EE0E7A003481CD /* configFile.json */; };
 /* End PBXBuildFile section */
 
@@ -30,7 +29,6 @@
 		27E70B6A29E5AB0C00B3E72C /* MessagingCoreExampleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagingCoreExampleApp.swift; sourceTree = "<group>"; };
 		27E70B6C29E5AB0C00B3E72C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		27E70B6E29E5AB0F00B3E72C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		27E70B7129E5AB0F00B3E72C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		8720C47429EE0E7A003481CD /* configFile.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = configFile.json; path = ../../MessagingBasicExample/configFile.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -46,12 +44,12 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		279DF18D29E6D86500A50813 /* ViewModels */ = {
+		279DF18D29E6D86500A50813 /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				27C8231B29E5DA9B00A142EA /* MessagingViewModel.swift */,
 			);
-			path = ViewModels;
+			path = Models;
 			sourceTree = "<group>";
 		};
 		279DF18E29E6D87A00A50813 /* Views */ = {
@@ -93,22 +91,13 @@
 		27E70B6929E5AB0C00B3E72C /* MessagingCoreExample */ = {
 			isa = PBXGroup;
 			children = (
-				8720C47429EE0E7A003481CD /* configFile.json */,
 				279DF18F29E6DA9F00A50813 /* Delegates */,
 				279DF18E29E6D87A00A50813 /* Views */,
-				279DF18D29E6D86500A50813 /* ViewModels */,
+				279DF18D29E6D86500A50813 /* Models */,
+				8720C47429EE0E7A003481CD /* configFile.json */,
 				27E70B6E29E5AB0F00B3E72C /* Assets.xcassets */,
-				27E70B7029E5AB0F00B3E72C /* Preview Content */,
 			);
 			path = MessagingCoreExample;
-			sourceTree = "<group>";
-		};
-		27E70B7029E5AB0F00B3E72C /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-				27E70B7129E5AB0F00B3E72C /* Preview Assets.xcassets */,
-			);
-			path = "Preview Content";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -175,7 +164,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				27E70B7229E5AB0F00B3E72C /* Preview Assets.xcassets in Resources */,
 				8720C47529EE0E7A003481CD /* configFile.json in Resources */,
 				27E70B6F29E5AB0F00B3E72C /* Assets.xcassets in Resources */,
 			);

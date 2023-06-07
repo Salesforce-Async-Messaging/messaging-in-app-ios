@@ -1,11 +1,11 @@
 //
-//  MessagingBasicExampleApp.swift
+//  MessagingUIExampleApp.swift
 //
 
 import SwiftUI
 
 @main
-struct MessagingBasicExampleApp: App {
+struct MessagingUIExampleApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()

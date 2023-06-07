@@ -13,14 +13,17 @@ class ObserveableConversationEntries: ObservableObject {
 struct ContentView: View {
     @State private var isChatFeedHidden = true
     @State private var messageInputText: String
-    @ObservedObject var observableConversationData: ObserveableConversationEntries
+    @State private var businessHoursMessage: String?
+    @State private var shouldHideBusinessHoursBanner: Bool = true
+    @State private var isWithinBusinessHours: Bool = false
+    @ObservedObject var observeableConversationData: ObserveableConversationEntries
     var viewModel: MessagingViewModel
 
     init(isChatFeedHidden: Bool = true, messageInputText: String = "") {
         self.isChatFeedHidden = isChatFeedHidden
         self.messageInputText = messageInputText
         let observableEntries = ObserveableConversationEntries()
-        self.observableConversationData = observableEntries
+        self.observeableConversationData = observableEntries
         self.viewModel = MessagingViewModel(observeableConversationData: observableEntries)
     }
 
@@ -37,14 +40,13 @@ struct ContentView: View {
             Spacer()
             Text("Messaging for In-App Core SDK Example")
             Spacer()
-            HStack {
-                Button("Enter Chat") {
+            VStack {
+                Button("Speak with an Agent") {
                     isChatFeedHidden.toggle()
                     viewModel.fetchAndUpdateConversation()
                 }
-                Button("Reset Chat") {
+                Button("Reset Conversation ID") {
                     viewModel.resetChat()
-                    observableConversationData.conversationEntries = []
                 }
             }
             .buttonStyle(. bordered)
@@ -56,7 +58,21 @@ struct ContentView: View {
 
     private var ChatFeed: some View {
         VStack {
+            VStack {
+                Text(businessHoursMessage ?? "Not within business hours")
+                .frame(maxWidth: .infinity, alignment: .center)
+                .background(isWithinBusinessHours ? Color.green : Color.red)
+            }
+            .isHidden(shouldHideBusinessHoursBanner, remove: shouldHideBusinessHoursBanner)
+
             ChatFeedList
+            .onAppear {
+                viewModel.checkIfWithinBusinessHours(completion: { (isWithinBusinessHours, isBusinessHoursConfigured) in
+                    self.shouldHideBusinessHoursBanner = !isBusinessHoursConfigured
+                    self.isWithinBusinessHours = isWithinBusinessHours
+                    businessHoursMessage = isWithinBusinessHours ? "You are within business hours" : "You are not within business hours"
+                })
+            }
             HStack {
                 TextField("Type a Message", text: $messageInputText)
                 Button("SEND") {
@@ -78,7 +94,7 @@ struct ContentView: View {
     private var ChatFeedList: some View {
         ScrollView {
             LazyVStack {
-                ForEach(observableConversationData.conversationEntries, id: \.identifier) { message in
+                ForEach(observeableConversationData.conversationEntries, id: \.identifier) { message in
                     // TO DO: Handle each messaging type that applies to your implementation here.
                     switch message.format {
                     case .attachments:

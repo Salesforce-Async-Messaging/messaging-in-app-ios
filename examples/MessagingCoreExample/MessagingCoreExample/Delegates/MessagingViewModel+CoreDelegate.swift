@@ -19,7 +19,7 @@ extension MessagingViewModel: CoreDelegate {
             didReceiveEntries entries: [ConversationEntry]!,
             paged: Bool) {
         // TO DO: Handle event
-        guard conversation.identifier == self.getConvoID() else { return }
+        guard conversation.identifier == self.conversationID else { return }
 
         DispatchQueue.main.async {
             for entry in entries {

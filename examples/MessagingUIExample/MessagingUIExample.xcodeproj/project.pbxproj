@@ -8,7 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		04B4356729F9A61E0036721F /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 04B4356929F9A61E0036721F /* Localizable.strings */; };
-		87B86E062857E1C000B0DF86 /* MessagingBasicExampleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87B86DF62857E1BF00B0DF86 /* MessagingBasicExampleApp.swift */; };
+		271AE61A2A2E1D9100256255 /* MessagingController+UserVerificationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271AE6192A2E1D9100256255 /* MessagingController+UserVerificationDelegate.swift */; };
+		271AE61C2A2E1DAD00256255 /* MessagingController+TemplatedUrlDelegate.swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271AE61B2A2E1DAD00256255 /* MessagingController+TemplatedUrlDelegate.swift.swift */; };
+		271AE61E2A2E1DD100256255 /* MessagingController+HiddenPreChatDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271AE61D2A2E1DD100256255 /* MessagingController+HiddenPreChatDelegate.swift */; };
+		271AE6202A2E1DE600256255 /* MessagingController+CoreDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271AE61F2A2E1DE600256255 /* MessagingController+CoreDelegate.swift */; };
+		87B86E062857E1C000B0DF86 /* MessagingUIExampleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87B86DF62857E1BF00B0DF86 /* MessagingUIExampleApp.swift */; };
 		87B86E082857E1C000B0DF86 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87B86DF72857E1BF00B0DF86 /* ContentView.swift */; };
 		87B86E0A2857E1C000B0DF86 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 87B86DF82857E1C000B0DF86 /* Assets.xcassets */; };
 		87B86E152857E1E000B0DF86 /* MessagingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87B86E142857E1E000B0DF86 /* MessagingController.swift */; };
@@ -18,11 +22,15 @@
 
 /* Begin PBXFileReference section */
 		04B4356829F9A61E0036721F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
-		87678FE22859435D00903F65 /* MessagingBasicExample--iOS--Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "MessagingBasicExample--iOS--Info.plist"; sourceTree = "<group>"; };
-		87B86DF62857E1BF00B0DF86 /* MessagingBasicExampleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagingBasicExampleApp.swift; sourceTree = "<group>"; };
+		271AE6192A2E1D9100256255 /* MessagingController+UserVerificationDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MessagingController+UserVerificationDelegate.swift"; sourceTree = "<group>"; };
+		271AE61B2A2E1DAD00256255 /* MessagingController+TemplatedUrlDelegate.swift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MessagingController+TemplatedUrlDelegate.swift.swift"; sourceTree = "<group>"; };
+		271AE61D2A2E1DD100256255 /* MessagingController+HiddenPreChatDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MessagingController+HiddenPreChatDelegate.swift"; sourceTree = "<group>"; };
+		271AE61F2A2E1DE600256255 /* MessagingController+CoreDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MessagingController+CoreDelegate.swift"; sourceTree = "<group>"; };
+		87678FE22859435D00903F65 /* MessagingUIExample--iOS--Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MessagingUIExample--iOS--Info.plist"; sourceTree = "<group>"; };
+		87B86DF62857E1BF00B0DF86 /* MessagingUIExampleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagingUIExampleApp.swift; sourceTree = "<group>"; };
 		87B86DF72857E1BF00B0DF86 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		87B86DF82857E1C000B0DF86 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		87B86DFD2857E1C000B0DF86 /* MessagingBasicExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MessagingBasicExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		87B86DFD2857E1C000B0DF86 /* MessagingUIExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MessagingUIExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		87B86E142857E1E000B0DF86 /* MessagingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagingController.swift; sourceTree = "<group>"; };
 		F216B3F229B90BE400F49F59 /* configFile.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = configFile.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -39,14 +47,42 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		271AE6162A2E1C2B00256255 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				87B86DF62857E1BF00B0DF86 /* MessagingUIExampleApp.swift */,
+				87B86DF72857E1BF00B0DF86 /* ContentView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		271AE6172A2E1CAF00256255 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				87B86E142857E1E000B0DF86 /* MessagingController.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		271AE6182A2E1CDF00256255 /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				271AE6192A2E1D9100256255 /* MessagingController+UserVerificationDelegate.swift */,
+				271AE61B2A2E1DAD00256255 /* MessagingController+TemplatedUrlDelegate.swift.swift */,
+				271AE61D2A2E1DD100256255 /* MessagingController+HiddenPreChatDelegate.swift */,
+				271AE61F2A2E1DE600256255 /* MessagingController+CoreDelegate.swift */,
+			);
+			path = Delegates;
+			sourceTree = "<group>";
+		};
 		87B86DF02857E1BF00B0DF86 = {
 			isa = PBXGroup;
 			children = (
+				271AE6182A2E1CDF00256255 /* Delegates */,
+				271AE6172A2E1CAF00256255 /* Models */,
+				271AE6162A2E1C2B00256255 /* Views */,
 				04B4356929F9A61E0036721F /* Localizable.strings */,
-				87678FE22859435D00903F65 /* MessagingBasicExample--iOS--Info.plist */,
-				87B86DF62857E1BF00B0DF86 /* MessagingBasicExampleApp.swift */,
-				87B86DF72857E1BF00B0DF86 /* ContentView.swift */,
-				87B86E142857E1E000B0DF86 /* MessagingController.swift */,
+				87678FE22859435D00903F65 /* MessagingUIExample--iOS--Info.plist */,
 				F216B3F229B90BE400F49F59 /* configFile.json */,
 				87B86DF82857E1C000B0DF86 /* Assets.xcassets */,
 				87B86DFE2857E1C000B0DF86 /* Products */,
@@ -56,7 +92,7 @@
 		87B86DFE2857E1C000B0DF86 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				87B86DFD2857E1C000B0DF86 /* MessagingBasicExample.app */,
+				87B86DFD2857E1C000B0DF86 /* MessagingUIExample.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -64,9 +100,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		87B86DFC2857E1C000B0DF86 /* MessagingBasicExample (iOS) */ = {
+		87B86DFC2857E1C000B0DF86 /* MessagingUIExample (iOS) */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 87B86E0E2857E1C000B0DF86 /* Build configuration list for PBXNativeTarget "MessagingBasicExample (iOS)" */;
+			buildConfigurationList = 87B86E0E2857E1C000B0DF86 /* Build configuration list for PBXNativeTarget "MessagingUIExample (iOS)" */;
 			buildPhases = (
 				87B86DF92857E1C000B0DF86 /* Sources */,
 				87B86DFA2857E1C000B0DF86 /* Frameworks */,
@@ -76,12 +112,12 @@
 			);
 			dependencies = (
 			);
-			name = "MessagingBasicExample (iOS)";
+			name = "MessagingUIExample (iOS)";
 			packageProductDependencies = (
 				87CC8EC22859109A00312421 /* Swift-InAppMessaging */,
 			);
 			productName = "MessagingBasicExample (iOS)";
-			productReference = 87B86DFD2857E1C000B0DF86 /* MessagingBasicExample.app */;
+			productReference = 87B86DFD2857E1C000B0DF86 /* MessagingUIExample.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -99,7 +135,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 87B86DF42857E1BF00B0DF86 /* Build configuration list for PBXProject "MessagingBasicExample" */;
+			buildConfigurationList = 87B86DF42857E1BF00B0DF86 /* Build configuration list for PBXProject "MessagingUIExample" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -115,7 +151,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				87B86DFC2857E1C000B0DF86 /* MessagingBasicExample (iOS) */,
+				87B86DFC2857E1C000B0DF86 /* MessagingUIExample (iOS) */,
 			);
 		};
 /* End PBXProject section */
@@ -138,9 +174,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				271AE6202A2E1DE600256255 /* MessagingController+CoreDelegate.swift in Sources */,
 				87B86E082857E1C000B0DF86 /* ContentView.swift in Sources */,
 				87B86E152857E1E000B0DF86 /* MessagingController.swift in Sources */,
-				87B86E062857E1C000B0DF86 /* MessagingBasicExampleApp.swift in Sources */,
+				87B86E062857E1C000B0DF86 /* MessagingUIExampleApp.swift in Sources */,
+				271AE61A2A2E1D9100256255 /* MessagingController+UserVerificationDelegate.swift in Sources */,
+				271AE61E2A2E1DD100256255 /* MessagingController+HiddenPreChatDelegate.swift in Sources */,
+				271AE61C2A2E1DAD00256255 /* MessagingController+TemplatedUrlDelegate.swift.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,7 +316,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "MessagingBasicExample--iOS--Info.plist";
+				INFOPLIST_FILE = "MessagingUIExample--iOS--Info.plist";
 				INFOPLIST_KEY_LSSupportsOpeningDocumentsInPlace = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = "Used when sending an image to an agent.";
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Used when sending an image to an agent.";
@@ -291,8 +331,8 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.salesforce.MessagingBasicExample;
-				PRODUCT_NAME = MessagingBasicExample;
+				PRODUCT_BUNDLE_IDENTIFIER = com.salesforce.MessagingUIExample;
+				PRODUCT_NAME = MessagingUIExample;
 				SDKROOT = iphoneos;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -309,7 +349,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "MessagingBasicExample--iOS--Info.plist";
+				INFOPLIST_FILE = "MessagingUIExample--iOS--Info.plist";
 				INFOPLIST_KEY_LSSupportsOpeningDocumentsInPlace = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = "Used when sending an image to an agent.";
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Used when sending an image to an agent.";
@@ -324,8 +364,8 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.salesforce.MessagingBasicExample;
-				PRODUCT_NAME = MessagingBasicExample;
+				PRODUCT_BUNDLE_IDENTIFIER = com.salesforce.MessagingUIExample;
+				PRODUCT_NAME = MessagingUIExample;
 				SDKROOT = iphoneos;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -337,7 +377,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		87B86DF42857E1BF00B0DF86 /* Build configuration list for PBXProject "MessagingBasicExample" */ = {
+		87B86DF42857E1BF00B0DF86 /* Build configuration list for PBXProject "MessagingUIExample" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				87B86E0C2857E1C000B0DF86 /* Debug */,
@@ -346,7 +386,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		87B86E0E2857E1C000B0DF86 /* Build configuration list for PBXNativeTarget "MessagingBasicExample (iOS)" */ = {
+		87B86E0E2857E1C000B0DF86 /* Build configuration list for PBXNativeTarget "MessagingUIExample (iOS)" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				87B86E0F2857E1C000B0DF86 /* Debug */,
