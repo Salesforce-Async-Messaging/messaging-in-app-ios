@@ -7,4 +7,6 @@ We provide the following example apps to demonstrate common uses for the Messagi
 
 ## Customization
 
-The [Simple UI SDK Example](./MessagingBasicExample/) provides an example of how you can customize images and override branding. Specifically, the `actionMenu` image in the chat feed has been replaced, and the color for error messages has been changed. To undo these customizations, simply remove the corresponding items from the Assets catalog in the app.
+The [Simple UI SDK Example](./MessagingBasicExample/) provides an example of how you can customize strings and branding colors. Specifically, the chat title string and the color for error messages have been changed.
+
+To undo these customizations, simply remove the corresponding items from the `Localizable.strings` file and the `Assets` catalog.

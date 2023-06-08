@@ -4,6 +4,6 @@ A simple messaging app that uses the UI SDK to start a messaging session with an
 
 ## Customization
 
-This app provides an example of how you can customize images and override branding. Specifically, the `actionMenu` image in the chat feed has been replaced, and the color for error messages has been changed.
+This app provides an example of how you can customize strings and branding colors. Specifically, the chat title string and the color for error messages have been changed.
 
-To undo these customizations, simply remove the corresponding items from the Assets catalog in the app.
+To undo these customizations, simply remove the corresponding items from the `Localizable.strings` file and the `Assets` catalog.
