@@ -1,9 +1,0 @@
-/* 
-  Localizable.strings
-  MessagingBasicExample
-*/
-
-// Modifying the string values within this file will result in the SDK reflecting those changes.
-
-/* Title for the chat feed view. */
-"SMI.Chat.Feed.Title" = "Chat";

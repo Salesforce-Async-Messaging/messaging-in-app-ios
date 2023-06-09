@@ -7,130 +7,139 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		27B2C6E62A30E43100DC6740 /* Swift-InAppMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = 27B2C6E52A30E43100DC6740 /* Swift-InAppMessaging */; };
-		27B2C74C2A30E81700DC6740 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 27B2C74B2A30E81700DC6740 /* README.md */; };
-		27B2C7522A30E81E00DC6740 /* MessagingViewModel+HiddenPreChatDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B2C74E2A30E81E00DC6740 /* MessagingViewModel+HiddenPreChatDelegate.swift */; };
-		27B2C7532A30E81E00DC6740 /* MessagingViewModel+CoreDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B2C74F2A30E81E00DC6740 /* MessagingViewModel+CoreDelegate.swift */; };
-		27B2C7542A30E81E00DC6740 /* MessageViewModel+TemplatedUrlDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B2C7502A30E81E00DC6740 /* MessageViewModel+TemplatedUrlDelegate.swift */; };
-		27B2C7552A30E81E00DC6740 /* MessaingViewModel+UserVerifictionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B2C7512A30E81E00DC6740 /* MessaingViewModel+UserVerifictionDelegate.swift */; };
-		27B2C7582A30E82500DC6740 /* MessagingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B2C7572A30E82500DC6740 /* MessagingViewModel.swift */; };
-		27B2C75C2A30E83300DC6740 /* MessagingCoreExampleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B2C75A2A30E83300DC6740 /* MessagingCoreExampleApp.swift */; };
-		27B2C75D2A30E83300DC6740 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B2C75B2A30E83300DC6740 /* ContentView.swift */; };
-		27B2C75F2A30E85D00DC6740 /* configFile.json in Resources */ = {isa = PBXBuildFile; fileRef = 27B2C75E2A30E85D00DC6740 /* configFile.json */; };
+		27B2C6E32A30E42400DC6740 /* Swift-InAppMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = 27B2C6E22A30E42400DC6740 /* Swift-InAppMessaging */; };
+		27B2C7312A30E75400DC6740 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27B2C7302A30E75400DC6740 /* Assets.xcassets */; };
+		27B2C7332A30E75900DC6740 /* configFile.json in Resources */ = {isa = PBXBuildFile; fileRef = 27B2C7322A30E75900DC6740 /* configFile.json */; };
+		27B2C7352A30E76200DC6740 /* MessagingUIExample--iOS--Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 27B2C7342A30E76200DC6740 /* MessagingUIExample--iOS--Info.plist */; };
+		27B2C7372A30E76D00DC6740 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 27B2C7362A30E76D00DC6740 /* README.md */; };
+		27B2C73B2A30E77300DC6740 /* MessagingUIExampleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B2C7392A30E77300DC6740 /* MessagingUIExampleApp.swift */; };
+		27B2C73C2A30E77300DC6740 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B2C73A2A30E77300DC6740 /* ContentView.swift */; };
+		27B2C73F2A30E77800DC6740 /* MessagingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B2C73E2A30E77800DC6740 /* MessagingController.swift */; };
+		27B2C7452A30E77D00DC6740 /* MessagingController+UserVerificationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B2C7412A30E77D00DC6740 /* MessagingController+UserVerificationDelegate.swift */; };
+		27B2C7462A30E77D00DC6740 /* MessagingController+HiddenPreChatDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B2C7422A30E77D00DC6740 /* MessagingController+HiddenPreChatDelegate.swift */; };
+		27B2C7472A30E77D00DC6740 /* MessagingController+CoreDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B2C7432A30E77D00DC6740 /* MessagingController+CoreDelegate.swift */; };
+		27B2C7482A30E77D00DC6740 /* MessagingController+TemplatedUrlDelegate.swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B2C7442A30E77D00DC6740 /* MessagingController+TemplatedUrlDelegate.swift.swift */; };
+		27B2C74A2A30E7DC00DC6740 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 27B2C7492A30E7DC00DC6740 /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		27B2C6B62A30E39500DC6740 /* MessagingCoreExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MessagingCoreExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		27B2C74B2A30E81700DC6740 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		27B2C74E2A30E81E00DC6740 /* MessagingViewModel+HiddenPreChatDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MessagingViewModel+HiddenPreChatDelegate.swift"; sourceTree = "<group>"; };
-		27B2C74F2A30E81E00DC6740 /* MessagingViewModel+CoreDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MessagingViewModel+CoreDelegate.swift"; sourceTree = "<group>"; };
-		27B2C7502A30E81E00DC6740 /* MessageViewModel+TemplatedUrlDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MessageViewModel+TemplatedUrlDelegate.swift"; sourceTree = "<group>"; };
-		27B2C7512A30E81E00DC6740 /* MessaingViewModel+UserVerifictionDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MessaingViewModel+UserVerifictionDelegate.swift"; sourceTree = "<group>"; };
-		27B2C7572A30E82500DC6740 /* MessagingViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessagingViewModel.swift; sourceTree = "<group>"; };
-		27B2C75A2A30E83300DC6740 /* MessagingCoreExampleApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessagingCoreExampleApp.swift; sourceTree = "<group>"; };
-		27B2C75B2A30E83300DC6740 /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		27B2C75E2A30E85D00DC6740 /* configFile.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = configFile.json; sourceTree = "<group>"; };
+		27B2C6D02A30E3AD00DC6740 /* MessagingUIExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MessagingUIExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		27B2C7302A30E75400DC6740 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		27B2C7322A30E75900DC6740 /* configFile.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = configFile.json; sourceTree = "<group>"; };
+		27B2C7342A30E76200DC6740 /* MessagingUIExample--iOS--Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "MessagingUIExample--iOS--Info.plist"; sourceTree = "<group>"; };
+		27B2C7362A30E76D00DC6740 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		27B2C7392A30E77300DC6740 /* MessagingUIExampleApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessagingUIExampleApp.swift; sourceTree = "<group>"; };
+		27B2C73A2A30E77300DC6740 /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		27B2C73E2A30E77800DC6740 /* MessagingController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessagingController.swift; sourceTree = "<group>"; };
+		27B2C7412A30E77D00DC6740 /* MessagingController+UserVerificationDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MessagingController+UserVerificationDelegate.swift"; sourceTree = "<group>"; };
+		27B2C7422A30E77D00DC6740 /* MessagingController+HiddenPreChatDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MessagingController+HiddenPreChatDelegate.swift"; sourceTree = "<group>"; };
+		27B2C7432A30E77D00DC6740 /* MessagingController+CoreDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MessagingController+CoreDelegate.swift"; sourceTree = "<group>"; };
+		27B2C7442A30E77D00DC6740 /* MessagingController+TemplatedUrlDelegate.swift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MessagingController+TemplatedUrlDelegate.swift.swift"; sourceTree = "<group>"; };
+		27B2C7492A30E7DC00DC6740 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		27B2C6B32A30E39500DC6740 /* Frameworks */ = {
+		27B2C6CD2A30E3AD00DC6740 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				27B2C6E62A30E43100DC6740 /* Swift-InAppMessaging in Frameworks */,
+				27B2C6E32A30E42400DC6740 /* Swift-InAppMessaging in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		27B2C6AD2A30E39500DC6740 = {
+		27B2C6C72A30E3AD00DC6740 = {
 			isa = PBXGroup;
 			children = (
-				27B2C74D2A30E81E00DC6740 /* Delegates */,
-				27B2C7562A30E82500DC6740 /* Models */,
-				27B2C7592A30E83300DC6740 /* Views */,
-				27B2C75E2A30E85D00DC6740 /* configFile.json */,
-				27B2C74B2A30E81700DC6740 /* README.md */,
-				27B2C6B72A30E39500DC6740 /* Products */,
+				27B2C7402A30E77D00DC6740 /* Delegates */,
+				27B2C73D2A30E77800DC6740 /* Models */,
+				27B2C7382A30E77300DC6740 /* Views */,
+				27B2C7342A30E76200DC6740 /* MessagingUIExample--iOS--Info.plist */,
+				27B2C7302A30E75400DC6740 /* Assets.xcassets */,
+				27B2C7492A30E7DC00DC6740 /* Localizable.strings */,
+				27B2C7322A30E75900DC6740 /* configFile.json */,
+				27B2C7362A30E76D00DC6740 /* README.md */,
+				27B2C6D12A30E3AD00DC6740 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		27B2C6B72A30E39500DC6740 /* Products */ = {
+		27B2C6D12A30E3AD00DC6740 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				27B2C6B62A30E39500DC6740 /* MessagingCoreExample.app */,
+				27B2C6D02A30E3AD00DC6740 /* MessagingUIExample.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		27B2C74D2A30E81E00DC6740 /* Delegates */ = {
+		27B2C7382A30E77300DC6740 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				27B2C74E2A30E81E00DC6740 /* MessagingViewModel+HiddenPreChatDelegate.swift */,
-				27B2C74F2A30E81E00DC6740 /* MessagingViewModel+CoreDelegate.swift */,
-				27B2C7502A30E81E00DC6740 /* MessageViewModel+TemplatedUrlDelegate.swift */,
-				27B2C7512A30E81E00DC6740 /* MessaingViewModel+UserVerifictionDelegate.swift */,
+				27B2C7392A30E77300DC6740 /* MessagingUIExampleApp.swift */,
+				27B2C73A2A30E77300DC6740 /* ContentView.swift */,
 			);
-			path = Delegates;
+			path = Views;
 			sourceTree = "<group>";
 		};
-		27B2C7562A30E82500DC6740 /* Models */ = {
+		27B2C73D2A30E77800DC6740 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				27B2C7572A30E82500DC6740 /* MessagingViewModel.swift */,
+				27B2C73E2A30E77800DC6740 /* MessagingController.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
 		};
-		27B2C7592A30E83300DC6740 /* Views */ = {
+		27B2C7402A30E77D00DC6740 /* Delegates */ = {
 			isa = PBXGroup;
 			children = (
-				27B2C75A2A30E83300DC6740 /* MessagingCoreExampleApp.swift */,
-				27B2C75B2A30E83300DC6740 /* ContentView.swift */,
+				27B2C7422A30E77D00DC6740 /* MessagingController+HiddenPreChatDelegate.swift */,
+				27B2C7432A30E77D00DC6740 /* MessagingController+CoreDelegate.swift */,
+				27B2C7442A30E77D00DC6740 /* MessagingController+TemplatedUrlDelegate.swift.swift */,
+				27B2C7412A30E77D00DC6740 /* MessagingController+UserVerificationDelegate.swift */,
 			);
-			path = Views;
+			path = Delegates;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		27B2C6B52A30E39500DC6740 /* MessagingCoreExample */ = {
+		27B2C6CF2A30E3AD00DC6740 /* MessagingUIExample */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 27B2C6C42A30E39700DC6740 /* Build configuration list for PBXNativeTarget "MessagingCoreExample" */;
+			buildConfigurationList = 27B2C6DE2A30E3AF00DC6740 /* Build configuration list for PBXNativeTarget "MessagingUIExample" */;
 			buildPhases = (
-				27B2C6B22A30E39500DC6740 /* Sources */,
-				27B2C6B32A30E39500DC6740 /* Frameworks */,
-				27B2C6B42A30E39500DC6740 /* Resources */,
+				27B2C6CC2A30E3AD00DC6740 /* Sources */,
+				27B2C6CD2A30E3AD00DC6740 /* Frameworks */,
+				27B2C6CE2A30E3AD00DC6740 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = MessagingCoreExample;
+			name = MessagingUIExample;
 			packageProductDependencies = (
-				27B2C6E52A30E43100DC6740 /* Swift-InAppMessaging */,
+				27B2C6E22A30E42400DC6740 /* Swift-InAppMessaging */,
 			);
-			productName = MessagingCoreExample;
-			productReference = 27B2C6B62A30E39500DC6740 /* MessagingCoreExample.app */;
+			productName = MessagingUIExample;
+			productReference = 27B2C6D02A30E3AD00DC6740 /* MessagingUIExample.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		27B2C6AE2A30E39500DC6740 /* Project object */ = {
+		27B2C6C82A30E3AD00DC6740 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1430;
 				LastUpgradeCheck = 1430;
 				TargetAttributes = {
-					27B2C6B52A30E39500DC6740 = {
+					27B2C6CF2A30E3AD00DC6740 = {
 						CreatedOnToolsVersion = 14.3;
 					};
 				};
 			};
-			buildConfigurationList = 27B2C6B12A30E39500DC6740 /* Build configuration list for PBXProject "MessagingCoreExample" */;
+			buildConfigurationList = 27B2C6CB2A30E3AD00DC6740 /* Build configuration list for PBXProject "MessagingUIExample" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -138,50 +147,53 @@
 				en,
 				Base,
 			);
-			mainGroup = 27B2C6AD2A30E39500DC6740;
+			mainGroup = 27B2C6C72A30E3AD00DC6740;
 			packageReferences = (
-				27B2C6E42A30E43100DC6740 /* XCRemoteSwiftPackageReference "Swift-Package-InAppMessaging" */,
+				27B2C6E12A30E42400DC6740 /* XCRemoteSwiftPackageReference "Swift-Package-InAppMessaging" */,
 			);
-			productRefGroup = 27B2C6B72A30E39500DC6740 /* Products */;
+			productRefGroup = 27B2C6D12A30E3AD00DC6740 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				27B2C6B52A30E39500DC6740 /* MessagingCoreExample */,
+				27B2C6CF2A30E3AD00DC6740 /* MessagingUIExample */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		27B2C6B42A30E39500DC6740 /* Resources */ = {
+		27B2C6CE2A30E3AD00DC6740 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				27B2C74C2A30E81700DC6740 /* README.md in Resources */,
-				27B2C75F2A30E85D00DC6740 /* configFile.json in Resources */,
+				27B2C74A2A30E7DC00DC6740 /* Localizable.strings in Resources */,
+				27B2C7312A30E75400DC6740 /* Assets.xcassets in Resources */,
+				27B2C7332A30E75900DC6740 /* configFile.json in Resources */,
+				27B2C7372A30E76D00DC6740 /* README.md in Resources */,
+				27B2C7352A30E76200DC6740 /* MessagingUIExample--iOS--Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		27B2C6B22A30E39500DC6740 /* Sources */ = {
+		27B2C6CC2A30E3AD00DC6740 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				27B2C7552A30E81E00DC6740 /* MessaingViewModel+UserVerifictionDelegate.swift in Sources */,
-				27B2C7522A30E81E00DC6740 /* MessagingViewModel+HiddenPreChatDelegate.swift in Sources */,
-				27B2C75D2A30E83300DC6740 /* ContentView.swift in Sources */,
-				27B2C75C2A30E83300DC6740 /* MessagingCoreExampleApp.swift in Sources */,
-				27B2C7582A30E82500DC6740 /* MessagingViewModel.swift in Sources */,
-				27B2C7532A30E81E00DC6740 /* MessagingViewModel+CoreDelegate.swift in Sources */,
-				27B2C7542A30E81E00DC6740 /* MessageViewModel+TemplatedUrlDelegate.swift in Sources */,
+				27B2C7482A30E77D00DC6740 /* MessagingController+TemplatedUrlDelegate.swift.swift in Sources */,
+				27B2C73C2A30E77300DC6740 /* ContentView.swift in Sources */,
+				27B2C73F2A30E77800DC6740 /* MessagingController.swift in Sources */,
+				27B2C7472A30E77D00DC6740 /* MessagingController+CoreDelegate.swift in Sources */,
+				27B2C7462A30E77D00DC6740 /* MessagingController+HiddenPreChatDelegate.swift in Sources */,
+				27B2C73B2A30E77300DC6740 /* MessagingUIExampleApp.swift in Sources */,
+				27B2C7452A30E77D00DC6740 /* MessagingController+UserVerificationDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		27B2C6C22A30E39700DC6740 /* Debug */ = {
+		27B2C6DC2A30E3AF00DC6740 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -241,7 +253,7 @@
 			};
 			name = Debug;
 		};
-		27B2C6C32A30E39700DC6740 /* Release */ = {
+		27B2C6DD2A30E3AF00DC6740 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -295,7 +307,7 @@
 			};
 			name = Release;
 		};
-		27B2C6C52A30E39700DC6740 /* Debug */ = {
+		27B2C6DF2A30E3AF00DC6740 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -316,7 +328,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = Salesforce.MessagingCoreExample;
+				PRODUCT_BUNDLE_IDENTIFIER = Salesforce.MessagingUIExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -324,7 +336,7 @@
 			};
 			name = Debug;
 		};
-		27B2C6C62A30E39700DC6740 /* Release */ = {
+		27B2C6E02A30E3AF00DC6740 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -345,7 +357,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = Salesforce.MessagingCoreExample;
+				PRODUCT_BUNDLE_IDENTIFIER = Salesforce.MessagingUIExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -356,20 +368,20 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		27B2C6B12A30E39500DC6740 /* Build configuration list for PBXProject "MessagingCoreExample" */ = {
+		27B2C6CB2A30E3AD00DC6740 /* Build configuration list for PBXProject "MessagingUIExample" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				27B2C6C22A30E39700DC6740 /* Debug */,
-				27B2C6C32A30E39700DC6740 /* Release */,
+				27B2C6DC2A30E3AF00DC6740 /* Debug */,
+				27B2C6DD2A30E3AF00DC6740 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		27B2C6C42A30E39700DC6740 /* Build configuration list for PBXNativeTarget "MessagingCoreExample" */ = {
+		27B2C6DE2A30E3AF00DC6740 /* Build configuration list for PBXNativeTarget "MessagingUIExample" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				27B2C6C52A30E39700DC6740 /* Debug */,
-				27B2C6C62A30E39700DC6740 /* Release */,
+				27B2C6DF2A30E3AF00DC6740 /* Debug */,
+				27B2C6E02A30E3AF00DC6740 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -377,7 +389,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		27B2C6E42A30E43100DC6740 /* XCRemoteSwiftPackageReference "Swift-Package-InAppMessaging" */ = {
+		27B2C6E12A30E42400DC6740 /* XCRemoteSwiftPackageReference "Swift-Package-InAppMessaging" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Salesforce-Async-Messaging/Swift-Package-InAppMessaging";
 			requirement = {
@@ -388,12 +400,12 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		27B2C6E52A30E43100DC6740 /* Swift-InAppMessaging */ = {
+		27B2C6E22A30E42400DC6740 /* Swift-InAppMessaging */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 27B2C6E42A30E43100DC6740 /* XCRemoteSwiftPackageReference "Swift-Package-InAppMessaging" */;
+			package = 27B2C6E12A30E42400DC6740 /* XCRemoteSwiftPackageReference "Swift-Package-InAppMessaging" */;
 			productName = "Swift-InAppMessaging";
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
-	rootObject = 27B2C6AE2A30E39500DC6740 /* Project object */;
+	rootObject = 27B2C6C82A30E3AD00DC6740 /* Project object */;
 }
