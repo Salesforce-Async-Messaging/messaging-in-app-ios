@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "swift-package-inappmessaging",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Salesforce-Async-Messaging/Swift-Package-InAppMessaging",
+      "state" : {
+        "revision" : "f11b4a488d2f16eb953f2937a77567cf010fc650",
+        "version" : "1.3.3"
+      }
+    }
+  ],
+  "version" : 2
+}
