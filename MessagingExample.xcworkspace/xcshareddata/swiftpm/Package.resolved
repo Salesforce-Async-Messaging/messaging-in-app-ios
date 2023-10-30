@@ -5,8 +5,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/Salesforce-Async-Messaging/Swift-Package-InAppMessaging",
       "state" : {
-        "revision" : "f11b4a488d2f16eb953f2937a77567cf010fc650",
-        "version" : "1.3.3"
+        "revision" : "d8341052682bd6c70fdcdcd4431ffc223b5b356a",
+        "version" : "1.4.0"
       }
     }
   ],
