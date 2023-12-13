@@ -14,9 +14,9 @@ import SMIClientCore
 extension MessagingViewModel: TemplatedUrlDelegate {
 
     /// Invoked automatically when values are needed for a given TemplatedUrl.
-    public func core(_ core: CoreClient!,
-              didRequestTemplatedValues templatable: SMITemplateable!,
-              completionHandler: URLParameterValueCompletion!) {
+    public func core(_ core: CoreClient,
+                     didRequestTemplatedValues templatable: SMITemplateable,
+                     completionHandler: URLParameterValueCompletion) {
 
         for key in templatable.keys {
             switch key {

@@ -157,7 +157,7 @@ public class MessagingViewModel: NSObject {
 
     /// Retrieves all conversation entries from the current conversation.
     private func retrieveAllConversationEntries(completion: @escaping ([ConversationEntry]?) -> ()) {
-        conversationClient?.entries(withLimit: 0, olderThanEntry: nil, completion: { messages, _, _ in
+        conversationClient?.entries(withLimit: 0, fromTimestamp: nil, direction: .descending, behaviour: .localWithNetwork, completion: { messages, _, _ in
             completion(messages)
         })
     }
