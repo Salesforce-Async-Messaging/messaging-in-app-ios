@@ -12,10 +12,10 @@ import SMIClientCore
  */
 extension MessagingController: HiddenPreChatDelegate {
     // Invoked automatically when hidden pre-chat fields are being sent
-    func core(_ core: CoreClient!,
-              conversation: Conversation!,
-              didRequestPrechatValues hiddenPreChatFields: [HiddenPreChatField]!,
-              completionHandler: HiddenPreChatValueCompletion!) {
+    func core(_ core: CoreClient,
+              conversation: Conversation,
+              didRequestPrechatValues hiddenPreChatFields: [HiddenPreChatField],
+              completionHandler: HiddenPreChatValueCompletion) {
 
         for it in hiddenPreChatFields {
             switch it.name {

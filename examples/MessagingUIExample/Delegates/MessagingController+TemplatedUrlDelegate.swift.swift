@@ -12,9 +12,9 @@ import SMIClientCore
  */
 extension MessagingController: TemplatedUrlDelegate {
     // Invoked automatically when values are needed for a given TemplatedUrl
-    func core(_ core: CoreClient!,
-              didRequestTemplatedValues templatable: SMITemplateable!,
-              completionHandler: URLParameterValueCompletion!) {
+    func core(_ core: CoreClient,
+              didRequestTemplatedValues templatable: SMITemplateable,
+              completionHandler: URLParameterValueCompletion) {
 
         for key in templatable.keys {
             switch key {
