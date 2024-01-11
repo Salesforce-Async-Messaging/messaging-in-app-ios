@@ -12,7 +12,7 @@ import SMIClientCore
  */
 extension MessagingController: CoreDelegate {
     // Called when errors are returned from the SDK.
-    func core(_ core: CoreClient!, didError error: Error!) {
-        print("ERROR: " + error.localizedDescription + "|" + error.debugDescription)
+    func core(_ core: CoreClient, didError error: Error) {
+        print("ERROR: " + error.localizedDescription)
     }
 }
