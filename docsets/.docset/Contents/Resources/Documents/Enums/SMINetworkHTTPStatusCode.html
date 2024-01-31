@@ -1,0 +1,2934 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>SMINetworkHTTPStatusCode Enumeration Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset="utf-8">
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+    <script src="../js/lunr.min.js" defer></script>
+    <script src="../js/typeahead.jquery.js" defer></script>
+    <script src="../js/jazzy.search.js" defer></script>
+  </head>
+  <body>
+
+    <a name="//apple_ref/objc/Enum/SMINetworkHTTPStatusCode" class="dashAnchor"></a>
+
+    <a title="SMINetworkHTTPStatusCode Enumeration Reference"></a>
+
+    <header class="header">
+      <p class="header-col header-col--primary">
+        <a class="header-link" href="../index.html">
+           Docs
+        </a>
+         (89% documented)
+      </p>
+    
+      <div class="header-col--secondary">
+        <form role="search" action="../search.json">
+          <input type="text" placeholder="Search documentation" data-typeahead>
+        </form>
+      </div>
+    
+    
+    </header>
+
+    <p class="breadcrumbs">
+      <a class="breadcrumb" href="../index.html"> Reference</a>
+      <img class="carat" src="../img/carat.png" alt=""/>
+      SMINetworkHTTPStatusCode Enumeration Reference
+    </p>
+
+    <div class="content-wrapper">
+      <nav class="navigation">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/SMICoreConfiguration.html">SMICoreConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/SMICoreFactory.html">SMICoreFactory</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/SMILogging.html">SMILogging</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes.html#/c:objc(cs)SMISerializable">SMISerializable</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/SMIUserVerification.html">SMIUserVerification</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Constants.html">Constants</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@SMIConversationEntryMessageTypesChoices">SMIConversationEntryMessageTypesChoices</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@SMIConversationEntryMessageTypesChoicesResponse">SMIConversationEntryMessageTypesChoicesResponse</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@SMIConversationEntryMessageTypesFormMessage">SMIConversationEntryMessageTypesFormMessage</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@SMIConversationEntryMessageTypesFormResponseMessage">SMIConversationEntryMessageTypesFormResponseMessage</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@SMIConversationEntryMessageTypesStaticContent">SMIConversationEntryMessageTypesStaticContent</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@SMIConversationEntryMessageTypesUnspecified">SMIConversationEntryMessageTypesUnspecified</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@SMIConversationEntryStatusAttachmentError">SMIConversationEntryStatusAttachmentError</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@SMIConversationEntryStatusDelivered">SMIConversationEntryStatusDelivered</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@SMIConversationEntryStatusError">SMIConversationEntryStatusError</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@SMIConversationEntryStatusRead">SMIConversationEntryStatusRead</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@SMIConversationEntryStatusSending">SMIConversationEntryStatusSending</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@SMIConversationEntryStatusSent">SMIConversationEntryStatusSent</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@SMIConversationEntryTypesChoice">SMIConversationEntryTypesChoice</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@SMIConversationEntryTypesDeliveryAck">SMIConversationEntryTypesDeliveryAck</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@SMIConversationEntryTypesMessage">SMIConversationEntryTypesMessage</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@SMIConversationEntryTypesParticipantChanged">SMIConversationEntryTypesParticipantChanged</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@SMIConversationEntryTypesReadAck">SMIConversationEntryTypesReadAck</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@SMIConversationEntryTypesRichMessage">SMIConversationEntryTypesRichMessage</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@SMIConversationEntryTypesRoutingResult">SMIConversationEntryTypesRoutingResult</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@SMIConversationEntryTypesRoutingWorkResult">SMIConversationEntryTypesRoutingWorkResult</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@SMIConversationEntryTypesSelection">SMIConversationEntryTypesSelection</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@SMIConversationEntryTypesTypingIndicator">SMIConversationEntryTypesTypingIndicator</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@SMIConversationEntryTypesUnknown">SMIConversationEntryTypesUnknown</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@SMIConversationFormatTypesAttachments">SMIConversationFormatTypesAttachments</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@SMIConversationFormatTypesImageMessage">SMIConversationFormatTypesImageMessage</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@SMIConversationFormatTypesInputs">SMIConversationFormatTypesInputs</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@SMIConversationFormatTypesListPicker">SMIConversationFormatTypesListPicker</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@SMIConversationFormatTypesQuickReplies">SMIConversationFormatTypesQuickReplies</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@SMIConversationFormatTypesResult">SMIConversationFormatTypesResult</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@SMIConversationFormatTypesRichLink">SMIConversationFormatTypesRichLink</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@SMIConversationFormatTypesSelections">SMIConversationFormatTypesSelections</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@SMIConversationFormatTypesTextMessage">SMIConversationFormatTypesTextMessage</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@SMIConversationFormatTypesUnspecified">SMIConversationFormatTypesUnspecified</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@SMIConversationFormatTypesWebView">SMIConversationFormatTypesWebView</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@SMIErrorNetworkDomain">SMIErrorNetworkDomain</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@SMIErrorNetworkHTTPApiResultErrorCode">SMIErrorNetworkHTTPApiResultErrorCode</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@SMIErrorNetworkHTTPApiResultErrorType">SMIErrorNetworkHTTPApiResultErrorType</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@SMIErrorNetworkHTTPFileSizeLimit">SMIErrorNetworkHTTPFileSizeLimit</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@SMIErrorNetworkHTTPResponseBody">SMIErrorNetworkHTTPResponseBody</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@SMIErrorNetworkHTTPResponseCode">SMIErrorNetworkHTTPResponseCode</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@SMIErrorSecureFormDomain">SMIErrorSecureFormDomain</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@SMIErrorUserVerificationDomain">SMIErrorUserVerificationDomain</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@SMIFailureTypesCancelled">SMIFailureTypesCancelled</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@SMIFailureTypesNone">SMIFailureTypesNone</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@SMIFailureTypesRoutingError">SMIFailureTypesRoutingError</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@SMIFailureTypesSubmissionError">SMIFailureTypesSubmissionError</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@SMIFailureTypesUnknown">SMIFailureTypesUnknown</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@SMIFormInputSectionTypeSingleInputSection">SMIFormInputSectionTypeSingleInputSection</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@SMIFormInputTypeDatePickerInput">SMIFormInputTypeDatePickerInput</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@SMIFormInputTypeOptionPickerInput">SMIFormInputTypeOptionPickerInput</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@SMIFormInputTypeSelectInput">SMIFormInputTypeSelectInput</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@SMIFormInputTypeTextInput">SMIFormInputTypeTextInput</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@SMIFormInputValueTypeSelectedOptionsInputValue">SMIFormInputValueTypeSelectedOptionsInputValue</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@SMIFormInputValueTypeSingleInputValue">SMIFormInputValueTypeSingleInputValue</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@SMIFormResponseErrorTypeFormRequestExpired">SMIFormResponseErrorTypeFormRequestExpired</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@SMIFormResponseErrorTypeInvalidFormResponse">SMIFormResponseErrorTypeInvalidFormResponse</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@SMIFormResponseErrorTypeTypeApiResultErrorCode">SMIFormResponseErrorTypeTypeApiResultErrorCode</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@SMIFormResponseErrorTypeTypeInternalServerError">SMIFormResponseErrorTypeTypeInternalServerError</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@SMIFormResponseValueTypeDateTimeValue">SMIFormResponseValueTypeDateTimeValue</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@SMIFormResponseValueTypeDateValue">SMIFormResponseValueTypeDateValue</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@SMIFormResponseValueTypeDoubleValue">SMIFormResponseValueTypeDoubleValue</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@SMIFormResponseValueTypeIntegerValue">SMIFormResponseValueTypeIntegerValue</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@SMIFormResponseValueTypeTextValue">SMIFormResponseValueTypeTextValue</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@SMIFormResponseValueTypeURLValue">SMIFormResponseValueTypeURLValue</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@SMIFormResultTypeFormErrorResult">SMIFormResultTypeFormErrorResult</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@SMIFormResultTypeFormRecordsResult">SMIFormResultTypeFormRecordsResult</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@SMIFormTextInputTypeMultiline">SMIFormTextInputTypeMultiline</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@SMIFormTextInputTypeSingleline">SMIFormTextInputTypeSingleline</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@SMIFormTitleInteractionItemTypeTitleOption">SMIFormTitleInteractionItemTypeTitleOption</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@SMIFormTitleItemTypeTitleItem">SMIFormTitleItemTypeTitleItem</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@SMIListAPIDirectionsAscending">SMIListAPIDirectionsAscending</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@SMIListAPIDirectionsDescending">SMIListAPIDirectionsDescending</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@SMILoggingCategoryAPI">SMILoggingCategoryAPI</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@SMILoggingCategoryDatabase">SMILoggingCategoryDatabase</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@SMILoggingCategoryNetworking">SMILoggingCategoryNetworking</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@SMIMessageReasonAutomatedResponse">SMIMessageReasonAutomatedResponse</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@SMIMessageReasonNone">SMIMessageReasonNone</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@SMINetworkConnectivityStateConnected">SMINetworkConnectivityStateConnected</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@SMINetworkConnectivityStateOffline">SMINetworkConnectivityStateOffline</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@SMINetworkMimeTypesApplicationJSON">SMINetworkMimeTypesApplicationJSON</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@SMINetworkMimeTypesApplicationOctetStream">SMINetworkMimeTypesApplicationOctetStream</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@SMINetworkMimeTypesApplicationPDF">SMINetworkMimeTypesApplicationPDF</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@SMINetworkMimeTypesGZIP">SMINetworkMimeTypesGZIP</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@SMINetworkMimeTypesImageBMP">SMINetworkMimeTypesImageBMP</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@SMINetworkMimeTypesImageGIF">SMINetworkMimeTypesImageGIF</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@SMINetworkMimeTypesImageJPEG">SMINetworkMimeTypesImageJPEG</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@SMINetworkMimeTypesImagePNG">SMINetworkMimeTypesImagePNG</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@SMINetworkMimeTypesImageTIFF">SMINetworkMimeTypesImageTIFF</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@SMINetworkMimeTypesMultiPartForm">SMINetworkMimeTypesMultiPartForm</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@SMINetworkMimeTypesTextEventStream">SMINetworkMimeTypesTextEventStream</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@SMINetworkMimeTypesTextPlain">SMINetworkMimeTypesTextPlain</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@SMIParticipantChangedOperationTypesAdd">SMIParticipantChangedOperationTypesAdd</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@SMIParticipantChangedOperationTypesRemove">SMIParticipantChangedOperationTypesRemove</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@SMIParticipantRoleAgent">SMIParticipantRoleAgent</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@SMIParticipantRoleChatbot">SMIParticipantRoleChatbot</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@SMIParticipantRoleSupervisor">SMIParticipantRoleSupervisor</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@SMIParticipantRoleSystem">SMIParticipantRoleSystem</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@SMIParticipantRoleUser">SMIParticipantRoleUser</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@SMIPreChatConfigurationFormTypesPreChat">SMIPreChatConfigurationFormTypesPreChat</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@SMIPreChatFieldTypesCheckbox">SMIPreChatFieldTypesCheckbox</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@SMIPreChatFieldTypesChoiceList">SMIPreChatFieldTypesChoiceList</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@SMIPreChatFieldTypesEmail">SMIPreChatFieldTypesEmail</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@SMIPreChatFieldTypesNumber">SMIPreChatFieldTypesNumber</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@SMIPreChatFieldTypesPhone">SMIPreChatFieldTypesPhone</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@SMIPreChatFieldTypesText">SMIPreChatFieldTypesText</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@SMIPreChatFieldTypesTextArea">SMIPreChatFieldTypesTextArea</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@SMIRoutingTypesInitial">SMIRoutingTypesInitial</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@SMIRoutingTypesTransfer">SMIRoutingTypesTransfer</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@SMIRoutingWorkTypesAccepted">SMIRoutingWorkTypesAccepted</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@SMIRoutingWorkTypesAssigned">SMIRoutingWorkTypesAssigned</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@SMIRoutingWorkTypesClosed">SMIRoutingWorkTypesClosed</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@SMITypingIndicatorTypesStarted">SMITypingIndicatorTypesStarted</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@SMITypingIndicatorTypesStopped">SMITypingIndicatorTypesStopped</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/SMIAcknowledgementTypes.html">SMIAcknowledgementTypes</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/SMIAuthorizationTypes.html">SMIAuthorizationTypes</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/SMIChallengeReason.html">SMIChallengeReason</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/SMIConversationStatus.html">SMIConversationStatus</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/SMIErrorCodes.html">SMIErrorCodes</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/SMIFormErrorType.html">SMIFormErrorType</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/SMILoggingLevel.html">SMILoggingLevel</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/SMINetworkHTTPStatusCode.html">SMINetworkHTTPStatusCode</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/SMIPreChatErrorTypes.html">SMIPreChatErrorTypes</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/SMIQueryBehaviour.html">SMIQueryBehaviour</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/SMIAttachmentEntry.html">SMIAttachmentEntry</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/SMIAuthorization.html">SMIAuthorization</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/SMIBusinessHours.html">SMIBusinessHours</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/SMIBusinessHoursInfo.html">SMIBusinessHoursInfo</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/SMIChoice.html">SMIChoice</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/SMIChoiceList.html">SMIChoiceList</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/SMIChoiceListConfiguration.html">SMIChoiceListConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/SMIChoiceListDependency.html">SMIChoiceListDependency</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/SMIChoiceListValue.html">SMIChoiceListValue</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/SMIChoicesResponse.html">SMIChoicesResponse</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/SMIConversation.html">SMIConversation</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/SMIConversationClient.html">SMIConversationClient</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/SMIConversationClientDelegate.html">SMIConversationClientDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/SMIConversationEntry.html">SMIConversationEntry</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/SMICoreClient.html">SMICoreClient</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/SMICoreDelegate.html">SMICoreDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/SMICoreFactory.html">SMICoreFactory</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/SMIEntryAck.html">SMIEntryAck</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/SMIEntryPayload.html">SMIEntryPayload</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols.html#/c:objc(pl)SMIEntryTypeFormMessage">SMIEntryTypeFormMessage</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols.html#/c:objc(pl)SMIEntryTypeFormResponseMessage">SMIEntryTypeFormResponseMessage</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/SMIEntryTypeMessage.html">SMIEntryTypeMessage</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/SMIFileAsset.html">SMIFileAsset</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/SMIFormDatePickerInput.html">SMIFormDatePickerInput</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/SMIFormErrorResult.html">SMIFormErrorResult</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/SMIFormInput.html">SMIFormInput</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/SMIFormInputSection.html">SMIFormInputSection</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/SMIFormInputValue.html">SMIFormInputValue</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/SMIFormInputs.html">SMIFormInputs</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/SMIFormOptionPickerInput.html">SMIFormOptionPickerInput</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/SMIFormRecordResult.html">SMIFormRecordResult</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/SMIFormRecordsResult.html">SMIFormRecordsResult</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/SMIFormResponseDateTimeValue.html">SMIFormResponseDateTimeValue</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/SMIFormResponseDateValue.html">SMIFormResponseDateValue</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/SMIFormResponseDoubleValue.html">SMIFormResponseDoubleValue</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/SMIFormResponseInputs.html">SMIFormResponseInputs</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/SMIFormResponseIntegerValue.html">SMIFormResponseIntegerValue</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/SMIFormResponseResult.html">SMIFormResponseResult</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/SMIFormResponseTextValue.html">SMIFormResponseTextValue</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/SMIFormResponseURLValue.html">SMIFormResponseURLValue</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/SMIFormResponseValue.html">SMIFormResponseValue</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/SMIFormResult.html">SMIFormResult</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/SMIFormSelectInput.html">SMIFormSelectInput</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/SMIFormSelectedOption.html">SMIFormSelectedOption</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/SMIFormSelectedOptionsInputValue.html">SMIFormSelectedOptionsInputValue</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/SMIFormSingleInputSection.html">SMIFormSingleInputSection</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/SMIFormSingleInputValue.html">SMIFormSingleInputValue</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/SMIFormTextInput.html">SMIFormTextInput</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/SMIFormTitleInteractionItem.html">SMIFormTitleInteractionItem</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/SMIFormTitleItem.html">SMIFormTitleItem</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/SMIFormTitleOptionItem.html">SMIFormTitleOptionItem</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/SMIHiddenPreChatDelegate.html">SMIHiddenPreChatDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols.html#/c:objc(pl)SMIHiddenPreChatField">SMIHiddenPreChatField</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/SMIImageAsset.html">SMIImageAsset</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/SMIListPicker.html">SMIListPicker</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/SMILogging.html">SMILogging</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/SMIMessageSelectable.html">SMIMessageSelectable</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/SMIPDFAsset.html">SMIPDFAsset</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/SMIParticipant.html">SMIParticipant</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/SMIParticipantChanged.html">SMIParticipantChanged</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/SMIParticipantChangedOperation.html">SMIParticipantChangedOperation</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/SMIParticipantClientMenu.html">SMIParticipantClientMenu</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols.html#/c:objc(pl)SMIParticipantClientMenuOption">SMIParticipantClientMenuOption</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/SMIPreChatChoiceListField.html">SMIPreChatChoiceListField</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/SMIPreChatConfiguration.html">SMIPreChatConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/SMIPreChatField.html">SMIPreChatField</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/SMIQuickReply.html">SMIQuickReply</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/SMIRemoteConfiguration.html">SMIRemoteConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/SMIRichLinkMessage.html">SMIRichLinkMessage</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/SMIRoutingResult.html">SMIRoutingResult</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/SMIRoutingWorkResult.html">SMIRoutingWorkResult</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/SMITemplateable.html">SMITemplateable</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/SMITemplatedURL.html">SMITemplatedURL</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/SMITemplatedUrlDelegate.html">SMITemplatedUrlDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/SMITermsAndConditions.html">SMITermsAndConditions</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/SMITextMessage.html">SMITextMessage</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/SMITypingIndicator.html">SMITypingIndicator</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/SMIUnknownAsset.html">SMIUnknownAsset</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols.html#/c:objc(pl)SMIUnknownEntry">SMIUnknownEntry</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/SMIUserVerificationDelegate.html">SMIUserVerificationDelegate</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Type%20Definitions.html">Type Definitions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Type%20Definitions.html#/c:SMIBusinessHoursInfo.h@T@SMIBusinessHoursInfoCompletion">SMIBusinessHoursInfoCompletion</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Type%20Definitions.html#/c:SMIConversationEntryMessageTypes.h@T@SMIConversationEntryMessageTypes">SMIConversationEntryMessageTypes</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Type%20Definitions.html#/c:SMIConversationEntryStatus.h@T@SMIConversationEntryStatus">SMIConversationEntryStatus</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Type%20Definitions.html#/c:SMIConversationEntryTypes.h@T@SMIConversationEntryTypes">SMIConversationEntryTypes</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Type%20Definitions.html#/c:SMIConversationFormatTypes.h@T@SMIConversationFormatTypes">SMIConversationFormatTypes</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Type%20Definitions.html#/c:SMIQueryCompletions.h@T@SMIConversationQueryCompletion">SMIConversationQueryCompletion</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Type%20Definitions.html#/c:SMIDataTypes.h@T@SMIDataOperationCompletion">SMIDataOperationCompletion</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Type%20Definitions.html#/c:SMIFailureTypes.h@T@SMIFailureTypes">SMIFailureTypes</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Type%20Definitions.html#/c:SMIFileAsset.h@T@SMIFileFetchCompletion">SMIFileFetchCompletion</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Type%20Definitions.html#/c:SMIFormInputSectionType.h@T@SMIFormInputSectionType">SMIFormInputSectionType</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Type%20Definitions.html#/c:SMIFormInputType.h@T@SMIFormInputType">SMIFormInputType</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Type%20Definitions.html#/c:SMIFormInputValueType.h@T@SMIFormInputValueType">SMIFormInputValueType</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Type%20Definitions.html#/c:SMIFormResponseErrorType.h@T@SMIFormResponseErrorType">SMIFormResponseErrorType</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Type%20Definitions.html#/c:SMIFormResponseValueType.h@T@SMIFormResponseValueType">SMIFormResponseValueType</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Type%20Definitions.html#/c:SMIFormResultType.h@T@SMIFormResultType">SMIFormResultType</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Type%20Definitions.html#/c:SMIFormTextInputType.h@T@SMIFormTextInputType">SMIFormTextInputType</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Type%20Definitions.html#/c:SMIFormTitleInteractionItemType.h@T@SMIFormTitleInteractionItemType">SMIFormTitleInteractionItemType</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Type%20Definitions.html#/c:SMIFormTitleItemType.h@T@SMIFormTitleItemType">SMIFormTitleItemType</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Type%20Definitions.html#/c:SMIQueryCompletions.h@T@SMIFullQueryCompletion">SMIFullQueryCompletion</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Type%20Definitions.html#/c:SMIHiddenPreChatDelegate.h@T@SMIHiddenPreChatValueCompletion">SMIHiddenPreChatValueCompletion</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Type%20Definitions.html#/c:SMIListAPIDirections.h@T@SMIListAPIDirections">SMIListAPIDirections</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Type%20Definitions.html#/c:SMILoggingCategory.h@T@SMILoggingCategory">SMILoggingCategory</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Type%20Definitions.html#/c:SMIMessageReason.h@T@SMIMessageReason">SMIMessageReason</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Type%20Definitions.html#/c:SMINetworkConnectivityState.h@T@SMINetworkConnectivityState">SMINetworkConnectivityState</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Type%20Definitions.html#/c:SMINetworkMimeTypes.h@T@SMINetworkMimeTypes">SMINetworkMimeTypes</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Type%20Definitions.html#/c:SMIParticipantChangedOperationTypes.h@T@SMIParticipantChangedOperationTypes">SMIParticipantChangedOperationTypes</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Type%20Definitions.html#/c:SMIQueryCompletions.h@T@SMIParticipantQueryCompletion">SMIParticipantQueryCompletion</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Type%20Definitions.html#/c:SMIParticipantRole.h@T@SMIParticipantRole">SMIParticipantRole</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Type%20Definitions.html#/c:SMIPreChatConfigurationFormTypes.h@T@SMIPreChatConfigurationFormTypes">SMIPreChatConfigurationFormTypes</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Type%20Definitions.html#/c:SMIPreChatFieldTypes.h@T@SMIPreChatFieldTypes">SMIPreChatFieldTypes</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Type%20Definitions.html#/c:SMIRemoteConfiguration.h@T@SMIRemoteConfigurationCompletion">SMIRemoteConfigurationCompletion</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Type%20Definitions.html#/c:SMIRoutingTypes.h@T@SMIRoutingTypes">SMIRoutingTypes</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Type%20Definitions.html#/c:SMIRoutingWorkTypes.h@T@SMIRoutingWorkTypes">SMIRoutingWorkTypes</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Type%20Definitions.html#/c:SMIQueryCompletions.h@T@SMISingleConversationQueryCompletion">SMISingleConversationQueryCompletion</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Type%20Definitions.html#/c:SMIQueryCompletions.h@T@SMISingleEntryQueryCompletion">SMISingleEntryQueryCompletion</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Type%20Definitions.html#/c:SMITemplatedUrlDelegate.h@T@SMITemplatedUrlParametersCompletion">SMITemplatedUrlParametersCompletion</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Type%20Definitions.html#/c:SMITypingIndicatorTypes.h@T@SMITypingIndicatorTypes">SMITypingIndicatorTypes</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Type%20Definitions.html#/c:SMIUserVerificationDelegate.h@T@SMIUserVerificationChallengeCompletion">SMIUserVerificationChallengeCompletion</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+
+        <section class="section">
+          <div class="section-content top-matter">
+            <h1>SMINetworkHTTPStatusCode</h1>
+              <div class="declaration">
+                <div class="language">
+                  <p class="aside-title">Objective-C</p>
+                  <pre class="highlight objective_c"><code><span class="n">NS_ENUM</span><span class="p">(</span><span class="n">NSInteger</span><span class="p">,</span> <span class="n">SMINetworkHTTPStatusCode</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">SMINetworkHTTPStatusCodeContinue</span> <span class="o">=</span> <span class="mi">100</span><span class="p">,</span>
+    <span class="n">SMINetworkHTTPStatusCodeSwitchingProtocol</span> <span class="o">=</span> <span class="mi">101</span><span class="p">,</span>
+    <span class="n">SMINetworkHTTPStatusCodeProcessing</span> <span class="o">=</span> <span class="mi">102</span><span class="p">,</span>
+    <span class="n">SMINetworkHTTPStatusCodeEarlyHints</span> <span class="o">=</span> <span class="mi">103</span><span class="p">,</span>
+
+    <span class="n">SMINetworkHTTPStatusCodeOK</span> <span class="o">=</span> <span class="mi">200</span><span class="p">,</span>
+    <span class="n">SMINetworkHTTPStatusCodeCreated</span> <span class="o">=</span> <span class="mi">201</span><span class="p">,</span>
+    <span class="n">SMINetworkHTTPStatusCodeAccepted</span> <span class="o">=</span> <span class="mi">202</span><span class="p">,</span>
+    <span class="n">SMINetworkHTTPStatusCodeNonAuthoritaveInformation</span> <span class="o">=</span> <span class="mi">203</span><span class="p">,</span>
+    <span class="n">SMINetworkHTTPStatusCodeNoContent</span> <span class="o">=</span> <span class="mi">204</span><span class="p">,</span>
+    <span class="n">SMINetworkHTTPStatusCodeResetContent</span> <span class="o">=</span> <span class="mi">205</span><span class="p">,</span>
+    <span class="n">SMINetworkHTTPStatusCodePartialContent</span> <span class="o">=</span> <span class="mi">206</span><span class="p">,</span>
+    <span class="n">SMINetworkHTTPStatusCodeMultiStatus</span> <span class="o">=</span> <span class="mi">207</span><span class="p">,</span>
+    <span class="n">SMINetworkHTTPStatusCodeAlreadyReported</span> <span class="o">=</span> <span class="mi">208</span><span class="p">,</span>
+    <span class="n">SMINetworkHTTPStatusCodeIMUsed</span> <span class="o">=</span> <span class="mi">226</span><span class="p">,</span>
+
+    <span class="n">SMINetworkHTTPStatusCodeMultipleChoice</span> <span class="o">=</span> <span class="mi">300</span><span class="p">,</span>
+    <span class="n">SMINetworkHTTPStatusCodeMovedPermanently</span> <span class="o">=</span> <span class="mi">301</span><span class="p">,</span>
+    <span class="n">SMINetworkHTTPStatusCodeFound</span> <span class="o">=</span> <span class="mi">302</span><span class="p">,</span>
+    <span class="n">SMINetworkHTTPStatusCodeSeeOther</span> <span class="o">=</span> <span class="mi">303</span><span class="p">,</span>
+    <span class="n">SMINetworkHTTPStatusCodeNotModified</span> <span class="o">=</span> <span class="mi">304</span><span class="p">,</span>
+    <span class="n">SMINetworkHTTPStatusCodeUseProxy</span> <span class="o">=</span> <span class="mi">305</span><span class="p">,</span>
+    <span class="n">SMINetworkHTTPStatusCodeUnused</span> <span class="o">=</span> <span class="mi">306</span><span class="p">,</span>
+    <span class="n">SMINetworkHTTPStatusCodeTemporaryRedirect</span> <span class="o">=</span> <span class="mi">307</span><span class="p">,</span>
+    <span class="n">SMINetworkHTTPStatusCodePermanentRedirect</span> <span class="o">=</span> <span class="mi">308</span><span class="p">,</span>
+
+    <span class="n">SMINetworkHTTPStatusCodeBadRequest</span> <span class="o">=</span> <span class="mi">400</span><span class="p">,</span>
+    <span class="n">SMINetworkHTTPStatusCodeUnauthorized</span> <span class="o">=</span> <span class="mi">401</span><span class="p">,</span>
+    <span class="n">SMINetworkHTTPStatusCodePaymentRequired</span> <span class="o">=</span> <span class="mi">402</span><span class="p">,</span>
+    <span class="n">SMINetworkHTTPStatusCodeForbidden</span> <span class="o">=</span> <span class="mi">403</span><span class="p">,</span>
+    <span class="n">SMINetworkHTTPStatusCodeNotFound</span> <span class="o">=</span> <span class="mi">404</span><span class="p">,</span>
+    <span class="n">SMINetworkHTTPStatusCodeMethodNotAllowed</span> <span class="o">=</span> <span class="mi">405</span><span class="p">,</span>
+    <span class="n">SMINetworkHTTPStatusCodeNotAcceptable</span> <span class="o">=</span> <span class="mi">406</span><span class="p">,</span>
+    <span class="n">SMINetworkHTTPStatusCodeProxyAuthenticationRequired</span> <span class="o">=</span> <span class="mi">407</span><span class="p">,</span>
+    <span class="n">SMINetworkHTTPStatusCodeRequestTimeout</span> <span class="o">=</span> <span class="mi">408</span><span class="p">,</span>
+    <span class="n">SMINetworkHTTPStatusCodeConflict</span> <span class="o">=</span> <span class="mi">409</span><span class="p">,</span>
+    <span class="n">SMINetworkHTTPStatusCodeGone</span> <span class="o">=</span> <span class="mi">410</span><span class="p">,</span>
+    <span class="n">SMINetworkHTTPStatusCodeLengthRequired</span> <span class="o">=</span> <span class="mi">411</span><span class="p">,</span>
+    <span class="n">SMINetworkHTTPStatusCodePreconditionFailed</span> <span class="o">=</span> <span class="mi">412</span><span class="p">,</span>
+    <span class="n">SMINetworkHTTPStatusCodePayloadTooLarge</span> <span class="o">=</span> <span class="mi">413</span><span class="p">,</span>
+    <span class="n">SMINetworkHTTPStatusCodeURITooLong</span> <span class="o">=</span> <span class="mi">414</span><span class="p">,</span>
+    <span class="n">SMINetworkHTTPStatusCodeUnsupportedMediaType</span> <span class="o">=</span> <span class="mi">415</span><span class="p">,</span>
+    <span class="n">SMINetworkHTTPStatusCodeRangeNotSatisfiable</span> <span class="o">=</span> <span class="mi">416</span><span class="p">,</span>
+    <span class="n">SMINetworkHTTPStatusCodeExpectationFailed</span> <span class="o">=</span> <span class="mi">417</span><span class="p">,</span>
+    <span class="n">SMINetworkHTTPStatusCodeImATeapot</span> <span class="o">=</span> <span class="mi">418</span><span class="p">,</span>
+    <span class="n">SMINetworkHTTPStatusCodeMisdirectedRequest</span> <span class="o">=</span> <span class="mi">421</span><span class="p">,</span>
+    <span class="n">SMINetworkHTTPStatusCodeUnprocessableEntity</span> <span class="o">=</span> <span class="mi">422</span><span class="p">,</span>
+    <span class="n">SMINetworkHTTPStatusCodeLocked</span> <span class="o">=</span> <span class="mi">423</span><span class="p">,</span>
+    <span class="n">SMINetworkHTTPStatusCodeFailedDependency</span> <span class="o">=</span> <span class="mi">424</span><span class="p">,</span>
+    <span class="n">SMINetworkHTTPStatusCodeTooEarly</span> <span class="o">=</span> <span class="mi">425</span><span class="p">,</span>
+    <span class="n">SMINetworkHTTPStatusCodeUpgradeRequired</span> <span class="o">=</span> <span class="mi">426</span><span class="p">,</span>
+    <span class="n">SMINetworkHTTPStatusCodePreconditionRequired</span> <span class="o">=</span> <span class="mi">428</span><span class="p">,</span>
+    <span class="n">SMINetworkHTTPStatusCodeTooManyRequests</span> <span class="o">=</span> <span class="mi">429</span><span class="p">,</span>
+    <span class="n">SMINetworkHTTPStatusCodeRequestHeaderFieldsTooLarge</span> <span class="o">=</span> <span class="mi">431</span><span class="p">,</span>
+    <span class="n">SMINetworkHTTPStatusCodeUnavailableForLegalReasons</span> <span class="o">=</span> <span class="mi">451</span><span class="p">,</span>
+
+    <span class="n">SMINetworkHTTPStatusCodeInternalServerError</span> <span class="o">=</span> <span class="mi">500</span><span class="p">,</span>
+    <span class="n">SMINetworkHTTPStatusCodeNotImplemented</span> <span class="o">=</span> <span class="mi">501</span><span class="p">,</span>
+    <span class="n">SMINetworkHTTPStatusCodeBadGateway</span> <span class="o">=</span> <span class="mi">502</span><span class="p">,</span>
+    <span class="n">SMINetworkHTTPStatusCodeServiceUnavailable</span> <span class="o">=</span> <span class="mi">503</span><span class="p">,</span>
+    <span class="n">SMINetworkHTTPStatusCodeGatewayTimeout</span> <span class="o">=</span> <span class="mi">504</span><span class="p">,</span>
+    <span class="n">SMINetworkHTTPStatusCodeHTTPVersionNotSupported</span> <span class="o">=</span> <span class="mi">505</span><span class="p">,</span>
+    <span class="n">SMINetworkHTTPStatusCodeVariantAlsoNegotiates</span> <span class="o">=</span> <span class="mi">506</span><span class="p">,</span>
+    <span class="n">SMINetworkHTTPStatusCodeInsufficientStorage</span> <span class="o">=</span> <span class="mi">507</span><span class="p">,</span>
+    <span class="n">SMINetworkHTTPStatusCodeLoopDetected</span> <span class="o">=</span> <span class="mi">508</span><span class="p">,</span>
+    <span class="n">SMINetworkHTTPStatusCodeNotExtended</span> <span class="o">=</span> <span class="mi">510</span><span class="p">,</span>
+    <span class="n">SMINetworkHTTPStatusCodeNetworkAuthenticationRequired</span> <span class="o">=</span> <span class="mi">511</span>
+<span class="p">}</span></code></pre>
+
+                </div>
+                <div class="language">
+                  <p class="aside-title">Swift</p>
+                  <pre class="highlight swift"><code><span class="kd">enum</span> <span class="kt">NetworkHTTPStatusCode</span> <span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="kd">@unchecked</span> <span class="kt">Sendable</span></code></pre>
+
+                </div>
+              </div>
+            <p>Undocumented</p>
+
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-content">
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@E@SMINetworkHTTPStatusCode@SMINetworkHTTPStatusCodeContinue"></a>
+                    <a name="//apple_ref/objc/Case/SMINetworkHTTPStatusCodeContinue" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@E@SMINetworkHTTPStatusCode@SMINetworkHTTPStatusCodeContinue">SMINetworkHTTPStatusCodeContinue</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="n">SMINetworkHTTPStatusCodeContinue</span> <span class="o">=</span> <span class="mi">100</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="p">`</span><span class="nv">continue</span><span class="p">`</span> <span class="o">=</span> <span class="mi">100</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@E@SMINetworkHTTPStatusCode@SMINetworkHTTPStatusCodeSwitchingProtocol"></a>
+                    <a name="//apple_ref/objc/Case/SMINetworkHTTPStatusCodeSwitchingProtocol" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@E@SMINetworkHTTPStatusCode@SMINetworkHTTPStatusCodeSwitchingProtocol">SMINetworkHTTPStatusCodeSwitchingProtocol</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="n">SMINetworkHTTPStatusCodeSwitchingProtocol</span> <span class="o">=</span> <span class="mi">101</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">switchingProtocol</span> <span class="o">=</span> <span class="mi">101</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@E@SMINetworkHTTPStatusCode@SMINetworkHTTPStatusCodeProcessing"></a>
+                    <a name="//apple_ref/objc/Case/SMINetworkHTTPStatusCodeProcessing" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@E@SMINetworkHTTPStatusCode@SMINetworkHTTPStatusCodeProcessing">SMINetworkHTTPStatusCodeProcessing</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="n">SMINetworkHTTPStatusCodeProcessing</span> <span class="o">=</span> <span class="mi">102</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">processing</span> <span class="o">=</span> <span class="mi">102</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@E@SMINetworkHTTPStatusCode@SMINetworkHTTPStatusCodeEarlyHints"></a>
+                    <a name="//apple_ref/objc/Case/SMINetworkHTTPStatusCodeEarlyHints" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@E@SMINetworkHTTPStatusCode@SMINetworkHTTPStatusCodeEarlyHints">SMINetworkHTTPStatusCodeEarlyHints</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="n">SMINetworkHTTPStatusCodeEarlyHints</span> <span class="o">=</span> <span class="mi">103</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">earlyHints</span> <span class="o">=</span> <span class="mi">103</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@E@SMINetworkHTTPStatusCode@SMINetworkHTTPStatusCodeOK"></a>
+                    <a name="//apple_ref/objc/Case/SMINetworkHTTPStatusCodeOK" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@E@SMINetworkHTTPStatusCode@SMINetworkHTTPStatusCodeOK">SMINetworkHTTPStatusCodeOK</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="n">SMINetworkHTTPStatusCodeOK</span> <span class="o">=</span> <span class="mi">200</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="kt">OK</span> <span class="o">=</span> <span class="mi">200</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@E@SMINetworkHTTPStatusCode@SMINetworkHTTPStatusCodeCreated"></a>
+                    <a name="//apple_ref/objc/Case/SMINetworkHTTPStatusCodeCreated" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@E@SMINetworkHTTPStatusCode@SMINetworkHTTPStatusCodeCreated">SMINetworkHTTPStatusCodeCreated</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="n">SMINetworkHTTPStatusCodeCreated</span> <span class="o">=</span> <span class="mi">201</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">created</span> <span class="o">=</span> <span class="mi">201</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@E@SMINetworkHTTPStatusCode@SMINetworkHTTPStatusCodeAccepted"></a>
+                    <a name="//apple_ref/objc/Case/SMINetworkHTTPStatusCodeAccepted" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@E@SMINetworkHTTPStatusCode@SMINetworkHTTPStatusCodeAccepted">SMINetworkHTTPStatusCodeAccepted</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="n">SMINetworkHTTPStatusCodeAccepted</span> <span class="o">=</span> <span class="mi">202</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">accepted</span> <span class="o">=</span> <span class="mi">202</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@E@SMINetworkHTTPStatusCode@SMINetworkHTTPStatusCodeNonAuthoritaveInformation"></a>
+                    <a name="//apple_ref/objc/Case/SMINetworkHTTPStatusCodeNonAuthoritaveInformation" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@E@SMINetworkHTTPStatusCode@SMINetworkHTTPStatusCodeNonAuthoritaveInformation">SMINetworkHTTPStatusCodeNonAuthoritaveInformation</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="n">SMINetworkHTTPStatusCodeNonAuthoritaveInformation</span> <span class="o">=</span> <span class="mi">203</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">nonAuthoritaveInformation</span> <span class="o">=</span> <span class="mi">203</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@E@SMINetworkHTTPStatusCode@SMINetworkHTTPStatusCodeNoContent"></a>
+                    <a name="//apple_ref/objc/Case/SMINetworkHTTPStatusCodeNoContent" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@E@SMINetworkHTTPStatusCode@SMINetworkHTTPStatusCodeNoContent">SMINetworkHTTPStatusCodeNoContent</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="n">SMINetworkHTTPStatusCodeNoContent</span> <span class="o">=</span> <span class="mi">204</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">noContent</span> <span class="o">=</span> <span class="mi">204</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@E@SMINetworkHTTPStatusCode@SMINetworkHTTPStatusCodeResetContent"></a>
+                    <a name="//apple_ref/objc/Case/SMINetworkHTTPStatusCodeResetContent" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@E@SMINetworkHTTPStatusCode@SMINetworkHTTPStatusCodeResetContent">SMINetworkHTTPStatusCodeResetContent</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="n">SMINetworkHTTPStatusCodeResetContent</span> <span class="o">=</span> <span class="mi">205</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">resetContent</span> <span class="o">=</span> <span class="mi">205</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@E@SMINetworkHTTPStatusCode@SMINetworkHTTPStatusCodePartialContent"></a>
+                    <a name="//apple_ref/objc/Case/SMINetworkHTTPStatusCodePartialContent" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@E@SMINetworkHTTPStatusCode@SMINetworkHTTPStatusCodePartialContent">SMINetworkHTTPStatusCodePartialContent</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="n">SMINetworkHTTPStatusCodePartialContent</span> <span class="o">=</span> <span class="mi">206</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">partialContent</span> <span class="o">=</span> <span class="mi">206</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@E@SMINetworkHTTPStatusCode@SMINetworkHTTPStatusCodeMultiStatus"></a>
+                    <a name="//apple_ref/objc/Case/SMINetworkHTTPStatusCodeMultiStatus" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@E@SMINetworkHTTPStatusCode@SMINetworkHTTPStatusCodeMultiStatus">SMINetworkHTTPStatusCodeMultiStatus</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="n">SMINetworkHTTPStatusCodeMultiStatus</span> <span class="o">=</span> <span class="mi">207</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">multiStatus</span> <span class="o">=</span> <span class="mi">207</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@E@SMINetworkHTTPStatusCode@SMINetworkHTTPStatusCodeAlreadyReported"></a>
+                    <a name="//apple_ref/objc/Case/SMINetworkHTTPStatusCodeAlreadyReported" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@E@SMINetworkHTTPStatusCode@SMINetworkHTTPStatusCodeAlreadyReported">SMINetworkHTTPStatusCodeAlreadyReported</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="n">SMINetworkHTTPStatusCodeAlreadyReported</span> <span class="o">=</span> <span class="mi">208</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">alreadyReported</span> <span class="o">=</span> <span class="mi">208</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@E@SMINetworkHTTPStatusCode@SMINetworkHTTPStatusCodeIMUsed"></a>
+                    <a name="//apple_ref/objc/Case/SMINetworkHTTPStatusCodeIMUsed" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@E@SMINetworkHTTPStatusCode@SMINetworkHTTPStatusCodeIMUsed">SMINetworkHTTPStatusCodeIMUsed</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="n">SMINetworkHTTPStatusCodeIMUsed</span> <span class="o">=</span> <span class="mi">226</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">imUsed</span> <span class="o">=</span> <span class="mi">226</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@E@SMINetworkHTTPStatusCode@SMINetworkHTTPStatusCodeMultipleChoice"></a>
+                    <a name="//apple_ref/objc/Case/SMINetworkHTTPStatusCodeMultipleChoice" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@E@SMINetworkHTTPStatusCode@SMINetworkHTTPStatusCodeMultipleChoice">SMINetworkHTTPStatusCodeMultipleChoice</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="n">SMINetworkHTTPStatusCodeMultipleChoice</span> <span class="o">=</span> <span class="mi">300</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">multipleChoice</span> <span class="o">=</span> <span class="mi">300</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@E@SMINetworkHTTPStatusCode@SMINetworkHTTPStatusCodeMovedPermanently"></a>
+                    <a name="//apple_ref/objc/Case/SMINetworkHTTPStatusCodeMovedPermanently" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@E@SMINetworkHTTPStatusCode@SMINetworkHTTPStatusCodeMovedPermanently">SMINetworkHTTPStatusCodeMovedPermanently</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="n">SMINetworkHTTPStatusCodeMovedPermanently</span> <span class="o">=</span> <span class="mi">301</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">movedPermanently</span> <span class="o">=</span> <span class="mi">301</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@E@SMINetworkHTTPStatusCode@SMINetworkHTTPStatusCodeFound"></a>
+                    <a name="//apple_ref/objc/Case/SMINetworkHTTPStatusCodeFound" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@E@SMINetworkHTTPStatusCode@SMINetworkHTTPStatusCodeFound">SMINetworkHTTPStatusCodeFound</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="n">SMINetworkHTTPStatusCodeFound</span> <span class="o">=</span> <span class="mi">302</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">found</span> <span class="o">=</span> <span class="mi">302</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@E@SMINetworkHTTPStatusCode@SMINetworkHTTPStatusCodeSeeOther"></a>
+                    <a name="//apple_ref/objc/Case/SMINetworkHTTPStatusCodeSeeOther" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@E@SMINetworkHTTPStatusCode@SMINetworkHTTPStatusCodeSeeOther">SMINetworkHTTPStatusCodeSeeOther</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="n">SMINetworkHTTPStatusCodeSeeOther</span> <span class="o">=</span> <span class="mi">303</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">seeOther</span> <span class="o">=</span> <span class="mi">303</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@E@SMINetworkHTTPStatusCode@SMINetworkHTTPStatusCodeNotModified"></a>
+                    <a name="//apple_ref/objc/Case/SMINetworkHTTPStatusCodeNotModified" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@E@SMINetworkHTTPStatusCode@SMINetworkHTTPStatusCodeNotModified">SMINetworkHTTPStatusCodeNotModified</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="n">SMINetworkHTTPStatusCodeNotModified</span> <span class="o">=</span> <span class="mi">304</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">notModified</span> <span class="o">=</span> <span class="mi">304</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@E@SMINetworkHTTPStatusCode@SMINetworkHTTPStatusCodeUseProxy"></a>
+                    <a name="//apple_ref/objc/Case/SMINetworkHTTPStatusCodeUseProxy" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@E@SMINetworkHTTPStatusCode@SMINetworkHTTPStatusCodeUseProxy">SMINetworkHTTPStatusCodeUseProxy</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="n">SMINetworkHTTPStatusCodeUseProxy</span> <span class="o">=</span> <span class="mi">305</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">useProxy</span> <span class="o">=</span> <span class="mi">305</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@E@SMINetworkHTTPStatusCode@SMINetworkHTTPStatusCodeUnused"></a>
+                    <a name="//apple_ref/objc/Case/SMINetworkHTTPStatusCodeUnused" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@E@SMINetworkHTTPStatusCode@SMINetworkHTTPStatusCodeUnused">SMINetworkHTTPStatusCodeUnused</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="n">SMINetworkHTTPStatusCodeUnused</span> <span class="o">=</span> <span class="mi">306</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">unused</span> <span class="o">=</span> <span class="mi">306</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@E@SMINetworkHTTPStatusCode@SMINetworkHTTPStatusCodeTemporaryRedirect"></a>
+                    <a name="//apple_ref/objc/Case/SMINetworkHTTPStatusCodeTemporaryRedirect" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@E@SMINetworkHTTPStatusCode@SMINetworkHTTPStatusCodeTemporaryRedirect">SMINetworkHTTPStatusCodeTemporaryRedirect</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="n">SMINetworkHTTPStatusCodeTemporaryRedirect</span> <span class="o">=</span> <span class="mi">307</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">temporaryRedirect</span> <span class="o">=</span> <span class="mi">307</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@E@SMINetworkHTTPStatusCode@SMINetworkHTTPStatusCodePermanentRedirect"></a>
+                    <a name="//apple_ref/objc/Case/SMINetworkHTTPStatusCodePermanentRedirect" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@E@SMINetworkHTTPStatusCode@SMINetworkHTTPStatusCodePermanentRedirect">SMINetworkHTTPStatusCodePermanentRedirect</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="n">SMINetworkHTTPStatusCodePermanentRedirect</span> <span class="o">=</span> <span class="mi">308</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">permanentRedirect</span> <span class="o">=</span> <span class="mi">308</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@E@SMINetworkHTTPStatusCode@SMINetworkHTTPStatusCodeBadRequest"></a>
+                    <a name="//apple_ref/objc/Case/SMINetworkHTTPStatusCodeBadRequest" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@E@SMINetworkHTTPStatusCode@SMINetworkHTTPStatusCodeBadRequest">SMINetworkHTTPStatusCodeBadRequest</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="n">SMINetworkHTTPStatusCodeBadRequest</span> <span class="o">=</span> <span class="mi">400</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">badRequest</span> <span class="o">=</span> <span class="mi">400</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@E@SMINetworkHTTPStatusCode@SMINetworkHTTPStatusCodeUnauthorized"></a>
+                    <a name="//apple_ref/objc/Case/SMINetworkHTTPStatusCodeUnauthorized" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@E@SMINetworkHTTPStatusCode@SMINetworkHTTPStatusCodeUnauthorized">SMINetworkHTTPStatusCodeUnauthorized</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="n">SMINetworkHTTPStatusCodeUnauthorized</span> <span class="o">=</span> <span class="mi">401</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">unauthorized</span> <span class="o">=</span> <span class="mi">401</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@E@SMINetworkHTTPStatusCode@SMINetworkHTTPStatusCodePaymentRequired"></a>
+                    <a name="//apple_ref/objc/Case/SMINetworkHTTPStatusCodePaymentRequired" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@E@SMINetworkHTTPStatusCode@SMINetworkHTTPStatusCodePaymentRequired">SMINetworkHTTPStatusCodePaymentRequired</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="n">SMINetworkHTTPStatusCodePaymentRequired</span> <span class="o">=</span> <span class="mi">402</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">paymentRequired</span> <span class="o">=</span> <span class="mi">402</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@E@SMINetworkHTTPStatusCode@SMINetworkHTTPStatusCodeForbidden"></a>
+                    <a name="//apple_ref/objc/Case/SMINetworkHTTPStatusCodeForbidden" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@E@SMINetworkHTTPStatusCode@SMINetworkHTTPStatusCodeForbidden">SMINetworkHTTPStatusCodeForbidden</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="n">SMINetworkHTTPStatusCodeForbidden</span> <span class="o">=</span> <span class="mi">403</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">forbidden</span> <span class="o">=</span> <span class="mi">403</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@E@SMINetworkHTTPStatusCode@SMINetworkHTTPStatusCodeNotFound"></a>
+                    <a name="//apple_ref/objc/Case/SMINetworkHTTPStatusCodeNotFound" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@E@SMINetworkHTTPStatusCode@SMINetworkHTTPStatusCodeNotFound">SMINetworkHTTPStatusCodeNotFound</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="n">SMINetworkHTTPStatusCodeNotFound</span> <span class="o">=</span> <span class="mi">404</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">notFound</span> <span class="o">=</span> <span class="mi">404</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@E@SMINetworkHTTPStatusCode@SMINetworkHTTPStatusCodeMethodNotAllowed"></a>
+                    <a name="//apple_ref/objc/Case/SMINetworkHTTPStatusCodeMethodNotAllowed" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@E@SMINetworkHTTPStatusCode@SMINetworkHTTPStatusCodeMethodNotAllowed">SMINetworkHTTPStatusCodeMethodNotAllowed</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="n">SMINetworkHTTPStatusCodeMethodNotAllowed</span> <span class="o">=</span> <span class="mi">405</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">methodNotAllowed</span> <span class="o">=</span> <span class="mi">405</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@E@SMINetworkHTTPStatusCode@SMINetworkHTTPStatusCodeNotAcceptable"></a>
+                    <a name="//apple_ref/objc/Case/SMINetworkHTTPStatusCodeNotAcceptable" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@E@SMINetworkHTTPStatusCode@SMINetworkHTTPStatusCodeNotAcceptable">SMINetworkHTTPStatusCodeNotAcceptable</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="n">SMINetworkHTTPStatusCodeNotAcceptable</span> <span class="o">=</span> <span class="mi">406</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">notAcceptable</span> <span class="o">=</span> <span class="mi">406</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@E@SMINetworkHTTPStatusCode@SMINetworkHTTPStatusCodeProxyAuthenticationRequired"></a>
+                    <a name="//apple_ref/objc/Case/SMINetworkHTTPStatusCodeProxyAuthenticationRequired" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@E@SMINetworkHTTPStatusCode@SMINetworkHTTPStatusCodeProxyAuthenticationRequired">SMINetworkHTTPStatusCodeProxyAuthenticationRequired</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="n">SMINetworkHTTPStatusCodeProxyAuthenticationRequired</span> <span class="o">=</span> <span class="mi">407</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">proxyAuthenticationRequired</span> <span class="o">=</span> <span class="mi">407</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@E@SMINetworkHTTPStatusCode@SMINetworkHTTPStatusCodeRequestTimeout"></a>
+                    <a name="//apple_ref/objc/Case/SMINetworkHTTPStatusCodeRequestTimeout" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@E@SMINetworkHTTPStatusCode@SMINetworkHTTPStatusCodeRequestTimeout">SMINetworkHTTPStatusCodeRequestTimeout</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="n">SMINetworkHTTPStatusCodeRequestTimeout</span> <span class="o">=</span> <span class="mi">408</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">requestTimeout</span> <span class="o">=</span> <span class="mi">408</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@E@SMINetworkHTTPStatusCode@SMINetworkHTTPStatusCodeConflict"></a>
+                    <a name="//apple_ref/objc/Case/SMINetworkHTTPStatusCodeConflict" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@E@SMINetworkHTTPStatusCode@SMINetworkHTTPStatusCodeConflict">SMINetworkHTTPStatusCodeConflict</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="n">SMINetworkHTTPStatusCodeConflict</span> <span class="o">=</span> <span class="mi">409</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">conflict</span> <span class="o">=</span> <span class="mi">409</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@E@SMINetworkHTTPStatusCode@SMINetworkHTTPStatusCodeGone"></a>
+                    <a name="//apple_ref/objc/Case/SMINetworkHTTPStatusCodeGone" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@E@SMINetworkHTTPStatusCode@SMINetworkHTTPStatusCodeGone">SMINetworkHTTPStatusCodeGone</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="n">SMINetworkHTTPStatusCodeGone</span> <span class="o">=</span> <span class="mi">410</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">gone</span> <span class="o">=</span> <span class="mi">410</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@E@SMINetworkHTTPStatusCode@SMINetworkHTTPStatusCodeLengthRequired"></a>
+                    <a name="//apple_ref/objc/Case/SMINetworkHTTPStatusCodeLengthRequired" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@E@SMINetworkHTTPStatusCode@SMINetworkHTTPStatusCodeLengthRequired">SMINetworkHTTPStatusCodeLengthRequired</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="n">SMINetworkHTTPStatusCodeLengthRequired</span> <span class="o">=</span> <span class="mi">411</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">lengthRequired</span> <span class="o">=</span> <span class="mi">411</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@E@SMINetworkHTTPStatusCode@SMINetworkHTTPStatusCodePreconditionFailed"></a>
+                    <a name="//apple_ref/objc/Case/SMINetworkHTTPStatusCodePreconditionFailed" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@E@SMINetworkHTTPStatusCode@SMINetworkHTTPStatusCodePreconditionFailed">SMINetworkHTTPStatusCodePreconditionFailed</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="n">SMINetworkHTTPStatusCodePreconditionFailed</span> <span class="o">=</span> <span class="mi">412</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">preconditionFailed</span> <span class="o">=</span> <span class="mi">412</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@E@SMINetworkHTTPStatusCode@SMINetworkHTTPStatusCodePayloadTooLarge"></a>
+                    <a name="//apple_ref/objc/Case/SMINetworkHTTPStatusCodePayloadTooLarge" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@E@SMINetworkHTTPStatusCode@SMINetworkHTTPStatusCodePayloadTooLarge">SMINetworkHTTPStatusCodePayloadTooLarge</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="n">SMINetworkHTTPStatusCodePayloadTooLarge</span> <span class="o">=</span> <span class="mi">413</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">payloadTooLarge</span> <span class="o">=</span> <span class="mi">413</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@E@SMINetworkHTTPStatusCode@SMINetworkHTTPStatusCodeURITooLong"></a>
+                    <a name="//apple_ref/objc/Case/SMINetworkHTTPStatusCodeURITooLong" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@E@SMINetworkHTTPStatusCode@SMINetworkHTTPStatusCodeURITooLong">SMINetworkHTTPStatusCodeURITooLong</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="n">SMINetworkHTTPStatusCodeURITooLong</span> <span class="o">=</span> <span class="mi">414</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">uriTooLong</span> <span class="o">=</span> <span class="mi">414</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@E@SMINetworkHTTPStatusCode@SMINetworkHTTPStatusCodeUnsupportedMediaType"></a>
+                    <a name="//apple_ref/objc/Case/SMINetworkHTTPStatusCodeUnsupportedMediaType" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@E@SMINetworkHTTPStatusCode@SMINetworkHTTPStatusCodeUnsupportedMediaType">SMINetworkHTTPStatusCodeUnsupportedMediaType</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="n">SMINetworkHTTPStatusCodeUnsupportedMediaType</span> <span class="o">=</span> <span class="mi">415</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">unsupportedMediaType</span> <span class="o">=</span> <span class="mi">415</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@E@SMINetworkHTTPStatusCode@SMINetworkHTTPStatusCodeRangeNotSatisfiable"></a>
+                    <a name="//apple_ref/objc/Case/SMINetworkHTTPStatusCodeRangeNotSatisfiable" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@E@SMINetworkHTTPStatusCode@SMINetworkHTTPStatusCodeRangeNotSatisfiable">SMINetworkHTTPStatusCodeRangeNotSatisfiable</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="n">SMINetworkHTTPStatusCodeRangeNotSatisfiable</span> <span class="o">=</span> <span class="mi">416</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">rangeNotSatisfiable</span> <span class="o">=</span> <span class="mi">416</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@E@SMINetworkHTTPStatusCode@SMINetworkHTTPStatusCodeExpectationFailed"></a>
+                    <a name="//apple_ref/objc/Case/SMINetworkHTTPStatusCodeExpectationFailed" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@E@SMINetworkHTTPStatusCode@SMINetworkHTTPStatusCodeExpectationFailed">SMINetworkHTTPStatusCodeExpectationFailed</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="n">SMINetworkHTTPStatusCodeExpectationFailed</span> <span class="o">=</span> <span class="mi">417</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">expectationFailed</span> <span class="o">=</span> <span class="mi">417</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@E@SMINetworkHTTPStatusCode@SMINetworkHTTPStatusCodeImATeapot"></a>
+                    <a name="//apple_ref/objc/Case/SMINetworkHTTPStatusCodeImATeapot" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@E@SMINetworkHTTPStatusCode@SMINetworkHTTPStatusCodeImATeapot">SMINetworkHTTPStatusCodeImATeapot</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="n">SMINetworkHTTPStatusCodeImATeapot</span> <span class="o">=</span> <span class="mi">418</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">imATeapot</span> <span class="o">=</span> <span class="mi">418</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@E@SMINetworkHTTPStatusCode@SMINetworkHTTPStatusCodeMisdirectedRequest"></a>
+                    <a name="//apple_ref/objc/Case/SMINetworkHTTPStatusCodeMisdirectedRequest" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@E@SMINetworkHTTPStatusCode@SMINetworkHTTPStatusCodeMisdirectedRequest">SMINetworkHTTPStatusCodeMisdirectedRequest</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="n">SMINetworkHTTPStatusCodeMisdirectedRequest</span> <span class="o">=</span> <span class="mi">421</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">misdirectedRequest</span> <span class="o">=</span> <span class="mi">421</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@E@SMINetworkHTTPStatusCode@SMINetworkHTTPStatusCodeUnprocessableEntity"></a>
+                    <a name="//apple_ref/objc/Case/SMINetworkHTTPStatusCodeUnprocessableEntity" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@E@SMINetworkHTTPStatusCode@SMINetworkHTTPStatusCodeUnprocessableEntity">SMINetworkHTTPStatusCodeUnprocessableEntity</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="n">SMINetworkHTTPStatusCodeUnprocessableEntity</span> <span class="o">=</span> <span class="mi">422</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">unprocessableEntity</span> <span class="o">=</span> <span class="mi">422</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@E@SMINetworkHTTPStatusCode@SMINetworkHTTPStatusCodeLocked"></a>
+                    <a name="//apple_ref/objc/Case/SMINetworkHTTPStatusCodeLocked" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@E@SMINetworkHTTPStatusCode@SMINetworkHTTPStatusCodeLocked">SMINetworkHTTPStatusCodeLocked</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="n">SMINetworkHTTPStatusCodeLocked</span> <span class="o">=</span> <span class="mi">423</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">locked</span> <span class="o">=</span> <span class="mi">423</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@E@SMINetworkHTTPStatusCode@SMINetworkHTTPStatusCodeFailedDependency"></a>
+                    <a name="//apple_ref/objc/Case/SMINetworkHTTPStatusCodeFailedDependency" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@E@SMINetworkHTTPStatusCode@SMINetworkHTTPStatusCodeFailedDependency">SMINetworkHTTPStatusCodeFailedDependency</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="n">SMINetworkHTTPStatusCodeFailedDependency</span> <span class="o">=</span> <span class="mi">424</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">failedDependency</span> <span class="o">=</span> <span class="mi">424</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@E@SMINetworkHTTPStatusCode@SMINetworkHTTPStatusCodeTooEarly"></a>
+                    <a name="//apple_ref/objc/Case/SMINetworkHTTPStatusCodeTooEarly" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@E@SMINetworkHTTPStatusCode@SMINetworkHTTPStatusCodeTooEarly">SMINetworkHTTPStatusCodeTooEarly</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="n">SMINetworkHTTPStatusCodeTooEarly</span> <span class="o">=</span> <span class="mi">425</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">tooEarly</span> <span class="o">=</span> <span class="mi">425</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@E@SMINetworkHTTPStatusCode@SMINetworkHTTPStatusCodeUpgradeRequired"></a>
+                    <a name="//apple_ref/objc/Case/SMINetworkHTTPStatusCodeUpgradeRequired" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@E@SMINetworkHTTPStatusCode@SMINetworkHTTPStatusCodeUpgradeRequired">SMINetworkHTTPStatusCodeUpgradeRequired</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="n">SMINetworkHTTPStatusCodeUpgradeRequired</span> <span class="o">=</span> <span class="mi">426</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">upgradeRequired</span> <span class="o">=</span> <span class="mi">426</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@E@SMINetworkHTTPStatusCode@SMINetworkHTTPStatusCodePreconditionRequired"></a>
+                    <a name="//apple_ref/objc/Case/SMINetworkHTTPStatusCodePreconditionRequired" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@E@SMINetworkHTTPStatusCode@SMINetworkHTTPStatusCodePreconditionRequired">SMINetworkHTTPStatusCodePreconditionRequired</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="n">SMINetworkHTTPStatusCodePreconditionRequired</span> <span class="o">=</span> <span class="mi">428</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">preconditionRequired</span> <span class="o">=</span> <span class="mi">428</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@E@SMINetworkHTTPStatusCode@SMINetworkHTTPStatusCodeTooManyRequests"></a>
+                    <a name="//apple_ref/objc/Case/SMINetworkHTTPStatusCodeTooManyRequests" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@E@SMINetworkHTTPStatusCode@SMINetworkHTTPStatusCodeTooManyRequests">SMINetworkHTTPStatusCodeTooManyRequests</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="n">SMINetworkHTTPStatusCodeTooManyRequests</span> <span class="o">=</span> <span class="mi">429</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">tooManyRequests</span> <span class="o">=</span> <span class="mi">429</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@E@SMINetworkHTTPStatusCode@SMINetworkHTTPStatusCodeRequestHeaderFieldsTooLarge"></a>
+                    <a name="//apple_ref/objc/Case/SMINetworkHTTPStatusCodeRequestHeaderFieldsTooLarge" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@E@SMINetworkHTTPStatusCode@SMINetworkHTTPStatusCodeRequestHeaderFieldsTooLarge">SMINetworkHTTPStatusCodeRequestHeaderFieldsTooLarge</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="n">SMINetworkHTTPStatusCodeRequestHeaderFieldsTooLarge</span> <span class="o">=</span> <span class="mi">431</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">requestHeaderFieldsTooLarge</span> <span class="o">=</span> <span class="mi">431</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@E@SMINetworkHTTPStatusCode@SMINetworkHTTPStatusCodeUnavailableForLegalReasons"></a>
+                    <a name="//apple_ref/objc/Case/SMINetworkHTTPStatusCodeUnavailableForLegalReasons" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@E@SMINetworkHTTPStatusCode@SMINetworkHTTPStatusCodeUnavailableForLegalReasons">SMINetworkHTTPStatusCodeUnavailableForLegalReasons</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="n">SMINetworkHTTPStatusCodeUnavailableForLegalReasons</span> <span class="o">=</span> <span class="mi">451</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">unavailableForLegalReasons</span> <span class="o">=</span> <span class="mi">451</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@E@SMINetworkHTTPStatusCode@SMINetworkHTTPStatusCodeInternalServerError"></a>
+                    <a name="//apple_ref/objc/Case/SMINetworkHTTPStatusCodeInternalServerError" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@E@SMINetworkHTTPStatusCode@SMINetworkHTTPStatusCodeInternalServerError">SMINetworkHTTPStatusCodeInternalServerError</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="n">SMINetworkHTTPStatusCodeInternalServerError</span> <span class="o">=</span> <span class="mi">500</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">internalServerError</span> <span class="o">=</span> <span class="mi">500</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@E@SMINetworkHTTPStatusCode@SMINetworkHTTPStatusCodeNotImplemented"></a>
+                    <a name="//apple_ref/objc/Case/SMINetworkHTTPStatusCodeNotImplemented" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@E@SMINetworkHTTPStatusCode@SMINetworkHTTPStatusCodeNotImplemented">SMINetworkHTTPStatusCodeNotImplemented</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="n">SMINetworkHTTPStatusCodeNotImplemented</span> <span class="o">=</span> <span class="mi">501</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">notImplemented</span> <span class="o">=</span> <span class="mi">501</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@E@SMINetworkHTTPStatusCode@SMINetworkHTTPStatusCodeBadGateway"></a>
+                    <a name="//apple_ref/objc/Case/SMINetworkHTTPStatusCodeBadGateway" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@E@SMINetworkHTTPStatusCode@SMINetworkHTTPStatusCodeBadGateway">SMINetworkHTTPStatusCodeBadGateway</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="n">SMINetworkHTTPStatusCodeBadGateway</span> <span class="o">=</span> <span class="mi">502</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">badGateway</span> <span class="o">=</span> <span class="mi">502</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@E@SMINetworkHTTPStatusCode@SMINetworkHTTPStatusCodeServiceUnavailable"></a>
+                    <a name="//apple_ref/objc/Case/SMINetworkHTTPStatusCodeServiceUnavailable" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@E@SMINetworkHTTPStatusCode@SMINetworkHTTPStatusCodeServiceUnavailable">SMINetworkHTTPStatusCodeServiceUnavailable</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="n">SMINetworkHTTPStatusCodeServiceUnavailable</span> <span class="o">=</span> <span class="mi">503</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">serviceUnavailable</span> <span class="o">=</span> <span class="mi">503</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@E@SMINetworkHTTPStatusCode@SMINetworkHTTPStatusCodeGatewayTimeout"></a>
+                    <a name="//apple_ref/objc/Case/SMINetworkHTTPStatusCodeGatewayTimeout" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@E@SMINetworkHTTPStatusCode@SMINetworkHTTPStatusCodeGatewayTimeout">SMINetworkHTTPStatusCodeGatewayTimeout</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="n">SMINetworkHTTPStatusCodeGatewayTimeout</span> <span class="o">=</span> <span class="mi">504</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">gatewayTimeout</span> <span class="o">=</span> <span class="mi">504</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@E@SMINetworkHTTPStatusCode@SMINetworkHTTPStatusCodeHTTPVersionNotSupported"></a>
+                    <a name="//apple_ref/objc/Case/SMINetworkHTTPStatusCodeHTTPVersionNotSupported" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@E@SMINetworkHTTPStatusCode@SMINetworkHTTPStatusCodeHTTPVersionNotSupported">SMINetworkHTTPStatusCodeHTTPVersionNotSupported</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="n">SMINetworkHTTPStatusCodeHTTPVersionNotSupported</span> <span class="o">=</span> <span class="mi">505</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">httpVersionNotSupported</span> <span class="o">=</span> <span class="mi">505</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@E@SMINetworkHTTPStatusCode@SMINetworkHTTPStatusCodeVariantAlsoNegotiates"></a>
+                    <a name="//apple_ref/objc/Case/SMINetworkHTTPStatusCodeVariantAlsoNegotiates" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@E@SMINetworkHTTPStatusCode@SMINetworkHTTPStatusCodeVariantAlsoNegotiates">SMINetworkHTTPStatusCodeVariantAlsoNegotiates</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="n">SMINetworkHTTPStatusCodeVariantAlsoNegotiates</span> <span class="o">=</span> <span class="mi">506</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">variantAlsoNegotiates</span> <span class="o">=</span> <span class="mi">506</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@E@SMINetworkHTTPStatusCode@SMINetworkHTTPStatusCodeInsufficientStorage"></a>
+                    <a name="//apple_ref/objc/Case/SMINetworkHTTPStatusCodeInsufficientStorage" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@E@SMINetworkHTTPStatusCode@SMINetworkHTTPStatusCodeInsufficientStorage">SMINetworkHTTPStatusCodeInsufficientStorage</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="n">SMINetworkHTTPStatusCodeInsufficientStorage</span> <span class="o">=</span> <span class="mi">507</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">insufficientStorage</span> <span class="o">=</span> <span class="mi">507</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@E@SMINetworkHTTPStatusCode@SMINetworkHTTPStatusCodeLoopDetected"></a>
+                    <a name="//apple_ref/objc/Case/SMINetworkHTTPStatusCodeLoopDetected" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@E@SMINetworkHTTPStatusCode@SMINetworkHTTPStatusCodeLoopDetected">SMINetworkHTTPStatusCodeLoopDetected</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="n">SMINetworkHTTPStatusCodeLoopDetected</span> <span class="o">=</span> <span class="mi">508</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">loopDetected</span> <span class="o">=</span> <span class="mi">508</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@E@SMINetworkHTTPStatusCode@SMINetworkHTTPStatusCodeNotExtended"></a>
+                    <a name="//apple_ref/objc/Case/SMINetworkHTTPStatusCodeNotExtended" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@E@SMINetworkHTTPStatusCode@SMINetworkHTTPStatusCodeNotExtended">SMINetworkHTTPStatusCodeNotExtended</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="n">SMINetworkHTTPStatusCodeNotExtended</span> <span class="o">=</span> <span class="mi">510</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">notExtended</span> <span class="o">=</span> <span class="mi">510</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@E@SMINetworkHTTPStatusCode@SMINetworkHTTPStatusCodeNetworkAuthenticationRequired"></a>
+                    <a name="//apple_ref/objc/Case/SMINetworkHTTPStatusCodeNetworkAuthenticationRequired" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@E@SMINetworkHTTPStatusCode@SMINetworkHTTPStatusCodeNetworkAuthenticationRequired">SMINetworkHTTPStatusCodeNetworkAuthenticationRequired</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="n">SMINetworkHTTPStatusCodeNetworkAuthenticationRequired</span> <span class="o">=</span> <span class="mi">511</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">networkAuthenticationRequired</span> <span class="o">=</span> <span class="mi">511</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+      </article>
+    </div>
+    <section class="footer">
+      <p>&copy; 2024 <a class="link" href="" target="_blank" rel="external noopener">Salesforce</a>. All rights reserved. (Last updated: 2024-01-31)</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external noopener">jazzy ♪♫ v0.14.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external noopener">Realm</a> project.</p>
+    </section>
+  </body>
+</html>
