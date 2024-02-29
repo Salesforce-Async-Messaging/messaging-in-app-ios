@@ -140,6 +140,9 @@
                 <a class="nav-group-task-link" href="Constants.html#/c:@SMIConversationFormatTypesAttachments">SMIConversationFormatTypesAttachments</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Constants.html#/c:@SMIConversationFormatTypesCarousel">SMIConversationFormatTypesCarousel</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Constants.html#/c:@SMIConversationFormatTypesImageMessage">SMIConversationFormatTypesImageMessage</a>
               </li>
               <li class="nav-group-task">
@@ -450,6 +453,9 @@
                 <a class="nav-group-task-link" href="Protocols/SMIAttachmentEntry.html">SMIAttachmentEntry</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols/SMIAttachments.html">SMIAttachments</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Protocols/SMIAuthorization.html">SMIAuthorization</a>
               </li>
               <li class="nav-group-task">
@@ -457,6 +463,9 @@
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Protocols/SMIBusinessHoursInfo.html">SMIBusinessHoursInfo</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols/SMICarousel.html">SMICarousel</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Protocols/SMIChoice.html">SMIChoice</a>
@@ -615,6 +624,9 @@
                 <a class="nav-group-task-link" href="Protocols/SMILogging.html">SMILogging</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols/SMIMessageChoices.html">SMIMessageChoices</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Protocols/SMIMessageSelectable.html">SMIMessageSelectable</a>
               </li>
               <li class="nav-group-task">
@@ -675,10 +687,16 @@
                 <a class="nav-group-task-link" href="Protocols/SMITextMessage.html">SMITextMessage</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols/SMITitleImageItem.html">SMITitleImageItem</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols/SMITitleLinkItem.html">SMITitleLinkItem</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Protocols/SMITypingIndicator.html">SMITypingIndicator</a>
               </li>
               <li class="nav-group-task">
-                <a class="nav-group-task-link" href="Protocols/SMIUnknownAsset.html">SMIUnknownAsset</a>
+                <a class="nav-group-task-link" href="Protocols.html#/c:objc(pl)SMIUnknownAsset">SMIUnknownAsset</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Protocols.html#/c:objc(pl)SMIUnknownEntry">SMIUnknownEntry</a>
@@ -800,6 +818,9 @@
                 <a class="nav-group-task-link" href="Type%20Definitions.html#/c:SMITemplatedUrlDelegate.h@T@SMITemplatedUrlParametersCompletion">SMITemplatedUrlParametersCompletion</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Type%20Definitions.html#/c:SMIConversationRequestCompletion.h@T@SMITranscriptRequestCompletion">SMITranscriptRequestCompletion</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Type%20Definitions.html#/c:SMITypingIndicatorTypes.h@T@SMITypingIndicatorTypes">SMITypingIndicatorTypes</a>
               </li>
               <li class="nav-group-task">
@@ -844,12 +865,46 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@protocol</span> <span class="nc">SMIAttachmentEntry</span> <span class="o">&lt;</span><span class="n"><a href="Protocols/SMIEntryPayload.html">SMIEntryPayload</a></span><span class="p">,</span> <span class="n"><a href="Protocols/SMIEntryTypeMessage.html">SMIEntryTypeMessage</a></span><span class="o">&gt;</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">@protocol</span>
+    <span class="nc">SMIAttachmentEntry</span> <span class="o">&lt;</span><span class="n"><a href="Protocols/SMIEntryPayload.html">SMIEntryPayload</a></span><span class="p">,</span> <span class="n"><a href="Protocols/SMIEntryTypeMessage.html">SMIEntryTypeMessage</a></span><span class="p">,</span> <span class="n"><a href="Protocols/SMIAttachments.html">SMIAttachments</a></span><span class="o">&gt;</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">protocol</span> <span class="kt">AttachmentEntry</span> <span class="p">:</span> <span class="kt">EntryPayload</span><span class="p">,</span> <span class="kt">EntryTypeMessage</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">protocol</span> <span class="kt">AttachmentEntry</span> <span class="p">:</span> <span class="kt">Attachments</span><span class="p">,</span> <span class="kt">EntryPayload</span><span class="p">,</span> <span class="kt">EntryTypeMessage</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(pl)SMIAttachments"></a>
+                    <a name="//apple_ref/objc/Protocol/SMIAttachments" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(pl)SMIAttachments">SMIAttachments</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Attachment entry.</p>
+
+                        <a href="Protocols/SMIAttachments.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@protocol</span> <span class="nc">SMIAttachments</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">protocol</span> <span class="kt">Attachments</span></code></pre>
 
                         </div>
                       </div>
@@ -949,6 +1004,40 @@
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">protocol</span> <span class="kt">BusinessHoursInfo</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(pl)SMICarousel"></a>
+                    <a name="//apple_ref/objc/Protocol/SMICarousel" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(pl)SMICarousel">SMICarousel</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A response type that represents a specific choice.</p>
+
+                        <a href="Protocols/SMICarousel.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@protocol</span> <span class="nc">SMICarousel</span> <span class="o">&lt;</span><span class="n"><a href="Protocols/SMIEntryPayload.html">SMIEntryPayload</a></span><span class="p">,</span> <span class="n"><a href="Protocols/SMIMessageSelectable.html">SMIMessageSelectable</a></span><span class="p">,</span>
+                       <span class="n"><a href="Protocols/SMIEntryTypeMessage.html">SMIEntryTypeMessage</a></span><span class="p">,</span> <span class="n"><a href="Protocols/SMIAttachments.html">SMIAttachments</a></span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">protocol</span> <span class="kt">Carousel</span> <span class="p">:</span> <span class="kt">Attachments</span><span class="p">,</span> <span class="kt">EntryPayload</span><span class="p">,</span> <span class="kt">EntryTypeMessage</span><span class="p">,</span> <span class="kt"><a href="Protocols/SMIMessageSelectable.html">SMIMessageSelectable</a></span></code></pre>
 
                         </div>
                       </div>
@@ -2622,13 +2711,13 @@ for chat messages, receive message status changes, detect network status changes
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@protocol</span>
-    <span class="nc">SMIListPicker</span> <span class="o">&lt;</span><span class="n"><a href="Protocols/SMIEntryPayload.html">SMIEntryPayload</a></span><span class="p">,</span> <span class="n"><a href="Protocols/SMIMessageSelectable.html">SMIMessageSelectable</a></span><span class="p">,</span> <span class="n"><a href="Protocols/SMIEntryTypeMessage.html">SMIEntryTypeMessage</a></span><span class="o">&gt;</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">@protocol</span> <span class="nc">SMIListPicker</span> <span class="o">&lt;</span><span class="n"><a href="Protocols/SMIEntryPayload.html">SMIEntryPayload</a></span><span class="p">,</span> <span class="n"><a href="Protocols/SMIMessageSelectable.html">SMIMessageSelectable</a></span><span class="p">,</span>
+                         <span class="n"><a href="Protocols/SMIEntryTypeMessage.html">SMIEntryTypeMessage</a></span><span class="p">,</span> <span class="n"><a href="Protocols/SMIMessageChoices.html">SMIMessageChoices</a></span><span class="o">&gt;</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">protocol</span> <span class="kt">ListPicker</span> <span class="p">:</span> <span class="kt">EntryPayload</span><span class="p">,</span> <span class="kt">EntryTypeMessage</span><span class="p">,</span> <span class="kt"><a href="Protocols/SMIMessageSelectable.html">SMIMessageSelectable</a></span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">protocol</span> <span class="kt">ListPicker</span> <span class="p">:</span> <span class="kt">EntryPayload</span><span class="p">,</span> <span class="kt">EntryTypeMessage</span><span class="p">,</span> <span class="kt"><a href="Protocols/SMIMessageChoices.html">SMIMessageChoices</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/SMIMessageSelectable.html">SMIMessageSelectable</a></span></code></pre>
 
                         </div>
                       </div>
@@ -2662,6 +2751,39 @@ for chat messages, receive message status changes, detect network status changes
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">protocol</span> <span class="kt">LoggingProtocol</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(pl)SMIMessageChoices"></a>
+                    <a name="//apple_ref/objc/Protocol/SMIMessageChoices" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(pl)SMIMessageChoices">SMIMessageChoices</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A message that has selectable choices.</p>
+
+                        <a href="Protocols/SMIMessageChoices.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@protocol</span> <span class="nc">SMIMessageChoices</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">protocol</span> <span class="kt">SMIMessageChoices</span></code></pre>
 
                         </div>
                       </div>
@@ -3018,13 +3140,13 @@ for chat messages, receive message status changes, detect network status changes
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@protocol</span>
-    <span class="nc">SMIQuickReply</span> <span class="o">&lt;</span><span class="n"><a href="Protocols/SMIEntryPayload.html">SMIEntryPayload</a></span><span class="p">,</span> <span class="n"><a href="Protocols/SMIMessageSelectable.html">SMIMessageSelectable</a></span><span class="p">,</span> <span class="n"><a href="Protocols/SMIEntryTypeMessage.html">SMIEntryTypeMessage</a></span><span class="o">&gt;</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">@protocol</span> <span class="nc">SMIQuickReply</span> <span class="o">&lt;</span><span class="n"><a href="Protocols/SMIEntryPayload.html">SMIEntryPayload</a></span><span class="p">,</span> <span class="n"><a href="Protocols/SMIMessageSelectable.html">SMIMessageSelectable</a></span><span class="p">,</span>
+                         <span class="n"><a href="Protocols/SMIEntryTypeMessage.html">SMIEntryTypeMessage</a></span><span class="p">,</span> <span class="n"><a href="Protocols/SMIMessageChoices.html">SMIMessageChoices</a></span><span class="o">&gt;</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">protocol</span> <span class="kt">QuickReply</span> <span class="p">:</span> <span class="kt">EntryPayload</span><span class="p">,</span> <span class="kt">EntryTypeMessage</span><span class="p">,</span> <span class="kt"><a href="Protocols/SMIMessageSelectable.html">SMIMessageSelectable</a></span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">protocol</span> <span class="kt">QuickReply</span> <span class="p">:</span> <span class="kt">EntryPayload</span><span class="p">,</span> <span class="kt">EntryTypeMessage</span><span class="p">,</span> <span class="kt"><a href="Protocols/SMIMessageChoices.html">SMIMessageChoices</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/SMIMessageSelectable.html">SMIMessageSelectable</a></span></code></pre>
 
                         </div>
                       </div>
@@ -3336,6 +3458,76 @@ for chat messages, receive message status changes, detect network status changes
                 <li class="item">
                   <div>
                     <code>
+                    <a name="/c:objc(pl)SMITitleImageItem"></a>
+                    <a name="//apple_ref/objc/Protocol/SMITitleImageItem" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(pl)SMITitleImageItem">SMITitleImageItem</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="Protocols/SMITitleImageItem.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@protocol</span> <span class="nc">SMITitleImageItem</span> <span class="o">&lt;</span><span class="n"><a href="Protocols/SMIFormTitleItem.html">SMIFormTitleItem</a></span><span class="o">&gt;</span>
+
+<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">,</span> <span class="n">strong</span><span class="p">)</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">imageId</span><span class="p">;</span>
+
+<span class="k">@end</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">protocol</span> <span class="kt">TitleImageItem</span> <span class="p">:</span> <span class="kt">FormTitleItem</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(pl)SMITitleLinkItem"></a>
+                    <a name="//apple_ref/objc/Protocol/SMITitleLinkItem" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(pl)SMITitleLinkItem">SMITitleLinkItem</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Representative of TitleLinkItem that will be used to respresent items in the chat feed.</p>
+
+                        <a href="Protocols/SMITitleLinkItem.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@protocol</span> <span class="nc">SMITitleLinkItem</span> <span class="o">&lt;</span><span class="n">NSObject</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">protocol</span> <span class="kt">TitleLinkItem</span> <span class="p">:</span> <span class="kt">NSObjectProtocol</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
                     <a name="/c:objc(pl)SMITypingIndicator"></a>
                     <a name="//apple_ref/objc/Protocol/SMITypingIndicator" class="dashAnchor"></a>
                     <a class="token" href="#/c:objc(pl)SMITypingIndicator">SMITypingIndicator</a>
@@ -3381,18 +3573,17 @@ for chat messages, receive message status changes, detect network status changes
                       <div class="abstract">
                         <p>Describes an unknown asset.</p>
 
-                        <a href="Protocols/SMIUnknownAsset.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@protocol</span> <span class="nc">SMIUnknownAsset</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">@protocol</span> <span class="nc">SMIUnknownAsset</span> <span class="o">&lt;</span><span class="n"><a href="Protocols/SMIFileAsset.html">SMIFileAsset</a></span><span class="o">&gt;</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">protocol</span> <span class="kt">UnknownAsset</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">protocol</span> <span class="kt">UnknownAsset</span> <span class="p">:</span> <span class="kt">FileAsset</span></code></pre>
 
                         </div>
                       </div>
@@ -3509,7 +3700,7 @@ for chat messages, receive message status changes, detect network status changes
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2024 <a class="link" href="" target="_blank" rel="external noopener">Salesforce</a>. All rights reserved. (Last updated: 2024-01-31)</p>
+      <p>&copy; 2024 <a class="link" href="" target="_blank" rel="external noopener">Salesforce</a>. All rights reserved. (Last updated: 2024-02-29)</p>
       <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external noopener">jazzy ♪♫ v0.14.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external noopener">Realm</a> project.</p>
     </section>
   </body>

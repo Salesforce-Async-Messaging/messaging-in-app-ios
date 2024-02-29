@@ -1,465 +1,479 @@
 {
   "warnings": [
     {
-      "file": "/var/folders/vn/2xl09q9s36j7x04f3wwhxc0r0000gp/T/tmp.VYaZf9qyLw/SMIClientCore/SMIConversation.h",
+      "file": "/var/folders/vn/2xl09q9s36j7x04f3wwhxc0r0000gp/T/tmp.JmTxBoLNxX/SMIClientCore/SMIConversation.h",
       "line": 45,
       "symbol": "SMIConversation.created",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
       "warning": "undocumented"
     },
     {
-      "file": "/var/folders/vn/2xl09q9s36j7x04f3wwhxc0r0000gp/T/tmp.VYaZf9qyLw/SMIClientCore/SMINetworkHTTPStatusCodes.h",
+      "file": "/var/folders/vn/2xl09q9s36j7x04f3wwhxc0r0000gp/T/tmp.JmTxBoLNxX/SMIClientCore/SMINetworkHTTPStatusCodes.h",
       "line": 11,
       "symbol": "SMINetworkHTTPStatusCode",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enum",
       "warning": "undocumented"
     },
     {
-      "file": "/var/folders/vn/2xl09q9s36j7x04f3wwhxc0r0000gp/T/tmp.VYaZf9qyLw/SMIClientCore/SMINetworkHTTPStatusCodes.h",
+      "file": "/var/folders/vn/2xl09q9s36j7x04f3wwhxc0r0000gp/T/tmp.JmTxBoLNxX/SMIClientCore/SMINetworkHTTPStatusCodes.h",
       "line": 11,
       "symbol": "SMINetworkHTTPStatusCode",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.typedef",
       "warning": "undocumented"
     },
     {
-      "file": "/var/folders/vn/2xl09q9s36j7x04f3wwhxc0r0000gp/T/tmp.VYaZf9qyLw/SMIClientCore/SMINetworkHTTPStatusCodes.h",
+      "file": "/var/folders/vn/2xl09q9s36j7x04f3wwhxc0r0000gp/T/tmp.JmTxBoLNxX/SMIClientCore/SMINetworkHTTPStatusCodes.h",
       "line": 12,
       "symbol": "SMINetworkHTTPStatusCode.SMINetworkHTTPStatusCodeContinue",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
-      "file": "/var/folders/vn/2xl09q9s36j7x04f3wwhxc0r0000gp/T/tmp.VYaZf9qyLw/SMIClientCore/SMINetworkHTTPStatusCodes.h",
+      "file": "/var/folders/vn/2xl09q9s36j7x04f3wwhxc0r0000gp/T/tmp.JmTxBoLNxX/SMIClientCore/SMINetworkHTTPStatusCodes.h",
       "line": 13,
       "symbol": "SMINetworkHTTPStatusCode.SMINetworkHTTPStatusCodeSwitchingProtocol",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
-      "file": "/var/folders/vn/2xl09q9s36j7x04f3wwhxc0r0000gp/T/tmp.VYaZf9qyLw/SMIClientCore/SMINetworkHTTPStatusCodes.h",
+      "file": "/var/folders/vn/2xl09q9s36j7x04f3wwhxc0r0000gp/T/tmp.JmTxBoLNxX/SMIClientCore/SMINetworkHTTPStatusCodes.h",
       "line": 14,
       "symbol": "SMINetworkHTTPStatusCode.SMINetworkHTTPStatusCodeProcessing",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
-      "file": "/var/folders/vn/2xl09q9s36j7x04f3wwhxc0r0000gp/T/tmp.VYaZf9qyLw/SMIClientCore/SMINetworkHTTPStatusCodes.h",
+      "file": "/var/folders/vn/2xl09q9s36j7x04f3wwhxc0r0000gp/T/tmp.JmTxBoLNxX/SMIClientCore/SMINetworkHTTPStatusCodes.h",
       "line": 15,
       "symbol": "SMINetworkHTTPStatusCode.SMINetworkHTTPStatusCodeEarlyHints",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
-      "file": "/var/folders/vn/2xl09q9s36j7x04f3wwhxc0r0000gp/T/tmp.VYaZf9qyLw/SMIClientCore/SMINetworkHTTPStatusCodes.h",
+      "file": "/var/folders/vn/2xl09q9s36j7x04f3wwhxc0r0000gp/T/tmp.JmTxBoLNxX/SMIClientCore/SMINetworkHTTPStatusCodes.h",
       "line": 17,
       "symbol": "SMINetworkHTTPStatusCode.SMINetworkHTTPStatusCodeOK",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
-      "file": "/var/folders/vn/2xl09q9s36j7x04f3wwhxc0r0000gp/T/tmp.VYaZf9qyLw/SMIClientCore/SMINetworkHTTPStatusCodes.h",
+      "file": "/var/folders/vn/2xl09q9s36j7x04f3wwhxc0r0000gp/T/tmp.JmTxBoLNxX/SMIClientCore/SMINetworkHTTPStatusCodes.h",
       "line": 18,
       "symbol": "SMINetworkHTTPStatusCode.SMINetworkHTTPStatusCodeCreated",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
-      "file": "/var/folders/vn/2xl09q9s36j7x04f3wwhxc0r0000gp/T/tmp.VYaZf9qyLw/SMIClientCore/SMINetworkHTTPStatusCodes.h",
+      "file": "/var/folders/vn/2xl09q9s36j7x04f3wwhxc0r0000gp/T/tmp.JmTxBoLNxX/SMIClientCore/SMINetworkHTTPStatusCodes.h",
       "line": 19,
       "symbol": "SMINetworkHTTPStatusCode.SMINetworkHTTPStatusCodeAccepted",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
-      "file": "/var/folders/vn/2xl09q9s36j7x04f3wwhxc0r0000gp/T/tmp.VYaZf9qyLw/SMIClientCore/SMINetworkHTTPStatusCodes.h",
+      "file": "/var/folders/vn/2xl09q9s36j7x04f3wwhxc0r0000gp/T/tmp.JmTxBoLNxX/SMIClientCore/SMINetworkHTTPStatusCodes.h",
       "line": 20,
       "symbol": "SMINetworkHTTPStatusCode.SMINetworkHTTPStatusCodeNonAuthoritaveInformation",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
-      "file": "/var/folders/vn/2xl09q9s36j7x04f3wwhxc0r0000gp/T/tmp.VYaZf9qyLw/SMIClientCore/SMINetworkHTTPStatusCodes.h",
+      "file": "/var/folders/vn/2xl09q9s36j7x04f3wwhxc0r0000gp/T/tmp.JmTxBoLNxX/SMIClientCore/SMINetworkHTTPStatusCodes.h",
       "line": 21,
       "symbol": "SMINetworkHTTPStatusCode.SMINetworkHTTPStatusCodeNoContent",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
-      "file": "/var/folders/vn/2xl09q9s36j7x04f3wwhxc0r0000gp/T/tmp.VYaZf9qyLw/SMIClientCore/SMINetworkHTTPStatusCodes.h",
+      "file": "/var/folders/vn/2xl09q9s36j7x04f3wwhxc0r0000gp/T/tmp.JmTxBoLNxX/SMIClientCore/SMINetworkHTTPStatusCodes.h",
       "line": 22,
       "symbol": "SMINetworkHTTPStatusCode.SMINetworkHTTPStatusCodeResetContent",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
-      "file": "/var/folders/vn/2xl09q9s36j7x04f3wwhxc0r0000gp/T/tmp.VYaZf9qyLw/SMIClientCore/SMINetworkHTTPStatusCodes.h",
+      "file": "/var/folders/vn/2xl09q9s36j7x04f3wwhxc0r0000gp/T/tmp.JmTxBoLNxX/SMIClientCore/SMINetworkHTTPStatusCodes.h",
       "line": 23,
       "symbol": "SMINetworkHTTPStatusCode.SMINetworkHTTPStatusCodePartialContent",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
-      "file": "/var/folders/vn/2xl09q9s36j7x04f3wwhxc0r0000gp/T/tmp.VYaZf9qyLw/SMIClientCore/SMINetworkHTTPStatusCodes.h",
+      "file": "/var/folders/vn/2xl09q9s36j7x04f3wwhxc0r0000gp/T/tmp.JmTxBoLNxX/SMIClientCore/SMINetworkHTTPStatusCodes.h",
       "line": 24,
       "symbol": "SMINetworkHTTPStatusCode.SMINetworkHTTPStatusCodeMultiStatus",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
-      "file": "/var/folders/vn/2xl09q9s36j7x04f3wwhxc0r0000gp/T/tmp.VYaZf9qyLw/SMIClientCore/SMINetworkHTTPStatusCodes.h",
+      "file": "/var/folders/vn/2xl09q9s36j7x04f3wwhxc0r0000gp/T/tmp.JmTxBoLNxX/SMIClientCore/SMINetworkHTTPStatusCodes.h",
       "line": 25,
       "symbol": "SMINetworkHTTPStatusCode.SMINetworkHTTPStatusCodeAlreadyReported",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
-      "file": "/var/folders/vn/2xl09q9s36j7x04f3wwhxc0r0000gp/T/tmp.VYaZf9qyLw/SMIClientCore/SMINetworkHTTPStatusCodes.h",
+      "file": "/var/folders/vn/2xl09q9s36j7x04f3wwhxc0r0000gp/T/tmp.JmTxBoLNxX/SMIClientCore/SMINetworkHTTPStatusCodes.h",
       "line": 26,
       "symbol": "SMINetworkHTTPStatusCode.SMINetworkHTTPStatusCodeIMUsed",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
-      "file": "/var/folders/vn/2xl09q9s36j7x04f3wwhxc0r0000gp/T/tmp.VYaZf9qyLw/SMIClientCore/SMINetworkHTTPStatusCodes.h",
+      "file": "/var/folders/vn/2xl09q9s36j7x04f3wwhxc0r0000gp/T/tmp.JmTxBoLNxX/SMIClientCore/SMINetworkHTTPStatusCodes.h",
       "line": 28,
       "symbol": "SMINetworkHTTPStatusCode.SMINetworkHTTPStatusCodeMultipleChoice",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
-      "file": "/var/folders/vn/2xl09q9s36j7x04f3wwhxc0r0000gp/T/tmp.VYaZf9qyLw/SMIClientCore/SMINetworkHTTPStatusCodes.h",
+      "file": "/var/folders/vn/2xl09q9s36j7x04f3wwhxc0r0000gp/T/tmp.JmTxBoLNxX/SMIClientCore/SMINetworkHTTPStatusCodes.h",
       "line": 29,
       "symbol": "SMINetworkHTTPStatusCode.SMINetworkHTTPStatusCodeMovedPermanently",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
-      "file": "/var/folders/vn/2xl09q9s36j7x04f3wwhxc0r0000gp/T/tmp.VYaZf9qyLw/SMIClientCore/SMINetworkHTTPStatusCodes.h",
+      "file": "/var/folders/vn/2xl09q9s36j7x04f3wwhxc0r0000gp/T/tmp.JmTxBoLNxX/SMIClientCore/SMINetworkHTTPStatusCodes.h",
       "line": 30,
       "symbol": "SMINetworkHTTPStatusCode.SMINetworkHTTPStatusCodeFound",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
-      "file": "/var/folders/vn/2xl09q9s36j7x04f3wwhxc0r0000gp/T/tmp.VYaZf9qyLw/SMIClientCore/SMINetworkHTTPStatusCodes.h",
+      "file": "/var/folders/vn/2xl09q9s36j7x04f3wwhxc0r0000gp/T/tmp.JmTxBoLNxX/SMIClientCore/SMINetworkHTTPStatusCodes.h",
       "line": 31,
       "symbol": "SMINetworkHTTPStatusCode.SMINetworkHTTPStatusCodeSeeOther",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
-      "file": "/var/folders/vn/2xl09q9s36j7x04f3wwhxc0r0000gp/T/tmp.VYaZf9qyLw/SMIClientCore/SMINetworkHTTPStatusCodes.h",
+      "file": "/var/folders/vn/2xl09q9s36j7x04f3wwhxc0r0000gp/T/tmp.JmTxBoLNxX/SMIClientCore/SMINetworkHTTPStatusCodes.h",
       "line": 32,
       "symbol": "SMINetworkHTTPStatusCode.SMINetworkHTTPStatusCodeNotModified",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
-      "file": "/var/folders/vn/2xl09q9s36j7x04f3wwhxc0r0000gp/T/tmp.VYaZf9qyLw/SMIClientCore/SMINetworkHTTPStatusCodes.h",
+      "file": "/var/folders/vn/2xl09q9s36j7x04f3wwhxc0r0000gp/T/tmp.JmTxBoLNxX/SMIClientCore/SMINetworkHTTPStatusCodes.h",
       "line": 33,
       "symbol": "SMINetworkHTTPStatusCode.SMINetworkHTTPStatusCodeUseProxy",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
-      "file": "/var/folders/vn/2xl09q9s36j7x04f3wwhxc0r0000gp/T/tmp.VYaZf9qyLw/SMIClientCore/SMINetworkHTTPStatusCodes.h",
+      "file": "/var/folders/vn/2xl09q9s36j7x04f3wwhxc0r0000gp/T/tmp.JmTxBoLNxX/SMIClientCore/SMINetworkHTTPStatusCodes.h",
       "line": 34,
       "symbol": "SMINetworkHTTPStatusCode.SMINetworkHTTPStatusCodeUnused",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
-      "file": "/var/folders/vn/2xl09q9s36j7x04f3wwhxc0r0000gp/T/tmp.VYaZf9qyLw/SMIClientCore/SMINetworkHTTPStatusCodes.h",
+      "file": "/var/folders/vn/2xl09q9s36j7x04f3wwhxc0r0000gp/T/tmp.JmTxBoLNxX/SMIClientCore/SMINetworkHTTPStatusCodes.h",
       "line": 35,
       "symbol": "SMINetworkHTTPStatusCode.SMINetworkHTTPStatusCodeTemporaryRedirect",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
-      "file": "/var/folders/vn/2xl09q9s36j7x04f3wwhxc0r0000gp/T/tmp.VYaZf9qyLw/SMIClientCore/SMINetworkHTTPStatusCodes.h",
+      "file": "/var/folders/vn/2xl09q9s36j7x04f3wwhxc0r0000gp/T/tmp.JmTxBoLNxX/SMIClientCore/SMINetworkHTTPStatusCodes.h",
       "line": 36,
       "symbol": "SMINetworkHTTPStatusCode.SMINetworkHTTPStatusCodePermanentRedirect",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
-      "file": "/var/folders/vn/2xl09q9s36j7x04f3wwhxc0r0000gp/T/tmp.VYaZf9qyLw/SMIClientCore/SMINetworkHTTPStatusCodes.h",
+      "file": "/var/folders/vn/2xl09q9s36j7x04f3wwhxc0r0000gp/T/tmp.JmTxBoLNxX/SMIClientCore/SMINetworkHTTPStatusCodes.h",
       "line": 38,
       "symbol": "SMINetworkHTTPStatusCode.SMINetworkHTTPStatusCodeBadRequest",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
-      "file": "/var/folders/vn/2xl09q9s36j7x04f3wwhxc0r0000gp/T/tmp.VYaZf9qyLw/SMIClientCore/SMINetworkHTTPStatusCodes.h",
+      "file": "/var/folders/vn/2xl09q9s36j7x04f3wwhxc0r0000gp/T/tmp.JmTxBoLNxX/SMIClientCore/SMINetworkHTTPStatusCodes.h",
       "line": 39,
       "symbol": "SMINetworkHTTPStatusCode.SMINetworkHTTPStatusCodeUnauthorized",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
-      "file": "/var/folders/vn/2xl09q9s36j7x04f3wwhxc0r0000gp/T/tmp.VYaZf9qyLw/SMIClientCore/SMINetworkHTTPStatusCodes.h",
+      "file": "/var/folders/vn/2xl09q9s36j7x04f3wwhxc0r0000gp/T/tmp.JmTxBoLNxX/SMIClientCore/SMINetworkHTTPStatusCodes.h",
       "line": 40,
       "symbol": "SMINetworkHTTPStatusCode.SMINetworkHTTPStatusCodePaymentRequired",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
-      "file": "/var/folders/vn/2xl09q9s36j7x04f3wwhxc0r0000gp/T/tmp.VYaZf9qyLw/SMIClientCore/SMINetworkHTTPStatusCodes.h",
+      "file": "/var/folders/vn/2xl09q9s36j7x04f3wwhxc0r0000gp/T/tmp.JmTxBoLNxX/SMIClientCore/SMINetworkHTTPStatusCodes.h",
       "line": 41,
       "symbol": "SMINetworkHTTPStatusCode.SMINetworkHTTPStatusCodeForbidden",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
-      "file": "/var/folders/vn/2xl09q9s36j7x04f3wwhxc0r0000gp/T/tmp.VYaZf9qyLw/SMIClientCore/SMINetworkHTTPStatusCodes.h",
+      "file": "/var/folders/vn/2xl09q9s36j7x04f3wwhxc0r0000gp/T/tmp.JmTxBoLNxX/SMIClientCore/SMINetworkHTTPStatusCodes.h",
       "line": 42,
       "symbol": "SMINetworkHTTPStatusCode.SMINetworkHTTPStatusCodeNotFound",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
-      "file": "/var/folders/vn/2xl09q9s36j7x04f3wwhxc0r0000gp/T/tmp.VYaZf9qyLw/SMIClientCore/SMINetworkHTTPStatusCodes.h",
+      "file": "/var/folders/vn/2xl09q9s36j7x04f3wwhxc0r0000gp/T/tmp.JmTxBoLNxX/SMIClientCore/SMINetworkHTTPStatusCodes.h",
       "line": 43,
       "symbol": "SMINetworkHTTPStatusCode.SMINetworkHTTPStatusCodeMethodNotAllowed",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
-      "file": "/var/folders/vn/2xl09q9s36j7x04f3wwhxc0r0000gp/T/tmp.VYaZf9qyLw/SMIClientCore/SMINetworkHTTPStatusCodes.h",
+      "file": "/var/folders/vn/2xl09q9s36j7x04f3wwhxc0r0000gp/T/tmp.JmTxBoLNxX/SMIClientCore/SMINetworkHTTPStatusCodes.h",
       "line": 44,
       "symbol": "SMINetworkHTTPStatusCode.SMINetworkHTTPStatusCodeNotAcceptable",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
-      "file": "/var/folders/vn/2xl09q9s36j7x04f3wwhxc0r0000gp/T/tmp.VYaZf9qyLw/SMIClientCore/SMINetworkHTTPStatusCodes.h",
+      "file": "/var/folders/vn/2xl09q9s36j7x04f3wwhxc0r0000gp/T/tmp.JmTxBoLNxX/SMIClientCore/SMINetworkHTTPStatusCodes.h",
       "line": 45,
       "symbol": "SMINetworkHTTPStatusCode.SMINetworkHTTPStatusCodeProxyAuthenticationRequired",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
-      "file": "/var/folders/vn/2xl09q9s36j7x04f3wwhxc0r0000gp/T/tmp.VYaZf9qyLw/SMIClientCore/SMINetworkHTTPStatusCodes.h",
+      "file": "/var/folders/vn/2xl09q9s36j7x04f3wwhxc0r0000gp/T/tmp.JmTxBoLNxX/SMIClientCore/SMINetworkHTTPStatusCodes.h",
       "line": 46,
       "symbol": "SMINetworkHTTPStatusCode.SMINetworkHTTPStatusCodeRequestTimeout",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
-      "file": "/var/folders/vn/2xl09q9s36j7x04f3wwhxc0r0000gp/T/tmp.VYaZf9qyLw/SMIClientCore/SMINetworkHTTPStatusCodes.h",
+      "file": "/var/folders/vn/2xl09q9s36j7x04f3wwhxc0r0000gp/T/tmp.JmTxBoLNxX/SMIClientCore/SMINetworkHTTPStatusCodes.h",
       "line": 47,
       "symbol": "SMINetworkHTTPStatusCode.SMINetworkHTTPStatusCodeConflict",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
-      "file": "/var/folders/vn/2xl09q9s36j7x04f3wwhxc0r0000gp/T/tmp.VYaZf9qyLw/SMIClientCore/SMINetworkHTTPStatusCodes.h",
+      "file": "/var/folders/vn/2xl09q9s36j7x04f3wwhxc0r0000gp/T/tmp.JmTxBoLNxX/SMIClientCore/SMINetworkHTTPStatusCodes.h",
       "line": 48,
       "symbol": "SMINetworkHTTPStatusCode.SMINetworkHTTPStatusCodeGone",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
-      "file": "/var/folders/vn/2xl09q9s36j7x04f3wwhxc0r0000gp/T/tmp.VYaZf9qyLw/SMIClientCore/SMINetworkHTTPStatusCodes.h",
+      "file": "/var/folders/vn/2xl09q9s36j7x04f3wwhxc0r0000gp/T/tmp.JmTxBoLNxX/SMIClientCore/SMINetworkHTTPStatusCodes.h",
       "line": 49,
       "symbol": "SMINetworkHTTPStatusCode.SMINetworkHTTPStatusCodeLengthRequired",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
-      "file": "/var/folders/vn/2xl09q9s36j7x04f3wwhxc0r0000gp/T/tmp.VYaZf9qyLw/SMIClientCore/SMINetworkHTTPStatusCodes.h",
+      "file": "/var/folders/vn/2xl09q9s36j7x04f3wwhxc0r0000gp/T/tmp.JmTxBoLNxX/SMIClientCore/SMINetworkHTTPStatusCodes.h",
       "line": 50,
       "symbol": "SMINetworkHTTPStatusCode.SMINetworkHTTPStatusCodePreconditionFailed",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
-      "file": "/var/folders/vn/2xl09q9s36j7x04f3wwhxc0r0000gp/T/tmp.VYaZf9qyLw/SMIClientCore/SMINetworkHTTPStatusCodes.h",
+      "file": "/var/folders/vn/2xl09q9s36j7x04f3wwhxc0r0000gp/T/tmp.JmTxBoLNxX/SMIClientCore/SMINetworkHTTPStatusCodes.h",
       "line": 51,
       "symbol": "SMINetworkHTTPStatusCode.SMINetworkHTTPStatusCodePayloadTooLarge",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
-      "file": "/var/folders/vn/2xl09q9s36j7x04f3wwhxc0r0000gp/T/tmp.VYaZf9qyLw/SMIClientCore/SMINetworkHTTPStatusCodes.h",
+      "file": "/var/folders/vn/2xl09q9s36j7x04f3wwhxc0r0000gp/T/tmp.JmTxBoLNxX/SMIClientCore/SMINetworkHTTPStatusCodes.h",
       "line": 52,
       "symbol": "SMINetworkHTTPStatusCode.SMINetworkHTTPStatusCodeURITooLong",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
-      "file": "/var/folders/vn/2xl09q9s36j7x04f3wwhxc0r0000gp/T/tmp.VYaZf9qyLw/SMIClientCore/SMINetworkHTTPStatusCodes.h",
+      "file": "/var/folders/vn/2xl09q9s36j7x04f3wwhxc0r0000gp/T/tmp.JmTxBoLNxX/SMIClientCore/SMINetworkHTTPStatusCodes.h",
       "line": 53,
       "symbol": "SMINetworkHTTPStatusCode.SMINetworkHTTPStatusCodeUnsupportedMediaType",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
-      "file": "/var/folders/vn/2xl09q9s36j7x04f3wwhxc0r0000gp/T/tmp.VYaZf9qyLw/SMIClientCore/SMINetworkHTTPStatusCodes.h",
+      "file": "/var/folders/vn/2xl09q9s36j7x04f3wwhxc0r0000gp/T/tmp.JmTxBoLNxX/SMIClientCore/SMINetworkHTTPStatusCodes.h",
       "line": 54,
       "symbol": "SMINetworkHTTPStatusCode.SMINetworkHTTPStatusCodeRangeNotSatisfiable",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
-      "file": "/var/folders/vn/2xl09q9s36j7x04f3wwhxc0r0000gp/T/tmp.VYaZf9qyLw/SMIClientCore/SMINetworkHTTPStatusCodes.h",
+      "file": "/var/folders/vn/2xl09q9s36j7x04f3wwhxc0r0000gp/T/tmp.JmTxBoLNxX/SMIClientCore/SMINetworkHTTPStatusCodes.h",
       "line": 55,
       "symbol": "SMINetworkHTTPStatusCode.SMINetworkHTTPStatusCodeExpectationFailed",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
-      "file": "/var/folders/vn/2xl09q9s36j7x04f3wwhxc0r0000gp/T/tmp.VYaZf9qyLw/SMIClientCore/SMINetworkHTTPStatusCodes.h",
+      "file": "/var/folders/vn/2xl09q9s36j7x04f3wwhxc0r0000gp/T/tmp.JmTxBoLNxX/SMIClientCore/SMINetworkHTTPStatusCodes.h",
       "line": 56,
       "symbol": "SMINetworkHTTPStatusCode.SMINetworkHTTPStatusCodeImATeapot",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
-      "file": "/var/folders/vn/2xl09q9s36j7x04f3wwhxc0r0000gp/T/tmp.VYaZf9qyLw/SMIClientCore/SMINetworkHTTPStatusCodes.h",
+      "file": "/var/folders/vn/2xl09q9s36j7x04f3wwhxc0r0000gp/T/tmp.JmTxBoLNxX/SMIClientCore/SMINetworkHTTPStatusCodes.h",
       "line": 57,
       "symbol": "SMINetworkHTTPStatusCode.SMINetworkHTTPStatusCodeMisdirectedRequest",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
-      "file": "/var/folders/vn/2xl09q9s36j7x04f3wwhxc0r0000gp/T/tmp.VYaZf9qyLw/SMIClientCore/SMINetworkHTTPStatusCodes.h",
+      "file": "/var/folders/vn/2xl09q9s36j7x04f3wwhxc0r0000gp/T/tmp.JmTxBoLNxX/SMIClientCore/SMINetworkHTTPStatusCodes.h",
       "line": 58,
       "symbol": "SMINetworkHTTPStatusCode.SMINetworkHTTPStatusCodeUnprocessableEntity",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
-      "file": "/var/folders/vn/2xl09q9s36j7x04f3wwhxc0r0000gp/T/tmp.VYaZf9qyLw/SMIClientCore/SMINetworkHTTPStatusCodes.h",
+      "file": "/var/folders/vn/2xl09q9s36j7x04f3wwhxc0r0000gp/T/tmp.JmTxBoLNxX/SMIClientCore/SMINetworkHTTPStatusCodes.h",
       "line": 59,
       "symbol": "SMINetworkHTTPStatusCode.SMINetworkHTTPStatusCodeLocked",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
-      "file": "/var/folders/vn/2xl09q9s36j7x04f3wwhxc0r0000gp/T/tmp.VYaZf9qyLw/SMIClientCore/SMINetworkHTTPStatusCodes.h",
+      "file": "/var/folders/vn/2xl09q9s36j7x04f3wwhxc0r0000gp/T/tmp.JmTxBoLNxX/SMIClientCore/SMINetworkHTTPStatusCodes.h",
       "line": 60,
       "symbol": "SMINetworkHTTPStatusCode.SMINetworkHTTPStatusCodeFailedDependency",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
-      "file": "/var/folders/vn/2xl09q9s36j7x04f3wwhxc0r0000gp/T/tmp.VYaZf9qyLw/SMIClientCore/SMINetworkHTTPStatusCodes.h",
+      "file": "/var/folders/vn/2xl09q9s36j7x04f3wwhxc0r0000gp/T/tmp.JmTxBoLNxX/SMIClientCore/SMINetworkHTTPStatusCodes.h",
       "line": 61,
       "symbol": "SMINetworkHTTPStatusCode.SMINetworkHTTPStatusCodeTooEarly",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
-      "file": "/var/folders/vn/2xl09q9s36j7x04f3wwhxc0r0000gp/T/tmp.VYaZf9qyLw/SMIClientCore/SMINetworkHTTPStatusCodes.h",
+      "file": "/var/folders/vn/2xl09q9s36j7x04f3wwhxc0r0000gp/T/tmp.JmTxBoLNxX/SMIClientCore/SMINetworkHTTPStatusCodes.h",
       "line": 62,
       "symbol": "SMINetworkHTTPStatusCode.SMINetworkHTTPStatusCodeUpgradeRequired",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
-      "file": "/var/folders/vn/2xl09q9s36j7x04f3wwhxc0r0000gp/T/tmp.VYaZf9qyLw/SMIClientCore/SMINetworkHTTPStatusCodes.h",
+      "file": "/var/folders/vn/2xl09q9s36j7x04f3wwhxc0r0000gp/T/tmp.JmTxBoLNxX/SMIClientCore/SMINetworkHTTPStatusCodes.h",
       "line": 63,
       "symbol": "SMINetworkHTTPStatusCode.SMINetworkHTTPStatusCodePreconditionRequired",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
-      "file": "/var/folders/vn/2xl09q9s36j7x04f3wwhxc0r0000gp/T/tmp.VYaZf9qyLw/SMIClientCore/SMINetworkHTTPStatusCodes.h",
+      "file": "/var/folders/vn/2xl09q9s36j7x04f3wwhxc0r0000gp/T/tmp.JmTxBoLNxX/SMIClientCore/SMINetworkHTTPStatusCodes.h",
       "line": 64,
       "symbol": "SMINetworkHTTPStatusCode.SMINetworkHTTPStatusCodeTooManyRequests",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
-      "file": "/var/folders/vn/2xl09q9s36j7x04f3wwhxc0r0000gp/T/tmp.VYaZf9qyLw/SMIClientCore/SMINetworkHTTPStatusCodes.h",
+      "file": "/var/folders/vn/2xl09q9s36j7x04f3wwhxc0r0000gp/T/tmp.JmTxBoLNxX/SMIClientCore/SMINetworkHTTPStatusCodes.h",
       "line": 65,
       "symbol": "SMINetworkHTTPStatusCode.SMINetworkHTTPStatusCodeRequestHeaderFieldsTooLarge",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
-      "file": "/var/folders/vn/2xl09q9s36j7x04f3wwhxc0r0000gp/T/tmp.VYaZf9qyLw/SMIClientCore/SMINetworkHTTPStatusCodes.h",
+      "file": "/var/folders/vn/2xl09q9s36j7x04f3wwhxc0r0000gp/T/tmp.JmTxBoLNxX/SMIClientCore/SMINetworkHTTPStatusCodes.h",
       "line": 66,
       "symbol": "SMINetworkHTTPStatusCode.SMINetworkHTTPStatusCodeUnavailableForLegalReasons",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
-      "file": "/var/folders/vn/2xl09q9s36j7x04f3wwhxc0r0000gp/T/tmp.VYaZf9qyLw/SMIClientCore/SMINetworkHTTPStatusCodes.h",
+      "file": "/var/folders/vn/2xl09q9s36j7x04f3wwhxc0r0000gp/T/tmp.JmTxBoLNxX/SMIClientCore/SMINetworkHTTPStatusCodes.h",
       "line": 68,
       "symbol": "SMINetworkHTTPStatusCode.SMINetworkHTTPStatusCodeInternalServerError",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
-      "file": "/var/folders/vn/2xl09q9s36j7x04f3wwhxc0r0000gp/T/tmp.VYaZf9qyLw/SMIClientCore/SMINetworkHTTPStatusCodes.h",
+      "file": "/var/folders/vn/2xl09q9s36j7x04f3wwhxc0r0000gp/T/tmp.JmTxBoLNxX/SMIClientCore/SMINetworkHTTPStatusCodes.h",
       "line": 69,
       "symbol": "SMINetworkHTTPStatusCode.SMINetworkHTTPStatusCodeNotImplemented",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
-      "file": "/var/folders/vn/2xl09q9s36j7x04f3wwhxc0r0000gp/T/tmp.VYaZf9qyLw/SMIClientCore/SMINetworkHTTPStatusCodes.h",
+      "file": "/var/folders/vn/2xl09q9s36j7x04f3wwhxc0r0000gp/T/tmp.JmTxBoLNxX/SMIClientCore/SMINetworkHTTPStatusCodes.h",
       "line": 70,
       "symbol": "SMINetworkHTTPStatusCode.SMINetworkHTTPStatusCodeBadGateway",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
-      "file": "/var/folders/vn/2xl09q9s36j7x04f3wwhxc0r0000gp/T/tmp.VYaZf9qyLw/SMIClientCore/SMINetworkHTTPStatusCodes.h",
+      "file": "/var/folders/vn/2xl09q9s36j7x04f3wwhxc0r0000gp/T/tmp.JmTxBoLNxX/SMIClientCore/SMINetworkHTTPStatusCodes.h",
       "line": 71,
       "symbol": "SMINetworkHTTPStatusCode.SMINetworkHTTPStatusCodeServiceUnavailable",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
-      "file": "/var/folders/vn/2xl09q9s36j7x04f3wwhxc0r0000gp/T/tmp.VYaZf9qyLw/SMIClientCore/SMINetworkHTTPStatusCodes.h",
+      "file": "/var/folders/vn/2xl09q9s36j7x04f3wwhxc0r0000gp/T/tmp.JmTxBoLNxX/SMIClientCore/SMINetworkHTTPStatusCodes.h",
       "line": 72,
       "symbol": "SMINetworkHTTPStatusCode.SMINetworkHTTPStatusCodeGatewayTimeout",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
-      "file": "/var/folders/vn/2xl09q9s36j7x04f3wwhxc0r0000gp/T/tmp.VYaZf9qyLw/SMIClientCore/SMINetworkHTTPStatusCodes.h",
+      "file": "/var/folders/vn/2xl09q9s36j7x04f3wwhxc0r0000gp/T/tmp.JmTxBoLNxX/SMIClientCore/SMINetworkHTTPStatusCodes.h",
       "line": 73,
       "symbol": "SMINetworkHTTPStatusCode.SMINetworkHTTPStatusCodeHTTPVersionNotSupported",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
-      "file": "/var/folders/vn/2xl09q9s36j7x04f3wwhxc0r0000gp/T/tmp.VYaZf9qyLw/SMIClientCore/SMINetworkHTTPStatusCodes.h",
+      "file": "/var/folders/vn/2xl09q9s36j7x04f3wwhxc0r0000gp/T/tmp.JmTxBoLNxX/SMIClientCore/SMINetworkHTTPStatusCodes.h",
       "line": 74,
       "symbol": "SMINetworkHTTPStatusCode.SMINetworkHTTPStatusCodeVariantAlsoNegotiates",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
-      "file": "/var/folders/vn/2xl09q9s36j7x04f3wwhxc0r0000gp/T/tmp.VYaZf9qyLw/SMIClientCore/SMINetworkHTTPStatusCodes.h",
+      "file": "/var/folders/vn/2xl09q9s36j7x04f3wwhxc0r0000gp/T/tmp.JmTxBoLNxX/SMIClientCore/SMINetworkHTTPStatusCodes.h",
       "line": 75,
       "symbol": "SMINetworkHTTPStatusCode.SMINetworkHTTPStatusCodeInsufficientStorage",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
-      "file": "/var/folders/vn/2xl09q9s36j7x04f3wwhxc0r0000gp/T/tmp.VYaZf9qyLw/SMIClientCore/SMINetworkHTTPStatusCodes.h",
+      "file": "/var/folders/vn/2xl09q9s36j7x04f3wwhxc0r0000gp/T/tmp.JmTxBoLNxX/SMIClientCore/SMINetworkHTTPStatusCodes.h",
       "line": 76,
       "symbol": "SMINetworkHTTPStatusCode.SMINetworkHTTPStatusCodeLoopDetected",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
-      "file": "/var/folders/vn/2xl09q9s36j7x04f3wwhxc0r0000gp/T/tmp.VYaZf9qyLw/SMIClientCore/SMINetworkHTTPStatusCodes.h",
+      "file": "/var/folders/vn/2xl09q9s36j7x04f3wwhxc0r0000gp/T/tmp.JmTxBoLNxX/SMIClientCore/SMINetworkHTTPStatusCodes.h",
       "line": 77,
       "symbol": "SMINetworkHTTPStatusCode.SMINetworkHTTPStatusCodeNotExtended",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
       "warning": "undocumented"
     },
     {
-      "file": "/var/folders/vn/2xl09q9s36j7x04f3wwhxc0r0000gp/T/tmp.VYaZf9qyLw/SMIClientCore/SMINetworkHTTPStatusCodes.h",
+      "file": "/var/folders/vn/2xl09q9s36j7x04f3wwhxc0r0000gp/T/tmp.JmTxBoLNxX/SMIClientCore/SMINetworkHTTPStatusCodes.h",
       "line": 78,
       "symbol": "SMINetworkHTTPStatusCode.SMINetworkHTTPStatusCodeNetworkAuthenticationRequired",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enumcase",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/var/folders/vn/2xl09q9s36j7x04f3wwhxc0r0000gp/T/tmp.JmTxBoLNxX/SMIClientCore/SMITitleImageItem.h",
+      "line": 14,
+      "symbol": "SMITitleImageItem",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/var/folders/vn/2xl09q9s36j7x04f3wwhxc0r0000gp/T/tmp.JmTxBoLNxX/SMIClientCore/SMITitleImageItem.h",
+      "line": 16,
+      "symbol": "SMITitleImageItem.imageId",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.property",
       "warning": "undocumented"
     }
   ],
