@@ -48,6 +48,9 @@ struct ContentView: View {
                 Button("Reset Conversation ID") {
                     viewModel.resetChat()
                 }
+                Button("Retreive Transcript") {
+                    viewModel.retreiveTranscript()
+                }
             }
             .buttonStyle(. bordered)
             .tint(.blue)
