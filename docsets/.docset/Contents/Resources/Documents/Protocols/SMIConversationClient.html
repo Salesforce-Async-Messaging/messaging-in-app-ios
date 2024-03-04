@@ -140,6 +140,9 @@
                 <a class="nav-group-task-link" href="../Constants.html#/c:@SMIConversationFormatTypesAttachments">SMIConversationFormatTypesAttachments</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@SMIConversationFormatTypesCarousel">SMIConversationFormatTypesCarousel</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Constants.html#/c:@SMIConversationFormatTypesImageMessage">SMIConversationFormatTypesImageMessage</a>
               </li>
               <li class="nav-group-task">
@@ -450,6 +453,9 @@
                 <a class="nav-group-task-link" href="../Protocols/SMIAttachmentEntry.html">SMIAttachmentEntry</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/SMIAttachments.html">SMIAttachments</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Protocols/SMIAuthorization.html">SMIAuthorization</a>
               </li>
               <li class="nav-group-task">
@@ -457,6 +463,9 @@
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Protocols/SMIBusinessHoursInfo.html">SMIBusinessHoursInfo</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/SMICarousel.html">SMICarousel</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Protocols/SMIChoice.html">SMIChoice</a>
@@ -615,6 +624,9 @@
                 <a class="nav-group-task-link" href="../Protocols/SMILogging.html">SMILogging</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/SMIMessageChoices.html">SMIMessageChoices</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Protocols/SMIMessageSelectable.html">SMIMessageSelectable</a>
               </li>
               <li class="nav-group-task">
@@ -675,10 +687,16 @@
                 <a class="nav-group-task-link" href="../Protocols/SMITextMessage.html">SMITextMessage</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/SMITitleImageItem.html">SMITitleImageItem</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/SMITitleLinkItem.html">SMITitleLinkItem</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Protocols/SMITypingIndicator.html">SMITypingIndicator</a>
               </li>
               <li class="nav-group-task">
-                <a class="nav-group-task-link" href="../Protocols/SMIUnknownAsset.html">SMIUnknownAsset</a>
+                <a class="nav-group-task-link" href="../Protocols.html#/c:objc(pl)SMIUnknownAsset">SMIUnknownAsset</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Protocols.html#/c:objc(pl)SMIUnknownEntry">SMIUnknownEntry</a>
@@ -798,6 +816,9 @@
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Type%20Definitions.html#/c:SMITemplatedUrlDelegate.h@T@SMITemplatedUrlParametersCompletion">SMITemplatedUrlParametersCompletion</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Type%20Definitions.html#/c:SMIConversationRequestCompletion.h@T@SMITranscriptRequestCompletion">SMITranscriptRequestCompletion</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Type%20Definitions.html#/c:SMITypingIndicatorTypes.h@T@SMITypingIndicatorTypes">SMITypingIndicatorTypes</a>
@@ -2196,6 +2217,57 @@ An entry is considered verified if the entry in the local DB cache has been veri
                 <li class="item">
                   <div>
                     <code>
+                    <a name="/c:objc(pl)SMIConversationClient(im)retrieveTranscript:"></a>
+                    <a name="//apple_ref/objc/Method/-retrieveTranscript:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(pl)SMIConversationClient(im)retrieveTranscript:">-retrieveTranscript:<wbr></a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Attempt to download a transcript of the converation.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">retrieveTranscript</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n"><a href="../Type%20Definitions.html#/c:SMIConversationRequestCompletion.h@T@SMITranscriptRequestCompletion">SMITranscriptRequestCompletion</a></span><span class="p">)</span><span class="nv">completion</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">retrieveTranscript</span><span class="p">()</span> <span class="k">async</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">PDFDocument</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The completion of the transcript request with a PDF document of the conversation transcript.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
                     <a name="/c:objc(pl)SMIConversationClient(im)addDelegate:"></a>
                     <a name="//apple_ref/objc/Method/-addDelegate:" class="dashAnchor"></a>
                     <a class="token" href="#/c:objc(pl)SMIConversationClient(im)addDelegate:">-addDelegate:<wbr></a>
@@ -2368,7 +2440,7 @@ It is recommended that the main queue is passed to this method if you plan to ha
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2024 <a class="link" href="" target="_blank" rel="external noopener">Salesforce</a>. All rights reserved. (Last updated: 2024-01-31)</p>
+      <p>&copy; 2024 <a class="link" href="" target="_blank" rel="external noopener">Salesforce</a>. All rights reserved. (Last updated: 2024-02-29)</p>
       <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external noopener">jazzy ♪♫ v0.14.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external noopener">Realm</a> project.</p>
     </section>
   </body>
