@@ -70,6 +70,29 @@ public class MessagingViewModel: NSObject {
         conversationClient?.send(reply: choice)
     }
 
+    /// Sends a request to get the chat transcript.
+    public func retreiveTranscript() {
+        conversationClient?.retreiveTranscript { document, error in
+            if error != nil {
+                print("Failed to retreive the chat transcript")
+                return
+            }
+
+            guard let pdfData = document?.dataRepresentation() else {
+                return
+            }
+            let activityViewController = UIActivityViewController(activityItems: [pdfData], applicationActivities: nil)
+            let keyWindow = UIApplication.shared.windows.first(where: {$0.isKeyWindow})
+
+            if var topController = keyWindow?.rootViewController {
+                while let presentedViewController = topController.presentedViewController {
+                    topController = presentedViewController
+                }
+                topController.present(activityViewController, animated: true)
+            }
+        }
+    }
+
     /// Resets the conversation ID and creates a new conversation.
     public func resetChat() {
         self.conversationID = UUID()
