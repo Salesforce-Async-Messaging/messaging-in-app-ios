@@ -71,10 +71,10 @@ public class MessagingViewModel: NSObject {
     }
 
     /// Sends a request to get the chat transcript.
-    public func retreiveTranscript() {
+    public func retrieveTranscript() {
         conversationClient?.retrieveTranscript { document, error in
             if error != nil {
-                print("Failed to retreive the chat transcript")
+                print("Failed to retrieve the chat transcript")
                 return
             }
 
