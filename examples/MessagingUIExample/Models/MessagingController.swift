@@ -49,17 +49,18 @@ class MessagingController: NSObject, ObservableObject {
 
         guard let config = uiConfig else { return }
         
+        let core = CoreFactory.create(withConfig: config)
         // Handle pre-chat requests with a HiddenPreChatDelegate implementation.
-        CoreFactory.create(withConfig: config).setPreChatDelegate(delegate: self, queue: DispatchQueue.main)
-        
+        core.setPreChatDelegate(delegate: self, queue: DispatchQueue.main)
+
         // Handle auto-response component requests with a TemplatedUrlDelegate implementation.
-        CoreFactory.create(withConfig: config).setTemplatedUrlDelegate(delegate: self, queue: DispatchQueue.main)
-        
+        core.setTemplatedUrlDelegate(delegate: self, queue: DispatchQueue.main)
+
         // Handle user verification requests with a UserVerificationDelegate implementation.
-        CoreFactory.create(withConfig: config).setUserVerificationDelegate(delegate: self, queue: DispatchQueue.main)
+        core.setUserVerificationDelegate(delegate: self, queue: DispatchQueue.main)
 
         // Handle error messages from the SDK.
-        CoreFactory.create(withConfig: config).addDelegate(delegate: self)
+        core.addDelegate(delegate: self)
 
         print("Config created using conversation ID \(conversationID.description).")
     }
