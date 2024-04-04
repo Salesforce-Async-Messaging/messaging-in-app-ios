@@ -158,23 +158,23 @@ public class MessagingViewModel: NSObject {
         coreClient?.start()
 
         // Handle pre-chat requests with a HiddenPreChatDelegate implementation
-        CoreFactory.create(withConfig: config).setPreChatDelegate(delegate: self, queue: DispatchQueue.main)
+        coreClient?.setPreChatDelegate(delegate: self, queue: DispatchQueue.main)
 
         // Handle auto-response component requests with a TemplatedUrlDelegate implementation
-        CoreFactory.create(withConfig: config).setTemplatedUrlDelegate(delegate: self, queue: DispatchQueue.main)
+        coreClient?.setTemplatedUrlDelegate(delegate: self, queue: DispatchQueue.main)
 
         // Handle user verification requests with a UserVerificationDelegate implementation
-        CoreFactory.create(withConfig: config).setUserVerificationDelegate(delegate: self, queue: DispatchQueue.main)
+        coreClient?.setUserVerificationDelegate(delegate: self, queue: DispatchQueue.main)
 
         // Handle error messages from the SDK
-        CoreFactory.create(withConfig: config).addDelegate(delegate: self)
+        coreClient?.addDelegate(delegate: self)
 
         // Create the conversation client
         conversationClient = coreClient?.conversationClient(with: self.conversationID)
 
         // Retrieve and submit any PreChat fields
-        getPreChatFieldsFromConfig(completion: { preChatFields in
-            self.submitPreChatFields(preChatFields: preChatFields)
+        getRemoteConfig(completion: { preChatFields in
+            self.submitRemoteConfig(remoteConfig: preChatFields)
         })
     }
 
@@ -186,11 +186,9 @@ public class MessagingViewModel: NSObject {
     }
 
     /// Retrieves pre-chat fields from the remote config.
-    private func getPreChatFieldsFromConfig(completion: @escaping ([PreChatField]?) -> ()) {
+    private func getRemoteConfig(completion: @escaping (RemoteConfiguration?) -> ()) {
         coreClient?.retrieveRemoteConfiguration(completion: { remoteConfig, error in
-            if let preChatFields = remoteConfig?.preChatConfiguration?.first?.preChatFields {
-                completion(preChatFields)
-            }
+            completion(remoteConfig)
         })
     }
 
@@ -199,10 +197,10 @@ public class MessagingViewModel: NSObject {
     /// UI to get values from a user and then map them to the
     /// pre-chat values. You would then submit the pre-chat
     /// fields to Salesforce.
-    private func submitPreChatFields(preChatFields: [PreChatField]?) {
-        guard let preChatFields = preChatFields else { return }
+    private func submitRemoteConfig(remoteConfig: RemoteConfiguration?) {
+        guard let remoteConfig = remoteConfig else { return }
 
-        for preChatField in preChatFields {
+        for preChatField in remoteConfig.preChatConfiguration?.first?.preChatFields ?? [] {
             if preChatField.isRequired {
                 preChatField.value = "value"
             }
@@ -211,7 +209,7 @@ public class MessagingViewModel: NSObject {
         // You can choose to create the conversation when submiting
         // pre-chat values, otherwise the conversation will be started
         // after sending the first message.
-        self.conversationClient?.submit(preChatFields: preChatFields, hiddenPreChatFields: [], createConversationOnSubmit: true)
+        self.conversationClient?.submit(remoteConfig: remoteConfig, createConversationOnSubmit: true)
     }
 
     /// Sets the debug level to see more logs in the console.
