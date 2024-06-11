@@ -299,6 +299,9 @@
                 <a class="nav-group-task-link" href="../Constants.html#/c:@SMIMessageReasonAutomatedResponse">SMIMessageReasonAutomatedResponse</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@SMIMessageReasonConsent">SMIMessageReasonConsent</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Constants.html#/c:@SMIMessageReasonNone">SMIMessageReasonNone</a>
               </li>
               <li class="nav-group-task">
@@ -354,6 +357,9 @@
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Constants.html#/c:@SMIParticipantRoleChatbot">SMIParticipantRoleChatbot</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@SMIParticipantRoleRouter">SMIParticipantRoleRouter</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Constants.html#/c:@SMIParticipantRoleSupervisor">SMIParticipantRoleSupervisor</a>
@@ -962,6 +968,43 @@ when the service confirms receipt of the message.
                 <li class="item">
                   <div>
                     <code>
+                    <a name="/c:objc(pl)SMIConversationEntry(py)senderDisplayName"></a>
+                    <a name="//apple_ref/objc/Property/senderDisplayName" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(pl)SMIConversationEntry(py)senderDisplayName">senderDisplayName</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The display name of the particpant at the time this conversation entry was sent</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    This could differ from the displayName of the sender
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">readonly</span><span class="p">)</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">_Nonnull</span> <span class="n">senderDisplayName</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">senderDisplayName</span><span class="p">:</span> <span class="kt">String</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
                     <a name="/c:objc(pl)SMIConversationEntry(py)format"></a>
                     <a name="//apple_ref/objc/Property/format" class="dashAnchor"></a>
                     <a class="token" href="#/c:objc(pl)SMIConversationEntry(py)format">format</a>
@@ -1117,7 +1160,7 @@ when the service confirms receipt of the message.
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">payload</span><span class="p">:</span> <span class="kt">Serializable</span> <span class="o">&amp;</span> <span class="kt">EntryPayload</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">payload</span><span class="p">:</span> <span class="kd">any</span> <span class="kt">Serializable</span> <span class="o">&amp;</span> <span class="kt">EntryPayload</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
@@ -1149,7 +1192,7 @@ when the service confirms receipt of the message.
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">sender</span><span class="p">:</span> <span class="kt">Serializable</span> <span class="o">&amp;</span> <span class="kt">Participant</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">sender</span><span class="p">:</span> <span class="kd">any</span> <span class="kt">Serializable</span> <span class="o">&amp;</span> <span class="kt">Participant</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
@@ -1181,7 +1224,7 @@ when the service confirms receipt of the message.
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">error</span><span class="p">:</span> <span class="kt">Error</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">error</span><span class="p">:</span> <span class="p">(</span><span class="kd">any</span> <span class="kt">Error</span><span class="p">)?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
@@ -1196,7 +1239,7 @@ when the service confirms receipt of the message.
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2024 <a class="link" href="" target="_blank" rel="external noopener">Salesforce</a>. All rights reserved. (Last updated: 2024-02-29)</p>
+      <p>&copy; 2024 <a class="link" href="" target="_blank" rel="external noopener">Salesforce</a>. All rights reserved. (Last updated: 2024-06-11)</p>
       <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external noopener">jazzy ♪♫ v0.14.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external noopener">Realm</a> project.</p>
     </section>
   </body>
