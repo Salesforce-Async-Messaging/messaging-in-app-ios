@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		27B2C6E62A30E43100DC6740 /* Swift-InAppMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = 27B2C6E52A30E43100DC6740 /* Swift-InAppMessaging */; };
+		042F50732C18864600D0D77B /* Swift-InAppMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = 042F50722C18864600D0D77B /* Swift-InAppMessaging */; };
 		27B2C74C2A30E81700DC6740 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 27B2C74B2A30E81700DC6740 /* README.md */; };
 		27B2C7522A30E81E00DC6740 /* MessagingViewModel+HiddenPreChatDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B2C74E2A30E81E00DC6740 /* MessagingViewModel+HiddenPreChatDelegate.swift */; };
 		27B2C7532A30E81E00DC6740 /* MessagingViewModel+CoreDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B2C74F2A30E81E00DC6740 /* MessagingViewModel+CoreDelegate.swift */; };
@@ -37,7 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				27B2C6E62A30E43100DC6740 /* Swift-InAppMessaging in Frameworks */,
+				042F50732C18864600D0D77B /* Swift-InAppMessaging in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -109,7 +109,7 @@
 			);
 			name = MessagingCoreExample;
 			packageProductDependencies = (
-				27B2C6E52A30E43100DC6740 /* Swift-InAppMessaging */,
+				042F50722C18864600D0D77B /* Swift-InAppMessaging */,
 			);
 			productName = MessagingCoreExample;
 			productReference = 27B2C6B62A30E39500DC6740 /* MessagingCoreExample.app */;
@@ -140,7 +140,7 @@
 			);
 			mainGroup = 27B2C6AD2A30E39500DC6740;
 			packageReferences = (
-				27B2C6E42A30E43100DC6740 /* XCRemoteSwiftPackageReference "Swift-Package-InAppMessaging" */,
+				042F50712C18864600D0D77B /* XCRemoteSwiftPackageReference "Swift-Package-InAppMessaging" */,
 			);
 			productRefGroup = 27B2C6B72A30E39500DC6740 /* Products */;
 			projectDirPath = "";
@@ -379,20 +379,20 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		27B2C6E42A30E43100DC6740 /* XCRemoteSwiftPackageReference "Swift-Package-InAppMessaging" */ = {
+		042F50712C18864600D0D77B /* XCRemoteSwiftPackageReference "Swift-Package-InAppMessaging" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/Salesforce-Async-Messaging/Swift-Package-InAppMessaging";
+			repositoryURL = "https://github.com/Salesforce-Async-Messaging/Swift-Package-InAppMessaging.git";
 			requirement = {
-				kind = upToNextMinorVersion;
-				minimumVersion = 1.5.0;
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		27B2C6E52A30E43100DC6740 /* Swift-InAppMessaging */ = {
+		042F50722C18864600D0D77B /* Swift-InAppMessaging */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 27B2C6E42A30E43100DC6740 /* XCRemoteSwiftPackageReference "Swift-Package-InAppMessaging" */;
+			package = 042F50712C18864600D0D77B /* XCRemoteSwiftPackageReference "Swift-Package-InAppMessaging" */;
 			productName = "Swift-InAppMessaging";
 		};
 /* End XCSwiftPackageProductDependency section */
