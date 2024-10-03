@@ -7,46 +7,59 @@ import SMIClientUI
 import SMIClientCore
 
 struct ContentView: View {
-    @StateObject private var controller = MessagingController()
-    
     var body: some View {
-        NavigationView {
-            VStack {
-                Spacer()
-                Text("Messaging for In-App UI SDK Example")
-                Spacer()
-                VStack {
-                    if let config = controller.uiConfig {
-//                        NavigationLink(destination: Interface(config, preChatFieldValueProvider: setPreChatValues())) { // Set the pre populated pre-chat
-                        NavigationLink(destination: Interface(config)) {
-                            Text("Speak with an Agent")
-                        }
+        WrappedNavigationStack {
+            List {
+                Section(header: Text("Version Info")) {
+                    Text("Core: \(CoreFactory.sdkVersion ?? "")")
+                    Text("UI: \(Interface.sdkVersion ?? "")")
+                }
+
+                Section("Launch MIAW") {
+                    NavigationLink("SwiftUI") {
+                        MIAW()
                     }
-                    Button("Reset Conversation ID") {
-                        controller.resetConfig()
+                    NavigationLink("UIKit") {
+                        UIKitMIAW()
                     }
                 }
-                .buttonStyle(. bordered)
-                .tint(.blue)
-                Spacer()
+            }                
+            .navigationTitle("Main Menu")
+            .navigationBarTitleDisplayMode(.automatic)
+            .wrappedNavigationBarItems {
+                NavigationLink {
+                    SettingsForm()
+                } label: {
+                    Text(SettingsForm.title)
+                }
             }
-            .padding()
         }
     }
+}
 
-    // Pre set the pre-chat values
-    private func setPreChatValues() -> (([PreChatField]) async throws -> [PreChatField]) { { prechatFields in
-        prechatFields.enumerated().forEach { (index, value) in
-            let currenPrechatName = value.name
+struct MIAW: View {
+    @StateObject var configStore: MIAWConfigurationStore = MIAWConfigurationStore()
+    @StateObject var conversationManagementStore: ConversationManagementStore = ConversationManagementStore()
+    @StateObject var uiReplacementStore: UIReplacementStore = UIReplacementStore()
+    @StateObject var remoteLocaleStore: RemoteLocaleStore = RemoteLocaleStore()
 
-            if currenPrechatName == "Name of the Pre-Chat field you would like to set" {
-                prechatFields[index].value = "Set the value for the pre-chat fields"
-                prechatFields[index].isEditable = false // Set it to true to make the pre-chat fields editable, or to false to make them non-editable
-            }
-        }
+    var body: some View {
+        let config = UIConfiguration(configuration: configStore.config,
+                                     conversationId: conversationManagementStore.conversationUUID,
+                                     remoteLocaleMap: remoteLocaleStore.remoteLocaleMap,
+                                     urlDisplayMode: configStore.URLDisplayMode)
 
-        return prechatFields
-    }}
+        config.transcriptConfiguration = TranscriptConfiguration(allowTranscriptDownload: configStore.enableTranscriptUI)
+        config.attachmentConfiguration = AttachmentConfiguration(endUserToAgent: configStore.enableAttachmentUI)
+
+        return Interface(config,
+                         preChatFieldValueProvider: GlobalCoreDelegateHandler.shared.prePopulatedPreChatProvider.closure,
+                         chatFeedViewBuilder: GlobalCoreDelegateHandler.shared.viewBuilder)
+
+            .onAppear(perform: {
+                GlobalCoreDelegateHandler.shared.registerDelegates(CoreFactory.create(withConfig: config))
+            })
+    }
 }
 
 struct ContentView_Previews: PreviewProvider {
