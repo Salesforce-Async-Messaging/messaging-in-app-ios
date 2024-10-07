@@ -68,7 +68,7 @@ class MessagingController: NSObject, ObservableObject {
     /// Sets the debug level to see more logs in the console.
     private func setDebugLogging() {
         #if DEBUG
-            Logging.level = .debug
+        SMIClientCore.Logging.level = .debug
         #endif
     }
 }
