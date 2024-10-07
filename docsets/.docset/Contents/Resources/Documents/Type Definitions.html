@@ -293,7 +293,19 @@
                 <a class="nav-group-task-link" href="Constants.html#/c:@SMILoggingCategoryDatabase">SMILoggingCategoryDatabase</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Constants.html#/c:@SMILoggingCategoryError">SMILoggingCategoryError</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Constants.html#/c:@SMILoggingCategoryEvent">SMILoggingCategoryEvent</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Constants.html#/c:@SMILoggingCategoryMemory">SMILoggingCategoryMemory</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Constants.html#/c:@SMILoggingCategoryNetworking">SMILoggingCategoryNetworking</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Constants.html#/c:@SMILoggingCategoryRealtimeConnection">SMILoggingCategoryRealtimeConnection</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Constants.html#/c:@SMIMessageReasonAutomatedResponse">SMIMessageReasonAutomatedResponse</a>
@@ -393,6 +405,15 @@
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Constants.html#/c:@SMIPreChatFieldTypesTextArea">SMIPreChatFieldTypesTextArea</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Constants.html#/c:@SMIRealtimeConnectionStateClosed">SMIRealtimeConnectionStateClosed</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Constants.html#/c:@SMIRealtimeConnectionStateConnecting">SMIRealtimeConnectionStateConnecting</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Constants.html#/c:@SMIRealtimeConnectionStateOpen">SMIRealtimeConnectionStateOpen</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Constants.html#/c:@SMIRoutingTypesInitial">SMIRoutingTypesInitial</a>
@@ -804,6 +825,9 @@
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Type%20Definitions.html#/c:SMIPreChatFieldTypes.h@T@SMIPreChatFieldTypes">SMIPreChatFieldTypes</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Type%20Definitions.html#/c:SMIRealtimeConnectionState.h@T@SMIRealtimeConnectionState">SMIRealtimeConnectionState</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Type%20Definitions.html#/c:SMIRemoteConfiguration.h@T@SMIRemoteConfigurationCompletion">SMIRemoteConfigurationCompletion</a>
@@ -2364,6 +2388,44 @@ Possible values:</p>
                 <li class="item">
                   <div>
                     <code>
+                    <a name="/c:SMIRealtimeConnectionState.h@T@SMIRealtimeConnectionState"></a>
+                    <a name="//apple_ref/objc/Type/SMIRealtimeConnectionState" class="dashAnchor"></a>
+                    <a class="token" href="#/c:SMIRealtimeConnectionState.h@T@SMIRealtimeConnectionState">SMIRealtimeConnectionState</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The possible connection states for listening to realtime events.</p>
+
+<ul>
+<li><code><a href="Constants.html#/c:@SMIRealtimeConnectionStateClosed">SMIRealtimeConnectionStateClosed</a></code></li>
+<li><code><a href="Constants.html#/c:@SMIRealtimeConnectionStateOpen">SMIRealtimeConnectionStateOpen</a></code></li>
+<li><code><a href="Constants.html#/c:@SMIRealtimeConnectionStateConnecting">SMIRealtimeConnectionStateConnecting</a></code></li>
+</ul>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">typedef</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">SMIRealtimeConnectionState</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">struct</span> <span class="kt">RealtimeConnectionState</span> <span class="p">:</span> <span class="n">_ObjectiveCBridgeable</span><span class="p">,</span> <span class="kt">Hashable</span><span class="p">,</span> <span class="kt">Equatable</span><span class="p">,</span> <span class="n">_SwiftNewtypeWrapper</span><span class="p">,</span> <span class="kt">RawRepresentable</span><span class="p">,</span> <span class="kd">@unchecked</span> <span class="kt">Sendable</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
                     <a name="/c:SMIRemoteConfiguration.h@T@SMIRemoteConfigurationCompletion"></a>
                     <a name="//apple_ref/objc/Type/SMIRemoteConfigurationCompletion" class="dashAnchor"></a>
                     <a class="token" href="#/c:SMIRemoteConfiguration.h@T@SMIRemoteConfigurationCompletion">SMIRemoteConfigurationCompletion</a>
@@ -2633,8 +2695,8 @@ Possible values:</p>
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2024 <a class="link" href="" target="_blank" rel="external noopener">Salesforce</a>. All rights reserved. (Last updated: 2024-08-20)</p>
-      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external noopener">jazzy ♪♫ v0.15.0</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external noopener">Realm</a> project.</p>
+      <p>&copy; 2024 <a class="link" href="" target="_blank" rel="external noopener">Salesforce</a>. All rights reserved. (Last updated: 2024-10-07)</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external noopener">jazzy ♪♫ v0.15.1</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external noopener">Realm</a> project.</p>
     </section>
   </body>
 </html>
