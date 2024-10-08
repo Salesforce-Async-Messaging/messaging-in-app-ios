@@ -6,4 +6,4 @@
 // Modifying the string values within this file will result in the SDK reflecting those changes.
 
 /* Title for the chat feed view. */
-"SMI.Chat.Feed.Title" = "This is an example string override";
+"SMI.Chat.Feed.Title" = "Example Override";
