@@ -2,7 +2,7 @@
 
 # Salesforce Messaging for In-App (iOS SDK)
 
-Start a new conversation with customers from your Android mobile app. Custom branding and mobile push notifications provide a modern experience.
+Start a new conversation with customers from your iOS mobile app. Custom branding and mobile push notifications provide a modern experience.
 
 ## iOS SDK Links
 
