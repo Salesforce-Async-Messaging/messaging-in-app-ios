@@ -15,6 +15,9 @@
 		27B2C73B2A30E77300DC6740 /* MessagingUIExampleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B2C7392A30E77300DC6740 /* MessagingUIExampleApp.swift */; };
 		27B2C73C2A30E77300DC6740 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B2C73A2A30E77300DC6740 /* ContentView.swift */; };
 		27B2C74A2A30E7DC00DC6740 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 27B2C7492A30E7DC00DC6740 /* Localizable.strings */; };
+		F2665FE52CB819820044B7BF /* ConnectionEnvironment+Example.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2665FE42CB819820044B7BF /* ConnectionEnvironment+Example.swift */; };
+		F2665FE72CB819D80044B7BF /* EnvironmentSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2665FE62CB819D80044B7BF /* EnvironmentSettings.swift */; };
+		F2665FEA2CB81A2F0044B7BF /* DeveloperSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2665FE92CB81A2F0044B7BF /* DeveloperSettings.swift */; };
 		F27FB5542CB4521000E243B4 /* GlobalCoreDelegateHandler+TemplatedURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27FB54D2CB4521000E243B4 /* GlobalCoreDelegateHandler+TemplatedURL.swift */; };
 		F27FB5552CB4521000E243B4 /* TestEntryViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27FB5502CB4521000E243B4 /* TestEntryViewBuilder.swift */; };
 		F27FB5562CB4521000E243B4 /* GlobalCoreDelegateHandler+HiddenPreChat.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27FB54C2CB4521000E243B4 /* GlobalCoreDelegateHandler+HiddenPreChat.swift */; };
@@ -26,7 +29,6 @@
 		F2BFC17D2CAEDE1E000B97C0 /* TemplateURLDelegateConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2BFC1472CAEDE1D000B97C0 /* TemplateURLDelegateConfiguration.swift */; };
 		F2BFC17E2CAEDE1E000B97C0 /* HiddenPreChatDelegateConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2BFC1482CAEDE1D000B97C0 /* HiddenPreChatDelegateConfiguration.swift */; };
 		F2BFC17F2CAEDE1E000B97C0 /* DelegateManagementSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2BFC1492CAEDE1D000B97C0 /* DelegateManagementSettings.swift */; };
-		F2BFC1802CAEDE1E000B97C0 /* DeveloperSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2BFC14B2CAEDE1D000B97C0 /* DeveloperSettings.swift */; };
 		F2BFC1812CAEDE1E000B97C0 /* RemoteLocaleSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2BFC14D2CAEDE1D000B97C0 /* RemoteLocaleSettings.swift */; };
 		F2BFC1822CAEDE1E000B97C0 /* DemoManagementSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2BFC14F2CAEDE1D000B97C0 /* DemoManagementSettings.swift */; };
 		F2BFC1832CAEDE1E000B97C0 /* ConversationPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2BFC1512CAEDE1D000B97C0 /* ConversationPicker.swift */; };
@@ -90,6 +92,9 @@
 		27B2C7392A30E77300DC6740 /* MessagingUIExampleApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessagingUIExampleApp.swift; sourceTree = "<group>"; };
 		27B2C73A2A30E77300DC6740 /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		27B2C7492A30E7DC00DC6740 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		F2665FE42CB819820044B7BF /* ConnectionEnvironment+Example.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ConnectionEnvironment+Example.swift"; sourceTree = "<group>"; };
+		F2665FE62CB819D80044B7BF /* EnvironmentSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnvironmentSettings.swift; sourceTree = "<group>"; };
+		F2665FE92CB81A2F0044B7BF /* DeveloperSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeveloperSettings.swift; sourceTree = "<group>"; };
 		F27FB54A2CB4521000E243B4 /* GlobalCoreDelegateHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalCoreDelegateHandler.swift; sourceTree = "<group>"; };
 		F27FB54C2CB4521000E243B4 /* GlobalCoreDelegateHandler+HiddenPreChat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GlobalCoreDelegateHandler+HiddenPreChat.swift"; sourceTree = "<group>"; };
 		F27FB54D2CB4521000E243B4 /* GlobalCoreDelegateHandler+TemplatedURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GlobalCoreDelegateHandler+TemplatedURL.swift"; sourceTree = "<group>"; };
@@ -197,8 +202,17 @@
 				F2BFC1782CAEDE1E000B97C0 /* SettingsForm.swift */,
 				27B2C73A2A30E77300DC6740 /* ContentView.swift */,
 				F27FB55B2CB45B2500E243B4 /* UIKitMIAW.swift */,
+				F2665FE42CB819820044B7BF /* ConnectionEnvironment+Example.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		F2665FE82CB81A2F0044B7BF /* DebugManagement */ = {
+			isa = PBXGroup;
+			children = (
+				F2665FE92CB81A2F0044B7BF /* DeveloperSettings.swift */,
+			);
+			path = DebugManagement;
 			sourceTree = "<group>";
 		};
 		F27FB54F2CB4521000E243B4 /* CoreDelegate */ = {
@@ -260,6 +274,7 @@
 		F2BFC1442CAEDE1D000B97C0 /* Sections */ = {
 			isa = PBXGroup;
 			children = (
+				F2665FE82CB81A2F0044B7BF /* DebugManagement */,
 				F2BFC1452CAEDE1D000B97C0 /* ClientDelegates */,
 				F2BFC1502CAEDE1D000B97C0 /* ConversationManagement */,
 				F2BFC1552CAEDE1D000B97C0 /* DatabaseManagement */,
@@ -405,6 +420,7 @@
 		F2BFC1792CAEDE1E000B97C0 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
+				F2665FE62CB819D80044B7BF /* EnvironmentSettings.swift */,
 				F2BFC17A2CAEDE1E000B97C0 /* KeyValuePair.swift */,
 				F2BFC17B2CAEDE1E000B97C0 /* Settings.swift */,
 			);
@@ -568,6 +584,7 @@
 			files = (
 				F2F193DB2CB44B0A00B54AE8 /* UIReplacementSettings.swift in Sources */,
 				F2BFC17C2CAEDE1E000B97C0 /* PrePopulatedPreChatClosureConfiguration.swift in Sources */,
+				F2665FE52CB819820044B7BF /* ConnectionEnvironment+Example.swift in Sources */,
 				27B2C73C2A30E77300DC6740 /* ContentView.swift in Sources */,
 				F2BFC19D2CAEDE1E000B97C0 /* KeyValuePairRow.swift in Sources */,
 				F2BFC19A2CAEDE1E000B97C0 /* Array+RawRepresentable.swift in Sources */,
@@ -576,6 +593,7 @@
 				F2BFC19E2CAEDE1E000B97C0 /* SettingsForm.swift in Sources */,
 				F2F193F42CB44BC900B54AE8 /* TypingIndicatorReplacement.swift in Sources */,
 				F2F193F52CB44BC900B54AE8 /* FormResultReplacement.swift in Sources */,
+				F2665FEA2CB81A2F0044B7BF /* DeveloperSettings.swift in Sources */,
 				F2F193F62CB44BC900B54AE8 /* TextMessageReplacement.swift in Sources */,
 				F2F193F72CB44BC900B54AE8 /* TextReplacement.swift in Sources */,
 				F2F193F82CB44BC900B54AE8 /* EntryContainerReplacement.swift in Sources */,
@@ -587,6 +605,7 @@
 				F2F193FE2CB44BC900B54AE8 /* AttachmentReplacement.swift in Sources */,
 				F2F193FF2CB44BC900B54AE8 /* FormInputsReplacement.swift in Sources */,
 				F27FB5542CB4521000E243B4 /* GlobalCoreDelegateHandler+TemplatedURL.swift in Sources */,
+				F2665FE72CB819D80044B7BF /* EnvironmentSettings.swift in Sources */,
 				F27FB5552CB4521000E243B4 /* TestEntryViewBuilder.swift in Sources */,
 				F27FB5562CB4521000E243B4 /* GlobalCoreDelegateHandler+HiddenPreChat.swift in Sources */,
 				F27FB5572CB4521000E243B4 /* GlobalCoreDelegateHandler+UserVerification.swift in Sources */,
@@ -602,7 +621,6 @@
 				F2BFC1982CAEDE1E000B97C0 /* UIReplacementModel.swift in Sources */,
 				F2BFC1912CAEDE1E000B97C0 /* SettingsPicker.swift in Sources */,
 				F2BFC1922CAEDE1E000B97C0 /* SettingsTextField.swift in Sources */,
-				F2BFC1802CAEDE1E000B97C0 /* DeveloperSettings.swift in Sources */,
 				F2BFC1902CAEDE1E000B97C0 /* SettingsButton.swift in Sources */,
 				F2BFC1992CAEDE1E000B97C0 /* SettingsStore.swift in Sources */,
 				F2BFC17E2CAEDE1E000B97C0 /* HiddenPreChatDelegateConfiguration.swift in Sources */,

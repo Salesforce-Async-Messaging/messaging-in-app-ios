@@ -1,5 +1,8 @@
 //
 //  DeveloperSettings.swift
+//  SMITestApp
+//
+//  Created by Aaron Eisses on 2024-09-16.
 //
 
 import SwiftUI
