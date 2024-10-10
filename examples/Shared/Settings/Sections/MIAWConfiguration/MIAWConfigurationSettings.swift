@@ -69,8 +69,10 @@ struct MIAWConfigurationSettings: View {
 extension MIAWConfigurationStore {
     var connectionEnvironment: ConnectionEnvironment {
         get {
-            userDefaults.string(forKey: Keys.connectionEnvironment.rawValue).flatMap {
-                ConnectionEnvironment(rawValue: $0)
+            userDefaults.string(forKey: Keys.connectionEnvironment.rawValue).flatMap { string in
+                ConnectionEnvironment.allCases.first(where: {
+                    $0.rawValue == string
+                })
             } ?? ConnectionEnvironment.allCases.first!
         }
 
