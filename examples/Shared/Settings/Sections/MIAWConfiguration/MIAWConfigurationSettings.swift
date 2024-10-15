@@ -193,7 +193,7 @@ extension MIAWConfigurationStore {
     }
 }
 
-extension UrlDisplayMode: CaseIterable, Identifiable {
+extension UrlDisplayMode: @retroactive CaseIterable, @retroactive Identifiable {
     public static var allCases: [UrlDisplayMode] = [.externalBrowser, .inlineBrowser]
 
     public var id: String { rawValue }

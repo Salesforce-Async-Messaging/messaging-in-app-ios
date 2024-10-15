@@ -4,7 +4,7 @@
 
 import Foundation
 
-extension Dictionary: RawRepresentable where Key: Codable, Value: Codable {
+extension Dictionary: @retroactive RawRepresentable where Key: Codable, Value: Codable {
 
     public init?(rawValue: String) {
         guard let data = rawValue.data(using: .utf8) else { return nil }

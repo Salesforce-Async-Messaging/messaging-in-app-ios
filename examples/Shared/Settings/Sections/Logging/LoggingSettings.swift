@@ -69,7 +69,7 @@ extension LoggingStore {
     }
 }
 
-extension SMIClientCore.LoggingLevel: CaseIterable, Identifiable {
+extension SMIClientCore.LoggingLevel: @retroactive CaseIterable, @retroactive Identifiable {
     public static var allCases: [LoggingLevel] = [.debug, .none]
     public var id: UInt { rawValue }
 }
