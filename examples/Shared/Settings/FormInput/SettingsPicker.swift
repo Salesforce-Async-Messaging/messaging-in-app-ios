@@ -45,6 +45,7 @@ struct SettingsPicker<E>: View where E: RawRepresentable, E: Identifiable, E: Ha
     }
 }
 
+@available(iOS 17, *)
 #Preview {
     enum SettingsPickerTestEnum: String, CaseIterable, Identifiable {
         public var id: String { rawValue }
@@ -53,7 +54,7 @@ struct SettingsPicker<E>: View where E: RawRepresentable, E: Identifiable, E: Ha
         case third
     }
 
-    @AppStorage("SettingsPickerTestKey") var settingsPickerTestKey = SettingsPickerTestEnum.second
+    @Previewable @AppStorage("SettingsPickerTestKey") var settingsPickerTestKey = SettingsPickerTestEnum.second
 
     return Form {
         SettingsPicker<SettingsPickerTestEnum>("Test Picker", value: $settingsPickerTestKey)

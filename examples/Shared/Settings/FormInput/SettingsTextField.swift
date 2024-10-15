@@ -84,11 +84,12 @@ struct SettingsTextField: View {
     }
 }
 
+@available(iOS 17, *)
 #Preview {
-    @State var editable: String = "This is editable and will shrink"
-    @State var editableWithPlaceholder: String = ""
-    @State var notEditable: String = "This is not editable. It will not be cropped even though it is a super long string"
-    @State var notEditableWithPlaceholder: String = ""
+    @Previewable @State var editable: String = "This is editable and will shrink"
+    @Previewable @State var editableWithPlaceholder: String = ""
+    @Previewable @State var notEditable: String = "This is not editable. It will not be cropped even though it is a super long string"
+    @Previewable @State var notEditableWithPlaceholder: String = ""
 
     return Form {
         SettingsTextField("Editable", value: $editable)
