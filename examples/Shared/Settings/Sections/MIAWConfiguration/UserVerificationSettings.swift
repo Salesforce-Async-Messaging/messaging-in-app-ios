@@ -26,11 +26,15 @@ struct UserVerificationSettings: View {
     }
 
     @StateObject var userVerificationStore: UserVerificationStore = UserVerificationStore()
+    @StateObject var configStore: MIAWConfigurationStore = MIAWConfigurationStore()
+
     @State var isFetching: Bool = false
 
     var body: some View {
-        Section(header: Text(Self.header)) {
-            SettingsTextField("Customer Token", placeholder: "No Token: Please Generate", value: $userVerificationStore.tokenJWT, enabled: true, lineLimit: 12)
+        if configStore.userVerificationRequired {
+            Section(header: Text(Self.header)) {
+                SettingsTextField("Customer Token", placeholder: "No Token: Please Generate", value: $userVerificationStore.tokenJWT, enabled: true, lineLimit: 12)
+            }
         }
     }
 

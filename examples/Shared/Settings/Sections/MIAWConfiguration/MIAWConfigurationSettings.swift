@@ -45,22 +45,18 @@ struct MIAWConfigurationSettings: View {
                               placeholder: "Enter your Domain",
                               value: $store.domain,
                               enabled: store.connectionEnvironment.editableDomain)
-
+            
             SettingsTextField("Organization Id",
                               placeholder: "Enter your Organization Id",
                               value: $store.organizationId,
                               enabled: store.connectionEnvironment.editableOrganizationId)
-
+            
             SettingsTextField("Developer Name", placeholder: "Enter your Developer Name", value: $store.developerName)
-
+            
             SettingsToggle("Attachment UI Enabled", developerOnly: true, isOn: $store.enableAttachmentUI)
             SettingsToggle("Transcript Enabled", developerOnly: true, isOn: $store.enableTranscriptUI)
             SettingsToggle("User Verifcation Required", isOn: $store.userVerificationRequired)
             SettingsPicker("URL Display Mode", value: $store.URLDisplayMode)
-        }
-
-        if store.userVerificationRequired {
-            UserVerificationSettings()
         }
     }
 }
