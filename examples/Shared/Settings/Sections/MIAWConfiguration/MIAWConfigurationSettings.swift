@@ -56,6 +56,7 @@ struct MIAWConfigurationSettings: View {
             SettingsToggle("Attachment UI Enabled", developerOnly: true, isOn: $store.enableAttachmentUI)
             SettingsToggle("Transcript Enabled", developerOnly: true, isOn: $store.enableTranscriptUI)
             SettingsToggle("Progress Indicator for Agents", isOn: $store.useProgressIndicatorsForAgents)
+            SettingsToggle("End Session Enabled", developerOnly: true, isOn: $store.enableEndSessiontUI)
             SettingsToggle("User Verifcation Required", isOn: $store.userVerificationRequired)
             SettingsPicker("URL Display Mode", value: $store.URLDisplayMode)
         }
@@ -152,6 +153,18 @@ extension MIAWConfigurationStore {
         set {
             guard var environment = environments[connectionEnvironment.rawValue] else { return }
             environment.enableAttachmentUI = newValue
+            environments[connectionEnvironment.rawValue] = environment
+        }
+    }
+
+    var enableEndSessiontUI: Bool {
+        get {
+            guard let environment = environments[connectionEnvironment.rawValue] else { return false }
+            return environment.enableEndSessionUI
+        }
+        set {
+            guard var environment = environments[connectionEnvironment.rawValue] else { return }
+            environment.enableEndSessionUI = newValue
             environments[connectionEnvironment.rawValue] = environment
         }
     }

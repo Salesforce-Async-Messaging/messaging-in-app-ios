@@ -48,6 +48,7 @@ struct UIKitMIAW: UIViewControllerRepresentable {
                                                    remoteLocaleMap: remoteLocaleStore.remoteLocaleMap,
                                                    urlDisplayMode: configurationStore.URLDisplayMode)
 
+            uiConfiguration.conversationOptionsConfiguration = ConversationOptionsConfiguration(allowEndChat: configurationStore.enableEndSessiontUI)
             uiConfiguration.transcriptConfiguration = TranscriptConfiguration(allowTranscriptDownload: configurationStore.enableTranscriptUI)
             uiConfiguration.attachmentConfiguration = AttachmentConfiguration(endUserToAgent: configurationStore.enableAttachmentUI)
 
