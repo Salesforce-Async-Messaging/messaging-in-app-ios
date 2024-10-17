@@ -50,6 +50,8 @@ struct ConversationPicker: View {
         conversations = nil
 
         let core = CoreFactory.create(withConfig: configStore.config)
+        GlobalCoreDelegateHandler.shared.registerDelegates(core)
+
         let closure: ConversationQueryCompletion = { (conversations, error) in
             if error != nil {
                 isError = true

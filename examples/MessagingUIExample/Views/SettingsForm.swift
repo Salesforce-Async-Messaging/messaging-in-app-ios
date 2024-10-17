@@ -28,6 +28,7 @@ struct SettingsForm: View {
     var body: some View {
         Form {
             MIAWConfigurationSettings()
+            UserVerificationSettings()
             ConversationManagementSettings()
             DatabaseManagementSettings()
             DemoManagementSettings()
