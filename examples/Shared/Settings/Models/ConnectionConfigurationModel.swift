@@ -12,6 +12,7 @@ struct ConnectionConfigurationModel: Codable {
     var userVerificationRequired: Bool = false
     var enableAttachmentUI: Bool = true
     var enableTranscriptUI: Bool = true
+    var enableEndSessionUI: Bool = true
     var URLDisplayMode: String = UrlDisplayMode.inlineBrowser.rawValue
     var useSSL: Bool = true
 }
