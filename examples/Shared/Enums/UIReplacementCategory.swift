@@ -61,6 +61,7 @@ extension UIReplacementStore {
     var uiReplacements: [String: UIReplacementModel] {
         get {
             guard let dictionary = [String: UIReplacementModel](rawValue: userDefaults.string(forKey: Keys.uiReplacements.rawValue) ?? "") else {
+                clearUserDefaults()
                 return [:]
             }
 

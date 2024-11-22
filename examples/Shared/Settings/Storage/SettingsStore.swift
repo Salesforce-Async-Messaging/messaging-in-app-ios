@@ -51,6 +51,13 @@ class SettingsStore<Keys: Settings>: ObservableObject {
         }
     }
 
+    func clearUserDefaults() {
+        if let appDomain = Bundle.main.bundleIdentifier {
+            userDefaults.removePersistentDomain(forName: appDomain)
+            userDefaults.synchronize()
+        }
+    }
+
     func handleDerivedValues() {}
     func update() {}
 }
