@@ -22,7 +22,6 @@ extension MIAWConfigurationStore {
     var environments: [String: ConnectionConfigurationModel] {
         get {
             guard let dictionary = [String: ConnectionConfigurationModel](rawValue: userDefaults.string(forKey: Keys.environments.rawValue) ?? "") else {
-                clearUserDefaults()
                 return [:]
             }
 
