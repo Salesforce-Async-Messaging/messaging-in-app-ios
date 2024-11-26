@@ -59,6 +59,7 @@ struct MIAWConfigurationSettings: View {
             SettingsToggle("End Session Enabled", developerOnly: true, isOn: $store.enableEndSessiontUI)
             SettingsToggle("User Verifcation Required", isOn: $store.userVerificationRequired)
             SettingsPicker("URL Display Mode", value: $store.URLDisplayMode)
+            SettingsPicker("Capability Version", value: $store.capabilityVersion)
         }
 
         if store.userVerificationRequired {
