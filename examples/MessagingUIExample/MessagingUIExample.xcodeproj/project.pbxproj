@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0440A2442C18B2E400A1B6A3 /* Swift-InAppMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = 0440A2432C18B2E400A1B6A3 /* Swift-InAppMessaging */; };
+		047F19102CF6600900438B4D /* Capability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047F190F2CF6600900438B4D /* Capability.swift */; };
 		27B2C7312A30E75400DC6740 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27B2C7302A30E75400DC6740 /* Assets.xcassets */; };
 		27B2C7332A30E75900DC6740 /* configFile.json in Resources */ = {isa = PBXBuildFile; fileRef = 27B2C7322A30E75900DC6740 /* configFile.json */; };
 		27B2C7352A30E76200DC6740 /* MessagingUIExample--iOS--Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 27B2C7342A30E76200DC6740 /* MessagingUIExample--iOS--Info.plist */; };
@@ -84,6 +85,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		047F190F2CF6600900438B4D /* Capability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Capability.swift; sourceTree = "<group>"; };
 		27B2C6D02A30E3AD00DC6740 /* MessagingUIExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MessagingUIExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		27B2C7302A30E75400DC6740 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		27B2C7322A30E75900DC6740 /* configFile.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = configFile.json; sourceTree = "<group>"; };
@@ -442,6 +444,7 @@
 			children = (
 				F2BFC16A2CAEDE1D000B97C0 /* ConnectionEnvironment.swift */,
 				F2F193DC2CB44B6700B54AE8 /* UIReplacementCategory.swift */,
+				047F190F2CF6600900438B4D /* Capability.swift */,
 			);
 			path = Enums;
 			sourceTree = "<group>";
@@ -617,6 +620,7 @@
 				F2F194032CB44BC900B54AE8 /* ImageReplacement.swift in Sources */,
 				F2F194042CB44BC900B54AE8 /* DateBreakReplacement.swift in Sources */,
 				F2F194052CB44BC900B54AE8 /* RichLinkReplacement.swift in Sources */,
+				047F19102CF6600900438B4D /* Capability.swift in Sources */,
 				F2BFC19C2CAEDE1E000B97C0 /* LabelledText.swift in Sources */,
 				F2BFC1982CAEDE1E000B97C0 /* UIReplacementModel.swift in Sources */,
 				F2BFC1912CAEDE1E000B97C0 /* SettingsPicker.swift in Sources */,
