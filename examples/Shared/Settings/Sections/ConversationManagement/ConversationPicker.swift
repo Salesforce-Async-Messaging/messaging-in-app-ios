@@ -48,7 +48,10 @@ struct ConversationPicker: View {
                 }
             }
         }
-        .onAppear(perform: fetch)
+        .onAppear(perform: {
+            GlobalCoreDelegateHandler.shared.registerDelegates(CoreFactory.create(withConfig: configStore.config))
+            fetch()
+        })
         .navigationTitle(Self.title)
     }
 
@@ -74,7 +77,7 @@ struct ConversationPicker: View {
         if isLocal {
             core.conversations(withLimit: limit, sortedByActivityDirection: .descending, completion: closure)
         } else {
-            core.conversations(withLimit: limit, olderThanConversation: nil, forceRefresh:isForceRefresh, completion: closure)
+            core.conversations(withLimit: limit, olderThanConversation: nil, forceRefresh: isForceRefresh, completion: closure)
         }
     }
 
