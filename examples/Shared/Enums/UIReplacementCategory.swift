@@ -14,6 +14,7 @@ enum UIReplacementCategory: String, CaseIterable, Identifiable {
 
     case entry = "Conversation Entry Model"
     case typingIndicator = "Typing Indicator Model"
+    case progressIndicator = "Progress Indicator Model"
     case dateBreak = "Date Break Model"
     case preChatReceipt = "PreChat Submission Receipt"
     case unknown = "Unknown"
@@ -50,6 +51,7 @@ enum UIReplacementCategory: String, CaseIterable, Identifiable {
         case _ as ConversationEntryModel: return .entry
         case _ as PreChatReceiptModel: return .preChatReceipt
         case _ as TypingIndicatorModel: return .typingIndicator
+        case _ as ProgressIndicatorModel: return .progressIndicator
         case _ as DateBreakModel: return .dateBreak
         default: return .unknown
         }
