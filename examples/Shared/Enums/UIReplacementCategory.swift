@@ -23,6 +23,7 @@ enum UIReplacementCategory: String, CaseIterable, Identifiable {
         switch self {
         case .preChatReceipt: PreChatReceiptReplacement(model)
         case .typingIndicator: TypingIndicatorReplacement(model)
+        case .progressIndicator: ProgressIndicatorReplacement(model)
         case .dateBreak: DateBreakReplacement(model)
         case .entry: EntryContainerReplacement(model: model, client: client)
         default: EmptyView()
@@ -33,6 +34,7 @@ enum UIReplacementCategory: String, CaseIterable, Identifiable {
         switch self {
         case .preChatReceipt: .replace
         case .typingIndicator: .replace
+        case .progressIndicator: .replace
         case .dateBreak: .replace
         case .entry: .replace
         default: .existing
