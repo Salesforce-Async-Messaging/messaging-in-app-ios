@@ -18,6 +18,7 @@ struct ConversationPicker: View {
     @State private var conversations: [Conversation]?
     @State private var error: NSError?
     @State private var isLocal = true
+    @State private var isForceRefresh = false
     @State private var limit: UInt = 0
 
     var body: some View {
@@ -28,6 +29,14 @@ struct ConversationPicker: View {
                         .onChange(of: isLocal) { _ in
                             fetch()
                         }
+                    if !isLocal {
+                        SettingsButton {
+                            isForceRefresh = true
+                            fetch()
+                        } label: {
+                            Text("Force Refresh")
+                        }
+                    }
                 }
 
                 if isError {
@@ -39,7 +48,10 @@ struct ConversationPicker: View {
                 }
             }
         }
-        .onAppear(perform: fetch)
+        .onAppear(perform: {
+            GlobalCoreDelegateHandler.shared.registerDelegates(CoreFactory.create(withConfig: configStore.config))
+            fetch()
+        })
         .navigationTitle(Self.title)
     }
 
@@ -60,13 +72,14 @@ struct ConversationPicker: View {
             }
 
             isFetching = false
+            isForceRefresh = false
             self.conversations = conversations
         }
 
         if isLocal {
             core.conversations(withLimit: limit, sortedByActivityDirection: .descending, completion: closure)
         } else {
-            core.conversations(withLimit: limit, olderThanConversation: nil, completion: closure)
+            core.conversations(withLimit: limit, olderThanConversation: nil, forceRefresh: isForceRefresh, completion: closure)
         }
     }
 

@@ -8,8 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		0440A2442C18B2E400A1B6A3 /* Swift-InAppMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = 0440A2432C18B2E400A1B6A3 /* Swift-InAppMessaging */; };
+		04D0AA7A2D41670300BFA27F /* ProgressIndicatorReplacement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D0AA792D4166FB00BFA27F /* ProgressIndicatorReplacement.swift */; };
 		27B2C7312A30E75400DC6740 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27B2C7302A30E75400DC6740 /* Assets.xcassets */; };
-		27B2C7332A30E75900DC6740 /* configFile.json in Resources */ = {isa = PBXBuildFile; fileRef = 27B2C7322A30E75900DC6740 /* configFile.json */; };
 		27B2C7352A30E76200DC6740 /* MessagingUIExample--iOS--Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 27B2C7342A30E76200DC6740 /* MessagingUIExample--iOS--Info.plist */; };
 		27B2C7372A30E76D00DC6740 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 27B2C7362A30E76D00DC6740 /* README.md */; };
 		27B2C73B2A30E77300DC6740 /* MessagingUIExampleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B2C7392A30E77300DC6740 /* MessagingUIExampleApp.swift */; };
@@ -84,9 +84,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		04D0AA792D4166FB00BFA27F /* ProgressIndicatorReplacement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressIndicatorReplacement.swift; sourceTree = "<group>"; };
 		27B2C6D02A30E3AD00DC6740 /* MessagingUIExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MessagingUIExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		27B2C7302A30E75400DC6740 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		27B2C7322A30E75900DC6740 /* configFile.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = configFile.json; sourceTree = "<group>"; };
 		27B2C7342A30E76200DC6740 /* MessagingUIExample--iOS--Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "MessagingUIExample--iOS--Info.plist"; sourceTree = "<group>"; };
 		27B2C7362A30E76D00DC6740 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		27B2C7392A30E77300DC6740 /* MessagingUIExampleApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessagingUIExampleApp.swift; sourceTree = "<group>"; };
@@ -181,7 +181,6 @@
 				27B2C7342A30E76200DC6740 /* MessagingUIExample--iOS--Info.plist */,
 				27B2C7302A30E75400DC6740 /* Assets.xcassets */,
 				27B2C7492A30E7DC00DC6740 /* Localizable.strings */,
-				27B2C7322A30E75900DC6740 /* configFile.json */,
 				27B2C7362A30E76D00DC6740 /* README.md */,
 				27B2C7392A30E77300DC6740 /* MessagingUIExampleApp.swift */,
 				27B2C6D12A30E3AD00DC6740 /* Products */,
@@ -479,6 +478,7 @@
 				F2F193EA2CB44BC900B54AE8 /* DateBreakReplacement.swift */,
 				F2F193EB2CB44BC900B54AE8 /* PreChatReceiptReplacement.swift */,
 				F2F193EC2CB44BC900B54AE8 /* TypingIndicatorReplacement.swift */,
+				04D0AA792D4166FB00BFA27F /* ProgressIndicatorReplacement.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -569,7 +569,6 @@
 			files = (
 				27B2C74A2A30E7DC00DC6740 /* Localizable.strings in Resources */,
 				27B2C7312A30E75400DC6740 /* Assets.xcassets in Resources */,
-				27B2C7332A30E75900DC6740 /* configFile.json in Resources */,
 				27B2C7372A30E76D00DC6740 /* README.md in Resources */,
 				27B2C7352A30E76200DC6740 /* MessagingUIExample--iOS--Info.plist in Resources */,
 			);
@@ -591,6 +590,7 @@
 				F2BFC18B2CAEDE1E000B97C0 /* UserVerificationSettings.swift in Sources */,
 				F2BFC1832CAEDE1E000B97C0 /* ConversationPicker.swift in Sources */,
 				F2BFC19E2CAEDE1E000B97C0 /* SettingsForm.swift in Sources */,
+				04D0AA7A2D41670300BFA27F /* ProgressIndicatorReplacement.swift in Sources */,
 				F2F193F42CB44BC900B54AE8 /* TypingIndicatorReplacement.swift in Sources */,
 				F2F193F52CB44BC900B54AE8 /* FormResultReplacement.swift in Sources */,
 				F2665FEA2CB81A2F0044B7BF /* DeveloperSettings.swift in Sources */,

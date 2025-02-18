@@ -49,6 +49,7 @@ struct MIAW: View {
                                      remoteLocaleMap: remoteLocaleStore.remoteLocaleMap,
                                      urlDisplayMode: configStore.URLDisplayMode)
 
+        config.conversationOptionsConfiguration = ConversationOptionsConfiguration(allowEndChat: configStore.enableEndSessiontUI)
         config.transcriptConfiguration = TranscriptConfiguration(allowTranscriptDownload: configStore.enableTranscriptUI)
         config.attachmentConfiguration = AttachmentConfiguration(endUserToAgent: configStore.enableAttachmentUI)
 
