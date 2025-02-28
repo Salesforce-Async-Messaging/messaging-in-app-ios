@@ -3,6 +3,7 @@
 //
 
 import SwiftUI
+import SMIClientCore
 
 typealias ConversationManagementStore = SettingsStore<ConversationManagementSettings.SettingsKeys>
 
@@ -21,6 +22,7 @@ struct ConversationManagementSettings: View {
     }
 
     @StateObject var store: ConversationManagementStore = ConversationManagementStore()
+    @StateObject var configStore: MIAWConfigurationStore = MIAWConfigurationStore()
 
     var body: some View {
         SettingsSection(Self.header, developerOnly: true) {
@@ -35,7 +37,28 @@ struct ConversationManagementSettings: View {
             SettingsButton {
                 store.conversationId = UUID().uuidString
             } label: {
-                Text("New Conversation")
+                Text("New Conversation Id")
+            }
+
+            SettingsButton {
+                let uUID = UUID()
+                store.conversationId = uUID.uuidString
+
+                let client = CoreFactory.create(withConfig: configStore.config).conversationClient(with: uUID)
+                client.core?.retrieveRemoteConfiguration(completion: { remoteConfig, _ in
+                    if let remoteConfig = remoteConfig {
+                        if let preChatConfiguration = remoteConfig.preChatConfiguration?.first {
+                            preChatConfiguration.preChatFields.forEach { $0.value = "Test Value" }
+                            client.create(remoteConfig: remoteConfig)
+                        } else {
+                            client.create()
+                        }
+                    } else {
+                        client.create()
+                    }
+                })
+            } label: {
+                Text("Create Conversation")
             }
         }
     }
