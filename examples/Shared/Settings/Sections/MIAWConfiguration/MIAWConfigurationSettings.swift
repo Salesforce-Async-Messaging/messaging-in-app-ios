@@ -55,10 +55,10 @@ struct MIAWConfigurationSettings: View {
 
             SettingsToggle("Attachment UI Enabled", developerOnly: true, isOn: $store.enableAttachmentUI)
             SettingsToggle("Transcript Enabled", developerOnly: true, isOn: $store.enableTranscriptUI)
-            SettingsToggle("Progress Indicator for Agents", isOn: $store.useProgressIndicatorsForAgents)
+            SettingsToggle("Progress Indicator for Agents", developerOnly: true, isOn: $store.useProgressIndicatorsForAgents)
             SettingsToggle("End Session Enabled", developerOnly: true, isOn: $store.enableEndSessiontUI)
-            SettingsToggle("User Verifcation Required", isOn: $store.userVerificationRequired)
-            SettingsPicker("URL Display Mode", value: $store.URLDisplayMode)
+            SettingsToggle("User Verifcation Required", developerOnly: true, isOn: $store.userVerificationRequired)
+            SettingsPicker("URL Display Mode", developerOnly: true, value: $store.URLDisplayMode)
         }
 
         if store.userVerificationRequired {
