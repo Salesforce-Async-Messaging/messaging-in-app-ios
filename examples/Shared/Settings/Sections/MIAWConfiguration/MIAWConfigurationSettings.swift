@@ -10,6 +10,7 @@ typealias MIAWConfigurationStore = SettingsStore<MIAWConfigurationSettings.Setti
 
 struct MIAWConfigurationSettings: View {
     static let header = "MIAW Configuration"
+    var reset: (() -> Void)?
 
     enum SettingsKeys: String, Settings {
         public var id: String { rawValue }
@@ -37,10 +38,18 @@ struct MIAWConfigurationSettings: View {
 
     @StateObject var store: MIAWConfigurationStore = MIAWConfigurationStore()
     @StateObject var developerStore: DeveloperStore = DeveloperStore()
+    @State private var toast: Toast?
 
     var body: some View {
         SettingsSection(Self.header) {
-            SettingsPicker("Connection Environment", developerOnly: true, value: $store.connectionEnvironment)
+            Instructions(instructions: "Use the tab below view to choose the current MIAW Connection Environment.",
+                         note:"The selected environment is applied to all demos! Changing the environment will wipe the database and delete all conversations.",
+                         section: false)
+
+            SettingsPicker("Connection Environment", developerOnly: false, value: $store.connectionEnvironment).onChange(of: store.connectionEnvironment) { _ in
+                reset?()
+            }
+
             SettingsTextField("Domain",
                               placeholder: "Enter your Domain",
                               value: $store.domain,
@@ -65,6 +74,10 @@ struct MIAWConfigurationSettings: View {
             UserVerificationSettings()
         }
     }
+}
+
+extension UrlDisplayMode: DeveloperToggle {
+    var developerOnly: Bool { true }
 }
 
 // MARK: - UserDefault Wrappers

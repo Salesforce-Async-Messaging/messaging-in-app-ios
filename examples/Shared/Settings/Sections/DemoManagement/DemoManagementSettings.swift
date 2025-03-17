@@ -41,7 +41,7 @@ struct DemoManagementSettings: View {
         case dismissButtonTitle
     }
 
-    public enum ModalPresentationStyle: String, CaseIterable, Identifiable {
+    public enum ModalPresentationStyle: String, CaseIterable, Identifiable, DeveloperToggle {
         // Required for compliance to Identifiable
         public var id: String { rawValue }
 
@@ -56,12 +56,18 @@ struct DemoManagementSettings: View {
             default: return .automatic
             }
         }
+
+        var developerOnly: Bool { true }
     }
 
     @StateObject var demoManagementStore: DemoManagementStore = DemoManagementStore()
 
     var body: some View {
-        SettingsSection(Self.header, developerOnly: true) {
+        SettingsSection(Self.header, developerOnly: false) {
+            Instructions(instructions: "You can change the background web page displayed in the \"Custom URL Demo\" on the main page.",
+                         note: "This setting is global and will persist when changing Connection Environments.",
+                         section: false)
+
             SettingsTextField("Demo Domain", placeholder: "Enter URL Domain", value: $demoManagementStore.demoDomain)
             SettingsToggle("Modal Presentation", developerOnly: true, isOn: $demoManagementStore.isModal)
 
