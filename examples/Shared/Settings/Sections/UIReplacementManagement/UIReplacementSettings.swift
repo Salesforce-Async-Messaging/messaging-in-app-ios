@@ -84,6 +84,10 @@ private struct ReplacementRow: View {
     }
 }
 
+extension ChatFeedRenderMode: DeveloperToggle {
+    var developerOnly: Bool { true }
+}
+
 extension UIReplacementStore {
     var replaceAll: Bool {
         get { userDefaults.bool(forKey: Keys.replaceAll.rawValue) }

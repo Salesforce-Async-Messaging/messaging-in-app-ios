@@ -45,10 +45,7 @@ struct SettingsKeyValueManager<PairType: KeyValuePair, Row: View>: View {
 
     var body: some View {
         Group {
-            SettingsSection("Info") {
-                LabelledText("Instructions", text: instructions, lineLimit: 5)
-                LabelledText("Note", text: "You cannot have duplicate entries with the same \"\(keyLabel)\"", lineLimit: 5)
-            }
+            Instructions(instructions: instructions, note: "You cannot have duplicate entries with the same \"\(keyLabel)\"")
 
             SettingsSection(header) {
                 SettingsTextField(keyLabel, placeholder: "Enter Key", value: $key)

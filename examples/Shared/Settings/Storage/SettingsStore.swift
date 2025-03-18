@@ -7,9 +7,12 @@ import Combine
 
 class SettingsStore<Keys: Settings>: ObservableObject {
     let userDefaults: UserDefaults = UserDefaults.standard
+    let version: UInt = 1
+    let versionKey: String = "version"
 
     init() {
         NotificationCenter.default.addObserver(self, selector: #selector(userDefaultsDidChange(_:)), name: UserDefaults.didChangeNotification, object: nil)
+        checkVersion()
         registerDefaults()
         handleDerivedValues()
         update()
@@ -19,15 +22,26 @@ class SettingsStore<Keys: Settings>: ObservableObject {
         NotificationCenter.default.removeObserver(self)
     }
 
+    // Just checks the hardcoded version number against what is stored in the settings
+    func checkVersion() {
+        let result = userDefaults.integer(forKey: versionKey)
+        if result != version {
+            let domain = Bundle.main.bundleIdentifier!
+            UserDefaults.standard.removePersistentDomain(forName: domain)
+            UserDefaults.standard.synchronize()
+        }
+    }
+
     func registerDefaults() {
         userDefaults.register(defaults: defaults())
+        userDefaults.set(version, forKey: versionKey)
     }
 
     func reset() {
         Keys.allCases.forEach { key in
             if key.resettable {
                 if let enumKey = key.rawValue as? String {
-                    UserDefaults.standard.set(key.defaultValue, forKey: enumKey)
+                    userDefaults.set(key.defaultValue, forKey: enumKey)
                 }
             }
         }

@@ -41,7 +41,7 @@ struct DemoManagementSettings: View {
         case dismissButtonTitle
     }
 
-    public enum ModalPresentationStyle: String, CaseIterable, Identifiable {
+    public enum ModalPresentationStyle: String, CaseIterable, Identifiable, DeveloperToggle {
         // Required for compliance to Identifiable
         public var id: String { rawValue }
 
@@ -56,21 +56,30 @@ struct DemoManagementSettings: View {
             default: return .automatic
             }
         }
+
+        var developerOnly: Bool { true }
     }
 
     @StateObject var demoManagementStore: DemoManagementStore = DemoManagementStore()
 
     var body: some View {
-        SettingsSection(Self.header) {
+        SettingsSection(Self.header, developerOnly: false) {
+            Instructions(instructions: "You can change the background web page displayed in the \"Custom URL Demo\" on the main page.",
+                         note: "This setting is global and will persist when changing Connection Environments.",
+                         section: false)
+
             SettingsTextField("Demo Domain", placeholder: "Enter URL Domain", value: $demoManagementStore.demoDomain)
-            SettingsToggle("Modal Presentation", isOn: $demoManagementStore.isModal)
+            SettingsToggle("Modal Presentation", developerOnly: true, isOn: $demoManagementStore.isModal)
 
             if demoManagementStore.isModal {
-                SettingsPicker("Modal Presentation Style", value: $demoManagementStore.modalPresentationStyle)
-                SettingsToggle("Replace Dismiss Button", isOn: $demoManagementStore.replaceDismissButton)
+                SettingsPicker("Modal Presentation Style", developerOnly: true, value: $demoManagementStore.modalPresentationStyle)
+                SettingsToggle("Replace Dismiss Button", developerOnly: true, isOn: $demoManagementStore.replaceDismissButton)
 
                 if demoManagementStore.replaceDismissButton {
-                    SettingsTextField("Button Title", placeholder: "Enter Dismiss Button Title", value: $demoManagementStore.dismissButtonTitle)
+                    SettingsTextField("Button Title",
+                                      developerOnly: true,
+                                      placeholder: "Enter Dismiss Button Title",
+                                      value: $demoManagementStore.dismissButtonTitle)
                 }
             }
         }
