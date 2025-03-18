@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct SettingsPicker<E>: View where E: RawRepresentable, E: Identifiable, E: Hashable, E: CaseIterable {
+struct SettingsPicker<E>: View where E: RawRepresentable, E: Identifiable, E: Hashable, E: CaseIterable, E: DeveloperToggle {
     let label: String
     let value: Binding<E>
     let developerOnly: Bool
@@ -35,7 +35,11 @@ struct SettingsPicker<E>: View where E: RawRepresentable, E: Identifiable, E: Ha
                     label: Text(label)
                 ) {
                     ForEach(keys) {
-                        Text($0.rawValue as? String ?? "").tag($0)
+                        if $0.developerOnly && developerStore.isDeveloperMode {
+                            Text($0.rawValue as? String ?? "").tag($0)
+                        } else if !$0.developerOnly && !developerStore.isDeveloperMode {
+                            Text($0.rawValue as? String ?? "").tag($0)
+                        }
                     }
                 }
                 .pickerStyle(SegmentedPickerStyle())
@@ -47,11 +51,13 @@ struct SettingsPicker<E>: View where E: RawRepresentable, E: Identifiable, E: Ha
 
 @available(iOS 17, *)
 #Preview {
-    enum SettingsPickerTestEnum: String, CaseIterable, Identifiable {
+    enum SettingsPickerTestEnum: String, CaseIterable, Identifiable, DeveloperToggle {
         public var id: String { rawValue }
         case first
         case second
         case third
+
+        var developerOnly: Bool { true }
     }
 
     @Previewable @AppStorage("SettingsPickerTestKey") var settingsPickerTestKey = SettingsPickerTestEnum.second

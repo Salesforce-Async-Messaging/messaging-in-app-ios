@@ -15,20 +15,40 @@ struct SettingsForm: View {
 
     static let title = "Settings"
 
-    @StateObject var configStore: MIAWConfigurationStore = MIAWConfigurationStore()
-    @StateObject var conversationManagementStore: ConversationManagementStore = ConversationManagementStore()
-    @StateObject var uiOverrideStore: UIOverrideStore = UIOverrideStore()
-    @StateObject var userVerificationStore: UserVerificationStore = UserVerificationStore()
-    @StateObject var demoManagementStore: DemoManagementStore = DemoManagementStore()
-    @StateObject var loggingStore: LoggingStore = LoggingStore()
-    @StateObject var delegateManagementStore: DelegateManagementStore = DelegateManagementStore()
-    @StateObject var remoteLocaleMapStore: RemoteLocaleStore = RemoteLocaleStore()
-    @StateObject var uiReplacementStore: UIReplacementStore = UIReplacementStore()
+    static var configStore: MIAWConfigurationStore = MIAWConfigurationStore()
+    static var conversationManagementStore: ConversationManagementStore = ConversationManagementStore()
+    static var uiOverrideStore: UIOverrideStore = UIOverrideStore()
+    static var userVerificationStore: UserVerificationStore = UserVerificationStore()
+    static var demoManagementStore: DemoManagementStore = DemoManagementStore()
+    static var loggingStore: LoggingStore = LoggingStore()
+    static var delegateManagementStore: DelegateManagementStore = DelegateManagementStore()
+    static var remoteLocaleMapStore: RemoteLocaleStore = RemoteLocaleStore()
+    static var uiReplacementStore: UIReplacementStore = UIReplacementStore()
+
+    @State private var toast: Toast?
+
+    static func reset() {
+        configStore.reset()
+        conversationManagementStore.reset()
+        uiOverrideStore.reset()
+        userVerificationStore.reset()
+        demoManagementStore.reset()
+        loggingStore.reset()
+        delegateManagementStore.reset()
+        remoteLocaleMapStore.reset()
+        uiReplacementStore.reset()
+
+        CoreFactory.create(withConfig: configStore.config).destroyStorage(andAuthorization: true) { _ in }
+    }
+
+    func resetAndToast() {
+        Self.reset()
+        toast = Toast(style: .success, message: "Database and UI Settings reset", width: 320)
+    }
 
     var body: some View {
         Form {
-            MIAWConfigurationSettings()
-            UserVerificationSettings()
+            MIAWConfigurationSettings(reset: resetAndToast)
             ConversationManagementSettings()
             DatabaseManagementSettings()
             DemoManagementSettings()
@@ -41,22 +61,11 @@ struct SettingsForm: View {
         .wrappedKeyboardDismiss()
         .navigationTitle(Self.title)
         .wrappedNavigationBarItems {
-            Button(action: {
-                configStore.reset()
-                conversationManagementStore.reset()
-                uiOverrideStore.reset()
-                userVerificationStore.reset()
-                demoManagementStore.reset()
-                loggingStore.reset()
-                delegateManagementStore.reset()
-                remoteLocaleMapStore.reset()
-                uiReplacementStore.reset()
-
-                CoreFactory.create(withConfig: configStore.config).destroyStorage(andAuthorization: true) { _ in }
-            }, label: {
+            Button(action: resetAndToast, label: {
                 Text(Constants.reset)
             })
         }
+        .toastView(toast: $toast)
     }
 }
 

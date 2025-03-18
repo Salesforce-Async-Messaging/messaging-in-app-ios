@@ -19,7 +19,8 @@ struct ContentView: View {
                     NavigationLink("SwiftUI") {
                         MIAW()
                     }
-                    NavigationLink("UIKit") {
+
+                    NavigationLink("Custom URL Demo") {
                         UIKitMIAW()
                     }
                 }

@@ -15,6 +15,7 @@ enum ConnectionEnvironment: String, EnvironmentSettings {
     case config2
     case config3
     case config4
+    case config5
 }
 
 // MARK: - UserDefault Wrappers
