@@ -64,8 +64,8 @@ struct DemoManagementSettings: View {
 
     var body: some View {
         SettingsSection(Self.header, developerOnly: false) {
-            Instructions(instructions: "You can change the background web page displayed in the \"Custom URL Demo\" on the main page.",
-                         note: "This setting is global and will persist when changing Connection Environments.",
+            Instructions(instructions: "This setting will change the background web page in the Custom URL Demo on the main page.",
+                         note: nil,
                          section: false)
 
             SettingsTextField("Demo Domain", placeholder: "Enter URL Domain", value: $demoManagementStore.demoDomain)
