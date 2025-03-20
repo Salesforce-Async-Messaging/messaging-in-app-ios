@@ -7,6 +7,7 @@ import Foundation
 extension ConnectionEnvironment: DeveloperToggle {
     var editableDomain: Bool { true }
     var editableOrganizationId: Bool { true }
+    var editableDeveloperName: Bool { true }
     var developerOnly: Bool { true }
 
     var defaultValue: ConnectionConfigurationModel {
