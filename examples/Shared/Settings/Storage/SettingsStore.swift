@@ -7,7 +7,7 @@ import Combine
 
 class SettingsStore<Keys: Settings>: ObservableObject {
     let userDefaults: UserDefaults = UserDefaults.standard
-    let version: UInt = 5
+    let version: UInt = 6
     let versionKey: String = "version"
 
     init() {
