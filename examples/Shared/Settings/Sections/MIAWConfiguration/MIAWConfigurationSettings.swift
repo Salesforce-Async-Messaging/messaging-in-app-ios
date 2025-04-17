@@ -54,7 +54,11 @@ struct MIAWConfigurationSettings: View {
                               placeholder: "Enter your Domain",
                               value: $store.domain,
                               enabled: store.connectionEnvironment.editableDomain)
-            
+
+            if store.connectionEnvironment.sslToggle {
+                SettingsToggle("Requres SSL", developerOnly: true, isOn: $store.useSSL)
+            }
+
             SettingsTextField("Organization Id",
                               placeholder: "Enter your Organization Id",
                               value: $store.organizationId,
@@ -217,11 +221,12 @@ extension MIAWConfigurationStore {
 
     var serviceAPIURL: URL {
         var serviceAPI = domain
+        let useSSL = useSSL
 
         serviceAPI = serviceAPI.replacingOccurrences(of: "https://", with: "")
         serviceAPI = serviceAPI.replacingOccurrences(of: "http://", with: "")
 
-        var sanitizedURL = "https://" + serviceAPI
+        var sanitizedURL = (useSSL ? "https://" : "http://") + serviceAPI
 
         sanitizedURL = sanitizedURL.trimmingCharacters(in: .whitespacesAndNewlines)
         guard let defaultURL = URL(string: "invalid://noop") else { fatalError("Invalid URL") }

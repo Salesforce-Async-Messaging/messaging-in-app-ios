@@ -9,6 +9,7 @@ extension ConnectionEnvironment: DeveloperToggle {
     var editableOrganizationId: Bool { true }
     var editableDeveloperName: Bool { true }
     var developerOnly: Bool { true }
+    var sslToggle: Bool { false }
 
     var defaultValue: ConnectionConfigurationModel {
         switch self {
