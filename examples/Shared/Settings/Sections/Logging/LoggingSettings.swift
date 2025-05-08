@@ -25,9 +25,7 @@ struct LoggingSettings: View {
 
         static func handleReset() {
             SMIClientCore.Logging.level = .debug
-
-            // JWRIGHT Update after production release
-//            SMIClientUI.Logging.level = .debug
+            SMIClientUI.Logging.level = .debug
         }
 
         case coreLoggingEnabled

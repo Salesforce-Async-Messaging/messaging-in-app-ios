@@ -10,6 +10,9 @@ typealias MIAWConfigurationStore = SettingsStore<MIAWConfigurationSettings.Setti
 
 struct MIAWConfigurationSettings: View {
     static let header = "MIAW Configuration"
+    var reset: (() -> Void)?
+    var instructions: String = "Use the tab below view to choose the current MIAW Connection Environment."
+    var note: String = "The selected environment is applied to all demos! Changing the environment will wipe the database and delete all conversations."
 
     enum SettingsKeys: String, Settings {
         public var id: String { rawValue }
@@ -37,30 +40,47 @@ struct MIAWConfigurationSettings: View {
 
     @StateObject var store: MIAWConfigurationStore = MIAWConfigurationStore()
     @StateObject var developerStore: DeveloperStore = DeveloperStore()
+    @State private var toast: Toast?
 
     var body: some View {
         SettingsSection(Self.header) {
-            SettingsPicker("Connection Environment", developerOnly: true, value: $store.connectionEnvironment)
+            Instructions(instructions: instructions, note:note, section: false)
+
+            SettingsPicker("Connection Environment", developerOnly: false, value: $store.connectionEnvironment).onChange(of: store.connectionEnvironment) { _ in
+                reset?()
+            }
+
             SettingsTextField("Domain",
                               placeholder: "Enter your Domain",
                               value: $store.domain,
                               enabled: store.connectionEnvironment.editableDomain)
-            
+
+            if store.connectionEnvironment.sslToggle {
+                SettingsToggle("Requres SSL", developerOnly: true, isOn: $store.useSSL)
+            }
+
             SettingsTextField("Organization Id",
                               placeholder: "Enter your Organization Id",
                               value: $store.organizationId,
                               enabled: store.connectionEnvironment.editableOrganizationId)
-            
-            SettingsTextField("Developer Name", placeholder: "Enter your Developer Name", value: $store.developerName)
-            
+
+            SettingsTextField("Developer Name",
+                              placeholder: "Enter your Developer Name",
+                              value: $store.developerName,
+                              enabled: store.connectionEnvironment.editableDeveloperName)
+
             SettingsToggle("Attachment UI Enabled", developerOnly: true, isOn: $store.enableAttachmentUI)
             SettingsToggle("Transcript Enabled", developerOnly: true, isOn: $store.enableTranscriptUI)
-            SettingsToggle("Progress Indicator for Agents", isOn: $store.useProgressIndicatorsForAgents)
+            SettingsToggle("Progress Indicator for Agents", developerOnly: true, isOn: $store.useProgressIndicatorsForAgents)
             SettingsToggle("End Session Enabled", developerOnly: true, isOn: $store.enableEndSessiontUI)
-            SettingsToggle("User Verifcation Required", isOn: $store.userVerificationRequired)
-            SettingsPicker("URL Display Mode", value: $store.URLDisplayMode)
+            SettingsToggle("User Verifcation Required", developerOnly: true, isOn: $store.userVerificationRequired)
+            SettingsPicker("URL Display Mode", developerOnly: true, value: $store.URLDisplayMode)
         }
     }
+}
+
+extension UrlDisplayMode: DeveloperToggle {
+    var developerOnly: Bool { true }
 }
 
 // MARK: - UserDefault Wrappers
@@ -201,11 +221,12 @@ extension MIAWConfigurationStore {
 
     var serviceAPIURL: URL {
         var serviceAPI = domain
+        let useSSL = useSSL
 
         serviceAPI = serviceAPI.replacingOccurrences(of: "https://", with: "")
         serviceAPI = serviceAPI.replacingOccurrences(of: "http://", with: "")
 
-        var sanitizedURL = "https://" + serviceAPI
+        var sanitizedURL = (useSSL ? "https://" : "http://") + serviceAPI
 
         sanitizedURL = sanitizedURL.trimmingCharacters(in: .whitespacesAndNewlines)
         guard let defaultURL = URL(string: "invalid://noop") else { fatalError("Invalid URL") }

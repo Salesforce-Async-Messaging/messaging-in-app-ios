@@ -9,8 +9,9 @@ typealias UIOverrideStore = SettingsStore<UIOverrideSettings.SettingsKeys>
 struct UIOverrideSettings: View {
     static let header = "UI Override Settings"
 
-    enum InterfaceStyle: String, CaseIterable, RawRepresentable, Identifiable {
+    enum InterfaceStyle: String, CaseIterable, RawRepresentable, Identifiable, DeveloperToggle {
         public var id: String { rawValue }
+        public var developerOnly: Bool { true }
 
         case system
         case dark

@@ -4,10 +4,12 @@
 
 import Foundation
 
-extension ConnectionEnvironment {
+extension ConnectionEnvironment: DeveloperToggle {
     var editableDomain: Bool { true }
     var editableOrganizationId: Bool { true }
-    var displaySSLToggle: Bool { false }
+    var editableDeveloperName: Bool { true }
+    var developerOnly: Bool { true }
+    var sslToggle: Bool { false }
 
     var defaultValue: ConnectionConfigurationModel {
         switch self {
@@ -27,6 +29,11 @@ extension ConnectionEnvironment {
                                                 developerName: "",
                                                 userVerificationRequired: false)
         case .config4:
+            return ConnectionConfigurationModel(domain: "config4.salesforce-scrt.com",
+                                                organizationId: "",
+                                                developerName: "",
+                                                userVerificationRequired: false)
+        case .config5:
             return ConnectionConfigurationModel(domain: "config4.salesforce-scrt.com",
                                                 organizationId: "",
                                                 developerName: "",
