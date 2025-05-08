@@ -70,6 +70,12 @@
             <a class="nav-group-name-link" href="../Constants.html">Constants</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@SMICitedDetailsTypeInlineMetadata">SMICitedDetailsTypeInlineMetadata</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@SMICitedReferenceTypeLink">SMICitedReferenceTypeLink</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Constants.html#/c:@SMIConversationEntryMessageTypesChoices">SMIConversationEntryMessageTypesChoices</a>
               </li>
               <li class="nav-group-task">
@@ -191,6 +197,9 @@
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Constants.html#/c:@SMIErrorNetworkHTTPFileSizeLimit">SMIErrorNetworkHTTPFileSizeLimit</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@SMIErrorNetworkHTTPRequestPath">SMIErrorNetworkHTTPRequestPath</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Constants.html#/c:@SMIErrorNetworkHTTPResponseBody">SMIErrorNetworkHTTPResponseBody</a>
@@ -445,6 +454,9 @@
                 <a class="nav-group-task-link" href="../Constants.html#/c:@SMIRealtimeConnectionStateOpen">SMIRealtimeConnectionStateOpen</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@SMIRoutingTypesConference">SMIRoutingTypesConference</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Constants.html#/c:@SMIRoutingTypesInitial">SMIRoutingTypesInitial</a>
               </li>
               <li class="nav-group-task">
@@ -546,6 +558,24 @@
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Protocols/SMIChoicesResponse.html">SMIChoicesResponse</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/SMICitation.html">SMICitation</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/SMICitationClaim.html">SMICitationClaim</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/SMICitationContent.html">SMICitationContent</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/SMICitedDetails.html">SMICitedDetails</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/SMICitedInlineMetadata.html">SMICitedInlineMetadata</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/SMICitedReference.html">SMICitedReference</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Protocols/SMIComposedStreamingToken.html">SMIComposedStreamingToken</a>
@@ -695,6 +725,12 @@
                 <a class="nav-group-task-link" href="../Protocols/SMIImageAsset.html">SMIImageAsset</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/SMIInlineMetadataCitedDetails.html">SMIInlineMetadataCitedDetails</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/SMILinkCitedReference.html">SMILinkCitedReference</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Protocols/SMIListPicker.html">SMIListPicker</a>
               </li>
               <li class="nav-group-task">
@@ -800,6 +836,12 @@
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Type%20Definitions.html#/c:SMIBusinessHoursInfo.h@T@SMIBusinessHoursInfoCompletion">SMIBusinessHoursInfoCompletion</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Type%20Definitions.html#/c:SMICitedDetailsType.h@T@SMICitedDetailsType">SMICitedDetailsType</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Type%20Definitions.html#/c:SMICitedReferenceType.h@T@SMICitedReferenceType">SMICitedReferenceType</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Type%20Definitions.html#/c:SMIConversationEntryMessageTypes.h@T@SMIConversationEntryMessageTypes">SMIConversationEntryMessageTypes</a>
@@ -1092,7 +1134,7 @@ for events using the associated delegate.</p>
                       <div class="pointer"></div>
                       <div class="aside aside-deprecated">
                         <p class="aside-title">Deprecated</p>
-                        <p>Will be removed in a future version. Use <code>sendImage:fileName:</code></p>
+                        <p>Will be removed in a future version. Use <code>sendImage:fileName:message</code></p>
 
                       </div>
                       <div class="abstract">
@@ -1144,13 +1186,18 @@ for events using the associated delegate.</p>
                     <code>
                     <a name="/c:objc(pl)SMIConversationClient(im)sendImage:fileName:"></a>
                     <a name="//apple_ref/objc/Method/-sendImage:fileName:" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(pl)SMIConversationClient(im)sendImage:fileName:">-sendImage:<wbr>fileName:<wbr></a>
+                    <a class="token discouraged" href="#/c:objc(pl)SMIConversationClient(im)sendImage:fileName:">-sendImage:<wbr>fileName:<wbr></a>
                     </code>
                   </div>
                   <div class="height-container">
                     <div class="pointer-container"></div>
                     <section class="section">
                       <div class="pointer"></div>
+                      <div class="aside aside-deprecated">
+                        <p class="aside-title">Deprecated</p>
+                        <p>Will be removed in a future version. Use <code>sendImage:fileName:message:</code></p>
+
+                      </div>
                       <div class="abstract">
                         <p>Sends an image with the contents of the data parameter.</p>
 
@@ -1207,13 +1254,18 @@ for events using the associated delegate.</p>
                     <code>
                     <a name="/c:objc(pl)SMIConversationClient(im)sendPDF:"></a>
                     <a name="//apple_ref/objc/Method/-sendPDF:" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(pl)SMIConversationClient(im)sendPDF:">-sendPDF:<wbr></a>
+                    <a class="token discouraged" href="#/c:objc(pl)SMIConversationClient(im)sendPDF:">-sendPDF:<wbr></a>
                     </code>
                   </div>
                   <div class="height-container">
                     <div class="pointer-container"></div>
                     <section class="section">
                       <div class="pointer"></div>
+                      <div class="aside aside-deprecated">
+                        <p class="aside-title">Deprecated</p>
+                        <p>Will be removed in a future version. Use <code>sendImage:fileName:message:</code></p>
+
+                      </div>
                       <div class="abstract">
                         <p>Sends an PDF attachment.</p>
 
@@ -1258,13 +1310,18 @@ for events using the associated delegate.</p>
                     <code>
                     <a name="/c:objc(pl)SMIConversationClient(im)sendFile:fileName:"></a>
                     <a name="//apple_ref/objc/Method/-sendFile:fileName:" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(pl)SMIConversationClient(im)sendFile:fileName:">-sendFile:<wbr>fileName:<wbr></a>
+                    <a class="token discouraged" href="#/c:objc(pl)SMIConversationClient(im)sendFile:fileName:">-sendFile:<wbr>fileName:<wbr></a>
                     </code>
                   </div>
                   <div class="height-container">
                     <div class="pointer-container"></div>
                     <section class="section">
                       <div class="pointer"></div>
+                      <div class="aside aside-deprecated">
+                        <p class="aside-title">Deprecated</p>
+                        <p>Will be removed in a future version. Use <code>sendImage:fileName:message:</code></p>
+
+                      </div>
                       <div class="abstract">
                         <p>Sends a file attachment</p>
 
@@ -1295,6 +1352,95 @@ for events using the associated delegate.</p>
                               <td>
                                 <div>
                                   <p>The file document to send.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>fileName</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>the of the document to send.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(pl)SMIConversationClient(im)sendFile:fileName:message:"></a>
+                    <a name="//apple_ref/objc/Method/-sendFile:fileName:message:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(pl)SMIConversationClient(im)sendFile:fileName:message:">-sendFile:<wbr>fileName:<wbr>message:<wbr></a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Sends a file attachment</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">sendFile</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSData</span> <span class="o">*</span><span class="p">)</span><span class="nv">data</span>
+        <span class="nf">fileName</span><span class="p">:(</span><span class="n">NSString</span> <span class="o">*</span><span class="n">_Nullable</span><span class="p">)</span><span class="nv">fileName</span>
+         <span class="nf">message</span><span class="p">:(</span><span class="n">NSString</span> <span class="o">*</span><span class="n">_Nullable</span><span class="p">)</span><span class="nv">message</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">send</span><span class="p">(</span><span class="n">file</span> <span class="nv">data</span><span class="p">:</span> <span class="kt">Data</span><span class="p">,</span> <span class="nv">fileName</span><span class="p">:</span> <span class="kt">String</span><span class="p">?,</span> <span class="nv">message</span><span class="p">:</span> <span class="kt">String</span><span class="p">?)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>data</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>the file document to send.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>fileName</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>the fileName of the document to send.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>message</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>the message to be sent with the file.</p>
                                 </div>
                               </td>
                             </tr>
@@ -1884,6 +2030,89 @@ Otherwise, the SDK stores the pre-chat data until the conversation is created.</
                             </tr>
                           </tbody>
                         </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(pl)SMIConversationClient(im)createConversation:"></a>
+                    <a name="//apple_ref/objc/Method/-createConversation:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(pl)SMIConversationClient(im)createConversation:">-createConversation:<wbr></a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Creates a conversation with the remote configuration.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">createConversation</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">id</span><span class="o">&lt;</span><span class="n"><a href="../Protocols/SMIRemoteConfiguration.html">SMIRemoteConfiguration</a></span><span class="o">&gt;</span><span class="p">)</span><span class="nv">remoteConfig</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">create</span><span class="p">(</span><span class="nv">remoteConfig</span><span class="p">:</span> <span class="n">any</span> <span class="kt">RemoteConfiguration</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>remoteConfig</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A <code>RemoteConfiguration</code> object for routing data.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(pl)SMIConversationClient(im)createConversation"></a>
+                    <a name="//apple_ref/objc/Method/-createConversation" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(pl)SMIConversationClient(im)createConversation">-createConversation</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Creates a conversation.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">createConversation</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">create</span><span class="p">()</span></code></pre>
+
+                        </div>
                       </div>
                     </section>
                   </div>
@@ -2648,7 +2877,7 @@ It is recommended that the main queue is passed to this method if you plan to ha
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2025 <a class="link" href="" target="_blank" rel="external noopener">Salesforce</a>. All rights reserved. (Last updated: 2025-02-14)</p>
+      <p>&copy; 2025 <a class="link" href="" target="_blank" rel="external noopener">Salesforce</a>. All rights reserved. (Last updated: 2025-05-08)</p>
       <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external noopener">jazzy ♪♫ v0.15.1</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external noopener">Realm</a> project.</p>
     </section>
   </body>
