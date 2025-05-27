@@ -66,7 +66,7 @@ private struct PrePopulatedPreChatClosureConfigurationRow: View {
             LabelledText(valueLabel, text: pair.value)
             Divider()
             SettingsToggle("Editable", isOn: $toggle)
-                .onChange(of: toggle) { newValue in
+                .onChange(of: toggle) { _, newValue in
                     let newPair = PrePopulatedPreChatKeyValuePair(key: pair.key, value: pair.value, isEditable: newValue)
                     if let index = delegateManagementStore.prePopPreChatValues.firstIndex(where: { $0.key == pair.key }) {
                         delegateManagementStore.prePopPreChatValues[index] = newPair
