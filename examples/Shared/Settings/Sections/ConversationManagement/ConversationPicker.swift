@@ -118,19 +118,6 @@ private struct ConversationView: View {
     init(_ conversation: Conversation) {
         self.conversation = conversation
     }
-    
-    var conversationStatus: String {
-        switch conversation.status {
-        case .open:
-            return "Active"
-        case .closed:
-            return "Closed"
-        case .unknown:
-            return "Unknown"
-        @unknown default:
-            return "Unknown"
-        }
-    }
 
     private func row(_ label: String, value: String) -> some View {
         HStack(alignment: .top) {
@@ -143,11 +130,26 @@ private struct ConversationView: View {
         VStack(alignment: .leading) {
             row("Identifier :", value: conversation.identifier.uuidString)
             row("Last Active:", value: conversation.lastActiveEntry?.timestamp.description ?? "")
-            row("Status:", value: conversationStatus)
+            row("Status:", value: conversation.status.description)
         }
     }
 }
 
 #Preview {
     ConversationPicker()
+}
+
+extension ConversationStatus {
+    var description: String {
+        switch self {
+        case .open:
+            return "Active"
+        case .closed:
+            return "Closed"
+        case .unknown:
+            return "Unknown"
+        @unknown default:
+            return "Unknown"
+        }
+    }
 }
