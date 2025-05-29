@@ -86,6 +86,7 @@
 		F2F194032CB44BC900B54AE8 /* ImageReplacement.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F193F02CB44BC900B54AE8 /* ImageReplacement.swift */; };
 		F2F194042CB44BC900B54AE8 /* DateBreakReplacement.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F193EA2CB44BC900B54AE8 /* DateBreakReplacement.swift */; };
 		F2F194052CB44BC900B54AE8 /* RichLinkReplacement.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F193E62CB44BC900B54AE8 /* RichLinkReplacement.swift */; };
+		F2F194062CB44BC900B54AE8 /* ConversationClosedReplacement.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F193F32CB44BC900B54AE9 /* ConversationClosedReplacement.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -169,6 +170,7 @@
 		F2F193EF2CB44BC900B54AE8 /* EntryContainerReplacement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryContainerReplacement.swift; sourceTree = "<group>"; };
 		F2F193F02CB44BC900B54AE8 /* ImageReplacement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageReplacement.swift; sourceTree = "<group>"; };
 		F2F193F12CB44BC900B54AE8 /* TextReplacement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextReplacement.swift; sourceTree = "<group>"; };
+		F2F193F32CB44BC900B54AE9 /* ConversationClosedReplacement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationClosedReplacement.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -513,19 +515,20 @@
 				F2F193EF2CB44BC900B54AE8 /* EntryContainerReplacement.swift */,
 				F2F193F02CB44BC900B54AE8 /* ImageReplacement.swift */,
 				F2F193F12CB44BC900B54AE8 /* TextReplacement.swift */,
+				F2F193F32CB44BC900B54AE9 /* ConversationClosedReplacement.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
 		};
 		F2F193F32CB44BC900B54AE8 /* ReplacementUI */ = {
-			isa = PBXGroup;
-			children = (
-				F2F193ED2CB44BC900B54AE8 /* Models */,
-				F2F193F22CB44BC900B54AE8 /* Views */,
-			);
-			path = ReplacementUI;
-			sourceTree = "<group>";
-		};
+				isa = PBXGroup;
+				children = (
+					F2F193ED2CB44BC900B54AE8 /* Models */,
+					F2F193F22CB44BC900B54AE8 /* Views */,
+				);
+				path = ReplacementUI;
+				sourceTree = "<group>";
+			};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -644,6 +647,7 @@
 				F2F194032CB44BC900B54AE8 /* ImageReplacement.swift in Sources */,
 				F2F194042CB44BC900B54AE8 /* DateBreakReplacement.swift in Sources */,
 				F2F194052CB44BC900B54AE8 /* RichLinkReplacement.swift in Sources */,
+				F2F194062CB44BC900B54AE8 /* ConversationClosedReplacement.swift in Sources */,
 				F2BFC19C2CAEDE1E000B97C0 /* LabelledText.swift in Sources */,
 				F2BFC1982CAEDE1E000B97C0 /* UIReplacementModel.swift in Sources */,
 				F2BFC1912CAEDE1E000B97C0 /* SettingsPicker.swift in Sources */,
