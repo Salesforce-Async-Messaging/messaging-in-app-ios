@@ -60,6 +60,18 @@ struct ConversationManagementSettings: View {
             } label: {
                 Text("Create Conversation")
             }
+
+            SettingsButton {
+                let uuid = UUID(uuidString: store.conversationId)
+                let client = CoreFactory.create(withConfig: configStore.config).conversationClient(with: uuid)
+                client.closeConversation(completion: { error in
+                    if error != nil {
+                        print(error ?? "")
+                    }
+                })
+            } label: {
+                Text("Close Conversation")
+            }
         }
     }
 }
