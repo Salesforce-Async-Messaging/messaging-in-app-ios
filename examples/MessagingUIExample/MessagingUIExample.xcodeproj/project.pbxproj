@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		0440A2442C18B2E400A1B6A3 /* Swift-InAppMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = 0440A2432C18B2E400A1B6A3 /* Swift-InAppMessaging */; };
 		04D0AA7A2D41670300BFA27F /* ProgressIndicatorReplacement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D0AA792D4166FB00BFA27F /* ProgressIndicatorReplacement.swift */; };
+		273326792E0434350032EC75 /* TestNavBarBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273326782E0434320032EC75 /* TestNavBarBuilder.swift */; };
+		2733267B2E0436240032EC75 /* NavBarReplacementCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2733267A2E0436150032EC75 /* NavBarReplacementCategory.swift */; };
+		274888972E048EB800B2EFAA /* ReplacementSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 274888962E048EA900B2EFAA /* ReplacementSettings.swift */; };
+		274888992E048EFA00B2EFAA /* NavBarReplacementSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 274888982E048EEE00B2EFAA /* NavBarReplacementSettings.swift */; };
 		27B2C7312A30E75400DC6740 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27B2C7302A30E75400DC6740 /* Assets.xcassets */; };
 		27B2C7352A30E76200DC6740 /* MessagingUIExample--iOS--Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 27B2C7342A30E76200DC6740 /* MessagingUIExample--iOS--Info.plist */; };
 		27B2C7372A30E76D00DC6740 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 27B2C7362A30E76D00DC6740 /* README.md */; };
@@ -98,6 +102,10 @@
 
 /* Begin PBXFileReference section */
 		04D0AA792D4166FB00BFA27F /* ProgressIndicatorReplacement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressIndicatorReplacement.swift; sourceTree = "<group>"; };
+		273326782E0434320032EC75 /* TestNavBarBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestNavBarBuilder.swift; sourceTree = "<group>"; };
+		2733267A2E0436150032EC75 /* NavBarReplacementCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavBarReplacementCategory.swift; sourceTree = "<group>"; };
+		274888962E048EA900B2EFAA /* ReplacementSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReplacementSettings.swift; sourceTree = "<group>"; };
+		274888982E048EEE00B2EFAA /* NavBarReplacementSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavBarReplacementSettings.swift; sourceTree = "<group>"; };
 		27B2C6D02A30E3AD00DC6740 /* MessagingUIExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MessagingUIExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		27B2C7302A30E75400DC6740 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		27B2C7342A30E76200DC6740 /* MessagingUIExample--iOS--Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "MessagingUIExample--iOS--Info.plist"; sourceTree = "<group>"; };
@@ -254,6 +262,7 @@
 		F27FB5522CB4521000E243B4 /* Providers */ = {
 			isa = PBXGroup;
 			children = (
+				273326782E0434320032EC75 /* TestNavBarBuilder.swift */,
 				F27FB5502CB4521000E243B4 /* TestEntryViewBuilder.swift */,
 				F27FB5512CB4521000E243B4 /* TestPrePopulatedPreChatProvider.swift */,
 			);
@@ -481,7 +490,9 @@
 			children = (
 				F2DE42822E04814000C07239 /* AuthorizationMethod.swift */,
 				F2BFC16A2CAEDE1D000B97C0 /* ConnectionEnvironment.swift */,
+				2733267A2E0436150032EC75 /* NavBarReplacementCategory.swift */,
 				F2F193DC2CB44B6700B54AE8 /* UIReplacementCategory.swift */,
+				F2BFC16A2CAEDE1D000B97C0 /* ConnectionEnvironment.swift */,
 			);
 			path = Enums;
 			sourceTree = "<group>";
@@ -489,7 +500,9 @@
 		F2F193DA2CB44B0A00B54AE8 /* UIReplacementManagement */ = {
 			isa = PBXGroup;
 			children = (
+				274888962E048EA900B2EFAA /* ReplacementSettings.swift */,
 				F2F193D92CB44B0A00B54AE8 /* UIReplacementSettings.swift */,
+				274888982E048EEE00B2EFAA /* NavBarReplacementSettings.swift */,
 			);
 			path = UIReplacementManagement;
 			sourceTree = "<group>";
@@ -632,6 +645,7 @@
 				F2F193DB2CB44B0A00B54AE8 /* UIReplacementSettings.swift in Sources */,
 				F2BFC17C2CAEDE1E000B97C0 /* PrePopulatedPreChatClosureConfiguration.swift in Sources */,
 				F2665FE52CB819820044B7BF /* ConnectionEnvironment+Example.swift in Sources */,
+				273326792E0434350032EC75 /* TestNavBarBuilder.swift in Sources */,
 				27B2C73C2A30E77300DC6740 /* ContentView.swift in Sources */,
 				F2BFC19D2CAEDE1E000B97C0 /* KeyValuePairRow.swift in Sources */,
 				F2BFC19A2CAEDE1E000B97C0 /* Array+RawRepresentable.swift in Sources */,
@@ -673,6 +687,7 @@
 				F2F194052CB44BC900B54AE8 /* RichLinkReplacement.swift in Sources */,
 				F2F194062CB44BC900B54AE8 /* ConversationClosedReplacement.swift in Sources */,
 				F2BFC19C2CAEDE1E000B97C0 /* LabelledText.swift in Sources */,
+				2733267B2E0436240032EC75 /* NavBarReplacementCategory.swift in Sources */,
 				F2BFC1982CAEDE1E000B97C0 /* UIReplacementModel.swift in Sources */,
 				F2BFC1912CAEDE1E000B97C0 /* SettingsPicker.swift in Sources */,
 				F2BFC1922CAEDE1E000B97C0 /* SettingsTextField.swift in Sources */,
@@ -694,10 +709,12 @@
 				F2BFC18C2CAEDE1E000B97C0 /* SettingsToggle.swift in Sources */,
 				F2A9FE332D835E8A008163E9 /* Instructions.swift in Sources */,
 				F2BFC17D2CAEDE1E000B97C0 /* TemplateURLDelegateConfiguration.swift in Sources */,
+				274888972E048EB800B2EFAA /* ReplacementSettings.swift in Sources */,
 				F2BFC17F2CAEDE1E000B97C0 /* DelegateManagementSettings.swift in Sources */,
 				F2BFC1A62CAEDE6C000B97C0 /* WrappedKeyboardDismiss.swift in Sources */,
 				F2BFC1822CAEDE1E000B97C0 /* DemoManagementSettings.swift in Sources */,
 				F2BFC19F2CAEDE1E000B97C0 /* KeyValuePair.swift in Sources */,
+				274888992E048EFA00B2EFAA /* NavBarReplacementSettings.swift in Sources */,
 				F2BFC1942CAEDE1E000B97C0 /* ConnectionEnvironment.swift in Sources */,
 				F2BFC1862CAEDE1E000B97C0 /* DatabaseManagementSettings.swift in Sources */,
 				F2BFC18F2CAEDE1E000B97C0 /* SettingsSection.swift in Sources */,
