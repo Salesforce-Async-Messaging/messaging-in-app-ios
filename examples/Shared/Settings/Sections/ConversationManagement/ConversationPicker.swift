@@ -26,7 +26,7 @@ struct ConversationPicker: View {
             Group {
                 Section(header: Text("Behaviour")) {
                     SettingsToggle("Use Local Cache", isOn: $isLocal)
-                        .onChange(of: isLocal) { _ in
+                        .onChange(of: isLocal) {
                             fetch()
                         }
                     if !isLocal {
@@ -63,7 +63,6 @@ struct ConversationPicker: View {
 
         let core = CoreFactory.create(withConfig: configStore.config)
         GlobalCoreDelegateHandler.shared.registerDelegates(core)
-
         let closure: ConversationQueryCompletion = { (conversations, error) in
             if error != nil {
                 isError = true
@@ -144,6 +143,7 @@ private struct ConversationView: View {
             row("Identifier :", value: conversation.identifier.uuidString)
             row("Last Active:", value: conversation.lastActiveEntry?.timestamp.description ?? "")
             row("Status:", value: conversation.status.description)
+            row("Status:", value: conversationStatus)
         }
     }
 }

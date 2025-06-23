@@ -49,12 +49,12 @@ struct SettingsKeyValueManager<PairType: KeyValuePair, Row: View>: View {
 
             SettingsSection(header) {
                 SettingsTextField(keyLabel, placeholder: "Enter Key", value: $key)
-                    .onChange(of: key) { _ in
+                    .onChange(of: key) {
                         canCreate = isValid
                     }
 
                 SettingsTextField(valueLabel, placeholder: "Enter Value", value: $value)
-                    .onChange(of: value) { _ in
+                    .onChange(of: value) {
                         canCreate = isValid
                     }
 
