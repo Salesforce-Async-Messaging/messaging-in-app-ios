@@ -11,8 +11,6 @@ import SMIClientUI
 typealias UIReplacementStore = SettingsStore<UIReplacementSettings.SettingsKeys>
 
 struct UIReplacementSettings: View {
-    static let header: String = "UI Replacement Settings"
-
     enum SettingsKeys: String, Settings {
         var defaultValue: Any {
             switch self {
@@ -40,29 +38,27 @@ struct UIReplacementSettings: View {
     @StateObject var uiReplacementStore: UIReplacementStore = UIReplacementStore()
 
     var body: some View {
-        SettingsSection(Self.header, developerOnly: true) {
-            NavigationLink {
-                Form {
-                    SettingsSection("Options") {
-                        SettingsToggle("Replace All", isOn: $uiReplacementStore.replaceAll)
-                    }
+        NavigationLink {
+            Form {
+                SettingsSection("Options") {
+                    SettingsToggle("Replace All", isOn: $uiReplacementStore.replaceAll)
+                }
 
-                    if uiReplacementStore.replaceAll == false {
-                        SettingsSection("Replacements") {
-                            ForEach(UIReplacementCategory.allCases.filter {$0 != .unknown }) { category in
-                                ReplacementRow(category: category)
-                            }
+                if uiReplacementStore.replaceAll == false {
+                    SettingsSection("Replacements") {
+                        ForEach(UIReplacementCategory.allCases.filter {$0 != .unknown }) { category in
+                            UIReplacementRow(category: category)
                         }
                     }
                 }
-            } label: {
-                Text("Configure Replacements")
             }
+        } label: {
+            Text("Configure UI Replacements")
         }
     }
 }
 
-private struct ReplacementRow: View {
+private struct UIReplacementRow: View {
     let category: UIReplacementCategory
 
     @State var renderMode: ChatFeedRenderMode = .existing
