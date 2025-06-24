@@ -22,8 +22,9 @@ struct UIOverrideSettings: View {
         public var id: String { rawValue }
 
         static func handleReset() {
-            let window = UIApplication.shared.windows.first(where: { $0.isKeyWindow })
-            window?.overrideUserInterfaceStyle = .unspecified
+            if let window = UIApplication.shared.connectedScenes.map({ $0 as? UIWindowScene }).compactMap({ $0 }).first?.windows.first {
+                window.overrideUserInterfaceStyle = .unspecified
+            }
         }
 
         var defaultValue: Any {
@@ -56,14 +57,15 @@ extension UIOverrideStore {
     }
 
     func updateUserInterfaceStyle() {
-        let window = UIApplication.shared.windows.first(where: { $0.isKeyWindow })
-        switch interfaceStyle {
-        case .system:
-            window?.overrideUserInterfaceStyle = .unspecified
-        case .light:
-            window?.overrideUserInterfaceStyle = .light
-        case .dark:
-            window?.overrideUserInterfaceStyle = .dark
+        if let window = UIApplication.shared.connectedScenes.map({ $0 as? UIWindowScene }).compactMap({ $0 }).first?.windows.first {
+            switch interfaceStyle {
+            case .system:
+                window.overrideUserInterfaceStyle = .unspecified
+            case .light:
+                window.overrideUserInterfaceStyle = .light
+            case .dark:
+                window.overrideUserInterfaceStyle = .dark
+            }
         }
     }
 }

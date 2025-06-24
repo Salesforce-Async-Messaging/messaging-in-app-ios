@@ -66,7 +66,7 @@ private struct UIReplacementRow: View {
 
     var body: some View {
         SettingsPicker(category.rawValue, value: $renderMode)
-            .onChange(of: renderMode) { newValue in
+            .onChange(of: renderMode) { _, newValue in
                 var uiReplacements = uiReplacementStore.uiReplacements
 
                 uiReplacements[category.rawValue]?.renderMode = newValue.rawValue

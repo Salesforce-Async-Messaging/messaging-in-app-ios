@@ -9,7 +9,7 @@ struct ConnectionConfigurationModel: Codable {
     var domain: String
     var organizationId: String
     var developerName: String
-    var userVerificationRequired: Bool = false
+    var authorizationMethod: AuthorizationMethod = .unverified
     var enableAttachmentUI: Bool = true
     var enableTranscriptUI: Bool = true
     var useProgressIndicatorForAgents: Bool = true
