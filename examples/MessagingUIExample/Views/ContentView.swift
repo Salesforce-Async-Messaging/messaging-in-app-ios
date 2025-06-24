@@ -56,7 +56,8 @@ struct MIAW: View {
 
         return Interface(config,
                          preChatFieldValueProvider: GlobalCoreDelegateHandler.shared.prePopulatedPreChatProvider.closure,
-                         chatFeedViewBuilder: GlobalCoreDelegateHandler.shared.viewBuilder)
+                         chatFeedViewBuilder: GlobalCoreDelegateHandler.shared.viewBuilder,
+                         navigationBarBuilder: GlobalCoreDelegateHandler.shared.navBarBuilder)
 
             .onAppear(perform: {
                 GlobalCoreDelegateHandler.shared.registerDelegates(CoreFactory.create(withConfig: config))

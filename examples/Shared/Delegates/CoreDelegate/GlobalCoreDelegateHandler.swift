@@ -12,6 +12,7 @@ import SMIClientCore
     static let shared = GlobalCoreDelegateHandler()
 
     let viewBuilder: TestEntryViewBuilder = TestEntryViewBuilder()
+    let navBarBuilder: TestNavBarBuilder = TestNavBarBuilder()
     let prePopulatedPreChatProvider: TestPrePopulatedPreChatProvider = TestPrePopulatedPreChatProvider()
     let userVerificationStore: UserVerificationStore = UserVerificationStore()
     let uiReplacementStore: UIReplacementStore = UIReplacementStore()
