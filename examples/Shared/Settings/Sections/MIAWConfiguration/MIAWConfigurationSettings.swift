@@ -46,7 +46,7 @@ struct MIAWConfigurationSettings: View {
         SettingsSection(Self.header) {
             Instructions(instructions: instructions, note:note, section: false)
 
-            SettingsPicker("Connection Environment", developerOnly: false, value: $store.connectionEnvironment).onChange(of: store.connectionEnvironment) { _ in
+            SettingsPicker("Connection Environment", developerOnly: false, value: $store.connectionEnvironment).onChange(of: store.connectionEnvironment) {
                 reset?()
             }
 
@@ -73,7 +73,7 @@ struct MIAWConfigurationSettings: View {
             SettingsToggle("Transcript Enabled", developerOnly: true, isOn: $store.enableTranscriptUI)
             SettingsToggle("Progress Indicator for Agents", developerOnly: true, isOn: $store.useProgressIndicatorsForAgents)
             SettingsToggle("End Session Enabled", developerOnly: true, isOn: $store.enableEndSessiontUI)
-            SettingsToggle("User Verifcation Required", developerOnly: true, isOn: $store.userVerificationRequired)
+            SettingsPicker("Authorization Method", developerOnly: true, value: $store.authorizationMethod)
             SettingsPicker("URL Display Mode", developerOnly: true, value: $store.URLDisplayMode)
         }
     }
@@ -124,14 +124,11 @@ extension MIAWConfigurationStore {
         }
     }
 
-    var userVerificationRequired: Bool {
-        get {
-            guard let environment = environments[connectionEnvironment.rawValue] else { return false }
-            return environment.userVerificationRequired
-        }
+    var authorizationMethod: AuthorizationMethod {
+        get { environments[connectionEnvironment.rawValue]?.authorizationMethod ?? .unverified }
         set {
             guard var environment = environments[connectionEnvironment.rawValue] else { return }
-            environment.userVerificationRequired = newValue
+            environment.authorizationMethod = newValue
             environments[connectionEnvironment.rawValue] = environment
         }
     }
@@ -216,7 +213,7 @@ extension MIAWConfigurationStore {
         Configuration(serviceAPI: serviceAPIURL,
                       organizationId: organizationId,
                       developerName: developerName,
-                      userVerificationRequired: userVerificationRequired)
+                      userVerificationRequired: authorizationMethod == .passthrough || authorizationMethod == .userVerified)
     }
 
     var serviceAPIURL: URL {
