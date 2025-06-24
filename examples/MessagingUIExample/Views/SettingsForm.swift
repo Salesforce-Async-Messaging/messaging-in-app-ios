@@ -55,7 +55,7 @@ struct SettingsForm: View {
             DemoManagementSettings()
             DelegateManagementSettings()
             RemoteLocaleSettings()
-            UIReplacementSettings()
+            ReplacementSettings()
             UIOverrideSettings()
             LoggingSettings()
         }

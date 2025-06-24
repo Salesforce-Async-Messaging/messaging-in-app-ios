@@ -90,12 +90,14 @@ struct UIKitMIAW: UIViewControllerRepresentable {
 
         @objc func startInApp(sender: UIButton!) {
             let testEntryViewBuilder = GlobalCoreDelegateHandler.shared.viewBuilder
+            let testNavBarBuilder = GlobalCoreDelegateHandler.shared.navBarBuilder
             let testPrePopulatedPreChatProvider = GlobalCoreDelegateHandler.shared.prePopulatedPreChatProvider.closure
 
             if demoManagementStore.isModal {
                 let controller = ModalInterfaceViewController(uiConfiguration,
                                                               preChatFieldValueProvider: testPrePopulatedPreChatProvider,
-                                                              chatFeedViewBuilder: testEntryViewBuilder)
+                                                              chatFeedViewBuilder: testEntryViewBuilder,
+                                                              navigationBarBuilder: testNavBarBuilder)
 
                 controller.modalPresentationStyle = demoManagementStore.modalPresentationStyle.systemValue
                 if demoManagementStore.replaceDismissButton {
