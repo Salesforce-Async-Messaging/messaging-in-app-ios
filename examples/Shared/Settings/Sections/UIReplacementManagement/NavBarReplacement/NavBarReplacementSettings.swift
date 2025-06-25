@@ -11,6 +11,8 @@ import SMIClientUI
 typealias NavBarReplacementStore = SettingsStore<NavBarReplacementSettings.SettingsKeys>
 
 struct NavBarReplacementSettings: View {
+    static let header: String = "Navigation Bar Replacements"
+
     enum SettingsKeys: String, Settings {
         var defaultValue: Any {
             switch self {
@@ -36,7 +38,9 @@ struct NavBarReplacementSettings: View {
     var body: some View {
         NavigationLink {
             Form {
-                SettingsSection("Replacements") {
+                NavTitleTimerReplacementSettings()
+
+                SettingsSection(Self.header) {
                     ForEach(NavBarReplacementCategory.allCases) { category in
                         NavBarReplacementRow(category: category)
                     }
