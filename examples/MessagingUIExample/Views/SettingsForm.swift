@@ -49,6 +49,7 @@ struct SettingsForm: View {
     var body: some View {
         Form {
             MIAWConfigurationSettings(reset: resetAndToast)
+            UserVerificationSettings()
             ConversationManagementSettings()
             DatabaseManagementSettings()
             DemoManagementSettings()

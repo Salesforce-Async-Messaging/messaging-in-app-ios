@@ -33,18 +33,9 @@ struct UserVerificationSettings: View {
     var body: some View {
         if configStore.userVerificationRequired {
             Section(header: Text(Self.header)) {
-                SettingsTextField("Customer Token", placeholder: "No Token: Please Generate", value: $userVerificationStore.tokenJWT, enabled: true, lineLimit: 12)
+                SettingsTextField("Customer Identity Token", placeholder: "No Token: Please Add Here", value: $userVerificationStore.tokenJWT, enabled: true, lineLimit: 12)
             }
         }
-    }
-
-    var generateTokenForm: some View {
-        Form {
-            Section(header: Text("Configuration")) {
-                SettingsTextField("Manual Input", placeholder: "Add your identity token here", value: $userVerificationStore.tokenJWT)
-            }
-        }
-        .navigationTitle("Generate Token")
     }
 }
 
