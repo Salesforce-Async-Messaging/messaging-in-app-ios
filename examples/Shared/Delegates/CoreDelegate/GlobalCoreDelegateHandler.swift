@@ -18,8 +18,14 @@ import SMIClientCore
     let delegateManagementStore: DelegateManagementStore = DelegateManagementStore()
 
     func registerDelegates(_ core: CoreClient) {
-        core.setPreChatDelegate(delegate: self, queue: .main)
-        core.setTemplatedUrlDelegate(delegate: self, queue: .main)
+        if delegateManagementStore.hiddenPreChatDelegateEnabled {
+            core.setPreChatDelegate(delegate: self, queue: .main)
+        }
+
+        if delegateManagementStore.templatedURLDelgateEnabled {
+            core.setTemplatedUrlDelegate(delegate: self, queue: .main)
+        }
+
         core.setUserVerificationDelegate(delegate: self, queue: .main)
     }
 }
