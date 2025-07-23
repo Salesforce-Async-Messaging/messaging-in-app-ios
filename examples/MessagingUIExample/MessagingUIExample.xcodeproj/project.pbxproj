@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		042B91D62E31634300B77BFA /* QueuePositionReplacement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042B91D52E31634300B77BFA /* QueuePositionReplacement.swift */; };
 		0440A2442C18B2E400A1B6A3 /* Swift-InAppMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = 0440A2432C18B2E400A1B6A3 /* Swift-InAppMessaging */; };
 		04D0AA7A2D41670300BFA27F /* ProgressIndicatorReplacement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D0AA792D4166FB00BFA27F /* ProgressIndicatorReplacement.swift */; };
 		272550302E0B175000A3BC65 /* NavTitleReplacementSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2725502E2E0B175000A3BC65 /* NavTitleReplacementSettings.swift */; };
@@ -103,6 +104,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		042B91D52E31634300B77BFA /* QueuePositionReplacement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueuePositionReplacement.swift; sourceTree = "<group>"; };
 		04D0AA792D4166FB00BFA27F /* ProgressIndicatorReplacement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressIndicatorReplacement.swift; sourceTree = "<group>"; };
 		2725502C2E0B175000A3BC65 /* NavBarReplacementSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavBarReplacementSettings.swift; sourceTree = "<group>"; };
 		2725502D2E0B175000A3BC65 /* NavigationTitleReplacementManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationTitleReplacementManager.swift; sourceTree = "<group>"; };
@@ -547,6 +549,7 @@
 				F2F193EB2CB44BC900B54AE8 /* PreChatReceiptReplacement.swift */,
 				F2F193EC2CB44BC900B54AE8 /* TypingIndicatorReplacement.swift */,
 				04D0AA792D4166FB00BFA27F /* ProgressIndicatorReplacement.swift */,
+				042B91D52E31634300B77BFA /* QueuePositionReplacement.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -667,6 +670,7 @@
 				F2BFC18B2CAEDE1E000B97C0 /* UserVerificationSettings.swift in Sources */,
 				F2BFC1832CAEDE1E000B97C0 /* ConversationPicker.swift in Sources */,
 				F2BFC19E2CAEDE1E000B97C0 /* SettingsForm.swift in Sources */,
+				042B91D62E31634300B77BFA /* QueuePositionReplacement.swift in Sources */,
 				04D0AA7A2D41670300BFA27F /* ProgressIndicatorReplacement.swift in Sources */,
 				F2F193F42CB44BC900B54AE8 /* TypingIndicatorReplacement.swift in Sources */,
 				F2F193F52CB44BC900B54AE8 /* FormResultReplacement.swift in Sources */,
