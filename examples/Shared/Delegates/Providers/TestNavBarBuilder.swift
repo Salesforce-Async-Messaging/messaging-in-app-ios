@@ -12,14 +12,13 @@ import SMIClientUI
 struct TestNavBarBuilder: NavigationBarBuilder {
     private let navBarReplacementStore: NavBarReplacementStore = NavBarReplacementStore()
 
-    var navigationItem: NavigationItemClosure {
-        return { screenType in
+    var handleNavigation: HandleNavigationClosure {
+        return { screenType, navigationItem in
+
             let rawScreenType = NavBarReplacementCategory.type(screenType).rawValue
 
             if let shouldReplace = navBarReplacementStore.navBarReplacements[rawScreenType]?.shouldReplace, shouldReplace {
-                return NavBarReplacementCategory.type(screenType).replacementNavItem(screenType)
-            } else {
-                return nil
+                NavBarReplacementCategory.type(screenType).updateNavigationItem(navigationItem)
             }
         }
     }

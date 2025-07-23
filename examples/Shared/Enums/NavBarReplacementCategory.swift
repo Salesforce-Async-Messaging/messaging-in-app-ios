@@ -13,7 +13,7 @@ enum NavBarReplacementCategory: String, CaseIterable, Identifiable {
 
     case chatFeed = "Chat Feed"
     case form = "Secure Forms"
-    case confirmation = "Confrimation Screen"
+    case confirmation = "Confirmation Screen"
     case information = "Information Screen"
     case preChat = "Pre-Chat"
     case attachment = "Attachement Viewer"
@@ -24,43 +24,25 @@ enum NavBarReplacementCategory: String, CaseIterable, Identifiable {
         return NavBarReplacementModel(shouldReplace: false)
     }
 
-    func replacementNavItem(_ type: NavigationScreenType) -> UINavigationItem {
-        switch type{
+    func updateNavigationItem(_ navigationItem: UINavigationItem) {
+        switch self {
         case .chatFeed:
-            let navigationItem = UINavigationItem()
             navigationItem.title = "Chat Feed Replacement"
-            return navigationItem
+            navigationItem.rightBarButtonItem = UIBarButtonItem(title: "blah", style: .plain, target: nil, action: nil)
         case .confirmation:
-            let navigationItem = UINavigationItem()
             navigationItem.title = "Confirmation Replacement"
-            return navigationItem
         case .information:
-            let navigationItem = UINavigationItem()
             navigationItem.title = "Information Replacement"
-            return navigationItem
         case .preChat:
-            let navigationItem = UINavigationItem()
             navigationItem.title = "Prechat Replacement"
-            return navigationItem
         case .attachment:
-            let navigationItem = UINavigationItem()
             navigationItem.title = "Attachment Replacement"
-            return navigationItem
         case .transcripts:
-            let navigationItem = UINavigationItem()
             navigationItem.title = "Transcript Replacement"
-            return navigationItem
         case .optionsMenu:
-            let navigationItem = UINavigationItem()
             navigationItem.title = "Options Menu Replacement"
-            return navigationItem
         case .form:
-            let navigationItem = UINavigationItem()
             navigationItem.title = "Form Replacement"
-            return navigationItem
-        @unknown default:
-            let navigationItem = UINavigationItem()
-            return navigationItem
         }
     }
 
