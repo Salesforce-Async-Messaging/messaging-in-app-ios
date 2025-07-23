@@ -9,8 +9,6 @@
 /* Begin PBXBuildFile section */
 		0440A2442C18B2E400A1B6A3 /* Swift-InAppMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = 0440A2432C18B2E400A1B6A3 /* Swift-InAppMessaging */; };
 		04D0AA7A2D41670300BFA27F /* ProgressIndicatorReplacement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D0AA792D4166FB00BFA27F /* ProgressIndicatorReplacement.swift */; };
-		272550302E0B175000A3BC65 /* NavTitleReplacementSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2725502E2E0B175000A3BC65 /* NavTitleReplacementSettings.swift */; };
-		272550312E0B175000A3BC65 /* NavigationTitleReplacementManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2725502D2E0B175000A3BC65 /* NavigationTitleReplacementManager.swift */; };
 		272550322E0B175000A3BC65 /* NavBarReplacementSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2725502C2E0B175000A3BC65 /* NavBarReplacementSettings.swift */; };
 		273326792E0434350032EC75 /* TestNavBarBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273326782E0434320032EC75 /* TestNavBarBuilder.swift */; };
 		2733267B2E0436240032EC75 /* NavBarReplacementCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2733267A2E0436150032EC75 /* NavBarReplacementCategory.swift */; };
@@ -105,8 +103,6 @@
 /* Begin PBXFileReference section */
 		04D0AA792D4166FB00BFA27F /* ProgressIndicatorReplacement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressIndicatorReplacement.swift; sourceTree = "<group>"; };
 		2725502C2E0B175000A3BC65 /* NavBarReplacementSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavBarReplacementSettings.swift; sourceTree = "<group>"; };
-		2725502D2E0B175000A3BC65 /* NavigationTitleReplacementManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationTitleReplacementManager.swift; sourceTree = "<group>"; };
-		2725502E2E0B175000A3BC65 /* NavTitleReplacementSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavTitleReplacementSettings.swift; sourceTree = "<group>"; };
 		273326782E0434320032EC75 /* TestNavBarBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestNavBarBuilder.swift; sourceTree = "<group>"; };
 		2733267A2E0436150032EC75 /* NavBarReplacementCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavBarReplacementCategory.swift; sourceTree = "<group>"; };
 		274888962E048EA900B2EFAA /* ReplacementSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReplacementSettings.swift; sourceTree = "<group>"; };
@@ -215,8 +211,6 @@
 			isa = PBXGroup;
 			children = (
 				2725502C2E0B175000A3BC65 /* NavBarReplacementSettings.swift */,
-				2725502D2E0B175000A3BC65 /* NavigationTitleReplacementManager.swift */,
-				2725502E2E0B175000A3BC65 /* NavTitleReplacementSettings.swift */,
 			);
 			path = NavBarReplacement;
 			sourceTree = "<group>";
@@ -504,7 +498,6 @@
 			children = (
 				2733267A2E0436150032EC75 /* NavBarReplacementCategory.swift */,
 				F2DE42822E04814000C07239 /* AuthorizationMethod.swift */,
-				F2BFC16A2CAEDE1D000B97C0 /* ConnectionEnvironment.swift */,
 				F2F193DC2CB44B6700B54AE8 /* UIReplacementCategory.swift */,
 				F2BFC16A2CAEDE1D000B97C0 /* ConnectionEnvironment.swift */,
 			);
@@ -690,8 +683,6 @@
 				F2665FE72CB819D80044B7BF /* EnvironmentSettings.swift in Sources */,
 				F27FB5552CB4521000E243B4 /* TestEntryViewBuilder.swift in Sources */,
 				F27FB5562CB4521000E243B4 /* GlobalCoreDelegateHandler+HiddenPreChat.swift in Sources */,
-				272550302E0B175000A3BC65 /* NavTitleReplacementSettings.swift in Sources */,
-				272550312E0B175000A3BC65 /* NavigationTitleReplacementManager.swift in Sources */,
 				272550322E0B175000A3BC65 /* NavBarReplacementSettings.swift in Sources */,
 				F27FB5572CB4521000E243B4 /* GlobalCoreDelegateHandler+UserVerification.swift in Sources */,
 				F27FB5582CB4521000E243B4 /* GlobalCoreDelegateHandler.swift in Sources */,

@@ -8,17 +8,19 @@
 import SMIClientUI
 import UIKit
 
-enum NavBarReplacementCategory: String, CaseIterable, Identifiable {
-    public var id: String { rawValue }
-
-    case chatFeed = "Chat Feed"
-    case form = "Secure Forms"
-    case confirmation = "Confirmation Screen"
-    case information = "Information Screen"
-    case preChat = "Pre-Chat"
-    case attachment = "Attachement Viewer"
-    case transcripts = "Transcripts"
-    case optionsMenu = "Options Menu"
+extension NavigationScreenType {
+    public var rawValue: String {
+        switch self {
+        case .chatFeed: "Chat Feed"
+        case .form: "Secure Forms"
+        case .confirmation: "Confirmation Screen"
+        case .preChat: "PreChat"
+        case .attachment: "Attachment Viewer"
+        case .transcripts: "Transcripts"
+        case .optionsMenu: "Options Menu"
+        default: "Unknown"
+        }
+    }
 
     var defaultValue: NavBarReplacementModel {
         return NavBarReplacementModel(shouldReplace: false)
@@ -28,7 +30,6 @@ enum NavBarReplacementCategory: String, CaseIterable, Identifiable {
         switch self {
         case .chatFeed:
             navigationItem.title = "Chat Feed Replacement"
-            navigationItem.rightBarButtonItem = UIBarButtonItem(title: "blah", style: .plain, target: nil, action: nil)
         case .confirmation:
             navigationItem.title = "Confirmation Replacement"
         case .information:
@@ -43,21 +44,20 @@ enum NavBarReplacementCategory: String, CaseIterable, Identifiable {
             navigationItem.title = "Options Menu Replacement"
         case .form:
             navigationItem.title = "Form Replacement"
+        default:
+            return
         }
-    }
 
-    static func type(_ type: NavigationScreenType) -> NavBarReplacementCategory {
-        switch type {
-        case .chatFeed: return .chatFeed
-        case .confirmation: return .confirmation
-        case .information: return .information
-        case .preChat: return .preChat
-        case .attachment: return .attachment
-        case .transcripts: return .transcripts
-        case .optionsMenu: return .optionsMenu
-        case .form: return .form
-        @unknown default:
-            fatalError()
+        if navigationItem.leftBarButtonItem != nil {
+            navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Left", style: .plain,
+                                                               target: navigationItem.leftBarButtonItem?.target,
+                                                               action: navigationItem.leftBarButtonItem?.action)
+        }
+
+        if navigationItem.rightBarButtonItem != nil {
+            navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Right", style: .plain,
+                                                                target: navigationItem.rightBarButtonItem?.target,
+                                                                action: navigationItem.rightBarButtonItem?.action)
         }
     }
 }

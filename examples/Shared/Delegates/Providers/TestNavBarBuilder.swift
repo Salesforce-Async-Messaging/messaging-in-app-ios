@@ -14,11 +14,8 @@ struct TestNavBarBuilder: NavigationBarBuilder {
 
     var handleNavigation: HandleNavigationClosure {
         return { screenType, navigationItem in
-
-            let rawScreenType = NavBarReplacementCategory.type(screenType).rawValue
-
-            if let shouldReplace = navBarReplacementStore.navBarReplacements[rawScreenType]?.shouldReplace, shouldReplace {
-                NavBarReplacementCategory.type(screenType).updateNavigationItem(navigationItem)
+            if let shouldReplace = navBarReplacementStore.navBarReplacements[screenType.rawValue]?.shouldReplace, shouldReplace {
+                screenType.updateNavigationItem(navigationItem)
             }
         }
     }

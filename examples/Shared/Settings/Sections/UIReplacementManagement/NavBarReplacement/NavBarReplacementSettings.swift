@@ -18,7 +18,7 @@ struct NavBarReplacementSettings: View {
             switch self {
             case .navBarReplacements:
                 var result: [String: NavBarReplacementModel] = [:]
-                NavBarReplacementCategory.allCases.forEach {
+                NavigationScreenType.allCases.forEach {
                     result[$0.rawValue] = $0.defaultValue
                 }
 
@@ -38,10 +38,8 @@ struct NavBarReplacementSettings: View {
     var body: some View {
         NavigationLink {
             Form {
-                NavTitleTimerReplacementSettings()
-
                 SettingsSection(Self.header) {
-                    ForEach(NavBarReplacementCategory.allCases) { category in
+                    ForEach(NavigationScreenType.allCases) { category in
                         NavBarReplacementRow(category: category)
                     }
                 }
@@ -52,17 +50,17 @@ struct NavBarReplacementSettings: View {
     }
 
     private struct NavBarReplacementRow: View {
-        let category: NavBarReplacementCategory
+        let category: NavigationScreenType
 
         @State var isOn: Bool = false
         @StateObject var navBarReplacementStore: NavBarReplacementStore = NavBarReplacementStore()
 
         var body: some View {
             SettingsToggle(category.rawValue, isOn: $isOn)
-                .onChange(of: isOn) { shouldReplace in
+                .onChange(of: isOn) { old, new in
                     var navBarReplacements = navBarReplacementStore.navBarReplacements
 
-                    navBarReplacements[category.rawValue]?.shouldReplace = shouldReplace
+                    navBarReplacements[category.rawValue]?.shouldReplace = new
 
                     navBarReplacementStore.navBarReplacements = navBarReplacements
                 }
