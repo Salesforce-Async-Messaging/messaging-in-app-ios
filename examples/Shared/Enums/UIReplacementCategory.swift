@@ -18,6 +18,7 @@ enum UIReplacementCategory: String, CaseIterable, Identifiable {
     case dateBreak = "Date Break Model"
     case preChatReceipt = "PreChat Submission Receipt"
     case conversationClosed = "Conversation Closed Model"
+    case queuePosition = "Queue Position Model"
     case unknown = "Unknown"
 
     func view(_ model: ChatFeedModel, client: ConversationClient?) -> any View {
@@ -28,6 +29,7 @@ enum UIReplacementCategory: String, CaseIterable, Identifiable {
         case .dateBreak: DateBreakReplacement(model)
         case .entry: EntryContainerReplacement(model: model, client: client)
         case .conversationClosed: ConversationClosedReplacement(model)
+        case .queuePosition: QueuePositionReplacement(model)
         default: EmptyView()
         }
     }
@@ -40,6 +42,7 @@ enum UIReplacementCategory: String, CaseIterable, Identifiable {
         case .dateBreak: .replace
         case .entry: .replace
         case .conversationClosed: .replace
+        case .queuePosition: .replace
         default: .existing
         }
     }
@@ -57,6 +60,7 @@ enum UIReplacementCategory: String, CaseIterable, Identifiable {
         case _ as PreChatReceiptModel: return .preChatReceipt
         case _ as TypingIndicatorModel: return .typingIndicator
         case _ as ProgressIndicatorModel: return .progressIndicator
+        case _ as QueuePositionModel: return .queuePosition
         case _ as DateBreakModel: return .dateBreak
         case _ as ConversationClosedModel: return .conversationClosed
         default: return .unknown
