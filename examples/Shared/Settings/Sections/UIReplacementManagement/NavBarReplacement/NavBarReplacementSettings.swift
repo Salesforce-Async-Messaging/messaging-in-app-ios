@@ -23,21 +23,33 @@ struct NavBarReplacementSettings: View {
                 }
 
                 return result.rawValue
+
+            case .dynamicTitleReplacement: return false
             }
         }
 
-        var resettable: Bool { true }
+        var resettable: Bool { false }
 
         static func handleReset() {}
 
         public var id: String { rawValue }
 
         case navBarReplacements
+        case dynamicTitleReplacement
     }
+
+    @StateObject var navBarReplacementStore: NavBarReplacementStore = NavBarReplacementStore()
 
     var body: some View {
         NavigationLink {
             Form {
+                SettingsSection("Dynamic Title Replacement") {
+                    Instructions(instructions:"This will enable dynamic replacement of the title with the current agent/bot name",
+                                 note: "This will only occur on the chat feed",
+                                 section: false)
+
+                    SettingsToggle("Replace Title with Agent Name", isOn: $navBarReplacementStore.dynamicTitleReplacement)
+                }
                 SettingsSection(Self.header) {
                     ForEach(NavigationScreenType.allCases) { category in
                         NavBarReplacementRow(category: category)
@@ -70,5 +82,13 @@ struct NavBarReplacementSettings: View {
                     }
                 })
         }
+    }
+}
+
+
+extension NavBarReplacementStore {
+    var dynamicTitleReplacement: Bool {
+        get { userDefaults.bool(forKey: Keys.dynamicTitleReplacement.rawValue) }
+        set { userDefaults.set(newValue, forKey: Keys.dynamicTitleReplacement.rawValue) }
     }
 }

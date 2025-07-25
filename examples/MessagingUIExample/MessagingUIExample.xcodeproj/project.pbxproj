@@ -32,6 +32,7 @@
 		F299531F2D8887A3002A58B9 /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = F299531D2D8887A3002A58B9 /* Toast.swift */; };
 		F29953212D8887BD002A58B9 /* ToastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29953202D8887BD002A58B9 /* ToastView.swift */; };
 		F29953232D888876002A58B9 /* ToastModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29953222D888876002A58B9 /* ToastModifier.swift */; };
+		F2A95FE32E33C81500E5FD37 /* GlobalCoreDelegateHandler+ConversationClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A95FE22E33C81500E5FD37 /* GlobalCoreDelegateHandler+ConversationClient.swift */; };
 		F2A9FE332D835E8A008163E9 /* Instructions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A9FE322D835E8A008163E9 /* Instructions.swift */; };
 		F2A9FE3E2D848AAE008163E9 /* DeveloperToggle.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A9FE3D2D848AA1008163E9 /* DeveloperToggle.swift */; };
 		F2BFC17C2CAEDE1E000B97C0 /* PrePopulatedPreChatClosureConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2BFC1462CAEDE1D000B97C0 /* PrePopulatedPreChatClosureConfiguration.swift */; };
@@ -126,6 +127,7 @@
 		F299531D2D8887A3002A58B9 /* Toast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Toast.swift; sourceTree = "<group>"; };
 		F29953202D8887BD002A58B9 /* ToastView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastView.swift; sourceTree = "<group>"; };
 		F29953222D888876002A58B9 /* ToastModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastModifier.swift; sourceTree = "<group>"; };
+		F2A95FE22E33C81500E5FD37 /* GlobalCoreDelegateHandler+ConversationClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GlobalCoreDelegateHandler+ConversationClient.swift"; sourceTree = "<group>"; };
 		F2A9FE322D835E8A008163E9 /* Instructions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Instructions.swift; sourceTree = "<group>"; };
 		F2A9FE3D2D848AA1008163E9 /* DeveloperToggle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeveloperToggle.swift; sourceTree = "<group>"; };
 		F2BFC1462CAEDE1D000B97C0 /* PrePopulatedPreChatClosureConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrePopulatedPreChatClosureConfiguration.swift; sourceTree = "<group>"; };
@@ -260,6 +262,7 @@
 			isa = PBXGroup;
 			children = (
 				F27FB54A2CB4521000E243B4 /* GlobalCoreDelegateHandler.swift */,
+				F2A95FE22E33C81500E5FD37 /* GlobalCoreDelegateHandler+ConversationClient.swift */,
 				F27FB54C2CB4521000E243B4 /* GlobalCoreDelegateHandler+HiddenPreChat.swift */,
 				F27FB54D2CB4521000E243B4 /* GlobalCoreDelegateHandler+TemplatedURL.swift */,
 				F27FB54E2CB4521000E243B4 /* GlobalCoreDelegateHandler+UserVerification.swift */,
@@ -719,6 +722,7 @@
 				F2BFC17D2CAEDE1E000B97C0 /* TemplateURLDelegateConfiguration.swift in Sources */,
 				274888972E048EB800B2EFAA /* ReplacementSettings.swift in Sources */,
 				F2BFC17F2CAEDE1E000B97C0 /* DelegateManagementSettings.swift in Sources */,
+				F2A95FE32E33C81500E5FD37 /* GlobalCoreDelegateHandler+ConversationClient.swift in Sources */,
 				F2BFC1A62CAEDE6C000B97C0 /* WrappedKeyboardDismiss.swift in Sources */,
 				F2BFC1822CAEDE1E000B97C0 /* DemoManagementSettings.swift in Sources */,
 				F2BFC19F2CAEDE1E000B97C0 /* KeyValuePair.swift in Sources */,

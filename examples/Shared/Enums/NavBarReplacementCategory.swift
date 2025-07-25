@@ -62,6 +62,10 @@ extension NavigationScreenType {
     }
 }
 
+struct NavBarReplacementModel: Codable {
+    var shouldReplace: Bool
+}
+
 // MARK: - UserDefault Wrappers
 extension NavBarReplacementStore {
     var navBarReplacements: [String: NavBarReplacementModel] {
@@ -77,7 +81,3 @@ extension NavBarReplacementStore {
     }
 }
 
-
-struct NavBarReplacementModel: Codable {
-    var shouldReplace: Bool
-}
