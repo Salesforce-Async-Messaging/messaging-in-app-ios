@@ -61,9 +61,7 @@ extension LoggingStore {
 
     func updateLoggingSettings() {
         SMIClientCore.Logging.level = coreLoggingEnabled ? .debug : .none
-
-        // JWRIGHT Update after production release
-//        SMIClientUI.Logging.level = uiLoggingEnabled ? .debug : .none
+        SMIClientUI.Logging.level = uiLoggingEnabled ? .debug : .none
     }
 }
 
