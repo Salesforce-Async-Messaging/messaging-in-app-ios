@@ -10,8 +10,6 @@
 		042B91D62E31634300B77BFA /* QueuePositionReplacement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042B91D52E31634300B77BFA /* QueuePositionReplacement.swift */; };
 		0440A2442C18B2E400A1B6A3 /* Swift-InAppMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = 0440A2432C18B2E400A1B6A3 /* Swift-InAppMessaging */; };
 		04D0AA7A2D41670300BFA27F /* ProgressIndicatorReplacement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D0AA792D4166FB00BFA27F /* ProgressIndicatorReplacement.swift */; };
-		272550302E0B175000A3BC65 /* NavTitleReplacementSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2725502E2E0B175000A3BC65 /* NavTitleReplacementSettings.swift */; };
-		272550312E0B175000A3BC65 /* NavigationTitleReplacementManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2725502D2E0B175000A3BC65 /* NavigationTitleReplacementManager.swift */; };
 		272550322E0B175000A3BC65 /* NavBarReplacementSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2725502C2E0B175000A3BC65 /* NavBarReplacementSettings.swift */; };
 		273326792E0434350032EC75 /* TestNavBarBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273326782E0434320032EC75 /* TestNavBarBuilder.swift */; };
 		2733267B2E0436240032EC75 /* NavBarReplacementCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2733267A2E0436150032EC75 /* NavBarReplacementCategory.swift */; };
@@ -35,6 +33,7 @@
 		F299531F2D8887A3002A58B9 /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = F299531D2D8887A3002A58B9 /* Toast.swift */; };
 		F29953212D8887BD002A58B9 /* ToastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29953202D8887BD002A58B9 /* ToastView.swift */; };
 		F29953232D888876002A58B9 /* ToastModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29953222D888876002A58B9 /* ToastModifier.swift */; };
+		F2A95FE32E33C81500E5FD37 /* GlobalCoreDelegateHandler+ConversationClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A95FE22E33C81500E5FD37 /* GlobalCoreDelegateHandler+ConversationClient.swift */; };
 		F2A9FE332D835E8A008163E9 /* Instructions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A9FE322D835E8A008163E9 /* Instructions.swift */; };
 		F2A9FE3E2D848AAE008163E9 /* DeveloperToggle.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A9FE3D2D848AA1008163E9 /* DeveloperToggle.swift */; };
 		F2BFC17C2CAEDE1E000B97C0 /* PrePopulatedPreChatClosureConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2BFC1462CAEDE1D000B97C0 /* PrePopulatedPreChatClosureConfiguration.swift */; };
@@ -107,8 +106,6 @@
 		042B91D52E31634300B77BFA /* QueuePositionReplacement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueuePositionReplacement.swift; sourceTree = "<group>"; };
 		04D0AA792D4166FB00BFA27F /* ProgressIndicatorReplacement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressIndicatorReplacement.swift; sourceTree = "<group>"; };
 		2725502C2E0B175000A3BC65 /* NavBarReplacementSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavBarReplacementSettings.swift; sourceTree = "<group>"; };
-		2725502D2E0B175000A3BC65 /* NavigationTitleReplacementManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationTitleReplacementManager.swift; sourceTree = "<group>"; };
-		2725502E2E0B175000A3BC65 /* NavTitleReplacementSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavTitleReplacementSettings.swift; sourceTree = "<group>"; };
 		273326782E0434320032EC75 /* TestNavBarBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestNavBarBuilder.swift; sourceTree = "<group>"; };
 		2733267A2E0436150032EC75 /* NavBarReplacementCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavBarReplacementCategory.swift; sourceTree = "<group>"; };
 		274888962E048EA900B2EFAA /* ReplacementSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReplacementSettings.swift; sourceTree = "<group>"; };
@@ -132,6 +129,7 @@
 		F299531D2D8887A3002A58B9 /* Toast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Toast.swift; sourceTree = "<group>"; };
 		F29953202D8887BD002A58B9 /* ToastView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastView.swift; sourceTree = "<group>"; };
 		F29953222D888876002A58B9 /* ToastModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastModifier.swift; sourceTree = "<group>"; };
+		F2A95FE22E33C81500E5FD37 /* GlobalCoreDelegateHandler+ConversationClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GlobalCoreDelegateHandler+ConversationClient.swift"; sourceTree = "<group>"; };
 		F2A9FE322D835E8A008163E9 /* Instructions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Instructions.swift; sourceTree = "<group>"; };
 		F2A9FE3D2D848AA1008163E9 /* DeveloperToggle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeveloperToggle.swift; sourceTree = "<group>"; };
 		F2BFC1462CAEDE1D000B97C0 /* PrePopulatedPreChatClosureConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrePopulatedPreChatClosureConfiguration.swift; sourceTree = "<group>"; };
@@ -217,8 +215,6 @@
 			isa = PBXGroup;
 			children = (
 				2725502C2E0B175000A3BC65 /* NavBarReplacementSettings.swift */,
-				2725502D2E0B175000A3BC65 /* NavigationTitleReplacementManager.swift */,
-				2725502E2E0B175000A3BC65 /* NavTitleReplacementSettings.swift */,
 			);
 			path = NavBarReplacement;
 			sourceTree = "<group>";
@@ -268,6 +264,7 @@
 			isa = PBXGroup;
 			children = (
 				F27FB54A2CB4521000E243B4 /* GlobalCoreDelegateHandler.swift */,
+				F2A95FE22E33C81500E5FD37 /* GlobalCoreDelegateHandler+ConversationClient.swift */,
 				F27FB54C2CB4521000E243B4 /* GlobalCoreDelegateHandler+HiddenPreChat.swift */,
 				F27FB54D2CB4521000E243B4 /* GlobalCoreDelegateHandler+TemplatedURL.swift */,
 				F27FB54E2CB4521000E243B4 /* GlobalCoreDelegateHandler+UserVerification.swift */,
@@ -506,7 +503,6 @@
 			children = (
 				2733267A2E0436150032EC75 /* NavBarReplacementCategory.swift */,
 				F2DE42822E04814000C07239 /* AuthorizationMethod.swift */,
-				F2BFC16A2CAEDE1D000B97C0 /* ConnectionEnvironment.swift */,
 				F2F193DC2CB44B6700B54AE8 /* UIReplacementCategory.swift */,
 				F2BFC16A2CAEDE1D000B97C0 /* ConnectionEnvironment.swift */,
 			);
@@ -694,8 +690,6 @@
 				F2665FE72CB819D80044B7BF /* EnvironmentSettings.swift in Sources */,
 				F27FB5552CB4521000E243B4 /* TestEntryViewBuilder.swift in Sources */,
 				F27FB5562CB4521000E243B4 /* GlobalCoreDelegateHandler+HiddenPreChat.swift in Sources */,
-				272550302E0B175000A3BC65 /* NavTitleReplacementSettings.swift in Sources */,
-				272550312E0B175000A3BC65 /* NavigationTitleReplacementManager.swift in Sources */,
 				272550322E0B175000A3BC65 /* NavBarReplacementSettings.swift in Sources */,
 				F27FB5572CB4521000E243B4 /* GlobalCoreDelegateHandler+UserVerification.swift in Sources */,
 				F27FB5582CB4521000E243B4 /* GlobalCoreDelegateHandler.swift in Sources */,
@@ -732,6 +726,7 @@
 				F2BFC17D2CAEDE1E000B97C0 /* TemplateURLDelegateConfiguration.swift in Sources */,
 				274888972E048EB800B2EFAA /* ReplacementSettings.swift in Sources */,
 				F2BFC17F2CAEDE1E000B97C0 /* DelegateManagementSettings.swift in Sources */,
+				F2A95FE32E33C81500E5FD37 /* GlobalCoreDelegateHandler+ConversationClient.swift in Sources */,
 				F2BFC1A62CAEDE6C000B97C0 /* WrappedKeyboardDismiss.swift in Sources */,
 				F2BFC1822CAEDE1E000B97C0 /* DemoManagementSettings.swift in Sources */,
 				F2BFC19F2CAEDE1E000B97C0 /* KeyValuePair.swift in Sources */,

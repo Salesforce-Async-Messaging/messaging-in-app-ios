@@ -18,30 +18,40 @@ struct NavBarReplacementSettings: View {
             switch self {
             case .navBarReplacements:
                 var result: [String: NavBarReplacementModel] = [:]
-                NavBarReplacementCategory.allCases.forEach {
+                NavigationScreenType.allCases.forEach {
                     result[$0.rawValue] = $0.defaultValue
                 }
 
                 return result.rawValue
+
+            case .dynamicTitleReplacement: return false
             }
         }
 
-        var resettable: Bool { true }
+        var resettable: Bool { false }
 
         static func handleReset() {}
 
         public var id: String { rawValue }
 
         case navBarReplacements
+        case dynamicTitleReplacement
     }
+
+    @StateObject var navBarReplacementStore: NavBarReplacementStore = NavBarReplacementStore()
 
     var body: some View {
         NavigationLink {
             Form {
-                NavTitleTimerReplacementSettings()
+                SettingsSection("Dynamic Title Replacement") {
+                    Instructions(instructions:"This will enable dynamic replacement of the title with the current agent/bot name",
+                                 note: "This will only occur on the chat feed",
+                                 section: false)
 
+                    SettingsToggle("Replace Title with Agent Name", isOn: $navBarReplacementStore.dynamicTitleReplacement)
+                }
                 SettingsSection(Self.header) {
-                    ForEach(NavBarReplacementCategory.allCases) { category in
+                    ForEach(NavigationScreenType.allCases) { category in
                         NavBarReplacementRow(category: category)
                     }
                 }
@@ -52,17 +62,17 @@ struct NavBarReplacementSettings: View {
     }
 
     private struct NavBarReplacementRow: View {
-        let category: NavBarReplacementCategory
+        let category: NavigationScreenType
 
         @State var isOn: Bool = false
         @StateObject var navBarReplacementStore: NavBarReplacementStore = NavBarReplacementStore()
 
         var body: some View {
             SettingsToggle(category.rawValue, isOn: $isOn)
-                .onChange(of: isOn) { shouldReplace in
+                .onChange(of: isOn) { old, new in
                     var navBarReplacements = navBarReplacementStore.navBarReplacements
 
-                    navBarReplacements[category.rawValue]?.shouldReplace = shouldReplace
+                    navBarReplacements[category.rawValue]?.shouldReplace = new
 
                     navBarReplacementStore.navBarReplacements = navBarReplacements
                 }
@@ -72,5 +82,13 @@ struct NavBarReplacementSettings: View {
                     }
                 })
         }
+    }
+}
+
+
+extension NavBarReplacementStore {
+    var dynamicTitleReplacement: Bool {
+        get { userDefaults.bool(forKey: Keys.dynamicTitleReplacement.rawValue) }
+        set { userDefaults.set(newValue, forKey: Keys.dynamicTitleReplacement.rawValue) }
     }
 }

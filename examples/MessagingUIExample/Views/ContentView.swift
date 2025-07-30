@@ -58,10 +58,10 @@ struct MIAW: View {
                          preChatFieldValueProvider: GlobalCoreDelegateHandler.shared.prePopulatedPreChatProvider.closure,
                          chatFeedViewBuilder: GlobalCoreDelegateHandler.shared.viewBuilder,
                          navigationBarBuilder: GlobalCoreDelegateHandler.shared.navBarBuilder)
-
-            .onAppear(perform: {
-                GlobalCoreDelegateHandler.shared.registerDelegates(CoreFactory.create(withConfig: config))
-            })
+        .onAppear(perform: {
+            let client = CoreFactory.create(withConfig: config).conversationClient(with: conversationManagementStore.conversationUUID)
+            GlobalCoreDelegateHandler.shared.registerDelegates(client)
+        })
     }
 }
 
