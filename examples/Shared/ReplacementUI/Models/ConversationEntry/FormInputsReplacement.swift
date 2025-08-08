@@ -1,6 +1,6 @@
 //
 //  FormInputsReplacement.swift
-//  IAMessagingTestApp
+//  MessagingUIExample
 //
 //  Created by Jeremy Wright on 2024-07-24.
 //  Copyright © 2024 Salesforce.com. All rights reserved.

@@ -1,8 +1,9 @@
 //
 //  GlobalCoreDelegateHandler+TemplatedURL.swift
-//  SMITestApp
+//  MessagingUIExample
 //
 //  Created by Jeremy Wright on 2024-09-12.
+//  Copyright © 2024 Salesforce.com. All rights reserved.
 //
 
 import Foundation

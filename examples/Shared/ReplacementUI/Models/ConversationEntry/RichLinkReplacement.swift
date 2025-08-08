@@ -1,6 +1,6 @@
 //
 //  RichLinkReplacement.swift
-//  IAMessagingTestApp
+//  MessagingUIExample
 //
 //  Created by Jeremy Wright on 2024-07-11.
 //  Copyright © 2024 Salesforce.com. All rights reserved.

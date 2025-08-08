@@ -1,8 +1,9 @@
 //
 //  GlobalCoreDelegateHandler+ConversationClient.swift
-//  SMITestApp
+//  MessagingUIExample
 //
 //  Created by Jeremy Wright on 2025-07-25.
+//  Copyright © 2025 Salesforce.com. All rights reserved.
 //
 
 import Foundation
