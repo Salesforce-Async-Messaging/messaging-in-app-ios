@@ -1,9 +1,9 @@
 //
 //  ProgressIndictorReplacement.swift
-//  IAMessagingTestApp
+//  MessagingUIExample
 //
 //  Created by Aaron Eisses on 2025-01-22.
-//  Copyright © 2024 Salesforce.com. All rights reserved.
+//  Copyright © 2025 Salesforce.com. All rights reserved.
 //
 
 import SwiftUI

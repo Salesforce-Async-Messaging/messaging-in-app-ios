@@ -1,16 +1,16 @@
 //
-//  WebViewReplacement.swift
+//  SesssionStatusChangedReplacement.swift
 //  MessagingUIExample
 //
-//  Created by Jeremy Wright on 2024-07-11.
-//  Copyright © 2024 Salesforce.com. All rights reserved.
+//  Created by Aaron Eisses on 2025-07-23.
+//  Copyright © 2025 Salesforce.com. All rights reserved.
 //
 
 import SwiftUI
 import SMIClientCore
 import SMIClientUI
 
-struct WebViewReplacement: View {
+struct SesssionStatusChangedReplacement: View {
     let model: ChatFeedModel
     let client: ConversationClient?
     let origin: EntryContainerReplacement.Origin
@@ -20,6 +20,15 @@ struct WebViewReplacement: View {
         return model.entry
     }
 
+    var payload: SessionStatusChanged {
+        guard let payload = entry.payload as? SessionStatusChanged else { fatalError("Incompatable Entry") }
+        return payload
+    }
+
+    var text: String {
+        return "CHAT ENDED!"
+    }
+
     init(_ model: ChatFeedModel, origin: EntryContainerReplacement.Origin, client: ConversationClient?) {
         self.model = model
         self.client = client
@@ -27,6 +36,6 @@ struct WebViewReplacement: View {
     }
 
     var body: some View {
-        origin.color
+        TextReplacement(text: text, origin: .system).padding(10)
     }
 }

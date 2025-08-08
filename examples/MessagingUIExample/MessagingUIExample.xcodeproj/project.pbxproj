@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		042B91D62E31634300B77BFA /* QueuePositionReplacement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042B91D52E31634300B77BFA /* QueuePositionReplacement.swift */; };
 		0440A2442C18B2E400A1B6A3 /* Swift-InAppMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = 0440A2432C18B2E400A1B6A3 /* Swift-InAppMessaging */; };
+		04AFF5692E46643300D6DCDA /* SessionStatusChangedReplacement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AFF5682E46643300D6DCDA /* SessionStatusChangedReplacement.swift */; };
 		04D0AA7A2D41670300BFA27F /* ProgressIndicatorReplacement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D0AA792D4166FB00BFA27F /* ProgressIndicatorReplacement.swift */; };
 		272550322E0B175000A3BC65 /* NavBarReplacementSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2725502C2E0B175000A3BC65 /* NavBarReplacementSettings.swift */; };
 		273326792E0434350032EC75 /* TestNavBarBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273326782E0434320032EC75 /* TestNavBarBuilder.swift */; };
@@ -104,6 +105,7 @@
 
 /* Begin PBXFileReference section */
 		042B91D52E31634300B77BFA /* QueuePositionReplacement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueuePositionReplacement.swift; sourceTree = "<group>"; };
+		04AFF5682E46643300D6DCDA /* SessionStatusChangedReplacement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionStatusChangedReplacement.swift; sourceTree = "<group>"; };
 		04D0AA792D4166FB00BFA27F /* ProgressIndicatorReplacement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressIndicatorReplacement.swift; sourceTree = "<group>"; };
 		2725502C2E0B175000A3BC65 /* NavBarReplacementSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavBarReplacementSettings.swift; sourceTree = "<group>"; };
 		273326782E0434320032EC75 /* TestNavBarBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestNavBarBuilder.swift; sourceTree = "<group>"; };
@@ -528,6 +530,7 @@
 				F2F193E12CB44BC900B54AE8 /* FormInputsReplacement.swift */,
 				F2F193E22CB44BC900B54AE8 /* FormResultReplacement.swift */,
 				F2F193E32CB44BC900B54AE8 /* ListPickerReplacement.swift */,
+				04AFF5682E46643300D6DCDA /* SessionStatusChangedReplacement.swift */,
 				F2F193E42CB44BC900B54AE8 /* ParticipantChangedReplacement.swift */,
 				F2F193E52CB44BC900B54AE8 /* QuickReplyReplacement.swift */,
 				F2F193E62CB44BC900B54AE8 /* RichLinkReplacement.swift */,
@@ -705,6 +708,7 @@
 				2733267B2E0436240032EC75 /* NavBarReplacementCategory.swift in Sources */,
 				F2BFC1982CAEDE1E000B97C0 /* UIReplacementModel.swift in Sources */,
 				F2BFC1912CAEDE1E000B97C0 /* SettingsPicker.swift in Sources */,
+				04AFF5692E46643300D6DCDA /* SessionStatusChangedReplacement.swift in Sources */,
 				F2BFC1922CAEDE1E000B97C0 /* SettingsTextField.swift in Sources */,
 				F2BFC1902CAEDE1E000B97C0 /* SettingsButton.swift in Sources */,
 				F2BFC1992CAEDE1E000B97C0 /* SettingsStore.swift in Sources */,
