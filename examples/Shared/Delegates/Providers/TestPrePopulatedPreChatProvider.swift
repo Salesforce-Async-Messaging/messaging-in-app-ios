@@ -1,8 +1,9 @@
 //
 //  TestPrePopulatedPreChatProvider.swift
-//  SMITestApp
+//  MessagingUIExample
 //
 //  Created by Jeremy Wright on 2024-09-25.
+//  Copyright © 2024 Salesforce.com. All rights reserved.
 //
 
 import Foundation

@@ -1,8 +1,9 @@
 //
 //  QueuePositionReplacement.swift
-//  SMITestApp
+//  MessagingUIExample
 //
 //  Created by Aaron Eisses on 2025-07-23.
+//  Copyright © 2025 Salesforce.com. All rights reserved.
 //
 
 import SwiftUI

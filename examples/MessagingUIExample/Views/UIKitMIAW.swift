@@ -3,6 +3,7 @@
 //  MessagingUIExample
 //
 //  Created by Jeremy Wright on 2024-10-07.
+//  Copyright © 2024 Salesforce.com. All rights reserved.
 //
 
 import SwiftUI

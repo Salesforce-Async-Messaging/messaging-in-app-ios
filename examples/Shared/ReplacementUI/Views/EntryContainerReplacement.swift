@@ -1,6 +1,6 @@
 //
 //  EntryContainerReplacement.swift
-//  IAMessagingTestApp
+//  MessagingUIExample
 //
 //  Created by Jeremy Wright on 2024-07-26.
 //  Copyright © 2024 Salesforce.com. All rights reserved.
@@ -77,6 +77,7 @@ struct EntryContainerReplacement: View {
     @ViewBuilder func viewWithType(_ type: ConversationEntryTypes, origin: Origin) -> some View {
         switch type {
         case .participantChanged: ParticipantChangedReplacement(model, origin: origin, client: client)
+        case .sessionStatusChanged: SesssionStatusChangedReplacement(model, origin: origin, client: client)
         default: EmptyView()
         }
     }
