@@ -15,6 +15,7 @@ extension NavigationScreenType {
         case .chatFeed: "Chat Feed"
         case .form: "Secure Forms"
         case .confirmation: "Confirmation Screen"
+        case .information: "Information Screen"
         case .preChat: "PreChat"
         case .attachment: "Attachment Viewer"
         case .transcripts: "Transcripts"
