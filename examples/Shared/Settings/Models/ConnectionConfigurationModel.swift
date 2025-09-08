@@ -16,4 +16,9 @@ struct ConnectionConfigurationModel: Codable {
     var enableEndSessionUI: Bool = true
     var URLDisplayMode: String = UrlDisplayMode.inlineBrowser.rawValue
     var useSSL: Bool = true
+    var enableImages: Bool = true
+    var enableVideos: Bool = true
+    var enableAudio: Bool = true
+    var enableText: Bool = true
+    var enableOther: Bool = true
 }

@@ -70,6 +70,9 @@ struct MIAWConfigurationSettings: View {
                               enabled: store.connectionEnvironment.editableDeveloperName)
 
             SettingsToggle("Attachment UI Enabled", developerOnly: true, isOn: $store.enableAttachmentUI)
+            SettingsNavigationLink("Allowed File Types", developerOnly: true) {
+                FileTypeSettings(miawConfigurationStore: store)
+            }
             SettingsToggle("Transcript Enabled", developerOnly: true, isOn: $store.enableTranscriptUI)
             SettingsToggle("Progress Indicator for Agents", developerOnly: true, isOn: $store.useProgressIndicatorsForAgents)
             SettingsToggle("End Session Enabled", developerOnly: true, isOn: $store.enableEndSessiontUI)
@@ -170,6 +173,66 @@ extension MIAWConfigurationStore {
         }
     }
 
+    var enableImages: Bool {
+        get {
+            guard let environment = environments[connectionEnvironment.rawValue] else { return false }
+            return environment.enableImages
+        }
+        set {
+            guard var environment = environments[connectionEnvironment.rawValue] else { return }
+            environment.enableImages = newValue
+            environments[connectionEnvironment.rawValue] = environment
+        }
+    }
+
+    var enableVideos: Bool {
+        get {
+            guard let environment = environments[connectionEnvironment.rawValue] else { return false }
+            return environment.enableVideos
+        }
+        set {
+            guard var environment = environments[connectionEnvironment.rawValue] else { return }
+            environment.enableVideos = newValue
+            environments[connectionEnvironment.rawValue] = environment
+        }
+    }
+
+    var enableAudio: Bool {
+        get {
+            guard let environment = environments[connectionEnvironment.rawValue] else { return false }
+            return environment.enableAudio
+        }
+        set {
+            guard var environment = environments[connectionEnvironment.rawValue] else { return }
+            environment.enableAudio = newValue
+            environments[connectionEnvironment.rawValue] = environment
+        }
+    }
+
+    var enableText: Bool {
+        get {
+            guard let environment = environments[connectionEnvironment.rawValue] else { return false }
+            return environment.enableText
+        }
+        set {
+            guard var environment = environments[connectionEnvironment.rawValue] else { return }
+            environment.enableText = newValue
+            environments[connectionEnvironment.rawValue] = environment
+        }
+    }
+
+    var enableOther: Bool {
+        get {
+            guard let environment = environments[connectionEnvironment.rawValue] else { return false }
+            return environment.enableOther
+        }
+        set {
+            guard var environment = environments[connectionEnvironment.rawValue] else { return }
+            environment.enableOther = newValue
+            environments[connectionEnvironment.rawValue] = environment
+        }
+    }
+
     var enableEndSessiontUI: Bool {
         get {
             guard let environment = environments[connectionEnvironment.rawValue] else { return false }
@@ -204,6 +267,16 @@ extension MIAWConfigurationStore {
             environment.useProgressIndicatorForAgents = newValue
             environments[connectionEnvironment.rawValue] = environment
         }
+    }
+
+    func allowedFileTypes() -> AllowedFileTypes {
+        guard let environment = environments[connectionEnvironment.rawValue] else { return AllowedFileTypes() }
+        return AllowedFileTypes(image: environment.enableImages ? FileTypeSettings.defaultImageExtensions : [],
+                                video: environment.enableVideos ? FileTypeSettings.defaultVideoExtensions : [],
+                                audio: environment.enableAudio ? FileTypeSettings.defaultAudioExtensions : [],
+                                text: environment.enableText ? FileTypeSettings.defaultTextExtensions : [],
+                                other: environment.enableOther ? FileTypeSettings.defaultOtherExtensions : [])
+
     }
 }
 

@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		042B91D62E31634300B77BFA /* QueuePositionReplacement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042B91D52E31634300B77BFA /* QueuePositionReplacement.swift */; };
 		0440A2442C18B2E400A1B6A3 /* Swift-InAppMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = 0440A2432C18B2E400A1B6A3 /* Swift-InAppMessaging */; };
+		04AD13602E6F23D7002FDBD6 /* FileTypeSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AD135E2E6F23D7002FDBD6 /* FileTypeSettings.swift */; };
+		04AD13622E6F2444002FDBD6 /* SettingNavigationLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AD13612E6F2444002FDBD6 /* SettingNavigationLink.swift */; };
 		04AFF5692E46643300D6DCDA /* SessionStatusChangedReplacement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AFF5682E46643300D6DCDA /* SessionStatusChangedReplacement.swift */; };
 		04D0AA7A2D41670300BFA27F /* ProgressIndicatorReplacement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D0AA792D4166FB00BFA27F /* ProgressIndicatorReplacement.swift */; };
 		272550322E0B175000A3BC65 /* NavBarReplacementSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2725502C2E0B175000A3BC65 /* NavBarReplacementSettings.swift */; };
@@ -105,6 +107,8 @@
 
 /* Begin PBXFileReference section */
 		042B91D52E31634300B77BFA /* QueuePositionReplacement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueuePositionReplacement.swift; sourceTree = "<group>"; };
+		04AD135E2E6F23D7002FDBD6 /* FileTypeSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileTypeSettings.swift; sourceTree = "<group>"; };
+		04AD13612E6F2444002FDBD6 /* SettingNavigationLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingNavigationLink.swift; sourceTree = "<group>"; };
 		04AFF5682E46643300D6DCDA /* SessionStatusChangedReplacement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionStatusChangedReplacement.swift; sourceTree = "<group>"; };
 		04D0AA792D4166FB00BFA27F /* ProgressIndicatorReplacement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressIndicatorReplacement.swift; sourceTree = "<group>"; };
 		2725502C2E0B175000A3BC65 /* NavBarReplacementSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavBarReplacementSettings.swift; sourceTree = "<group>"; };
@@ -213,6 +217,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		04AD135F2E6F23D7002FDBD6 /* FileTypeManagement */ = {
+			isa = PBXGroup;
+			children = (
+				04AD135E2E6F23D7002FDBD6 /* FileTypeSettings.swift */,
+			);
+			path = FileTypeManagement;
+			sourceTree = "<group>";
+		};
 		2725502F2E0B175000A3BC65 /* NavBarReplacement */ = {
 			isa = PBXGroup;
 			children = (
@@ -334,6 +346,7 @@
 		F2BFC1442CAEDE1D000B97C0 /* Sections */ = {
 			isa = PBXGroup;
 			children = (
+				04AD135F2E6F23D7002FDBD6 /* FileTypeManagement */,
 				F2665FE82CB81A2F0044B7BF /* DebugManagement */,
 				F2BFC1452CAEDE1D000B97C0 /* ClientDelegates */,
 				F2BFC1502CAEDE1D000B97C0 /* ConversationManagement */,
@@ -430,6 +443,7 @@
 		F2BFC1602CAEDE1D000B97C0 /* FormInput */ = {
 			isa = PBXGroup;
 			children = (
+				04AD13612E6F2444002FDBD6 /* SettingNavigationLink.swift */,
 				F2BFC1612CAEDE1D000B97C0 /* SettingsToggle.swift */,
 				F2BFC1622CAEDE1D000B97C0 /* SettingsKeyValueManager.swift */,
 				F2BFC1632CAEDE1D000B97C0 /* SettingsSlider.swift */,
@@ -667,6 +681,7 @@
 				F2BFC19A2CAEDE1E000B97C0 /* Array+RawRepresentable.swift in Sources */,
 				F29953232D888876002A58B9 /* ToastModifier.swift in Sources */,
 				F2BFC18B2CAEDE1E000B97C0 /* UserVerificationSettings.swift in Sources */,
+				04AD13602E6F23D7002FDBD6 /* FileTypeSettings.swift in Sources */,
 				F2BFC1832CAEDE1E000B97C0 /* ConversationPicker.swift in Sources */,
 				F2BFC19E2CAEDE1E000B97C0 /* SettingsForm.swift in Sources */,
 				042B91D62E31634300B77BFA /* QueuePositionReplacement.swift in Sources */,
@@ -693,6 +708,7 @@
 				F2665FE72CB819D80044B7BF /* EnvironmentSettings.swift in Sources */,
 				F27FB5552CB4521000E243B4 /* TestEntryViewBuilder.swift in Sources */,
 				F27FB5562CB4521000E243B4 /* GlobalCoreDelegateHandler+HiddenPreChat.swift in Sources */,
+				04AD13622E6F2444002FDBD6 /* SettingNavigationLink.swift in Sources */,
 				272550322E0B175000A3BC65 /* NavBarReplacementSettings.swift in Sources */,
 				F27FB5572CB4521000E243B4 /* GlobalCoreDelegateHandler+UserVerification.swift in Sources */,
 				F27FB5582CB4521000E243B4 /* GlobalCoreDelegateHandler.swift in Sources */,
