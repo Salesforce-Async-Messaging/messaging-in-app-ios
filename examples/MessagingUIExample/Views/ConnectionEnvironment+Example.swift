@@ -16,28 +16,23 @@ extension ConnectionEnvironment: DeveloperToggle {
         case .config1:
             return ConnectionConfigurationModel(domain: "config1.my.salesforce-scrt.com",
                                                 organizationId: "",
-                                                developerName: "",
-                                                userVerificationRequired: false)
+                                                developerName: "")
         case .config2:
             return ConnectionConfigurationModel(domain: "config2.my.salesforce-scrt.com",
                                                 organizationId: "",
-                                                developerName: "",
-                                                userVerificationRequired: false)
+                                                developerName: "")
         case .config3:
             return ConnectionConfigurationModel(domain: "config3.salesforce-scrt.com",
                                                 organizationId: "",
-                                                developerName: "",
-                                                userVerificationRequired: false)
+                                                developerName: "")
         case .config4:
             return ConnectionConfigurationModel(domain: "config4.salesforce-scrt.com",
                                                 organizationId: "",
-                                                developerName: "",
-                                                userVerificationRequired: false)
+                                                developerName: "")
         case .config5:
             return ConnectionConfigurationModel(domain: "config4.salesforce-scrt.com",
                                                 organizationId: "",
-                                                developerName: "",
-                                                userVerificationRequired: false)
+                                                developerName: "")
         }
     }
 }

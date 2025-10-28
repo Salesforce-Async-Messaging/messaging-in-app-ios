@@ -33,7 +33,7 @@ struct SettingsSlider: View {
             VStack(alignment: .leading) {
                 SettingsTextField(label, value: $currentValue, enabled: false, copyable: false)
                 Slider(value: binding, in: lowerBound ... upperBound, step: step).accessibility(identifier: "\(label).input")
-                    .onChange(of: binding.wrappedValue) { newValue in
+                    .onChange(of: binding.wrappedValue) { _, newValue in
                         currentValue = "Current Value: \(newValue)"
                     }
             }

@@ -1,6 +1,6 @@
 //
 //  FormResultReplacement.swift
-//  IAMessagingTestApp
+//  MessagingUIExample
 //
 //  Created by Jeremy Wright on 2024-07-24.
 //  Copyright © 2024 Salesforce.com. All rights reserved.
@@ -22,8 +22,8 @@ struct FormResultReplacement: View {
         return model.entry
     }
 
-    var payload: FormResult {
-        guard let payload = entry.payload as? FormResult else { fatalError("Incompatable Entry") }
+    var payload: FormResponseResult {
+        guard let payload = entry.payload as? FormResponseResult else { fatalError("Incompatable Entry") }
         return payload
     }
 
@@ -34,6 +34,6 @@ struct FormResultReplacement: View {
     }
 
     var body: some View {
-        TextReplacement(text: payload.resultType == .formRecordsResult ? "Form Submission Successful" : "Form Error", origin: origin)
+        TextReplacement(text: payload.result.resultType == .formRecordsResult ? "Form Submission Successful" : "Form Error", origin: origin)
     }
 }

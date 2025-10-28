@@ -1,8 +1,8 @@
 //
-//  ProgressIndictorReplacement.swift
+//  QueuePositionReplacement.swift
 //  MessagingUIExample
 //
-//  Created by Aaron Eisses on 2025-01-22.
+//  Created by Aaron Eisses on 2025-07-23.
 //  Copyright © 2025 Salesforce.com. All rights reserved.
 //
 
@@ -10,21 +10,20 @@ import SwiftUI
 import SMIClientCore
 import SMIClientUI
 
-struct ProgressIndicatorReplacement: View {
+struct QueuePositionReplacement: View {
     @EnvironmentObject var chatFeedProxy: ChatFeedProxy
 
     let model: ChatFeedModel
 
     var entry: ConversationEntry {
-        guard let progressModel = model as? ProgressIndicatorModel else { fatalError("Incorrect Model") }
-        return progressModel.entry
+        guard let queueModel = model as? QueuePositionModel else { fatalError("Incorrect Model") }
+        return queueModel.entry
     }
 
     var text: String {
-        if let entry = entry.payload as? ProgressIndicator {
-            if let progressMessage = entry.progressMessage as? EntryFormatText {
-                return progressMessage.text as String
-            }
+        if let entry = entry.payload as? QueuePosition {
+            let progress = entry.position
+            return "Position: " + String(progress)
         }
         return "Unknown"
     }

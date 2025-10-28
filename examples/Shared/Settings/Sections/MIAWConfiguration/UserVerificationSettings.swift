@@ -31,7 +31,7 @@ struct UserVerificationSettings: View {
     @State var isFetching: Bool = false
 
     var body: some View {
-        if configStore.userVerificationRequired {
+        if configStore.authorizationMethod == .userVerified {
             Section(header: Text(Self.header)) {
                 SettingsTextField("Customer Identity Token", placeholder: "No Token: Please Add Here", value: $userVerificationStore.tokenJWT, enabled: true, lineLimit: 12)
             }

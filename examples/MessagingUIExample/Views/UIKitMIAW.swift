@@ -3,6 +3,7 @@
 //  MessagingUIExample
 //
 //  Created by Jeremy Wright on 2024-10-07.
+//  Copyright © 2024 Salesforce.com. All rights reserved.
 //
 
 import SwiftUI
@@ -90,12 +91,14 @@ struct UIKitMIAW: UIViewControllerRepresentable {
 
         @objc func startInApp(sender: UIButton!) {
             let testEntryViewBuilder = GlobalCoreDelegateHandler.shared.viewBuilder
+            let testNavBarBuilder = GlobalCoreDelegateHandler.shared.navBarBuilder
             let testPrePopulatedPreChatProvider = GlobalCoreDelegateHandler.shared.prePopulatedPreChatProvider.closure
 
             if demoManagementStore.isModal {
                 let controller = ModalInterfaceViewController(uiConfiguration,
                                                               preChatFieldValueProvider: testPrePopulatedPreChatProvider,
-                                                              chatFeedViewBuilder: testEntryViewBuilder)
+                                                              chatFeedViewBuilder: testEntryViewBuilder,
+                                                              navigationBarBuilder: testNavBarBuilder)
 
                 controller.modalPresentationStyle = demoManagementStore.modalPresentationStyle.systemValue
                 if demoManagementStore.replaceDismissButton {
