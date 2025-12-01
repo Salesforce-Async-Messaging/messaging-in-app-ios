@@ -247,6 +247,8 @@ class WidgetViewController: UIViewController {
     }
     
     @objc private func widgetTapped() {
+        unreadCount = 0
+        updateContent()
         openChatAction()
     }
     

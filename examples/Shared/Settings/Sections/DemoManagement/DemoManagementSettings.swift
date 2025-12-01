@@ -16,6 +16,7 @@ struct DemoManagementSettings: View {
             switch self {
             case .demoDomain: "salesforce.com"
             case .isModal: true
+            case .isSessionWidgetEnabled: false
             case .modalPresentationStyle: ModalPresentationStyle.popover.rawValue
             case .replaceDismissButton: false
             case .dismissButtonTitle: "Back"
@@ -26,6 +27,7 @@ struct DemoManagementSettings: View {
             switch self {
             case .demoDomain: return false
             case .isModal: return true
+            case .isSessionWidgetEnabled: return true
             case .modalPresentationStyle: return true
             case .replaceDismissButton: return true
             case .dismissButtonTitle: return true
@@ -36,6 +38,7 @@ struct DemoManagementSettings: View {
 
         case demoDomain
         case isModal
+        case isSessionWidgetEnabled
         case modalPresentationStyle
         case replaceDismissButton
         case dismissButtonTitle
@@ -70,6 +73,7 @@ struct DemoManagementSettings: View {
 
             SettingsTextField("Demo Domain", placeholder: "Enter URL Domain", value: $demoManagementStore.demoDomain)
             SettingsToggle("Modal Presentation", developerOnly: true, isOn: $demoManagementStore.isModal)
+            SettingsToggle("Session Widget", developerOnly: true, isOn: $demoManagementStore.isSessionWidgetEnabled)
 
             if demoManagementStore.isModal {
                 SettingsPicker("Modal Presentation Style", developerOnly: true, value: $demoManagementStore.modalPresentationStyle)
@@ -104,6 +108,11 @@ extension DemoManagementStore {
     var isModal: Bool {
         get { userDefaults.bool(forKey: Keys.isModal.rawValue) }
         set { userDefaults.set(newValue, forKey: Keys.isModal.rawValue) }
+    }
+
+    var isSessionWidgetEnabled: Bool {
+        get { userDefaults.bool(forKey: Keys.isSessionWidgetEnabled.rawValue) }
+        set { userDefaults.set(newValue, forKey: Keys.isSessionWidgetEnabled.rawValue) }
     }
 
     var replaceDismissButton: Bool {

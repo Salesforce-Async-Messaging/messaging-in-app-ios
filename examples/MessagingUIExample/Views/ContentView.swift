@@ -23,10 +23,6 @@ struct ContentView: View {
                     NavigationLink("Custom URL Demo") {
                         UIKitMIAW()
                     }
-
-                    NavigationLink("Session Widget Demo") {
-                        UIKitSessionWidget()
-                    }
                 }
             }                
             .navigationTitle("Main Menu")
