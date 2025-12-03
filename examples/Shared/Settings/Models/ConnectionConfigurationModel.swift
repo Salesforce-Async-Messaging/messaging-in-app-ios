@@ -13,6 +13,7 @@ struct ConnectionConfigurationModel: Codable {
     var enableAttachmentUI: Bool = true
     var enableTranscriptUI: Bool = true
     var useProgressIndicatorForAgents: Bool = true
+    var useHumanAgentAvatar: Bool = false
     var enableEndSessionUI: Bool = true
     var URLDisplayMode: String = UrlDisplayMode.inlineBrowser.rawValue
     var useSSL: Bool = true
