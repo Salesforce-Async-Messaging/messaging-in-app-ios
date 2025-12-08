@@ -75,6 +75,7 @@ struct MIAWConfigurationSettings: View {
             }
             SettingsToggle("Transcript Enabled", developerOnly: true, isOn: $store.enableTranscriptUI)
             SettingsToggle("Progress Indicator for Agents", developerOnly: true, isOn: $store.useProgressIndicatorsForAgents)
+            SettingsToggle("Human Agent Avatar", developerOnly: true, isOn: $store.useHumanAgentAvatar)
             SettingsToggle("End Session Enabled", developerOnly: true, isOn: $store.enableEndSessiontUI)
             SettingsPicker("Authorization Method", developerOnly: true, value: $store.authorizationMethod)
             SettingsPicker("URL Display Mode", developerOnly: true, value: $store.URLDisplayMode)
@@ -265,6 +266,18 @@ extension MIAWConfigurationStore {
         set {
             guard var environment = environments[connectionEnvironment.rawValue] else { return }
             environment.useProgressIndicatorForAgents = newValue
+            environments[connectionEnvironment.rawValue] = environment
+        }
+    }
+
+    var useHumanAgentAvatar: Bool {
+        get {
+            guard let environment = environments[connectionEnvironment.rawValue] else { return false }
+            return environment.useHumanAgentAvatar
+        }
+        set {
+            guard var environment = environments[connectionEnvironment.rawValue] else { return }
+            environment.useHumanAgentAvatar = newValue
             environments[connectionEnvironment.rawValue] = environment
         }
     }
