@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		0440A2442C18B2E400A1B6A3 /* Swift-InAppMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = 0440A2432C18B2E400A1B6A3 /* Swift-InAppMessaging */; };
+		04AA478D2ED0DC8900BA10F6 /* MessagingSessionWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AA478A2ED0DC8900BA10F6 /* MessagingSessionWidget.swift */; };
+		04AA478E2ED0DC8900BA10F6 /* WidgetViewController+ConversationClientDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AA478B2ED0DC8900BA10F6 /* WidgetViewController+ConversationClientDelegate.swift */; };
+		04AA478F2ED0DC8900BA10F6 /* MessagingSessionWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AA478C2ED0DC8900BA10F6 /* MessagingSessionWidgetView.swift */; };
 		27B2C7312A30E75400DC6740 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27B2C7302A30E75400DC6740 /* Assets.xcassets */; };
 		27B2C7352A30E76200DC6740 /* MessagingUIExample--iOS--Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 27B2C7342A30E76200DC6740 /* MessagingUIExample--iOS--Info.plist */; };
 		27B2C7372A30E76D00DC6740 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 27B2C7362A30E76D00DC6740 /* README.md */; };
@@ -25,6 +28,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		04AA478A2ED0DC8900BA10F6 /* MessagingSessionWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagingSessionWidget.swift; sourceTree = "<group>"; };
+		04AA478B2ED0DC8900BA10F6 /* WidgetViewController+ConversationClientDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WidgetViewController+ConversationClientDelegate.swift"; sourceTree = "<group>"; };
+		04AA478C2ED0DC8900BA10F6 /* MessagingSessionWidgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagingSessionWidgetView.swift; sourceTree = "<group>"; };
 		27B2C6D02A30E3AD00DC6740 /* MessagingUIExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MessagingUIExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		27B2C7302A30E75400DC6740 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		27B2C7342A30E76200DC6740 /* MessagingUIExample--iOS--Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "MessagingUIExample--iOS--Info.plist"; sourceTree = "<group>"; };
@@ -83,6 +89,9 @@
 		27B2C7382A30E77300DC6740 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				04AA478A2ED0DC8900BA10F6 /* MessagingSessionWidget.swift */,
+				04AA478B2ED0DC8900BA10F6 /* WidgetViewController+ConversationClientDelegate.swift */,
+				04AA478C2ED0DC8900BA10F6 /* MessagingSessionWidgetView.swift */,
 				F2BFC1782CAEDE1E000B97C0 /* SettingsForm.swift */,
 				27B2C73A2A30E77300DC6740 /* ContentView.swift */,
 				F27FB55B2CB45B2500E243B4 /* UIKitMIAW.swift */,
@@ -182,6 +191,9 @@
 				27B2C73C2A30E77300DC6740 /* ContentView.swift in Sources */,
 				F2BFC19E2CAEDE1E000B97C0 /* SettingsForm.swift in Sources */,
 				F27FB55C2CB45B2500E243B4 /* UIKitMIAW.swift in Sources */,
+				04AA478D2ED0DC8900BA10F6 /* MessagingSessionWidget.swift in Sources */,
+				04AA478E2ED0DC8900BA10F6 /* WidgetViewController+ConversationClientDelegate.swift in Sources */,
+				04AA478F2ED0DC8900BA10F6 /* MessagingSessionWidgetView.swift in Sources */,
 				27B2C73B2A30E77300DC6740 /* MessagingUIExampleApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

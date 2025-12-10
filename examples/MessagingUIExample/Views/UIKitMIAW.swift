@@ -26,6 +26,10 @@ struct UIKitMIAW: UIViewControllerRepresentable {
             static let chatButtonHeight: CGFloat = 60
             static let chatButtonX: CGFloat = -30
             static let chatButtonY: CGFloat = -50
+            static let widgetOffsetX: CGFloat = -20
+            static let widgetOffsetY: CGFloat = -20
+            static let widgetHeight: CGFloat = 80
+            static let widgetWidth: CGFloat = 200
         }
 
         let demoManagementStore: DemoManagementStore = DemoManagementStore()
@@ -35,6 +39,8 @@ struct UIKitMIAW: UIViewControllerRepresentable {
         let remoteLocaleStore: RemoteLocaleStore = RemoteLocaleStore()
 
         let uiConfiguration: UIConfiguration
+        var messagingSessionWidget: MessagingSessionWidget?
+        private var widgetHostingController: UIHostingController<AnyView>?
 
         private lazy var floatingButton: RoundedButton = {
             var view = RoundedButton(image: "demoChatButton")
@@ -78,30 +84,94 @@ struct UIKitMIAW: UIViewControllerRepresentable {
             setupFloatingButton()
         }
 
-        func setupFloatingButton() {
-            self.view.addSubview(floatingButton)
+        override func viewWillDisappear(_ animated: Bool) {
+            super.viewWillDisappear(animated)
 
-            NSLayoutConstraint.activate([
-                floatingButton.heightAnchor.constraint(equalToConstant: Constants.chatButtonHeight),
-                floatingButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: Constants.chatButtonY),
-                floatingButton.widthAnchor.constraint(equalToConstant: Constants.chatButtonWidth),
-                floatingButton.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: Constants.chatButtonX)
-            ])
+            // Make sure the SSE stream is closed when we leave the UIKitSessionWidget view
+            if demoManagementStore.isSessionWidgetEnabled {
+                let coreClient = CoreFactory.create(withConfig: uiConfiguration)
+                coreClient.stop()
+            }
+        }
+
+        override func viewWillAppear(_ animated: Bool) {
+            super.viewWillAppear(animated)
+
+            // Make sure the SSE stream is open when the screen first appears
+            if demoManagementStore.isSessionWidgetEnabled {
+                let coreClient = CoreFactory.create(withConfig: uiConfiguration)
+                coreClient.start()
+            }
+        }
+
+        func setupFloatingButton() {
+            if demoManagementStore.isSessionWidgetEnabled {
+                // Create conversation client and widget
+                let conversationClient: ConversationClient = CoreFactory.create(withConfig: uiConfiguration).conversationClient(with: conversationManagementStore.conversationUUID)
+                messagingSessionWidget = MessagingSessionWidget(
+                    conversationClient: conversationClient,
+                    openChatFeed: { [weak self] in
+                        self?.openChatFeed()
+                    }
+                )
+
+                guard let widget = messagingSessionWidget else { return }
+
+                // Select which widget view to display
+                // Uncomment one of the following lines to select the widget type:
+                let widgetView: AnyView
+                // widgetView = AnyView(widget.queuePositionView())  // Queue position widget
+                // widgetView = AnyView(widget.sessionStatusView())     // Session status widget (currently selected)
+                widgetView = AnyView(widget.agentNameView())     // Agent name with unread counter widget
+
+                // Create hosting controller for SwiftUI view
+                let hostingController = UIHostingController(rootView: widgetView)
+                hostingController.view.backgroundColor = .clear
+                hostingController.view.translatesAutoresizingMaskIntoConstraints = false
+
+                // Add as child view controller
+                addChild(hostingController)
+                view.addSubview(hostingController.view)
+                hostingController.didMove(toParent: self)
+
+                // Position widget in lower right corner
+                NSLayoutConstraint.activate([
+                    hostingController.view.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: Constants.widgetOffsetX),
+                    hostingController.view.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: Constants.widgetOffsetY),
+                    hostingController.view.widthAnchor.constraint(equalToConstant: Constants.widgetWidth),
+                    hostingController.view.heightAnchor.constraint(equalToConstant: Constants.widgetHeight)
+                ])
+
+                self.widgetHostingController = hostingController
+            } else {
+                self.view.addSubview(floatingButton)
+
+                NSLayoutConstraint.activate([
+                    floatingButton.heightAnchor.constraint(equalToConstant: Constants.chatButtonHeight),
+                    floatingButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: Constants.chatButtonY),
+                    floatingButton.widthAnchor.constraint(equalToConstant: Constants.chatButtonWidth),
+                    floatingButton.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: Constants.chatButtonX)
+                ])
+            }
         }
 
         @objc func startInApp(sender: UIButton!) {
+            openChatFeed()
+        }
+
+        private func openChatFeed() {
             let testEntryViewBuilder = GlobalCoreDelegateHandler.shared.viewBuilder
             let testNavBarBuilder = GlobalCoreDelegateHandler.shared.navBarBuilder
             let testPrePopulatedPreChatProvider = GlobalCoreDelegateHandler.shared.prePopulatedPreChatProvider.closure
 
-            if demoManagementStore.isModal {
+            if demoManagementStore.isModal || demoManagementStore.isSessionWidgetEnabled {
                 let controller = ModalInterfaceViewController(uiConfiguration,
                                                               preChatFieldValueProvider: testPrePopulatedPreChatProvider,
                                                               chatFeedViewBuilder: testEntryViewBuilder,
                                                               navigationBarBuilder: testNavBarBuilder)
 
                 controller.modalPresentationStyle = demoManagementStore.modalPresentationStyle.systemValue
-                if demoManagementStore.replaceDismissButton {
+                if demoManagementStore.replaceDismissButton || demoManagementStore.isSessionWidgetEnabled {
                     controller.modalDismissButton = UIBarButtonItem(title: demoManagementStore.dismissButtonTitle,
                                                                     style: .plain,
                                                                     target: self,
@@ -113,7 +183,7 @@ struct UIKitMIAW: UIViewControllerRepresentable {
                 let popover: UIPopoverPresentationController? = controller.popoverPresentationController
                 popover?.permittedArrowDirections = .any
                 popover?.sourceView = self.view
-                popover?.sourceRect = sender.frame
+                popover?.sourceRect = CGRect(x: view.bounds.width - 220, y: view.bounds.height - 100, width: 200, height: 80)
 
                 return
             }
@@ -127,6 +197,15 @@ struct UIKitMIAW: UIViewControllerRepresentable {
 
         @objc private func dismissAction(sender: UIBarButtonItem) {
             self.dismiss(animated: true)
+
+            if demoManagementStore.isSessionWidgetEnabled {
+                // Wait for the feed to close before starting the stream
+                DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) { [self] in
+                    let coreClient: CoreClient = CoreFactory.create(withConfig: uiConfiguration)
+                    coreClient.start()
+                    messagingSessionWidget?.feedVisibillity(false)
+                }
+            }
         }
     }
 }
