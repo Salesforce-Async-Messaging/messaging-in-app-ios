@@ -282,7 +282,7 @@ extension MIAWConfigurationStore {
         }
     }
 
-    func allowedFileTypes() -> AllowedFileTypes {
+    func allowedFileTypes() -> SMIClientCore.AllowedFileTypes {
         guard let environment = environments[connectionEnvironment.rawValue] else { return AllowedFileTypes() }
         return AllowedFileTypes(image: environment.enableImages ? FileTypeSettings.defaultImageExtensions : [],
                                 video: environment.enableVideos ? FileTypeSettings.defaultVideoExtensions : [],
