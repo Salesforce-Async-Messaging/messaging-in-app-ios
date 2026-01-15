@@ -57,12 +57,12 @@ public class MessagingViewModel: NSObject {
 
     /// Sends an image to the agent.
     public func sendImageMessage(image: Data, fileName: String) {
-        conversationClient?.send(image: image, fileName: fileName)
+        conversationClient?.send!(image: image, fileName: fileName)
     }
 
     /// Sends a PDF file to the agent.
     public func sendPDFMessage(pdf: PDFDocument) {
-        conversationClient?.send(pdf: pdf)
+        conversationClient?.send!(pdf: pdf)
     }
 
     /// Sends a choice reply to the agent.
