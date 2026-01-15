@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 70;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -23,6 +23,7 @@
 		27B2C73B2A30E77300DC6740 /* MessagingUIExampleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B2C7392A30E77300DC6740 /* MessagingUIExampleApp.swift */; };
 		27B2C73C2A30E77300DC6740 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B2C73A2A30E77300DC6740 /* ContentView.swift */; };
 		27B2C74A2A30E7DC00DC6740 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 27B2C7492A30E7DC00DC6740 /* Localizable.strings */; };
+		F2448A162FA26A2A00F79668 /* SMIMultimediaCore in Frameworks */ = {isa = PBXBuildFile; productRef = F2448A152FA26A2A00F79668 /* SMIMultimediaCore */; };
 		F2665FE52CB819820044B7BF /* ConnectionEnvironment+Example.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2665FE42CB819820044B7BF /* ConnectionEnvironment+Example.swift */; };
 		F2665FE72CB819D80044B7BF /* EnvironmentSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2665FE62CB819D80044B7BF /* EnvironmentSettings.swift */; };
 		F2665FEA2CB81A2F0044B7BF /* DeveloperSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2665FE92CB81A2F0044B7BF /* DeveloperSettings.swift */; };
@@ -200,6 +201,10 @@
 		F2F193F32CB44BC900B54AE9 /* ConversationClosedReplacement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationClosedReplacement.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		F2448C342FA26AAE00F79668 /* Voice */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Voice; sourceTree = "<group>"; };
+/* End PBXFileSystemSynchronizedRootGroup section */
+
 /* Begin PBXFrameworksBuildPhase section */
 		27B2C6CD2A30E3AD00DC6740 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
@@ -210,6 +215,7 @@
 				F2DE42882E09915300C07239 /* SalesforceAnalytics in Frameworks */,
 				F2DE428A2E09915300C07239 /* SalesforceSDKCommon in Frameworks */,
 				0440A2442C18B2E400A1B6A3 /* Swift-InAppMessaging in Frameworks */,
+				F2448A162FA26A2A00F79668 /* SMIMultimediaCore in Frameworks */,
 				F2DE42862E09915300C07239 /* MobileSync in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -318,6 +324,7 @@
 		F2BFC1422CAEDE1D000B97C0 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				F2448C342FA26AAE00F79668 /* Voice */,
 				F27FB5532CB4521000E243B4 /* Delegates */,
 				F2F193F32CB44BC900B54AE8 /* ReplacementUI */,
 				F2BFC1A82CAEE33B000B97C0 /* Enums */,
@@ -603,6 +610,9 @@
 			);
 			dependencies = (
 			);
+			fileSystemSynchronizedGroups = (
+				F2448C342FA26AAE00F79668 /* Voice */,
+			);
 			name = MessagingUIExample;
 			packageProductDependencies = (
 				0440A2432C18B2E400A1B6A3 /* Swift-InAppMessaging */,
@@ -611,6 +621,7 @@
 				F2DE42892E09915300C07239 /* SalesforceSDKCommon */,
 				F2DE428B2E09915300C07239 /* SalesforceSDKCore */,
 				F2DE428D2E09915300C07239 /* SmartStore */,
+				F2448A152FA26A2A00F79668 /* SMIMultimediaCore */,
 			);
 			productName = MessagingUIExample;
 			productReference = 27B2C6D02A30E3AD00DC6740 /* MessagingUIExample.app */;
@@ -643,6 +654,7 @@
 			packageReferences = (
 				0440A2422C18B2E300A1B6A3 /* XCRemoteSwiftPackageReference "Swift-Package-InAppMessaging" */,
 				F2DE42842E09915300C07239 /* XCRemoteSwiftPackageReference "SalesforceMobileSDK-iOS-SPM" */,
+				F2448A142FA26A2A00F79668 /* XCRemoteSwiftPackageReference "SMIMultimediaCore-iOS" */,
 			);
 			productRefGroup = 27B2C6D12A30E3AD00DC6740 /* Products */;
 			projectDirPath = "";
@@ -889,6 +901,8 @@
 				DEVELOPMENT_TEAM = XD7TD9S6ZU;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Required for initiating voice sessions.";
+				INFOPLIST_KEY_NSVoIPUsageDescription = "Required for maintaining voice calls while the app is backgrounded.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -919,6 +933,8 @@
 				DEVELOPMENT_TEAM = XD7TD9S6ZU;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Required for initiating voice sessions.";
+				INFOPLIST_KEY_NSVoIPUsageDescription = "Required for maintaining voice calls while the app is backgrounded.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -967,7 +983,15 @@
 			repositoryURL = "https://github.com/Salesforce-Async-Messaging/Swift-Package-InAppMessaging.git";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 1.0.0;
+				minimumVersion = 1.11.0;
+			};
+		};
+		F2448A142FA26A2A00F79668 /* XCRemoteSwiftPackageReference "SMIMultimediaCore-iOS" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Salesforce-Async-Messaging/SMIMultimediaCore-iOS.swift#";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.11.0;
 			};
 		};
 		F2DE42842E09915300C07239 /* XCRemoteSwiftPackageReference "SalesforceMobileSDK-iOS-SPM" */ = {
@@ -985,6 +1009,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 0440A2422C18B2E300A1B6A3 /* XCRemoteSwiftPackageReference "Swift-Package-InAppMessaging" */;
 			productName = "Swift-InAppMessaging";
+		};
+		F2448A152FA26A2A00F79668 /* SMIMultimediaCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F2448A142FA26A2A00F79668 /* XCRemoteSwiftPackageReference "SMIMultimediaCore-iOS" */;
+			productName = SMIMultimediaCore;
 		};
 		F2DE42852E09915300C07239 /* MobileSync */ = {
 			isa = XCSwiftPackageProductDependency;
