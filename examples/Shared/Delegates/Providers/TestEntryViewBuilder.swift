@@ -13,6 +13,19 @@ import SMIClientUI
 struct TestEntryViewBuilder: ChatFeedViewBuilder {
     private let uiReplacementStore: UIReplacementStore = UIReplacementStore()
 
+    var accessibilityLabel: AccessibilityLabelClosure? {
+        return { model in
+            let category = UIReplacementCategory.category(model).rawValue
+            let renderMode = ChatFeedRenderMode(rawValue: uiReplacementStore.uiReplacements[category]?.renderMode ?? "") ?? .existing
+
+            if renderMode == .replace {
+                return "This is an accessibility string for a replaced view"
+            } else {
+                return nil
+            }
+        }
+    }
+
     var renderMode: RenderModeClosure? {
         return { model in
             if uiReplacementStore.replaceAll { return .replace }
