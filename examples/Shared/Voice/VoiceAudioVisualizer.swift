@@ -64,7 +64,7 @@ struct VoiceAudioVisualizer: View {
         HStack(spacing: barWidth) {
             ForEach(0 ..< renderEngine.bars.count, id: \.self) { index in
                 RoundedRectangle(cornerRadius: barMinHeight)
-                    .fill(Color.smiBranded(.voiceVisualizerBar))
+                    .fill(Color.smiBranded(.surface))
                     .opacity(1)
                     .frame(
                         width: barWidth,
@@ -74,8 +74,8 @@ struct VoiceAudioVisualizer: View {
         }
         .frame(width: self.width, height: self.height)
         .background(origin == .remote
-                     ? Color.smiBranded(.voiceVisualizerBackground)
-                     : Color.smiBranded(.voiceVisualizerLocalBackground))
+                     ? Color.smiBranded(.onSurface)
+                     : Color.smiBranded(.onBackground))
         .clipShape(Circle())
     }
 

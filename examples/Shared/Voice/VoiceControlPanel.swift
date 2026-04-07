@@ -75,7 +75,7 @@ struct VoiceControlPanel: View {
             Spacer()
         }
         .frame(maxHeight: .infinity)
-        .background(Color.smiBranded(.voiceSheetMinimizedBackground), ignoresSafeAreaEdges: .all)
+        .background(Color.smiBranded(.surface), ignoresSafeAreaEdges: .all)
     }
 
     private var isLandscape: Bool { verticalSizeClass == .compact }
@@ -102,7 +102,7 @@ struct VoiceControlPanel: View {
             .padding(.bottom, isLandscape ? Constants.landscapeSectionSpacing : Constants.buttonBottomPadding)
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .background(Color.smiBranded(.voiceSheetExpandedBackground))
+        .background(Color.smiBranded(.surface))
         .contentShape(Rectangle())
         .onTapGesture {}
     }
@@ -123,12 +123,12 @@ struct VoiceControlPanel: View {
         VStack(alignment: .leading, spacing: Constants.titleTimerSpacing) {
             Text(multimediaClient.session.displayName)
                 .font(.headline.weight(.semibold))
-                .foregroundStyle(Color.smiBranded(.voiceTextPrimary))
+                .foregroundStyle(Color.smiBranded(.onSurface))
 
             TimelineView(.periodic(from: .now, by: 1.0)) { context in
                 Text(formattedElapsedTime(at: context.date))
                     .font(.headline.weight(.semibold))
-                    .foregroundStyle(Color.smiBranded(.voiceTextPrimary))
+                    .foregroundStyle(Color.smiBranded(.onSurface))
                     .monospacedDigit()
             }
         }
@@ -145,7 +145,7 @@ struct VoiceControlPanel: View {
             }
         }
         .font(.subheadline)
-        .foregroundStyle(Color.smiBranded(.voiceTextSecondary))
+        .foregroundStyle(Color.smiBranded(.onBackground))
     }
 
     private func formattedElapsedTime(at date: Date) -> String {
@@ -164,12 +164,12 @@ struct VoiceControlPanel: View {
             isMuted.toggle()
         } label: {
             VoiceCircleIcon(image: Image(isMuted ? "actionMute" : "actionUnmute"),
-                       backgroundColor: Color.smiBranded(.voiceButtonBorder),
-                       foregroundColor: Color.smiBranded(.voiceButtonIcon),
+                       backgroundColor: Color.smiBranded(.onSurface),
+                       foregroundColor: Color.smiBranded(.onSurface),
                        size: Constants.buttonSize,
                        style: .outlined(lineWidth: 1),
                        iconPadding: Constants.buttonIconPadding)
-                .background(Circle().fill(Color.smiBranded(.voiceButtonBackground)))
+                .background(Circle().fill(Color.smiBranded(.surface)))
         }
     }
 
@@ -179,12 +179,12 @@ struct VoiceControlPanel: View {
             dismiss()
         } label: {
             VoiceCircleIcon(image: Image("actionEndVoice"),
-                       backgroundColor: Color.smiBranded(.voiceButtonBorder),
-                       foregroundColor: Color.smiBranded(.voiceButtonIcon),
+                       backgroundColor: Color.smiBranded(.onSurface),
+                       foregroundColor: Color.smiBranded(.onSurface),
                        size: Constants.buttonSize,
                        style: .outlined(lineWidth: 1),
                        iconPadding: Constants.buttonIconPadding)
-                .background(Circle().fill(Color.smiBranded(.voiceButtonBackground)))
+                .background(Circle().fill(Color.smiBranded(.surface)))
         }
     }
 
@@ -221,19 +221,13 @@ struct VoiceControlPanel: View {
 private struct VoiceSheetPresentationModifier: ViewModifier {
     @Binding var isExpanded: Bool
 
-    private var sheetBackground: Color {
-        isExpanded
-            ? Color.smiBranded(.voiceSheetExpandedBackground)
-            : Color.smiBranded(.voiceSheetMinimizedBackground)
-    }
-
     func body(content: Content) -> some View {
         if #available(iOS 16.4, *) {
             VoiceExpandedDetentWrapper(isExpanded: $isExpanded) {
                 content
             }
             .presentationDragIndicator(.visible)
-            .presentationBackground(sheetBackground)
+            .presentationBackground(Color.smiBranded(.surface))
             .presentationBackgroundInteraction(.enabled(upThrough: .fraction(VoiceControlPanel.Constants.compactDetentFraction)))
             .interactiveDismissDisabled()
         } else {
