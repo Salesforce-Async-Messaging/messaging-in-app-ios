@@ -14,34 +14,34 @@ struct VoiceSettings: View {
 
         var defaultValue: Any {
             switch self {
-            case .enableVoiceFAB: return false
+            case .enableVoiceNavBarButton: return false
             }
         }
 
         var resettable: Bool {
             switch self {
-            case .enableVoiceFAB: return true
+            case .enableVoiceNavBarButton: return true
             }
         }
 
         static func handleReset() {}
 
-        case enableVoiceFAB
+        case enableVoiceNavBarButton
     }
 
     @StateObject var store: VoiceStore = VoiceStore()
 
     var body: some View {
         SettingsSection(Self.header, developerOnly: true) {
-            SettingsToggle("Voice FAB", developerOnly: true, isOn: $store.enableVoiceFAB)
+            SettingsToggle("Voice Nav Bar Button", developerOnly: true, isOn: $store.enableVoiceNavBarButton)
         }
     }
 }
 
 extension VoiceStore {
-    var enableVoiceFAB: Bool {
-        get { userDefaults.bool(forKey: Keys.enableVoiceFAB.rawValue) }
-        set { userDefaults.set(newValue, forKey: Keys.enableVoiceFAB.rawValue) }
+    var enableVoiceNavBarButton: Bool {
+        get { userDefaults.bool(forKey: Keys.enableVoiceNavBarButton.rawValue) }
+        set { userDefaults.set(newValue, forKey: Keys.enableVoiceNavBarButton.rawValue) }
     }
 }
 
