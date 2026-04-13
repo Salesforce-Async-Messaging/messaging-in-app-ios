@@ -26,16 +26,19 @@ struct VoiceControlPanel: View {
         static let visualizerBottomLandscapeSpacing: CGFloat = 24
         static let landscapeSectionSpacing: CGFloat = 12
         static let timerFormat = "%02d:%02d"
-        static let compactDetentFraction: CGFloat = 0.15
+        static let compactDetentHeight: CGFloat = 80
     }
 
     private let client: ConversationClient
     @StateObject private var multimediaClient: MultimediaClient
+    @StateObject private var transcriptProvider: VoiceTranscriptProvider
+    @ObservedObject private var expandedState: VoiceSheetExpandedState
     @Environment(\.dismiss) private var dismiss
     @Environment(\.verticalSizeClass) private var verticalSizeClass
-    @State private var isExpanded: Bool = true
     @State private var isMuted: Bool = false
     @State private var hasJoined: Bool = false
+
+    private var isExpanded: Bool { expandedState.isExpanded }
 
     var body: some View {
         Group {
@@ -50,31 +53,29 @@ struct VoiceControlPanel: View {
         }
         .onAppear { handleStateChange(multimediaClient.session.state) }
         .onDisappear { endCallIfNeeded() }
-        .voiceSheetPresentation(isExpanded: $isExpanded)
         .environmentObject(multimediaClient)
     }
 
-    init(client: ConversationClient) {
+    init(client: ConversationClient, expandedState: VoiceSheetExpandedState) {
         self.client = client
+        self.expandedState = expandedState
         _multimediaClient = StateObject(wrappedValue: MultimediaClient(client.core?.multimediaClient))
+        _transcriptProvider = StateObject(wrappedValue: VoiceTranscriptProvider(client: client))
     }
 
     private var compactLayout: some View {
-        VStack {
-            Spacer()
-            HStack(spacing: Constants.spacing) {
-                audioMeter(.remote, size: Constants.buttonSize)
+        HStack(spacing: Constants.spacing) {
+            audioMeter(.remote, size: Constants.buttonSize)
 
-                titleAndTimer
-                    .frame(maxWidth: .infinity, alignment: .leading)
+            titleAndTimer
+                .frame(maxWidth: .infinity, alignment: .leading)
 
-                muteButton()
-                endCallButton()
-            }
-            .padding(.horizontal, Constants.horizontalPadding)
-            Spacer()
+            muteButton()
+            endCallButton()
         }
-        .frame(maxHeight: .infinity)
+        .padding(.horizontal, Constants.horizontalPadding)
+        .padding(.vertical, Constants.verticalPadding)
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(Color.smiBranded(.surface), ignoresSafeAreaEdges: .all)
     }
 
@@ -93,7 +94,13 @@ struct VoiceControlPanel: View {
             audioMeter(.remote, size: isLandscape ? Constants.landscapeIconSize : Constants.expandedIconSize)
                 .padding(.bottom, isLandscape ? Constants.visualizerBottomLandscapeSpacing : Constants.visualizerBottomSpacing)
 
-            Spacer()
+            VoiceTranscriptFeedView(
+                entries: transcriptProvider.entries,
+                agentDisplayName: multimediaClient.session.displayName
+            )
+            .padding(.horizontal, Constants.horizontalPadding)
+            .padding(.bottom, isLandscape ? Constants.landscapeSectionSpacing : Constants.sectionSpacing)
+            .layoutPriority(1)
 
             HStack(spacing: Constants.buttonSpacing) {
                 muteButton()
@@ -216,47 +223,3 @@ struct VoiceControlPanel: View {
     }
 }
 
-// MARK: - Sheet Presentation
-
-private struct VoiceSheetPresentationModifier: ViewModifier {
-    @Binding var isExpanded: Bool
-
-    func body(content: Content) -> some View {
-        if #available(iOS 16.4, *) {
-            VoiceExpandedDetentWrapper(isExpanded: $isExpanded) {
-                content
-            }
-            .presentationDragIndicator(.visible)
-            .presentationBackground(Color.smiBranded(.surface))
-            .presentationBackgroundInteraction(.enabled(upThrough: .fraction(VoiceControlPanel.Constants.compactDetentFraction)))
-            .interactiveDismissDisabled()
-        } else {
-            VoiceExpandedDetentWrapper(isExpanded: $isExpanded) {
-                content
-            }
-            .presentationDragIndicator(.visible)
-            .interactiveDismissDisabled()
-        }
-    }
-}
-
-@available(iOS 16, *)
-private struct VoiceExpandedDetentWrapper<Content: View>: View {
-    @Binding var isExpanded: Bool
-    @State private var selectedDetent: PresentationDetent = .large
-    let content: () -> Content
-
-    var body: some View {
-        content()
-            .presentationDetents([.fraction(VoiceControlPanel.Constants.compactDetentFraction), .large], selection: $selectedDetent)
-            .onChange(of: selectedDetent) { _, newValue in
-                isExpanded = newValue == .large
-            }
-    }
-}
-
-extension View {
-    fileprivate func voiceSheetPresentation(isExpanded: Binding<Bool>) -> some View {
-        modifier(VoiceSheetPresentationModifier(isExpanded: isExpanded))
-    }
-}
