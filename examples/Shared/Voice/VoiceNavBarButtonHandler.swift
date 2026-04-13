@@ -9,6 +9,8 @@ import SMIClientCore
 class VoiceNavBarButtonHandler: NSObject {
     private let modalityObserver = VoiceModalityObserver()
     private var voiceButtonCancellables = Set<AnyCancellable>()
+    private var expandedState = VoiceSheetExpandedState()
+    private weak var presentedVoiceController: UIViewController?
 
     var client: ConversationClient? {
         didSet {
@@ -53,11 +55,21 @@ class VoiceNavBarButtonHandler: NSObject {
     }
 
     @objc private func voiceButtonTapped() {
-        guard let client = client else { return }
+        guard let client = client,
+              presentedVoiceController == nil else { return }
+
+        UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
+
         client.changeModalities([.voice])
 
-        let controller = UIHostingController(rootView: VoiceControlPanel(client: client))
+        expandedState.isExpanded = true
+
+        let controller = UIHostingController(
+            rootView: VoiceControlPanel(client: client, expandedState: expandedState)
+        )
         controller.modalPresentationStyle = .pageSheet
+
+        configureSheetDetents(for: controller)
 
         guard let windowScene = UIApplication.shared.connectedScenes
             .first(where: { $0.activationState == .foregroundActive }) as? UIWindowScene,
@@ -68,6 +80,41 @@ class VoiceNavBarButtonHandler: NSObject {
         while let presented = topViewController.presentedViewController {
             topViewController = presented
         }
+
+        presentedVoiceController = controller
         topViewController.present(controller, animated: true)
     }
+
+    private func configureSheetDetents(for controller: UIViewController) {
+        guard let sheetController = controller.sheetPresentationController else { return }
+
+        let compactIdentifier = UISheetPresentationController.Detent.Identifier("compact")
+        let compactDetent = UISheetPresentationController.Detent.custom(identifier: compactIdentifier) { _ in
+            return VoiceControlPanel.Constants.compactDetentHeight
+        }
+
+        sheetController.detents = [compactDetent, .large()]
+        sheetController.selectedDetentIdentifier = .large
+        sheetController.prefersGrabberVisible = true
+        sheetController.prefersScrollingExpandsWhenScrolledToEdge = false
+        sheetController.largestUndimmedDetentIdentifier = compactIdentifier
+        sheetController.prefersEdgeAttachedInCompactHeight = true
+        sheetController.delegate = self
+    }
+}
+
+// MARK: - Sheet Delegate
+
+extension VoiceNavBarButtonHandler: UISheetPresentationControllerDelegate {
+    func sheetPresentationControllerDidChangeSelectedDetentIdentifier(
+        _ sheetPresentationController: UISheetPresentationController
+    ) {
+        expandedState.isExpanded = sheetPresentationController.selectedDetentIdentifier == .large
+    }
+}
+
+// MARK: - Shared State
+
+final class VoiceSheetExpandedState: ObservableObject {
+    @Published var isExpanded: Bool = true
 }
