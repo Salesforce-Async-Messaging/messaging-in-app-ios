@@ -14,7 +14,7 @@ struct VoiceSettings: View {
 
         var defaultValue: Any {
             switch self {
-            case .enableVoiceNavBarButton: return false
+            case .enableVoiceNavBarButton: return true
             }
         }
 
