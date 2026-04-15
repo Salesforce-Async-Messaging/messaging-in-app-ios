@@ -4,7 +4,6 @@
 
 import SwiftUI
 import SMIClientCore
-import SMIClientUI
 import SMIMultimediaCommon
 
 struct VoiceControlPanel: View {
@@ -76,7 +75,7 @@ struct VoiceControlPanel: View {
         .padding(.horizontal, Constants.horizontalPadding)
         .padding(.vertical, Constants.verticalPadding)
         .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .background(Color.smiBranded(.surface), ignoresSafeAreaEdges: .all)
+        .background(VoiceColors.surface, ignoresSafeAreaEdges: .all)
     }
 
     private var isLandscape: Bool { verticalSizeClass == .compact }
@@ -109,7 +108,7 @@ struct VoiceControlPanel: View {
             .padding(.bottom, isLandscape ? Constants.landscapeSectionSpacing : Constants.buttonBottomPadding)
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .background(Color.smiBranded(.surface))
+        .background(VoiceColors.surface)
         .contentShape(Rectangle())
         .onTapGesture {}
     }
@@ -130,12 +129,12 @@ struct VoiceControlPanel: View {
         VStack(alignment: .leading, spacing: Constants.titleTimerSpacing) {
             Text(multimediaClient.session.displayName)
                 .font(.headline.weight(.semibold))
-                .foregroundStyle(Color.smiBranded(.onSurface))
+                .foregroundStyle(VoiceColors.onSurface)
 
             TimelineView(.periodic(from: .now, by: 1.0)) { context in
                 Text(formattedElapsedTime(at: context.date))
                     .font(.headline.weight(.semibold))
-                    .foregroundStyle(Color.smiBranded(.onSurface))
+                    .foregroundStyle(VoiceColors.onSurface)
                     .monospacedDigit()
             }
         }
@@ -152,7 +151,7 @@ struct VoiceControlPanel: View {
             }
         }
         .font(.subheadline)
-        .foregroundStyle(Color.smiBranded(.onBackground))
+        .foregroundStyle(VoiceColors.onBackground)
     }
 
     private func formattedElapsedTime(at date: Date) -> String {
@@ -171,12 +170,12 @@ struct VoiceControlPanel: View {
             isMuted.toggle()
         } label: {
             VoiceCircleIcon(image: Image(isMuted ? "actionMute" : "actionUnmute"),
-                       backgroundColor: Color.smiBranded(.onSurface),
-                       foregroundColor: Color.smiBranded(.onSurface),
+                       backgroundColor: VoiceColors.onSurface,
+                       foregroundColor: VoiceColors.onSurface,
                        size: Constants.buttonSize,
                        style: .outlined(lineWidth: 1),
                        iconPadding: Constants.buttonIconPadding)
-                .background(Circle().fill(Color.smiBranded(.surface)))
+                .background(Circle().fill(VoiceColors.surface))
         }
     }
 
@@ -186,12 +185,12 @@ struct VoiceControlPanel: View {
             dismiss()
         } label: {
             VoiceCircleIcon(image: Image("actionEndVoice"),
-                       backgroundColor: Color.smiBranded(.onSurface),
-                       foregroundColor: Color.smiBranded(.onSurface),
+                       backgroundColor: VoiceColors.onSurface,
+                       foregroundColor: VoiceColors.onSurface,
                        size: Constants.buttonSize,
                        style: .outlined(lineWidth: 1),
                        iconPadding: Constants.buttonIconPadding)
-                .background(Circle().fill(Color.smiBranded(.surface)))
+                .background(Circle().fill(VoiceColors.surface))
         }
     }
 

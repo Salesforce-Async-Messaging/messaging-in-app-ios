@@ -3,7 +3,6 @@
 //
 
 import SwiftUI
-import SMIClientUI
 
 struct VoiceTranscriptFeedView: View {
     private enum Constants {
@@ -38,12 +37,12 @@ struct VoiceTranscriptFeedView: View {
         .animation(.easeInOut(duration: Constants.crossFadeDuration), value: currentEntry?.identifier)
         .background(
             RoundedRectangle(cornerRadius: Constants.cardCornerRadius)
-                .fill(Color.smiBranded(.surface).opacity(0.6))
+                .fill(VoiceColors.surface.opacity(0.6))
         )
         .clipShape(RoundedRectangle(cornerRadius: Constants.cardCornerRadius))
         .overlay(
             RoundedRectangle(cornerRadius: Constants.cardCornerRadius)
-                .stroke(Color.smiBranded(.onSurface).opacity(0.15), lineWidth: Constants.innerShadowStrokeWidth)
+                .stroke(VoiceColors.onSurface.opacity(0.15), lineWidth: Constants.innerShadowStrokeWidth)
                 .blur(radius: Constants.innerShadowRadius)
                 .mask(
                     LinearGradient(
@@ -82,7 +81,7 @@ private struct VoiceTranscriptEntryView: View {
     }
 
     var body: some View {
-        let textColor = Color.smiBranded(.onSurface)
+        let textColor = VoiceColors.onSurface
         var combined = Text(senderDisplayName + ": ").fontWeight(.semibold).foregroundColor(textColor)
 
         if !confirmedWords.isEmpty {

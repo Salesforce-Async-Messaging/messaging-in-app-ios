@@ -4,7 +4,6 @@
 
 import SwiftUI
 import SMIMultimediaCommon
-import SMIClientUI
 
 struct VoiceAudioVisualizer: View {
     private let width: CGFloat
@@ -64,7 +63,7 @@ struct VoiceAudioVisualizer: View {
         HStack(spacing: barWidth) {
             ForEach(0 ..< renderEngine.bars.count, id: \.self) { index in
                 RoundedRectangle(cornerRadius: barMinHeight)
-                    .fill(Color.smiBranded(.surface))
+                    .fill(VoiceColors.surface)
                     .opacity(1)
                     .frame(
                         width: barWidth,
@@ -74,8 +73,8 @@ struct VoiceAudioVisualizer: View {
         }
         .frame(width: self.width, height: self.height)
         .background(origin == .remote
-                     ? Color.smiBranded(.onSurface)
-                     : Color.smiBranded(.onBackground))
+                     ? VoiceColors.onSurface
+                     : VoiceColors.onBackground)
         .clipShape(Circle())
     }
 
