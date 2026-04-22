@@ -199,7 +199,7 @@ struct VoiceControlPanel: View {
     private func handleStateChange(_ newState: MultimediaConnectionState) {
         switch newState {
         case .initial:
-            multimediaClient.session.wrappedSession?.join(nil) { error in
+            multimediaClient.session.wrappedSession?.join { error in
                 if let error = error {
                     print("Multimedia Join Result: \(error)")
                 }
