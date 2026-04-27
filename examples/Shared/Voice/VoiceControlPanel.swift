@@ -34,7 +34,6 @@ struct VoiceControlPanel: View {
     @ObservedObject private var expandedState: VoiceSheetExpandedState
     @Environment(\.dismiss) private var dismiss
     @Environment(\.verticalSizeClass) private var verticalSizeClass
-    @State private var isMuted: Bool = false
     @State private var hasJoined: Bool = false
 
     private var isExpanded: Bool { expandedState.isExpanded }
@@ -167,9 +166,13 @@ struct VoiceControlPanel: View {
     @ViewBuilder
     private func muteButton() -> some View {
         Button {
-            isMuted.toggle()
+            if multimediaClient.session.isMicrophoneMuted {
+                multimediaClient.session.unmuteMicrophone()
+            } else {
+                multimediaClient.session.muteMicrophone()
+            }
         } label: {
-            VoiceCircleIcon(image: Image(isMuted ? "actionMute" : "actionUnmute"),
+            VoiceCircleIcon(image: Image(multimediaClient.session.isMicrophoneMuted ? "actionMute" : "actionUnmute"),
                        backgroundColor: VoiceColors.onSurface,
                        foregroundColor: VoiceColors.onSurface,
                        size: Constants.buttonSize,
