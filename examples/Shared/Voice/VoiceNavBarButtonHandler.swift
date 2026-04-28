@@ -5,6 +5,7 @@
 import SwiftUI
 import Combine
 import SMIClientCore
+import SMIMultimediaCommon
 
 class VoiceNavBarButtonHandler: NSObject {
     private let modalityObserver = VoiceModalityObserver()
@@ -16,6 +17,7 @@ class VoiceNavBarButtonHandler: NSObject {
         didSet {
             guard let client = client else { return }
             client.addDelegate(delegate: modalityObserver, queue: .main)
+            client.core?.multimediaClient?.add(delegate: self, queue: .main)
             client.conversation { [weak self] conversation, _ in
                 guard let conversation = conversation else { return }
                 self?.modalityObserver.updateVoiceSupport(from: conversation.supportedModalities)
@@ -60,7 +62,32 @@ class VoiceNavBarButtonHandler: NSObject {
 
         UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
 
-        client.changeModalities([.voice])
+        if let session = client.core?.multimediaClient?.currentSession {
+            handleSession(session)
+        } else {
+            client.changeModalities([.voice])
+        }
+    }
+
+    private func handleSession(_ session: MultimediaSessionProtocol) {
+        switch session.state {
+        case .initial:
+            session.join { error in
+                if let error = error {
+                    print("Multimedia Join Result: \(error)")
+                }
+            }
+            presentVoiceControlPanel()
+        case .connecting, .connected:
+            presentVoiceControlPanel()
+        default:
+            client?.changeModalities([.voice])
+        }
+    }
+
+    private func presentVoiceControlPanel() {
+        guard let client = client,
+              presentedVoiceController == nil else { return }
 
         expandedState.isExpanded = true
 
@@ -100,6 +127,14 @@ class VoiceNavBarButtonHandler: NSObject {
         sheetController.largestUndimmedDetentIdentifier = compactIdentifier
         sheetController.prefersEdgeAttachedInCompactHeight = true
         sheetController.delegate = self
+    }
+}
+
+// MARK: - Multimedia Client Delegate
+
+extension VoiceNavBarButtonHandler: MultimediaClientDelegate {
+    func client(_ client: any MultimediaClientProtocol, didUpdateSession session: any MultimediaSessionProtocol) {
+        handleSession(session)
     }
 }
 
