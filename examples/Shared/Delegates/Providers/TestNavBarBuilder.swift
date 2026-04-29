@@ -12,12 +12,20 @@ import SMIClientUI
 
 class TestNavBarBuilder: NavigationBarBuilder {
     private let navBarReplacementStore: NavBarReplacementStore = NavBarReplacementStore()
-    var client: ConversationClient?
+    private let voiceHandler = VoiceNavBarButtonHandler()
+
+    var client: ConversationClient? {
+        didSet {
+            voiceHandler.client = client
+        }
+    }
 
     override init() {
         super.init()
 
-        self.handleNavigation = { screenType, navigationItem in
+        self.handleNavigation = { [weak self] screenType, navigationItem in
+            guard let self = self else { return }
+
             if let shouldReplace = self.navBarReplacementStore.navBarReplacements[screenType.rawValue]?.shouldReplace, shouldReplace {
                 screenType.updateNavigationItem(navigationItem)
 
@@ -32,6 +40,10 @@ class TestNavBarBuilder: NavigationBarBuilder {
                         }
                     }
                 }
+            }
+
+            if screenType == .chatFeed && VoiceStore().enableVoiceNavBarButton {
+                self.voiceHandler.addButton(to: navigationItem)
             }
         }
     }
