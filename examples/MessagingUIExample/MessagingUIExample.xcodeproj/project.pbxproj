@@ -423,7 +423,7 @@
 			repositoryURL = "https://github.com/Salesforce-Async-Messaging/Swift-Package-InAppMessaging.git";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 1.11.0;
+				minimumVersion = 1.11.1;
 			};
 		};
 		F2448A142FA26A2A00F79668 /* XCRemoteSwiftPackageReference "SMIMultimediaCore-iOS" */ = {
@@ -431,7 +431,7 @@
 			repositoryURL = "https://github.com/Salesforce-Async-Messaging/SMIMultimediaCore-iOS.swift#";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 1.11.0;
+				minimumVersion = 1.11.1;
 			};
 		};
 		F2DE42842E09915300C07239 /* XCRemoteSwiftPackageReference "SalesforceMobileSDK-iOS-SPM" */ = {
