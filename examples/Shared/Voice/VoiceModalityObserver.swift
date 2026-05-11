@@ -3,6 +3,7 @@
 //
 
 import Foundation
+import Combine
 import SMIClientCore
 import SMIMultimediaCommon
 

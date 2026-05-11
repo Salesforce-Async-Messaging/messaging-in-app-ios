@@ -39,6 +39,8 @@ memory -- always verify against either the fetched example or the api-surface re
 | Delegate registration | `Shared/Delegates/CoreDelegate/GlobalCoreDelegateHandler.swift` |
 | Conversation delegate | `Shared/Delegates/CoreDelegate/GlobalCoreDelegateHandler+ConversationClient.swift` |
 | Navigation bar | `Shared/Delegates/Providers/TestNavBarBuilder.swift` |
+| Voice UI files | `Shared/Voice/VoiceNavBarButtonHandler.swift` (+ 9 other files in `Voice/`) |
+| Voice nav bar wiring | `Shared/Delegates/Providers/TestNavBarBuilder.swift` |
 
 ## 2. Both imports are always required
 
@@ -49,6 +51,7 @@ import SMIClientUI
 
 `Configuration`, `ConversationEntry`, `TextMessage`, `ParticipantRole` are in `SMIClientCore`.
 `UIConfiguration`, `Interface`, `ChatFeedViewBuilder` are in `SMIClientUI`.
+Voice files additionally need `import SMIMultimediaCommon` (bundled with the SDK -- no extra dependency).
 
 ## 3. Never fabricate type names
 

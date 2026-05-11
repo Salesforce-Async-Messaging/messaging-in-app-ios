@@ -100,7 +100,7 @@ private struct VoiceTranscriptEntryView: View {
             .font(.headline)
             .lineSpacing(Constants.lineSpacing)
             .frame(maxWidth: .infinity, alignment: .leading)
-            .onChange(of: entry.text) { _, text in
+            .onChange(of: entry.text) { text in
                 revealWords(from: text)
             }
             .onAppear {

@@ -8,7 +8,8 @@ description: >-
   management, conversation lists, templated URLs, auto-response, logging,
   locale mapping, delegate registration, ConversationClientDelegate, file attachments,
   allowed file types, attachment configuration, end chat, close conversation,
-  agent avatar, progress indicator, liquid glass, iOS 26, or conversation options.
+  agent avatar, progress indicator, liquid glass, iOS 26, conversation options,
+  voice, voice call, voice modality, multimedia, or modality.
 ---
 
 # Salesforce Messaging for In-App iOS SDK -- Features & Customization
@@ -116,6 +117,7 @@ Write only the code needed. Do not add anything the example does not demonstrate
 | End chat button / allow end chat | `reference/features.md` -- Conversation UI Options |
 | Agent avatar / progress indicators | `reference/features.md` -- Conversation UI Options |
 | iOS 26 liquid glass branding | `reference/features.md` -- Liquid Glass (iOS 26) |
+| Voice / voice call / voice modality | Use the **voice** skill (`voice/SKILL.md`) -- voice uses a different workflow |
 
 ### Customization
 | Request | Read this reference section |

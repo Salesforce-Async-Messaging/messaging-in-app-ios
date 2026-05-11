@@ -682,3 +682,87 @@ enum NavigationScreenType {
 SMIClientCore.Logging.level: LoggingLevel  // .debug or .none
 SMIClientUI.Logging.level: LoggingLevel    // .debug or .none
 ```
+
+---
+
+## Voice / Multimedia (SMIClientCore + SMIMultimediaCommon)
+
+Voice requires `import SMIMultimediaCommon` in addition to the standard imports.
+`SMIMultimediaCommon` is bundled with the `Swift-InAppMessaging` SPM package --
+no additional dependency is needed.
+
+### Modality (NS_TYPED_ENUM)
+
+```swift
+Modality.messaging
+Modality.voice
+```
+
+### ConversationClient -- Voice Methods
+
+```swift
+func changeModalities(_ modalities: [Modality])
+```
+
+Switches the conversation modality. Pass `[.voice]` to start voice or
+`[.messaging]` to return to text.
+
+### CoreClient -- Multimedia Property
+
+```swift
+var multimediaClient: MultimediaClientProtocol? { get }
+```
+
+### MultimediaClientProtocol
+
+```swift
+var currentSession: MultimediaSessionProtocol? { get }
+func add(delegate: MultimediaClientDelegate, queue: DispatchQueue?)
+```
+
+### MultimediaClientDelegate
+
+```swift
+func client(_ client: MultimediaClientProtocol, didUpdateSession session: MultimediaSessionProtocol)
+```
+
+### MultimediaSessionProtocol -- Key Properties
+
+| Property | Type | Description |
+|----------|------|-------------|
+| `state` | `MultimediaConnectionState` | Current session state |
+| `connectionDate` | `Date?` | When the session connected |
+| `displayName` | `String` | Agent display name |
+| `isMicrophoneMuted` | `Bool` | Whether local mic is muted |
+| `localParticipant` | `MultimediaParticipant?` | Local user participant |
+| `remoteParticipants` | `[MultimediaParticipant]` | Remote participants |
+
+### MultimediaSessionProtocol -- Key Methods
+
+```swift
+func join(completion: @escaping (Error?) -> Void)
+func leave(completion: @escaping (Error?) -> Void)
+func muteMicrophone()
+func unmuteMicrophone()
+```
+
+### MultimediaConnectionState
+
+```swift
+enum MultimediaConnectionState {
+    case initial
+    case connecting
+    case connected
+    case disconnecting
+    case disconnected
+}
+```
+
+### MultimediaParticipantOrigin
+
+```swift
+enum MultimediaParticipantOrigin {
+    case local
+    case remote
+}
+```
