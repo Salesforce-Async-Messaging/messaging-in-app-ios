@@ -32,7 +32,10 @@ struct MIAWConfigurationSettings: View {
 
         var resettable: Bool { false }
 
-        static func handleReset() {}
+        static func handleReset() {
+            let store = MIAWConfigurationStore()
+            store.conversationId = UUID().uuidString
+        }
 
         case connectionEnvironment
         case environments
@@ -46,9 +49,7 @@ struct MIAWConfigurationSettings: View {
         SettingsSection(Self.header) {
             Instructions(instructions: instructions, note:note, section: false)
 
-            SettingsPicker("Connection Environment", developerOnly: false, value: $store.connectionEnvironment).onChange(of: store.connectionEnvironment) {
-                reset?()
-            }
+            SettingsPicker("Connection Environment", developerOnly: false, value: $store.connectionEnvironment)
 
             SettingsTextField("Domain",
                               placeholder: "Enter your Domain",
@@ -68,6 +69,20 @@ struct MIAWConfigurationSettings: View {
                               placeholder: "Enter your Developer Name",
                               value: $store.developerName,
                               enabled: store.connectionEnvironment.editableDeveloperName)
+
+            SettingsTextField("Channel Address Id",
+                              placeholder: "Optional",
+                              value: $store.channelAddressIdentifier)
+
+            SettingsTextField("Conversation Id",
+                              value: $store.conversationId,
+                              enabled: false)
+
+            SettingsButton {
+                store.conversationId = UUID().uuidString
+            } label: {
+                Text("New Conversation Id")
+            }
 
             SettingsToggle("Attachment UI Enabled", developerOnly: true, isOn: $store.enableAttachmentUI)
             SettingsNavigationLink("Allowed File Types", developerOnly: true) {
@@ -127,6 +142,36 @@ extension MIAWConfigurationStore {
             environments[connectionEnvironment.rawValue] = environment
         }
     }
+
+    var channelAddressIdentifier: String {
+        get { environments[connectionEnvironment.rawValue]?.channelAddressIdentifier ?? "" }
+        set {
+            guard var environment = environments[connectionEnvironment.rawValue] else { return }
+            environment.channelAddressIdentifier = newValue.isEmpty ? nil : newValue
+            environments[connectionEnvironment.rawValue] = environment
+        }
+    }
+
+    var conversationId: String {
+        get {
+            if let existing = environments[connectionEnvironment.rawValue]?.conversationId {
+                return existing
+            }
+
+            let newValue = UUID().uuidString
+            guard var environment = environments[connectionEnvironment.rawValue] else { return newValue }
+            environment.conversationId = newValue
+            environments[connectionEnvironment.rawValue] = environment
+            return newValue
+        }
+        set {
+            guard var environment = environments[connectionEnvironment.rawValue] else { return }
+            environment.conversationId = newValue.isEmpty ? nil : newValue
+            environments[connectionEnvironment.rawValue] = environment
+        }
+    }
+
+    var conversationUUID: UUID { UUID(uuidString: conversationId) ?? UUID() }
 
     var authorizationMethod: AuthorizationMethod {
         get { environments[connectionEnvironment.rawValue]?.authorizationMethod ?? .unverified }
@@ -296,10 +341,12 @@ extension MIAWConfigurationStore {
 // MARK: - Convenience Computed Vars
 extension MIAWConfigurationStore {
     var config: Configuration {
-        Configuration(serviceAPI: serviceAPIURL,
-                      organizationId: organizationId,
-                      developerName: developerName,
-                      userVerificationRequired: authorizationMethod == .passthrough || authorizationMethod == .userVerified)
+        let channelId = channelAddressIdentifier.isEmpty ? nil : channelAddressIdentifier
+        return Configuration(serviceAPI: serviceAPIURL,
+                             organizationId: organizationId,
+                             developerName: developerName,
+                             channelAddressIdentifier: channelId,
+                             userVerificationRequired: authorizationMethod == .passthrough || authorizationMethod == .userVerified)
     }
 
     var serviceAPIURL: URL {

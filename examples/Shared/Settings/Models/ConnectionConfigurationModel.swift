@@ -9,6 +9,8 @@ struct ConnectionConfigurationModel: Codable {
     var domain: String
     var organizationId: String
     var developerName: String
+    var channelAddressIdentifier: String?
+    var conversationId: String?
     var authorizationMethod: AuthorizationMethod = .unverified
     var enableAttachmentUI: Bool = true
     var enableTranscriptUI: Bool = true

@@ -11,7 +11,6 @@ struct ConversationPicker: View {
     @Environment(\.presentationMode) var presentationMode
 
     @StateObject var configStore: MIAWConfigurationStore = MIAWConfigurationStore()
-    @StateObject var conversationManagementStore: ConversationManagementStore = ConversationManagementStore()
 
     @State private var isFetching: Bool = false
     @State private var isError: Bool = false
@@ -103,7 +102,7 @@ struct ConversationPicker: View {
             ForEach(conversations ?? [], id: \.identifier) { conversation in
                 ConversationView(conversation)
                     .onTapGesture {
-                        conversationManagementStore.conversationId = conversation.identifier.uuidString
+                        configStore.conversationId = conversation.identifier.uuidString
                         presentationMode.wrappedValue.dismiss()
                     }
             }
