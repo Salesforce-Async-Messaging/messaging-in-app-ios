@@ -46,7 +46,7 @@ struct VoiceControlPanel: View {
                 compactLayout
             }
         }
-        .onChange(of: multimediaClient.session.state) { _, newValue in
+        .onChange(of: multimediaClient.session.state) { newValue in
             handleStateChange(newValue)
         }
         .onAppear { handleStateChange(multimediaClient.session.state) }

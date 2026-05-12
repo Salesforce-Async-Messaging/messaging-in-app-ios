@@ -42,6 +42,8 @@ skills/
       api-surface.md                -- All public types and protocols
       features.md                   -- Feature implementation recipes
       customization.md              -- UI customization recipes
+  voice/
+    SKILL.md                        -- Voice calling integration
   troubleshooting/
     SKILL.md                        -- Issue triage decision tree
     reference/
@@ -51,12 +53,13 @@ skills/
   README.md                         -- This file
 ```
 
-### Three skills, split by user intent
+### Four skills, split by user intent
 
 | Skill | When it activates | What it does |
 |-------|-------------------|-------------|
 | **setup** | "Add the SDK", "integrate messaging", "set up in-app chat" | Guides initial integration step by step |
 | **features** | "Add push notifications", "customize colors", "replace views" | Routes to the right recipe, enforces example-first code gen |
+| **voice** | "Add voice", "add a call button", "voice modality" | Pulls open-source voice UI files and assets into the project (see note below) |
 | **troubleshooting** | "It's not working", "build error", "blank screen" | Triage checklist, then symptom-specific fixes |
 
 ## How It Works
@@ -70,6 +73,31 @@ The example app is in the public repo:
 
 When the example app is updated, the AI automatically gets the latest code on the
 next fetch. The skills themselves rarely need updating.
+
+### Voice skill -- what it adds to your project
+
+The **voice** skill works differently from the other skills. Instead of generating
+code based on examples, it pulls **open-source Swift source files and SVG image assets**
+directly from the public example app into your project:
+
+- **10 Swift files** added to a `Voice/` folder (voice control panel, audio visualizer,
+  transcript feed, modality observer, etc.)
+- **3 SVG image assets** added to your `Assets.xcassets/` (mute, unmute, end call icons)
+- **1 generated file** (`VoiceNavigationBarBuilder`) that wires the voice button into
+  the chat navigation bar
+
+These files are from the
+[`examples/Shared/Voice/`](https://github.com/Salesforce-Async-Messaging/messaging-in-app-ios/tree/master/examples/Shared/Voice)
+directory in the public repo. They are copied verbatim and become part of your app's
+source code -- you can customize them freely (colors, layout, button placement, etc.).
+
+Voice also requires the `SMIMultimediaCore` SPM package, which is a separate dependency
+from the main SDK. See the voice skill for details.
+
+By default, the voice button is added to the chat navigation bar. You can change where
+and how the button appears by modifying the `VoiceNavigationBarBuilder` or by using the
+**Navigation Bar Customization** feature in the features skill to control button
+placement across different screens.
 
 ### What the AI can help with
 
@@ -87,6 +115,11 @@ next fetch. The skills themselves rarely need updating.
 - "Hide the chat button outside business hours"
 - "Let users download a conversation transcript"
 - "Close a conversation programmatically"
+
+**Voice:**
+- "Add voice calling to the messaging experience"
+- "Add a voice button to the chat navigation bar"
+- "Enable voice modality in my messaging integration"
 
 **Customization:**
 - "Change the chat header color to match our brand"
@@ -108,6 +141,17 @@ next fetch. The skills themselves rarely need updating.
 - Create APNs certificates or push notification keys
 - Debug Salesforce-side configuration (routing, bot flows, agent availability)
 - Generate the `config.json` file (download it from the Salesforce org)
+
+## Disclaimer
+
+These skills are provided as a guide to help AI coding assistants generate correct
+integration code. **Results are not guaranteed.** AI-generated code should always be
+reviewed before merging into your project. Salesforce is not responsible for any issues
+arising from code produced by AI tools using these skills.
+
+Be aware that AI assistants may modify your source files, add new files, and change
+project configuration. Always review the changes an AI makes to your codebase before
+accepting them, and use version control so you can revert if needed.
 
 ## Resources
 
