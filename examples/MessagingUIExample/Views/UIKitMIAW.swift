@@ -34,9 +34,9 @@ struct UIKitMIAW: UIViewControllerRepresentable {
 
         let demoManagementStore: DemoManagementStore = DemoManagementStore()
         let configurationStore: MIAWConfigurationStore = MIAWConfigurationStore()
-        let conversationManagementStore: ConversationManagementStore = ConversationManagementStore()
         let uiReplacementStore: UIReplacementStore = UIReplacementStore()
         let remoteLocaleStore: RemoteLocaleStore = RemoteLocaleStore()
+        let conversationManagementStore: ConversationManagementStore = ConversationManagementStore()
 
         let uiConfiguration: UIConfiguration
         var messagingSessionWidget: MessagingSessionWidget?
@@ -51,7 +51,7 @@ struct UIKitMIAW: UIViewControllerRepresentable {
 
         init() {
             self.uiConfiguration = UIConfiguration(configuration: configurationStore.config,
-                                                   conversationId: conversationManagementStore.conversationUUID,
+                                                   conversationId: configurationStore.conversationUUID,
                                                    remoteLocaleMap: remoteLocaleStore.remoteLocaleMap,
                                                    urlDisplayMode: configurationStore.URLDisplayMode)
 

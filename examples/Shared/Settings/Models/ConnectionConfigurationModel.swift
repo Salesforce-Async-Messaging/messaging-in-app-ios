@@ -9,10 +9,13 @@ struct ConnectionConfigurationModel: Codable {
     var domain: String
     var organizationId: String
     var developerName: String
+    var channelAddressIdentifier: String?
+    var conversationId: String?
     var authorizationMethod: AuthorizationMethod = .unverified
     var enableAttachmentUI: Bool = true
     var enableTranscriptUI: Bool = true
     var useProgressIndicatorForAgents: Bool = true
+    var useHumanAgentAvatar: Bool = false
     var enableEndSessionUI: Bool = true
     var URLDisplayMode: String = UrlDisplayMode.inlineBrowser.rawValue
     var useSSL: Bool = true
@@ -21,4 +24,5 @@ struct ConnectionConfigurationModel: Codable {
     var enableAudio: Bool = true
     var enableText: Bool = true
     var enableOther: Bool = true
+    var useMessagingChannel: Bool = false
 }
