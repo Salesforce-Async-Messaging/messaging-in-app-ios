@@ -34,7 +34,11 @@ struct MIAWConfigurationSettings: View {
 
         static func handleReset() {
             let store = MIAWConfigurationStore()
-            store.conversationId = UUID().uuidString
+            var allEnvironments = store.environments
+            for key in allEnvironments.keys {
+                allEnvironments[key]?.conversationId = UUID().uuidString
+            }
+            store.environments = allEnvironments
         }
 
         case connectionEnvironment
@@ -42,6 +46,7 @@ struct MIAWConfigurationSettings: View {
     }
 
     @StateObject var store: MIAWConfigurationStore = MIAWConfigurationStore()
+    @StateObject var notificationManagementStore: NotificationManagementStore = NotificationManagementStore()
     @StateObject var developerStore: DeveloperStore = DeveloperStore()
     @State private var toast: Toast?
 
