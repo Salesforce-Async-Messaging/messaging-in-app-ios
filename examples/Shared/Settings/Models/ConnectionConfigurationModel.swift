@@ -24,4 +24,5 @@ struct ConnectionConfigurationModel: Codable {
     var enableAudio: Bool = true
     var enableText: Bool = true
     var enableOther: Bool = true
+    var useMessagingChannel: Bool = false
 }
