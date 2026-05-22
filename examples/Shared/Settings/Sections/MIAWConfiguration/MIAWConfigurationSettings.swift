@@ -75,13 +75,31 @@ struct MIAWConfigurationSettings: View {
                               value: $store.developerName,
                               enabled: store.connectionEnvironment.editableDeveloperName)
 
-            SettingsTextField("Channel Address Id",
-                              placeholder: "Optional",
-                              value: $store.channelAddressIdentifier)
+            SettingsToggle("Use Messaging Channel", developerOnly: true, isOn: $store.useMessagingChannel)
+                .onChange(of: store.useMessagingChannel) { isOn in
+                    if isOn {
+                        fetchChannelAddressIdentifier()
+                    }
+                }
+
+            if store.useMessagingChannel {
+                SettingsTextField("Channel Address Id",
+                                  developerOnly: true,
+                                  value: $store.channelAddressIdentifier,
+                                  enabled: false)
+            }
 
             SettingsTextField("Conversation Id",
                               value: $store.conversationId,
                               enabled: false)
+
+            if store.useMessagingChannel {
+                SettingsButton(developerOnly: true) {
+                    fetchChannelAddressIdentifier()
+                } label: {
+                    Text("Update Channel Address Identifier")
+                }
+            }
 
             SettingsButton {
                 store.conversationId = UUID().uuidString
@@ -99,6 +117,15 @@ struct MIAWConfigurationSettings: View {
             SettingsToggle("End Session Enabled", developerOnly: true, isOn: $store.enableEndSessiontUI)
             SettingsPicker("Authorization Method", developerOnly: true, value: $store.authorizationMethod)
             SettingsPicker("URL Display Mode", developerOnly: true, value: $store.URLDisplayMode)
+        }
+    }
+
+    private func fetchChannelAddressIdentifier() {
+        let coreClient = CoreFactory.create(withConfig: store.config)
+        coreClient.retrieveRemoteConfiguration { remoteConfig, _ in
+            if let identifier = remoteConfig?.messagingChannel?.identifier {
+                store.channelAddressIdentifier = identifier
+            }
         }
     }
 }
@@ -280,6 +307,21 @@ extension MIAWConfigurationStore {
         set {
             guard var environment = environments[connectionEnvironment.rawValue] else { return }
             environment.enableOther = newValue
+            environments[connectionEnvironment.rawValue] = environment
+        }
+    }
+
+    var useMessagingChannel: Bool {
+        get {
+            guard let environment = environments[connectionEnvironment.rawValue] else { return false }
+            return environment.useMessagingChannel
+        }
+        set {
+            guard var environment = environments[connectionEnvironment.rawValue] else { return }
+            environment.useMessagingChannel = newValue
+            if !newValue {
+                environment.channelAddressIdentifier = nil
+            }
             environments[connectionEnvironment.rawValue] = environment
         }
     }
