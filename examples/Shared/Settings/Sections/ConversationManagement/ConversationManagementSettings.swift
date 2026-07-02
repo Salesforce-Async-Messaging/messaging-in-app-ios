@@ -22,6 +22,7 @@ struct ConversationManagementSettings: View {
     }
 
     @StateObject var configStore: MIAWConfigurationStore = MIAWConfigurationStore()
+    @StateObject var contextEventStore: ContextEventStore = ContextEventStore()
 
     var body: some View {
         SettingsSection(Self.header, developerOnly: true) {
@@ -36,6 +37,11 @@ struct ConversationManagementSettings: View {
                 configStore.conversationId = uUID.uuidString
 
                 let client = CoreFactory.create(withConfig: configStore.config).conversationClient(with: uUID)
+
+                if contextEventStore.contextEvent {
+                    ContextEventStore.applySampleSessionContext(to: client)
+                }
+
                 client.core?.retrieveRemoteConfiguration(completion: { remoteConfig, _ in
                     if let remoteConfig = remoteConfig {
                         if let preChatConfiguration = remoteConfig.preChatConfiguration?.first {
