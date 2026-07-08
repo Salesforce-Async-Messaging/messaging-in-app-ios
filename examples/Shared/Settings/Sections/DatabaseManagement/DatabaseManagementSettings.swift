@@ -17,6 +17,21 @@ struct DatabaseManagementSettings: View {
             } label: {
                 Text("Clear Local Cache Only")
             }
+
+            #if DEBUG
+            SettingsButton {
+                let client = CoreFactory.create(withConfig: configStore.config).conversationClient(with: configStore.conversationUUID)
+                client.deleteEntries { _ in }
+            } label: {
+                Text("Delete Current Conversation Entries")
+            }
+
+            NavigationLink {
+                EntryBrowser()
+            } label: {
+                Text("Entry Browser")
+            }
+            #endif
         }
     }
 }
