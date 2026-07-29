@@ -9,6 +9,7 @@ import SMIMultimediaCommon
 
 class VoiceNavBarButtonHandler: NSObject {
     private let modalityObserver = VoiceModalityObserver()
+    private let voiceStore = VoiceStore()
     private var voiceButtonCancellables = Set<AnyCancellable>()
     private var expandedState = VoiceSheetExpandedState()
     private weak var presentedVoiceController: UIViewController?
@@ -17,6 +18,7 @@ class VoiceNavBarButtonHandler: NSObject {
         didSet {
             guard let client = client else { return }
             client.addDelegate(delegate: modalityObserver, queue: .main)
+            client.core?.multimediaClient?.configuration.callKitEnabled = voiceStore.callKitEnabled
             client.core?.multimediaClient?.add(delegate: self, queue: .main)
             client.conversation { [weak self] conversation, _ in
                 guard let conversation = conversation else { return }
