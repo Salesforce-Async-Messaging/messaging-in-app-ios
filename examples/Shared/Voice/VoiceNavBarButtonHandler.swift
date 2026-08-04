@@ -74,11 +74,6 @@ class VoiceNavBarButtonHandler: NSObject {
     private func handleSession(_ session: MultimediaSessionProtocol) {
         switch session.state {
         case .initial:
-            session.join { error in
-                if let error = error {
-                    print("Multimedia Join Result: \(error)")
-                }
-            }
             presentVoiceControlPanel()
         case .connecting, .connected:
             presentVoiceControlPanel()
