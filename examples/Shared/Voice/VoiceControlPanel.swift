@@ -185,6 +185,7 @@ struct VoiceControlPanel: View {
     @ViewBuilder
     private func endCallButton() -> some View {
         Button {
+            client.changeModalities([.messaging])
             dismiss()
         } label: {
             VoiceCircleIcon(image: Image("actionEndVoice"),
