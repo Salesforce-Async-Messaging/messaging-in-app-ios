@@ -40,13 +40,12 @@ struct ContentView: View {
 
 struct MIAW: View {
     @StateObject var configStore: MIAWConfigurationStore = MIAWConfigurationStore()
-    @StateObject var conversationManagementStore: ConversationManagementStore = ConversationManagementStore()
     @StateObject var uiReplacementStore: UIReplacementStore = UIReplacementStore()
     @StateObject var remoteLocaleStore: RemoteLocaleStore = RemoteLocaleStore()
 
     var body: some View {
         let config = UIConfiguration(configuration: configStore.config,
-                                     conversationId: conversationManagementStore.conversationUUID,
+                                     conversationId: configStore.conversationUUID,
                                      remoteLocaleMap: remoteLocaleStore.remoteLocaleMap,
                                      urlDisplayMode: configStore.URLDisplayMode)
 
@@ -59,7 +58,7 @@ struct MIAW: View {
                          chatFeedViewBuilder: GlobalCoreDelegateHandler.shared.viewBuilder,
                          navigationBarBuilder: GlobalCoreDelegateHandler.shared.navBarBuilder)
         .onAppear(perform: {
-            let client = CoreFactory.create(withConfig: config).conversationClient(with: conversationManagementStore.conversationUUID)
+            let client = CoreFactory.create(withConfig: config).conversationClient(with: configStore.conversationUUID)
             GlobalCoreDelegateHandler.shared.registerDelegates(client)
         })
     }

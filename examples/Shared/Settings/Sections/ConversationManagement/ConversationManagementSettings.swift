@@ -21,13 +21,11 @@ struct ConversationManagementSettings: View {
         case conversationId
     }
 
-    @StateObject var store: ConversationManagementStore = ConversationManagementStore()
     @StateObject var configStore: MIAWConfigurationStore = MIAWConfigurationStore()
+    @StateObject var contextEventStore: ContextEventStore = ContextEventStore()
 
     var body: some View {
         SettingsSection(Self.header, developerOnly: true) {
-            SettingsTextField("Current Conversation Id", placeholder: "Enter your Conversation Id", value: $store.conversationId, enabled: false)
-
             NavigationLink {
                 ConversationPicker()
             } label: {
@@ -35,16 +33,15 @@ struct ConversationManagementSettings: View {
             }
 
             SettingsButton {
-                store.conversationId = UUID().uuidString
-            } label: {
-                Text("New Conversation Id")
-            }
-
-            SettingsButton {
                 let uUID = UUID()
-                store.conversationId = uUID.uuidString
+                configStore.conversationId = uUID.uuidString
 
                 let client = CoreFactory.create(withConfig: configStore.config).conversationClient(with: uUID)
+
+                if contextEventStore.contextEvent {
+                    ContextEventStore.applySampleSessionContext(to: client)
+                }
+
                 client.core?.retrieveRemoteConfiguration(completion: { remoteConfig, _ in
                     if let remoteConfig = remoteConfig {
                         if let preChatConfiguration = remoteConfig.preChatConfiguration?.first {
@@ -62,7 +59,7 @@ struct ConversationManagementSettings: View {
             }
 
             SettingsButton {
-                let uuid = UUID(uuidString: store.conversationId)
+                let uuid = UUID(uuidString: configStore.conversationId)
                 let client = CoreFactory.create(withConfig: configStore.config).conversationClient(with: uuid)
                 client.closeConversation(completion: { error in
                     if error != nil {
