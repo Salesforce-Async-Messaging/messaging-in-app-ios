@@ -384,7 +384,7 @@
 			repositoryURL = "https://github.com/Salesforce-Async-Messaging/Swift-Package-InAppMessaging.git";
 			requirement = {
 				kind = exactVersion;
-				version = 1.13.1;
+				version = 1.13.2;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
