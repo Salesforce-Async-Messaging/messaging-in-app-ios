@@ -24,4 +24,17 @@ extension GlobalCoreDelegateHandler: ConversationClientDelegate {
             }
         }
     }
+
+    func client(_ client: any ConversationClient, didCreateConversation conversation: any Conversation) {
+        let label = conversationManagementStore.conversationLabel
+        if label.isEmpty {
+            return
+        }
+
+        client.update(label: label, completion: { error in
+            if error != nil {
+                print(error ?? "")
+            }
+        })
+    }
 }
