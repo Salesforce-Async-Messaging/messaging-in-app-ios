@@ -57,12 +57,13 @@ public class MessagingViewModel: NSObject {
 
     /// Sends an image to the agent.
     public func sendImageMessage(image: Data, fileName: String) {
-        conversationClient?.send!(image: image, fileName: fileName)
+        conversationClient?.send(file: image, fileName: fileName, message: nil)
     }
 
     /// Sends a PDF file to the agent.
-    public func sendPDFMessage(pdf: PDFDocument) {
-        conversationClient?.send!(pdf: pdf)
+    public func sendPDFMessage(pdf: PDFDocument, fileName: String = "document.pdf") {
+        guard let data = pdf.dataRepresentation() else { return }
+        conversationClient?.send(file: data, fileName: fileName, message: nil)
     }
 
     /// Sends a choice reply to the agent.
@@ -82,7 +83,10 @@ public class MessagingViewModel: NSObject {
                 return
             }
             let activityViewController = UIActivityViewController(activityItems: [pdfData], applicationActivities: nil)
-            let keyWindow = UIApplication.shared.windows.first(where: {$0.isKeyWindow})
+            let keyWindow = UIApplication.shared.connectedScenes
+                .compactMap { $0 as? UIWindowScene }
+                .flatMap { $0.windows }
+                .first(where: { $0.isKeyWindow })
 
             if var topController = keyWindow?.rootViewController {
                 while let presentedViewController = topController.presentedViewController {
