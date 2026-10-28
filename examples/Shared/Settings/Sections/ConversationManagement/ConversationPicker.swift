@@ -19,6 +19,10 @@ struct ConversationPicker: View {
     @State private var isLocal = true
     @State private var isForceRefresh = false
     @State private var limit: UInt = 0
+    @State private var labelConversation: Conversation?
+    @State private var labelText?
+    @State private var isEditingLabel = false
+    @State private var toast: Toast?
 
     var body: some View {
         List {
@@ -52,6 +56,50 @@ struct ConversationPicker: View {
             fetch()
         })
         .navigationTitle(Self.title)
+        .toastView(toast: $toast)
+        .alert("Update Label", isPresented: $isEditingLabel, presenting: labelConversation) { conversation in
+            TextField("Conversation Label", text: $labelText)
+                .autocorrectionDisabled()
+                .textInputAutocapitalization(.never)
+                .accessibilityIdentifier("Conversation Label.input")
+
+            Button("Cancel", role: .cancel) {}
+                .accessibilityIdentifier("Cancel Label.button")
+
+            Button("Update") {
+                updateLabel(conversation)
+            }
+            .accessibilityIdentifier("Update Label.button")
+        }
+    }
+
+    private func editLabel(_ conversation: Conversation) {
+        labelConversation = conversation
+        labelText = conversation.label ?? ""
+        isEditingLabel = true
+    }
+
+    private func updateLabel(_ conversation: Conversation) {
+        let client = CoreFactory.create(withConfig: configStore.config).conversationClient(with: conversation.identifier)
+        client.update(label: labelText) { error in
+            DispatchQueue.main.async {
+                if let error {
+                    toast = Self.errorToast(for: error)
+                } else {
+                    fetch()
+                }
+            }
+        }
+    }
+
+    private static func errorToast(for error: Error) -> Toast {
+        let nsError = error as NSError
+        let underlyingError = nsError.userInfo[NSUnderlyingErrorKey] as? NSError
+        let httpStatus = nsError.userInfo[errorNetworkHTTPResponseCode] as? Int
+            ?? underlyingError?.userInfo[errorNetworkHTTPResponseCode] as? Int
+        let httpText = httpStatus.map { String($0) } ?? "None"
+
+        return Toast(style: .error, message: "\(nsError.domain) \(nsError.code)\nHTTP Status: \(httpText)", width: 320)
     }
 
     private func fetch() {
@@ -100,11 +148,21 @@ struct ConversationPicker: View {
     private var handleData: some View {
         Section(header: Text(isLocal ? "Local Conversation Cache" : "Remote Conversation List")) {
             ForEach(conversations ?? [], id: \.identifier) { conversation in
-                ConversationView(conversation)
-                    .onTapGesture {
-                        configStore.conversationId = conversation.identifier.uuidString
-                        presentationMode.wrappedValue.dismiss()
+                VStack(alignment: .leading) {
+                    ConversationView(conversation)
+                        .onTapGesture {
+                            configStore.conversationId = conversation.identifier.uuidString
+                            presentationMode.wrappedValue.dismiss()
+                        }
+
+                    SettingsButton {
+                        editLabel(conversation)
+                    } label: {
+                        Text("Edit Label")
                     }
+                    .accessibilityHint("Updates the label on this conversation")
+                    .accessibilityIdentifier("Edit Label.\(conversation.identifier.uuidString)")
+                }
             }
         }
     }
@@ -143,6 +201,7 @@ private struct ConversationView: View {
             row("Last Active:", value: conversation.lastActiveEntry?.timestamp.description ?? "")
             row("Status:", value: conversation.status.description)
             row("Status:", value: conversationStatus)
+            row("Label:", value: conversation.label ?? "")
         }
     }
 }
