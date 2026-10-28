@@ -20,8 +20,8 @@ struct ContentView: View {
     var viewModel: MessagingViewModel
 
     init(isChatFeedHidden: Bool = true, messageInputText: String = "") {
-        self.isChatFeedHidden = isChatFeedHidden
-        self.messageInputText = messageInputText
+        _isChatFeedHidden = State(initialValue: isChatFeedHidden)
+        _messageInputText = State(initialValue: messageInputText)
         let observableEntries = ObserveableConversationEntries()
         self.observeableConversationData = observableEntries
         self.viewModel = MessagingViewModel(observeableConversationData: observableEntries)

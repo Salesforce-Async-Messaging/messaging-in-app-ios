@@ -76,7 +76,7 @@ struct MIAWConfigurationSettings: View {
                               enabled: store.connectionEnvironment.editableDeveloperName)
 
             SettingsToggle("Use Messaging Channel", developerOnly: true, isOn: $store.useMessagingChannel)
-                .onChange(of: store.useMessagingChannel) { isOn in
+                .onChange(of: store.useMessagingChannel) { _, isOn in
                     if isOn {
                         fetchChannelAddressIdentifier()
                     }
