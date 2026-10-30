@@ -22,6 +22,7 @@ import SalesforceSDKCore
     let navBarReplacementStore: NavBarReplacementStore = NavBarReplacementStore()
     let delegateManagementStore: DelegateManagementStore = DelegateManagementStore()
     let configStore: MIAWConfigurationStore = MIAWConfigurationStore()
+    let conversationManagementStore: ConversationManagementStore = ConversationManagementStore()
     var client: ConversationClient?
 
     func registerDelegates(_ core: CoreClient?) {

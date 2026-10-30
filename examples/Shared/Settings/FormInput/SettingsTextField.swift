@@ -81,6 +81,7 @@ struct SettingsTextField: View {
                 }
             }
         }
+        .font(.system(.body, design: .monospaced))
     }
 }
 
