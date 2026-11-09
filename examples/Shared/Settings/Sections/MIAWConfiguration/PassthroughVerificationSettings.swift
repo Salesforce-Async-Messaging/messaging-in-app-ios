@@ -36,7 +36,7 @@ struct PassthroughVerificationSettings: View {
     @StateObject var configStore: MIAWConfigurationStore = MIAWConfigurationStore()
 
     var body: some View {
-        if configStore.authorizationMethod == .passthrough {
+        if configStore.requiresUserVerification && configStore.usePassthrough {
             Section(header: Text(Self.header)) {
                 SettingsButton {
                     AuthHelper.loginIfRequired {}

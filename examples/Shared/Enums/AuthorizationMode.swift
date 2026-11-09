@@ -7,7 +7,7 @@ enum AuthorizationMode: String, Identifiable, CaseIterable, Codable, DeveloperTo
 
     case unAuth = "Unverified"
     case auth = "User Verified"
-    case hybridAuth = "Hybrid (Unverified, Elevatable)"
+    case hybridAuth = "Hybrid"
 
     var authMode: AuthMode {
         switch self {

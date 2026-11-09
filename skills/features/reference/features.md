@@ -166,10 +166,10 @@ Also fetch the delegate registration pattern:
 - Returning a `UserVerification` object with a JWT
 
 **Note:** The example imports `SalesforceSDKCore` and uses patterns specific to the
-Salesforce Mobile SDK (`configStore.authorizationMethod`, `PassthroughVerification`,
+Salesforce Mobile SDK (`configStore.usePassthrough`, `PassthroughVerification`,
 `AuthHelper`). These do NOT apply to most customer apps. Extract only the
 `UserVerificationDelegate` conformance and the `.JWT` code path. Ignore the
-`.passthrough` path and any `SalesforceSDKCore` imports.
+passthrough path and any `SalesforceSDKCore` imports.
 
 ### Adapt for the user's project
 - Create the delegate implementation in its own file (e.g. `UserVerificationHandler.swift`)

@@ -115,8 +115,12 @@ struct MIAWConfigurationSettings: View {
             SettingsToggle("Progress Indicator for Agents", developerOnly: true, isOn: $store.useProgressIndicatorsForAgents)
             SettingsToggle("Human Agent Avatar", developerOnly: true, isOn: $store.useHumanAgentAvatar)
             SettingsToggle("End Session Enabled", developerOnly: true, isOn: $store.enableEndSessiontUI)
-            SettingsPicker("Authorization Method Deprecated", developerOnly: true, value: $store.authorizationMethod)
             SettingsPicker("Auth Mode", developerOnly: true, value: $store.authorizationMode)
+
+            if store.requiresUserVerification {
+                SettingsToggle("Use Passthrough", developerOnly: true, isOn: $store.usePassthrough)
+            }
+
             SettingsPicker("URL Display Mode", developerOnly: true, value: $store.URLDisplayMode)
         }
     }
@@ -206,15 +210,6 @@ extension MIAWConfigurationStore {
 
     var conversationUUID: UUID { UUID(uuidString: conversationId) ?? UUID() }
 
-    var authorizationMethod: AuthorizationMethod {
-        get { environments[connectionEnvironment.rawValue]?.authorizationMethod ?? .unverified }
-        set {
-            guard var environment = environments[connectionEnvironment.rawValue] else { return }
-            environment.authorizationMethod = newValue
-            environments[connectionEnvironment.rawValue] = environment
-        }
-    }
-
     var authorizationMode: AuthorizationMode {
         get { environments[connectionEnvironment.rawValue]?.authorizationMode ?? .unAuth }
         set {
@@ -223,6 +218,17 @@ extension MIAWConfigurationStore {
             environments[connectionEnvironment.rawValue] = environment
         }
     }
+
+    var usePassthrough: Bool {
+        get { environments[connectionEnvironment.rawValue]?.usePassthrough ?? false }
+        set {
+            guard var environment = environments[connectionEnvironment.rawValue] else { return }
+            environment.usePassthrough = newValue
+            environments[connectionEnvironment.rawValue] = environment
+        }
+    }
+
+    var requiresUserVerification: Bool { authorizationMode != .unAuth }
 
     var useSSL: Bool {
         get {

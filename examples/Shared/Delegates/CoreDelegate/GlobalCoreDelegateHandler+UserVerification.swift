@@ -14,16 +14,12 @@ extension GlobalCoreDelegateHandler: UserVerificationDelegate {
     func core(_ core: CoreClient, userVerificationChallengeWith reason: ChallengeReason) async -> UserVerification? {
         if reason == .expired || reason == .malformed { return nil }
 
-        switch configStore.authorizationMethod {
-        case .userVerified:
-            return UserVerification(customerIdentityToken: userVerificationStore.tokenJWT, type: .JWT)
-
-        case .passthrough:
+        if configStore.usePassthrough {
             await Self.salesforceLogin()
             return await Self.fetchMIAWJWT(core)
-
-        default: return nil
         }
+
+        return UserVerification(customerIdentityToken: userVerificationStore.tokenJWT, type: .JWT)
     }
 }
 
