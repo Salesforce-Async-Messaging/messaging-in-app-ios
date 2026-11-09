@@ -115,7 +115,8 @@ struct MIAWConfigurationSettings: View {
             SettingsToggle("Progress Indicator for Agents", developerOnly: true, isOn: $store.useProgressIndicatorsForAgents)
             SettingsToggle("Human Agent Avatar", developerOnly: true, isOn: $store.useHumanAgentAvatar)
             SettingsToggle("End Session Enabled", developerOnly: true, isOn: $store.enableEndSessiontUI)
-            SettingsPicker("Authorization Method", developerOnly: true, value: $store.authorizationMethod)
+            SettingsPicker("Authorization Method Deprecated", developerOnly: true, value: $store.authorizationMethod)
+            SettingsPicker("Auth Mode", developerOnly: true, value: $store.authorizationMode)
             SettingsPicker("URL Display Mode", developerOnly: true, value: $store.URLDisplayMode)
         }
     }
@@ -210,6 +211,15 @@ extension MIAWConfigurationStore {
         set {
             guard var environment = environments[connectionEnvironment.rawValue] else { return }
             environment.authorizationMethod = newValue
+            environments[connectionEnvironment.rawValue] = environment
+        }
+    }
+
+    var authorizationMode: AuthorizationMode {
+        get { environments[connectionEnvironment.rawValue]?.authorizationMode ?? .unAuth }
+        set {
+            guard var environment = environments[connectionEnvironment.rawValue] else { return }
+            environment.authorizationMode = newValue
             environments[connectionEnvironment.rawValue] = environment
         }
     }
@@ -393,7 +403,7 @@ extension MIAWConfigurationStore {
                              organizationId: organizationId,
                              developerName: developerName,
                              channelAddressIdentifier: channelId,
-                             userVerificationRequired: authorizationMethod == .passthrough || authorizationMethod == .userVerified)
+                             authMode: authorizationMode.authMode)
     }
 
     var serviceAPIURL: URL {

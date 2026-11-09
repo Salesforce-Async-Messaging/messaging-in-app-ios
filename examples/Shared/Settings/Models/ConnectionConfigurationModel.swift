@@ -12,6 +12,7 @@ struct ConnectionConfigurationModel: Codable {
     var channelAddressIdentifier: String?
     var conversationId: String?
     var authorizationMethod: AuthorizationMethod = .unverified
+    var authorizationMode: AuthorizationMode? = .unAuth
     var enableAttachmentUI: Bool = true
     var enableTranscriptUI: Bool = true
     var useProgressIndicatorForAgents: Bool = true
