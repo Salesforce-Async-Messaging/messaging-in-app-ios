@@ -13,10 +13,12 @@ import SMIClientUI
 class TestNavBarBuilder: NavigationBarBuilder {
     private let navBarReplacementStore: NavBarReplacementStore = NavBarReplacementStore()
     private let voiceHandler = VoiceNavBarButtonHandler()
+    private let elevateAuthHandler = ElevateAuthNavBarButtonHandler()
 
     var client: ConversationClient? {
         didSet {
             voiceHandler.client = client
+            elevateAuthHandler.client = client
         }
     }
 
@@ -44,6 +46,10 @@ class TestNavBarBuilder: NavigationBarBuilder {
 
             if screenType == .chatFeed && VoiceStore().enableVoiceNavBarButton {
                 self.voiceHandler.addButton(to: navigationItem)
+            }
+
+            if screenType == .chatFeed && self.client?.core?.configuration.authMode == .hybridAuth {
+                self.elevateAuthHandler.addButton(to: navigationItem)
             }
         }
     }
