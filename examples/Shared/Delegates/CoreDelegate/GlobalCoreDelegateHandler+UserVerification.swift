@@ -41,8 +41,10 @@ extension GlobalCoreDelegateHandler {
     }
 
     class func fetchMIAWJWT(_ core: CoreClient) async -> PassthroughVerification? {
+        let isHybrid = GlobalCoreDelegateHandler.shared.configStore.authorizationMode == .hybridAuth
         let fetchTask = Task {
-            let request = RestRequest(method: .GET, serviceHostType:.custom, path:core.salesforceAuthenticationRequestPath, queryParams: nil)
+            let request = RestRequest(method: isHybrid ? .POST : .GET, serviceHostType:.custom, path:core.salesforceAuthenticationRequestPath, queryParams: nil)
+            request.setCustomRequestBodyDictionary([:], contentType: "application/json")
             do {
                 return try await RestClient.shared.send(request: request)
             }
@@ -59,6 +61,7 @@ extension GlobalCoreDelegateHandler {
                 return PassthroughVerification(jwt: accessToken, lastEventId: lastEventId)
             }
         } catch {
+            print("An error occurred: \(error)")
             return nil
         }
 
