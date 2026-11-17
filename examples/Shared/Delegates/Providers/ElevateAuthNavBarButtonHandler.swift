@@ -31,8 +31,6 @@ class ElevateAuthNavBarButtonHandler: NSObject {
             DispatchQueue.main.async {
                 if let error = error {
                     self?.presentAlert(title: "Elevate Auth Failed", message: error.localizedDescription)
-                } else {
-                    self?.presentAlert(title: "Elevate Auth", message: "The session is user verified.")
                 }
             }
         }
