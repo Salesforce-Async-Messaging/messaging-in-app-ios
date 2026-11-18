@@ -41,8 +41,53 @@ extension GlobalCoreDelegateHandler {
     }
 
     class func fetchMIAWJWT(_ core: CoreClient) async -> PassthroughVerification? {
+        if GlobalCoreDelegateHandler.shared.configStore.authorizationMode == .hybridAuth {
+            return await fetchHybridMIAWJWT(core)
+        }
+
+        return await fetchLegacyMIAWJWT(core)
+    }
+
+    private class func fetchHybridMIAWJWT(_ core: CoreClient) async -> PassthroughVerification? {
+        let fetchTask = Task {
+            let request = RestRequest(method: .POST, serviceHostType:.custom, path:core.salesforceAuthenticationRequestPath, queryParams: nil)
+            let jwt = try await core.unverifiedAccessToken()
+
+            request.setCustomRequestBodyDictionary([
+                "type": "ElevateSession",
+                "payload": [
+                    "guestAccessToken": jwt,
+                    "conversationIds": []
+                ]
+            ], contentType: "application/json")
+
+            do {
+                return try await RestClient.shared.send(request: request)
+            }
+        }
+
+        let result = await fetchTask.result
+
+        do {
+            if let body = try result.get().asJson() as? Dictionary<String, Any> {
+                guard let response = body["response"] as? Dictionary<String, Any> else { return nil }
+                guard let accessToken = response["accessToken"] as? String else { return nil }
+                guard let lastEventId = (response["lastEventId"] as? String) ?? (response["lastEventId"] as? Int).map(String.init) else { return nil }
+
+                return PassthroughVerification(jwt: accessToken, lastEventId: lastEventId)
+            }
+        } catch {
+            print("An error occurred: \(error)")
+            return nil
+        }
+
+        return nil
+    }
+
+    private class func fetchLegacyMIAWJWT(_ core: CoreClient) async -> PassthroughVerification? {
         let fetchTask = Task {
             let request = RestRequest(method: .GET, serviceHostType:.custom, path:core.salesforceAuthenticationRequestPath, queryParams: nil)
+            request.setCustomRequestBodyDictionary([:], contentType: "application/json")
             do {
                 return try await RestClient.shared.send(request: request)
             }
@@ -59,6 +104,7 @@ extension GlobalCoreDelegateHandler {
                 return PassthroughVerification(jwt: accessToken, lastEventId: lastEventId)
             }
         } catch {
+            print("An error occurred: \(error)")
             return nil
         }
 
