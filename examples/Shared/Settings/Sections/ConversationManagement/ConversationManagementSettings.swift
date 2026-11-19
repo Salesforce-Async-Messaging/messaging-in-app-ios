@@ -13,13 +13,38 @@ struct ConversationManagementSettings: View {
     enum SettingsKeys: String, Settings {
         public var id: String { rawValue }
 
-        var defaultValue: Any { "" }
-        var resettable: Bool { true }
+        var defaultValue: Any {
+            switch self {
+            case .conversationId: ""
+            case .conversationLabel: ""
+            case .queryLimit: "10"
+            case .queryUseFromTimestamp: false
+            case .queryFromTimestamp: Date.distantPast
+            case .queryDirection: ListAPIDirections.descending.rawValue
+            case .queryIncludeClosed: true
+            case .queryForceRefresh: false
+            }
+        }
 
-        static func handleReset() {}
+        var resettable: Bool {
+            switch self {
+            case .queryFromTimestamp: return false
+            default: return true
+            }
+        }
+
+        static func handleReset() {
+            UserDefaults.standard.removeObject(forKey: Self.queryFromTimestamp.rawValue)
+        }
 
         case conversationId
         case conversationLabel
+        case queryLimit
+        case queryUseFromTimestamp
+        case queryFromTimestamp
+        case queryDirection
+        case queryIncludeClosed
+        case queryForceRefresh
     }
 
     @StateObject var configStore: MIAWConfigurationStore = MIAWConfigurationStore()
@@ -33,6 +58,14 @@ struct ConversationManagementSettings: View {
             } label: {
                 Text("Choose Conversation")
             }
+
+            NavigationLink {
+                QueryConversation()
+            } label: {
+                Text(QueryConversation.title)
+            }
+            .accessibilityHint("Queries conversations using every query parameter")
+            .accessibilityIdentifier("Query Conversation.link")
 
             SettingsTextField("Default Conversation Label", placeholder: "No Label", value: $conversationManagementStore.conversationLabel)
 
@@ -103,6 +136,36 @@ extension ConversationManagementStore {
     var conversationLabel: String {
         get { userDefaults.string(forKey: Keys.conversationLabel.rawValue) ?? "" }
         set { userDefaults.set(newValue, forKey: Keys.conversationLabel.rawValue) }
+    }
+
+    var queryLimit: String {
+        get { userDefaults.string(forKey: Keys.queryLimit.rawValue) ?? "" }
+        set { userDefaults.set(newValue, forKey: Keys.queryLimit.rawValue) }
+    }
+
+    var queryUseFromTimestamp: Bool {
+        get { userDefaults.bool(forKey: Keys.queryUseFromTimestamp.rawValue) }
+        set { userDefaults.set(newValue, forKey: Keys.queryUseFromTimestamp.rawValue) }
+    }
+
+    var queryFromTimestamp: Date {
+        get { userDefaults.object(forKey: Keys.queryFromTimestamp.rawValue) as? Date ?? .distantPast }
+        set { userDefaults.set(newValue, forKey: Keys.queryFromTimestamp.rawValue) }
+    }
+
+    var queryDirection: ListAPIDirections {
+        get { userDefaults.string(forKey: Keys.queryDirection.rawValue) == ListAPIDirections.ascending.rawValue ? .ascending : .descending }
+        set { userDefaults.set(newValue.rawValue, forKey: Keys.queryDirection.rawValue) }
+    }
+
+    var queryIncludeClosed: Bool {
+        get { userDefaults.bool(forKey: Keys.queryIncludeClosed.rawValue) }
+        set { userDefaults.set(newValue, forKey: Keys.queryIncludeClosed.rawValue) }
+    }
+
+    var queryForceRefresh: Bool {
+        get { userDefaults.bool(forKey: Keys.queryForceRefresh.rawValue) }
+        set { userDefaults.set(newValue, forKey: Keys.queryForceRefresh.rawValue) }
     }
 }
 

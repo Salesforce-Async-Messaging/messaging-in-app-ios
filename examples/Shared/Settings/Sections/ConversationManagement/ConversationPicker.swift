@@ -170,13 +170,13 @@ struct ConversationPicker: View {
     }
 }
 
-private struct ConversationView: View {
+struct ConversationView: View {
     let conversation: Conversation
 
     init(_ conversation: Conversation) {
         self.conversation = conversation
     }
-    
+
     var conversationStatus: String {
         switch conversation.status {
         case .open:
@@ -200,6 +200,7 @@ private struct ConversationView: View {
     var body: some View {
         VStack(alignment: .leading) {
             row("Identifier :", value: conversation.identifier.uuidString)
+            row("Created:", value: conversation.created?.description ?? "")
             row("Last Active:", value: conversation.lastActiveEntry?.timestamp.description ?? "")
             row("Status:", value: conversation.status.description)
             row("Status:", value: conversationStatus)
