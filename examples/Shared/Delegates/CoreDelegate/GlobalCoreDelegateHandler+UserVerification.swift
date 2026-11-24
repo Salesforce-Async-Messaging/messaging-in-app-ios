@@ -16,7 +16,7 @@ extension GlobalCoreDelegateHandler: UserVerificationDelegate {
 
         if configStore.usePassthrough {
             await Self.salesforceLogin()
-            return await Self.fetchMIAWJWT(core)
+            return await Self.fetchMIAWJWT(core, reason: reason)
         }
 
         return UserVerification(customerIdentityToken: userVerificationStore.tokenJWT, type: .JWT)
@@ -40,8 +40,8 @@ extension GlobalCoreDelegateHandler {
         }
     }
 
-    class func fetchMIAWJWT(_ core: CoreClient) async -> PassthroughVerification? {
-        if GlobalCoreDelegateHandler.shared.configStore.authorizationMode == .hybridAuth {
+    class func fetchMIAWJWT(_ core: CoreClient, reason: ChallengeReason) async -> PassthroughVerification? {
+        if reason != .refresh && GlobalCoreDelegateHandler.shared.configStore.authorizationMode == .hybridAuth {
             return await fetchHybridMIAWJWT(core)
         }
 
@@ -54,7 +54,7 @@ extension GlobalCoreDelegateHandler {
             let jwt = try await core.unverifiedAccessToken()
 
             request.setCustomRequestBodyDictionary([
-                "type": "ElevateSession",
+                "requestType": "ElevateSession",
                 "payload": [
                     "guestAccessToken": jwt,
                     "conversationIds": []
@@ -87,7 +87,6 @@ extension GlobalCoreDelegateHandler {
     private class func fetchLegacyMIAWJWT(_ core: CoreClient) async -> PassthroughVerification? {
         let fetchTask = Task {
             let request = RestRequest(method: .GET, serviceHostType:.custom, path:core.salesforceAuthenticationRequestPath, queryParams: nil)
-            request.setCustomRequestBodyDictionary([:], contentType: "application/json")
             do {
                 return try await RestClient.shared.send(request: request)
             }
